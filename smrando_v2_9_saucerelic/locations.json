@@ -1,0 +1,2053 @@
+[
+  {
+    "name": "logic",
+    "sections": [
+	  {
+	    "name": "can hellrun",
+		"access_rules": [
+		  "alltanks:3",
+		  "varia"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "can bomb",
+		"access_rules": [
+		  "morph,bomb"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "can pb",
+		"access_rules": [
+		  "morph,powerbomb"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "can fly",
+		"access_rules": [
+		  "@logic/can bomb",
+		  "space"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "red doors",
+		"access_rules": [
+		  "missile",
+		  "super"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "green doors",
+		"access_rules": [
+		  "super"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "yellow doors",
+		"access_rules": [
+		  "@logic/can pb"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "bomb walls",
+		"access_rules": [
+		  "@logic/can bomb",
+		  "@logic/can pb",
+		  "screw"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "crystal flash",
+		"access_rules": [
+		  "missile2,super2,powerbomb3"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "gauntlet",
+		"access_rules": [
+		  "@logic/can fly,@logic/can bomb",
+		  "@logic/can fly,@logic/can pb,powerbomb2",
+		  "@logic/can fly,screw",
+		  "@logic/can fly,speed,@logic/can pb,alltanks:2",
+		  "hijump,@logic/can bomb",
+		  "hijump,@logic/can pb,powerbomb2",
+		  "hijump,screw",
+		  "hijump,speed,@logic/can pb,alltanks:2",
+		  "speed,@logic/can bomb",
+		  "speed,@logic/can pb,powerbomb2",
+		  "speed,screw",
+		  "speed,@logic/can pb,alltanks:2"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "bomb passages",
+		"access_rules": [
+		  "@logic/can bomb",
+		  "@logic/can pb"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "red brinstar",
+		"access_rules": [
+		  "super,@logic/bomb walls,morph",
+		  "super,@logic/can pb"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "kraid",
+		"access_rules": [
+		  "@logic/red brinstar,@logic/bomb passages"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "heated norfair",
+		"access_rules": [
+		  "@logic/red brinstar,@logic/can hellrun"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "crocomire",
+		"access_rules": [
+		  "@logic/heated norfair",
+		  "@logic/kraid,@logic/can pb,speed,alltanks:2"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "lower norfair",
+		"access_rules": [
+		  "@logic/heated norfair,powerbomb,varia,hijump",
+		  "@logic/heated norfair,powerbomb,varia,gravity"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "worst room",
+		"access_rules": [
+		  "@logic/can fly",
+		  "ice",
+		  "hijump"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "outer maridia",
+		"access_rules": [
+		  "@logic/red brinstar,@logic/can pb,gravity",
+		  "@logic/red brinstar,@logic/can pb,hijump,ice"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "inner maridia",
+		"access_rules": [
+		  "@logic/red brinstar,@logic/can pb,gravity"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "suitless maridia",
+		"access_rules": [
+		  "hijump,ice,grapple"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "botwoon",
+		"access_rules": [
+		  "@logic/inner maridia,ice",
+		  "@logic/inner maridia,speed"
+		],
+		"item_count": 1
+	  },
+	  {
+	    "name": "draygon",
+		"access_rules": [
+		  "@logic/botwoon,gravity"
+		],
+		"item_count": 1
+	  }
+	]
+  },
+  {
+    "name": "All Locations",
+	"children": [
+	  {
+	    "name": "Crateria",
+		"color": "#d83890",
+		"children": [
+		  {
+		    "name": "Crateria Power Bomb",
+			"access_rules": [
+			  "@logic/can pb,speed",
+			  "@logic/can pb,@logic/can fly"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1095,
+				"y": 111
+			  }
+			]
+		  },
+		  {
+		    "name": "Outside Wrecked Ship (bottom)",
+			"access_rules": [
+			  "@logic/can pb,super"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1255,
+				"y": 239
+			  }
+			]
+		  },
+		  {
+		    "name": "Outside Wrecked Ship (top)",
+			"access_rules": [
+			  "@logic/can pb,super"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1289,
+				"y": 77
+			  }
+			]
+		  },
+		  {
+		    "name": "Outside Wrecked Ship (middle)",
+			"access_rules": [
+			  "@logic/can pb,super"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1255,
+				"y": 142
+			  }
+			]
+		  },
+		  {
+		    "name": "Crateria Moat Missile",
+			"access_rules": [
+			  "@logic/can pb,super"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1191,
+				"y": 207
+			  }
+			]
+		  },
+		  {
+		    "name": "The Gauntlet",
+			"access_rules": [
+			  "@logic/gauntlet"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 583,
+				"y": 143
+			  }
+			]
+		  },
+		  {
+		    "name": "Crateria Missile (bottom)",
+			"access_rules": [
+			  "@logic/bomb walls"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 679,
+				"y": 655
+			  }
+			]
+		  },
+		  {
+		    "name": "Bomb Torizo",
+			"access_rules": [
+			  "morph,@logic/red doors"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 839,
+				"y": 271
+			  }
+			]
+		  },
+		  {
+		    "name": "Terminator",
+			"access_rules": [
+			  "@logic/bomb walls",
+			  "speed"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 423,
+				"y": 271
+			  }
+			]
+		  },
+		  {
+		    "name": "After Gauntlet",
+			"access_rules": [
+			  "@logic/gauntlet,@logic/bomb passages"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item (left)",
+				"item_count": 1
+			  },
+			  {
+			    "name": "Minor Item (right)",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 391,
+				"y": 175
+			  }
+			]
+		  },
+		  {
+		    "name": "Crateria Super Missile",
+			"access_rules": [
+			  "@logic/can pb,speed,etank:1",
+			  "@logic/can pb,speed,varia",
+			  "@logic/can pb,speed,gravity"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 807,
+				"y": 367
+			  }
+			]
+		  },
+		  {
+		    "name": "Crateria Missile (middle)",
+			"access_rules": [
+			  "@logic/bomb passages"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 551,
+				"y": 303
+			  }
+			]
+		  }
+	    ]
+	  },
+	  {
+	    "name": "Brinstar",
+		"color": "#01810f",
+		"children": [
+		  {
+		    "name": "Green Brinstar Power Bomb",
+			"access_rules": [
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 327,
+				"y": 879
+			  }
+			]
+		  },
+		  {
+		    "name": "Pink Brinstar Super",
+			"access_rules": [
+			  "@logic/bomb passages,super"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 711,
+				"y": 943
+			  }
+			]
+		  },
+		  {
+		    "name": "Green Brinstar Missile (below super)",
+			"access_rules": [
+			  "@logic/bomb passages,@logic/red doors"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 295,
+				"y": 783
+			  }
+			]
+		  },
+		  {
+		    "name": "Green Brinstar Super (top)",
+			"access_rules": [
+			  "@logic/red doors,speed",
+			  "@logic/red doors,@logic/bomb walls,morph"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 263,
+				"y": 751
+			  }
+			]
+		  },
+		  {
+		    "name": "Brinstar Reserve Tank",
+			"access_rules": [
+			  "@logic/red doors,speed",
+			  "@logic/red doors,@logic/bomb walls, morph"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 359,
+				"y": 783
+			  }
+			]
+		  },
+		  {
+		    "name": "Behind Brinstar Reserve",
+			"access_rules": [
+			  "@logic/red doors"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item (front)",
+				"access_rules": [
+				  "@logic/bomb walls,morph"
+				],
+				"item_count": 1
+			  },
+			  {
+			    "name": "Minor Item (back)",
+				"access_rules": [
+				  "@logic/bomb passages"
+				],
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 391,
+				"y": 783
+			  }
+			]
+		  },
+		  {
+		    "name": "Pink Brinstar Missile (top)",
+			"access_rules": [
+			  "@logic/bomb walls,@logic/red doors",
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 487,
+				"y": 879
+			  }
+			]
+		  },
+		  {
+		    "name": "Pink Brinstar Missile (bottom)",
+			"access_rules": [
+			  "@logic/bomb walls,@logic/red doors",
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 487,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Charge Beam",
+			"access_rules": [
+			  "@logic/bomb walls,@logic/red doors",
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 487,
+				"y": 1007
+			  }
+			]
+		  },
+		  {
+		    "name": "Pink Brinstar PB",
+			"access_rules": [
+			  "@logic/can pb,super"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 423,
+				"y": 911
+			  }
+			]
+		  },
+		  {
+		    "name": "Green Brinstar Missile (pipe)",
+			"access_rules": [
+			  "@logic/bomb passages,@logic/green doors",
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 647,
+				"y": 1007
+			  }
+			]
+		  },
+		  {
+		    "name": "Morph Ball",
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 743,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Blue Brinstar PB",
+			"access_rules": [
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 679,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Blue Brinstar Missile (middle)",
+			"access_rules": [
+			  "morph"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 967,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Brinstar Ceiling E-Tank",
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 935,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Etecoons E-Tank",
+			"access_rules": [
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 135,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Green Brinstar Super (bottom)",
+			"access_rules": [
+			  "@logic/can pb,@logic/green doors"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 103,
+				"y": 975
+			  }
+			]
+		  },
+		  {
+		    "name": "Waterway E-Tank",
+			"access_rules": [
+			  "@logic/can pb,@logic/red doors,speed"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 199,
+				"y": 1071
+			  }
+			]
+		  },
+		  {
+		    "name": "Blue Brinstar Missile (bottom)",
+			"access_rules": [
+			  "morph"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 839,
+				"y": 1007
+			  }
+			]
+		  },
+		  {
+		    "name": "Brinstar Gate E-Tank",
+			"access_rules": [
+			  "@logic/can pb,wave",
+			  "@logic/can pb,super,hijump"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 615,
+				"y": 911
+			  }
+			]
+		  },
+		  {
+		    "name": "Blue Brinstar Missiles (top)",
+			"access_rules": [
+			  "@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "2 Minor Items",
+				"item_count": 2
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 871,
+				"y": 911
+			  }
+			]
+		  },
+		  {
+		    "name": "X-Ray Scope",
+			"access_rules": [
+			  "@logic/red brinstar,@logic/can pb,grapple",
+			  "@logic/red brinstar,@logic/can pb,space",
+			  "@logic/red brinstar,@logic/can pb,varia,alltanks:4",
+			  "@logic/red brinstar,@logic/can pb,alltanks:6"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 679,
+				"y": 1135
+			  }
+			]
+		  },
+		  {
+		    "name": "Red Brinstar PB (sidehopper)",
+			"access_rules": [
+			  "@logic/red brinstar,@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1063,
+				"y": 911
+			  }
+			]
+		  },
+		  {
+		    "name": "Red Brinstar PB (spikes)",
+			"access_rules": [
+			  "@logic/red brinstar,@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1063,
+				"y": 1007
+			  }
+			]
+		  },
+		  {
+		    "name": "Red Brinstar Missile",
+			"access_rules": [
+			  "@logic/red brinstar,@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1031,
+				"y": 1007
+			  }
+			]
+		  },
+		  {
+		    "name": "Spazer",
+			"access_rules": [
+			  "@logic/red brinstar"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1159,
+				"y": 1199
+			  }
+			]
+		  },
+		  {
+		    "name": "Kraid E-Tank",
+			"access_rules": [
+			  "@logic/kraid"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1319,
+				"y": 1263
+			  }
+			]
+		  },
+		  {
+		    "name": "Kraid Missile",
+			"access_rules": [
+			  "@logic/kraid,@logic/can pb"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1462,
+				"y": 1231
+			  }
+			]
+		  },
+		  {
+		    "name": "Varia Suit",
+			"access_rules": [
+			  "@logic/kraid"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1767,
+				"y": 1263
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+	    "name": "Norfair",
+		"color": "#d12218",
+		"children": [
+		  {
+		    "name": "Norfair Missile (lava room)",
+			"access_rules": [
+			  "@logic/heated norfair"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1447,
+				"y": 1423
+			  }
+			]
+		  },
+		  {
+		    "name": "Ice Beam",
+			"access_rules": [
+			  "@logic/kraid,varia",
+			  "@logic/kraid,alltanks:2"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1095,
+				"y": 1359
+			  }
+			]
+		  },
+		  {
+		    "name": "Norfair Missile (below ice)",
+			"access_rules": [
+			  "@logic/kraid,@logic/can pb,@logic/can hellrun"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 999,
+				"y": 1423
+			  }
+			]
+		  },
+		  {
+		    "name": "Crocomire E-Tank",
+			"access_rules": [
+			  "@logic/crocomire"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1543,
+				"y": 1615
+			  }
+			]
+		  },
+		  {
+		    "name": "Hi-Jump Boots",
+			"access_rules": [
+			  "@logic/red brinstar"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1159,
+				"y": 1487
+			  }
+			]
+		  },
+		  {
+		    "name": "Crocomire Missile (above)",
+			"access_rules": [
+			  "@logic/crocomire,@logic/can fly",
+			  "@logic/crocomire,grapple",
+			  "@logic/crocomire,hijump,speed"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1287,
+				"y": 1487
+			  }
+			]
+		  },
+		  {
+		    "name": "Hi-Jump Missile",
+			"access_rules": [
+			  "@logic/red brinstar"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1191,
+				"y": 1455
+			  }
+			]
+		  },
+		  {
+		    "name": "Hi-Jump E-Tank",
+			"access_rules": [
+			  "@logic/red brinstar"
+			],
+			"sections": [
+			  {
+			    "name": "MINOR ITEM",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1223,
+				"y": 1455
+			  }
+			]
+		  },
+		  {
+		    "name": "Crocomire Power Bomb",
+			"access_rules": [
+			  "@logic/crocomire"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1223,
+				"y": 1615
+			  }
+			]
+		  },
+		  {
+		    "name": "Crocomire Missile (below)",
+			"access_rules": [
+			  "@logic/crocomire"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1383,
+				"y": 1775
+			  }
+			]
+		  },
+		  {
+		    "name": "Grapple Beam Missile",
+			"access_rules": [
+			  "@logic/crocomire,@logic/can fly",
+			  "@logic/crocomire,grapple",
+			  "@logic/crocomire,speed"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1191,
+				"y": 1775
+			  }
+			]
+		  },
+		  {
+		    "name": "Grapple Beam",
+			"access_rules": [
+			  "@logic/crocomire,@logic/can fly",
+			  "@logic/crocomire,ice",
+			  "@logic/crocomire,speed"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1031,
+				"y": 1807
+			  }
+			]
+		  },
+		  {
+		    "name": "Norfair Reserve Tank/Missile",
+			"access_rules": [
+			  "@logic/heated norfair,@logic/can fly",
+			  "@logic/heated norfair,grapple",
+			  "@logic/heated norfair,hijump"
+			],
+			"sections": [
+			  {
+			    "name": "1 Major, 1 Minor",
+				"item_count": 2
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1511,
+				"y": 1359
+			  }
+			]
+		  },
+		  {
+		    "name": "Bubble Norfair Missile (green door)",
+			"access_rules": [
+			  "@logic/heated norfair,@logic/can fly",
+			  "@logic/heated norfair,grapple",
+			  "@logic/heated norfair,hijump"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1607,
+				"y": 1359
+			  }
+			]
+		  },
+		  {
+		    "name": "Bubble Norfair Missile",
+			"access_rules": [
+			  "@logic/heated norfair"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1671,
+				"y": 1455
+			  }
+			]
+		  },
+		  {
+		    "name": "Speed Booster Missile",
+			"access_rules": [
+			  "@logic/heated norfair"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2087,
+				"y": 1359
+			  }
+			]
+		  },
+		  {
+		    "name": "Speed Booster",
+			"access_rules": [
+			  "@logic/heated norfair"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2119,
+				"y": 1359
+			  }
+			]
+		  },
+		  {
+		    "name": "Wave Beam Missile",
+			"access_rules": [
+			  "@logic/heated norfair"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1767,
+				"y": 1423
+			  }
+			]
+		  },
+		  {
+		    "name": "Wave Beam",
+			"access_rules": [
+			  "@logic/heated norfair"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1863,
+				"y": 1423
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+	    "name": "Lower Norfair",
+		"color": "#ff9d00",
+		"access_rules": [
+		  "@logic/lower norfair"
+		],
+		"children": [
+		  {
+		    "name": "Gold Torizo Missile",
+			"access_rules": [
+			  "space"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1511,
+				"y": 1775
+			  }
+			]
+		  },
+		  {
+		    "name": "Gold Torizo Super",
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1543,
+				"y": 1775
+			  }
+			]
+		  },
+		  {
+		    "name": "Mickey Mouse Missile",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Disney Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1831,
+				"y": 1615
+			  }
+			]
+		  },
+		  {
+		    "name": "Missile Above Fire Fleas",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2055,
+				"y": 1455
+			  }
+			]
+		  },
+		  {
+		    "name": "PB Above Fire Fleas",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2119,
+				"y": 1487
+			  }
+			]
+		  },
+		  {
+		    "name": "Power Bombs of Shame",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Shameful Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1959,
+				"y": 1743
+			  }
+			]
+		  },
+		  {
+		    "name": "Missiles Near Wave",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1863,
+				"y": 1455
+			  }
+			]
+		  },
+		  {
+		    "name": "Ridley E-Tank",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1639,
+				"y": 1839
+			  }
+			]
+		  },
+		  {
+		    "name": "Screw Attack",
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1575,
+				"y": 1807
+			  }
+			]
+		  },
+		  {
+		    "name": "Fire Fleas E-Tank",
+			"access_rules": [
+			  "@logic/worst room"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2121,
+				"y": 1645
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+	    "name": "Wrecked Ship",
+		"color": "#ceaf15",
+		"access_rules": [
+		  "@logic/can pb,super"
+		],
+		"children": [
+		  {
+		    "name": "Wrecked Ship Missile (middle)",
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1511,
+				"y": 271
+			  }
+			]
+		  },
+		  {
+		    "name": "Wrecked Ship Reserve Tank",
+			"access_rules": [
+			  "speed,varia",
+			  "speed,alltanks:1"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1607,
+				"y": 111
+			  }
+			]
+		  },
+		  {
+		    "name": "Gravity Suit Missile",
+			"access_rules": [
+			  "varia",
+			  "alltanks:1"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1541,
+				"y": 175
+			  }
+			]
+		  },
+		  {
+		    "name": "Wrecked Ship Missile (top)",
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1798,
+				"y": 79
+			  }
+			]
+		  },
+		  {
+		    "name": "Wrecked Ship E-Tank",
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1703,
+				"y": 175
+			  }
+			]
+		  },
+		  {
+		    "name": "Wrecked Ship Super (left)",
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1607,
+				"y": 303
+			  }
+			]
+		  },
+		  {
+		    "name": "Wrecked Ship Super (right)",
+			"sections": [
+			  {
+			    "name": "MAJOR ITEM",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1799,
+				"y": 303
+			  }
+			]
+		  },
+		  {
+		    "name": "Gravity Suit",
+			"access_rules": [
+			  "varia",
+			  "alltanks:1"
+			],
+			"sections": [
+			  {
+			    "name": "",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1447,
+				"y": 175
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+	    "name": "Maridia",
+		"color": "#263690",
+		"children": [
+		  {
+		    "name": "Green Maridia Missile (shinespark)",
+			"access_rules": [
+			  "@logic/red brinstar,@logic/can pb,gravity,speed"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1159,
+				"y": 1039
+			  }
+			]
+		  },
+		  {
+		    "name": "Green Maridia Super",
+			"access_rules": [
+			  "@logic/outer maridia"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1191,
+				"y": 1007
+			  }
+			]
+		  },
+		  {
+		    "name": "Mama Turtle E-Tank",
+			"access_rules": [
+			  "@logic/outer maridia,@logic/can fly",
+			  "@logic/outer maridia,speed",
+			  "@logic/outer marida,grapple"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1415,
+				"y": 1039
+			  }
+			]
+		  },
+		  {
+		    "name": "Green Maridia Tatori Missile",
+			"access_rules": [
+			  "@logic/outer maridia"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1447,
+				"y": 1071
+			  }
+			]
+		  },
+		  {
+		    "name": "Yellow Maridia Super/Missile",
+			"access_rules": [
+			  "@logic/inner maridia"
+			],
+			"sections": [
+			  {
+			    "name": "2 Minor Items",
+				"item_count": 2
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1223,
+				"y": 847
+			  }
+			]
+		  },
+		  {
+		    "name": "Yellow Maridia False Wall",
+			"access_rules": [
+			  "@logic/inner maridia"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1479,
+				"y": 847
+			  }
+			]
+		  },
+		  {
+		    "name": "Plasma Beam",
+			"access_rules": [
+			  "@logic/draygon,speed",
+			  "@logic/draygon,charge,@logic/can fly",
+			  "@logic/draygon,charge,hijump",
+			  "@logic/draygon,screw,@logic/can fly",
+			  "@logic/draygon,screw,hijump"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1735,
+				"y": 719
+			  }
+			]
+		  },
+		  {
+		    "name": "Maridia Reserve Sand Pit (left)",
+			"access_rules": [
+			  "@logic/outer maridia"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"access_rules": [
+				  "@logic/suitless maridia",
+				  "gravity"
+				],
+				"item_count": 1
+			  },
+			  {
+			    "name": "Minor Item",
+				"access_rules": [
+				  "gravity"
+				],
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1479,
+				"y": 1103
+			  }
+			]
+		  },
+		  {
+		    "name": "Maridia Sand Pit Missile (right)",
+			"access_rules": [
+			  "@logic/outer maridia,gravity"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1575,
+				"y": 1103
+			  }
+			]
+		  },
+		  {
+		    "name": "Maridia Sand Pit PB",
+			"access_rules": [
+			  "@logic/outer maridia,gravity"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1607,
+				"y": 1135
+			  }
+			]
+		  },
+		  {
+		    "name": "Pink Maridia Missile",
+			"access_rules": [
+			  "@logic/outer maridia,gravity"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1607,
+				"y": 943
+			  }
+			]
+		  },
+		  {
+		    "name": "Pink Maridia Super",
+			"access_rules": [
+			  "@logic/outer maridia,gravity"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1639,
+				"y": 943
+			  }
+			]
+		  },
+		  {
+		    "name": "Spring Ball",
+			"access_rules": [
+			  "@logic/inner maridia,ice",
+			  "@logic/inner maridia,grapple,@logic/can fly",
+			  "@logic/inner maridia,grapple,hijump"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1895,
+				"y": 1167
+			  }
+			]
+		  },
+		  {
+		    "name": "Draygon Missle",
+			"access_rules": [
+			  "@logic/botwoon"
+			],
+			"sections": [
+			  {
+			    "name": "Minor Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2183,
+				"y": 879
+			  }
+			]
+		  },
+		  {
+		    "name": "Botwoon E-Tank",
+			"access_rules": [
+			  "@logic/botwoon",
+			  "@logic/outer maridia,@logic/suitless maridia"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 1767,
+				"y": 911
+			  }
+			]
+		  },
+		  {
+		    "name": "Space Jump",
+			"access_rules": [
+			  "@logic/draygon"
+			],
+			"sections": [
+			  {
+			    "name": "Major Item",
+				"item_count": 1
+			  }
+			],
+			"map_locations": [
+			  {
+			    "map": "fullmap",
+				"x": 2055,
+				"y": 975
+			  }
+			]
+		  }
+		]
+	  }
+	]
+  }
+]

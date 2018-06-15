@@ -1,0 +1,160 @@
+﻿{
+  "map_enabled": true,
+  "auto_pin_capturing_locations": false,
+  "auto_unpin_on_clear": true,
+  "layout_swap_left_right": false,
+  "disabled_image_filter": "grayscale, dim",
+  "layouts": {
+    "shared_item_grid": {
+      "type": "array",
+      "orientation": "vertical",
+      "margin": "0,0",
+      "content": [
+        {
+          "type": "array",
+          "orientation": "horizontal",
+          "margin": "0,0",
+          "content": [
+            {
+              "type": "itemgrid",
+              "item_margin": "1,1",
+              "h_alignment": "left",
+              "rows": [
+                [ "charge", "ice", "wave", "spazer", "plasma", "grapple" ],
+				[ "", "", "", "varia", "gravity", "screw" ],
+                [ "kraid", "phantoon", "", "morph", "bomb", "spring" ],
+                [ "draygon", "ridley", "", "hijump", "speed", "space" ]
+              ]
+            },
+			{
+			  "type": "itemgrid",
+			  "margin": "5,0,3,0",
+			  "item_margin": "0,2",
+			  "h_alignment": "left",
+			  "v_alignment": "center",
+			  "rows": [
+			    [ "etank" ],
+				[ "reservetank" ]
+			  ]
+			},
+            {
+              "type": "array",
+			  "orientation": "horizontal",
+			  "v_alignment": "center",
+			  "margin": "0,0",
+              "content": [
+				{
+				  "type": "item",
+				  "item": "missile",
+				  "margin": "2,0"
+				},
+				{
+				  "type": "item",
+				  "item": "supermissile",
+				  "margin": "2,0"
+				},
+				{
+				  "type": "item",
+				  "item": "powerbomb",
+				  "margin": "2,0"
+				}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    "tracker_capture_item": {
+      "type": "container",
+      "content": {
+        "type": "layout",
+        "key": "shared_item_grid"
+      }
+    },
+    "tracker_default": {
+      "type": "container",
+      "background": "#000000",
+      "content": {
+        "type": "dock",
+        "dropshadow": true,
+        "content": [
+          {
+            "type": "dock",
+            "dock": "left",
+            "v_alignment": "stretch",
+            "content": [
+              {
+                "type": "group",
+                "header": "Items",
+                "dock": "top",
+                "content": {
+                  "type": "layout",
+                  "key": "shared_item_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Pinned Locations",
+                "content": {
+                  "type": "recentpins",
+                  "style": "wrap",
+                  "h_alignment": "stretch",
+                  "v_alignment": "stretch",
+                  "orientation": "vertical",
+                  "compact": true
+                }
+              }
+            ]
+          },
+          {
+            "type": "map"
+          }
+        ]
+      }
+    },
+    "tracker_horizontal": {
+      "type": "container",
+      "background": "#000000",
+      "content": {
+        "type": "dock",
+        "dropshadow": true,
+        "content": [
+          {
+            "type": "dock",
+            "dock": "bottom",
+            "content": [
+              {
+                "type": "group",
+                "header": "Items",
+                "dock": "left",
+                "margin": "0,0,3,0",
+                "content": {
+                  "type": "layout",
+                  "h_alignment": "center",
+                  "v_alignment": "center",
+                  "key": "shared_item_grid"
+                }
+              },
+              {
+                "type": "group",
+                "header": "Pinned Locations",
+                "content": {
+                  "type": "recentpins",
+                  "style": "wrap",
+                  "h_alignment": "stretch",
+                  "v_alignment": "stretch",
+                  "orientation": "horizontal",
+                  "compact": true
+                }
+              }
+            ]
+          },
+          {
+            "type": "map"
+          }
+        ]
+      }
+    }
+  }
+}

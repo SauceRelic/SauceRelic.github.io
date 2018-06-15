@@ -1,0 +1,70 @@
+﻿{
+    "type": "array",
+    "orientation": "vertical",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "1,1",
+            "h_alignment": "left",
+            "rows": [
+              [ "charge", "ice", "wave", "spazer", "plasma", "hijump" ],
+              [ "kraid", "phantoon", "varia", "morph", "bomb", "space" ],
+              [ "draygon", "ridley", "gravity", "spring", "screw", "speed" ]
+            ]
+          },
+          {
+            "type": "array",
+            "orientation": "vertical",
+            "margin": "0,0",
+            "content": [
+              {
+                "type": "array",
+                "orientation": "horizontal",
+                "margin": "0,0",
+                "content": [
+                  {
+                    "type": "item",
+                    "item": "grapple",
+                    "margin": "1,1"
+                  },
+                  {
+                    "type": "item",
+                    "item": "xray",
+                    "margin": "1,1"
+                  }
+                ]
+              },
+              {
+                "type": "array",
+                "orientation": "horizontal",
+                "margin": "0,0",
+                "content": [
+                  {
+                    "type": "item",
+                    "item": "missile",
+                    "margin": "2,2,1,2"
+                  },
+                  {
+                    "type": "item",
+                    "item": "supermissile",
+                    "margin": "2,2"
+                  },
+                  {
+                    "type": "item",
+                    "item": "powerbomb",
+                    "margin": "1,2,2,2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

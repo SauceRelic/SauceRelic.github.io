@@ -108,7 +108,69 @@
             ]
           },
           {
-            "type": "map"
+            "type": "tabbed",
+			"tabs": [
+			  {
+			    "title": "Full Map",
+				"icon": "images/icon_zebes.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "fullmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Crateria",
+				"icon": "images/icon_starship.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "crateriamap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Brinstar",
+				"icon": "images/icon_etecoon.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "brinstarmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Norfair",
+				"icon": "images/icon_norfair_statue.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "norfairmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Wrecked Ship",
+				"icon": "images/icon_robot.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "wreckedshipmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Maridia",
+				"icon": "images/icon_minidraygon.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "maridiamap"
+				  ]
+				}
+			  }
+			]
           }
         ]
       }
@@ -151,7 +213,69 @@
             ]
           },
           {
-            "type": "map"
+            "type": "tabbed",
+			"tabs": [
+			  {
+			    "title": "Full Map",
+				"icon": "images/icon_zebes.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "fullmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Crateria",
+				"icon": "images/icon_starship.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "crateriamap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Brinstar",
+				"icon": "images/icon_etecoon.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "brinstarmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Norfair",
+				"icon": "images/icon_norfair_statue.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "norfairmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Wrecked Ship",
+				"icon": "images/icon_robot.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "wreckedshipmap"
+				  ]
+				}
+			  },
+			  {
+			    "title": "Maridia",
+				"icon": "images/icon_minidraygon.png",
+				"content": {
+				  "type": "map",
+				  "maps": [
+				    "maridiamap"
+				  ]
+				}
+			  }
+			]
           }
         ]
       }

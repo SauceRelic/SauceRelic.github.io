@@ -113,31 +113,67 @@
   },
   {
     "name": "Ridley",
-    "type": "toggle",
+    "type": "progressive",
+	"allow_disabled": "false",
     "loop": "true",
-    "img": "images/Boss1.png",
-    "codes": "ridley"
+	"stages": [
+	  {
+	    "img": "images/Boss1.png"
+	  },
+	  {
+	    "img": "images/Boss1.png",
+		"img_mods": "@disabled",
+		"codes": "ridley,g4"
+	  }
+	]
   },
   {
     "name": "Kraid",
-    "type": "toggle",
+    "type": "progressive",
+	"allow_disabled": "false",
     "loop": "true",
-    "img": "images/Boss2.png",
-    "codes": "kraid"
+	"stages": [
+	  {
+	    "img": "images/Boss2.png"
+	  },
+	  {
+	    "img": "images/Boss2.png",
+		"img_mods": "@disabled",
+		"codes": "kraid,g4"
+	  }
+	]
   },
   {
     "name": "Phantoon",
-    "type": "toggle",
+    "type": "progressive",
+	"allow_disabled": "false",
     "loop": "true",
-    "img": "images/Boss3.png",
-    "codes": "phantoon"
+	"stages": [
+	  {
+	    "img": "images/Boss3.png"
+	  },
+	  {
+	    "img": "images/Boss3.png",
+		"img_mods": "@disabled",
+		"codes": "phantoon,g4"
+	  }
+	]
   },
   {
     "name": "Draygon",
-    "type": "toggle",
+    "type": "progressive",
+	"allow_disabled": "false",
     "loop": "true",
-    "img": "images/Boss4.png",
-    "codes": "draygon"
+	"stages": [
+	  {
+	    "img": "images/Boss4.png"
+	  },
+	  {
+	    "img": "images/Boss4.png",
+		"img_mods": "@disabled",
+		"codes": "draygon,g4"
+	  }
+	]
   },
   {
     "name": "Etanks",

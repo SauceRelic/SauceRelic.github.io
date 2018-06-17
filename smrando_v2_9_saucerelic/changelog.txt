@@ -1,3 +1,6 @@
+v1.1.1.0:
+	-Changed boss icon behavior; looks disabled when boss is defeated, as it behaves in-game
+
 v1.1.0.0:
 	-Added maps for individual sectors to increase location visibility
 	-Shifted all locations by 2 pixels to satisfy my perfectionism

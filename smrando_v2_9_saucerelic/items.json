@@ -114,80 +114,80 @@
   {
     "name": "Ridley",
     "type": "progressive",
-	"allow_disabled": "false",
+    "allow_disabled": "false",
     "loop": "true",
-	"stages": [
-	  {
-	    "img": "images/Boss1.png"
-	  },
-	  {
-	    "img": "images/Boss1.png",
-		"img_mods": "@disabled",
-		"codes": "ridley,g4"
-	  }
-	]
+    "stages": [
+      {
+        "img": "images/Boss1.png"
+      },
+      {
+        "img": "images/Boss1.png",
+        "img_mods": "@disabled",
+        "codes": "ridley,g4"
+      }
+    ]
   },
   {
     "name": "Kraid",
     "type": "progressive",
-	"allow_disabled": "false",
+    "allow_disabled": "false",
     "loop": "true",
-	"stages": [
-	  {
-	    "img": "images/Boss2.png"
-	  },
-	  {
-	    "img": "images/Boss2.png",
-		"img_mods": "@disabled",
-		"codes": "kraid,g4"
-	  }
-	]
+    "stages": [
+      {
+        "img": "images/Boss2.png"
+      },
+      {
+        "img": "images/Boss2.png",
+        "img_mods": "@disabled",
+        "codes": "kraid,g4"
+      }
+    ]
   },
   {
     "name": "Phantoon",
     "type": "progressive",
-	"allow_disabled": "false",
+    "allow_disabled": "false",
     "loop": "true",
-	"stages": [
-	  {
-	    "img": "images/Boss3.png"
-	  },
-	  {
-	    "img": "images/Boss3.png",
-		"img_mods": "@disabled",
-		"codes": "phantoon,g4"
-	  }
-	]
+    "stages": [
+      {
+        "img": "images/Boss3.png"
+      },
+      {
+        "img": "images/Boss3.png",
+        "img_mods": "@disabled",
+        "codes": "phantoon,g4"
+      }
+    ]
   },
   {
     "name": "Draygon",
     "type": "progressive",
-	"allow_disabled": "false",
+    "allow_disabled": "false",
     "loop": "true",
-	"stages": [
-	  {
-	    "img": "images/Boss4.png"
-	  },
-	  {
-	    "img": "images/Boss4.png",
-		"img_mods": "@disabled",
-		"codes": "draygon,g4"
-	  }
-	]
+    "stages": [
+      {
+        "img": "images/Boss4.png"
+      },
+      {
+        "img": "images/Boss4.png",
+        "img_mods": "@disabled",
+        "codes": "draygon,g4"
+      }
+    ]
   },
   {
     "name": "Etanks",
-	"type": "consumable",
-	"img": "images/etank.png",
-	"max_quantity": 14,
-	"codes": "etank,alltanks"
+    "type": "consumable",
+    "img": "images/etank.png",
+    "max_quantity": 14,
+    "codes": "etank,alltanks"
   },
   {
     "name": "Reserve Tanks",
-	"type": "consumable",
-	"img": "images/reservetank.png",
-	"max_quantity": 4,
-	"codes": "reservetank,alltanks"
+    "type": "consumable",
+    "img": "images/reservetank.png",
+    "max_quantity": 4,
+    "codes": "reservetank,alltanks"
   },
   {
     "name": "Missile Capacity",
@@ -204,7 +204,7 @@
       },
       {
         "img": "images/vertMiss10.png",
-		"codes": "missile2"
+        "codes": "missile2"
       },
       {
         "img": "images/vertMiss15.png"
@@ -334,7 +334,7 @@
       },
       {
         "img": "images/vertSuMi10.png",
-		"codes": "supermissile2,super2"
+        "codes": "supermissile2,super2"
       },
       {
         "img": "images/vertSuMi15.png"
@@ -377,11 +377,11 @@
       },
       {
         "img": "images/vertBomb10.png",
-		"codes": "powerbomb2"
+        "codes": "powerbomb2"
       },
       {
         "img": "images/vertBomb15.png",
-		"codes": "powerbomb3"
+        "codes": "powerbomb3"
       },
       {
         "img": "images/vertBomb20.png"

@@ -21,43 +21,43 @@
               "h_alignment": "left",
               "rows": [
                 [ "charge", "ice", "wave", "spazer", "plasma", "grapple" ],
-				[ "", "", "", "varia", "gravity", "screw" ],
+                [ "", "", "", "varia", "gravity", "screw" ],
                 [ "kraid", "phantoon", "", "morph", "bomb", "spring" ],
                 [ "draygon", "ridley", "", "hijump", "speed", "space" ]
               ]
             },
-			{
-			  "type": "itemgrid",
-			  "margin": "5,0,3,0",
-			  "item_margin": "0,2",
-			  "h_alignment": "left",
-			  "v_alignment": "center",
-			  "rows": [
-			    [ "etank" ],
-				[ "reservetank" ]
-			  ]
-			},
+            {
+              "type": "itemgrid",
+              "margin": "5,0,3,0",
+              "item_margin": "0,2",
+              "h_alignment": "left",
+              "v_alignment": "center",
+              "rows": [
+                [ "etank" ],
+                [ "reservetank" ]
+              ]
+            },
             {
               "type": "array",
-			  "orientation": "horizontal",
-			  "v_alignment": "center",
-			  "margin": "0,0",
+              "orientation": "horizontal",
+              "v_alignment": "center",
+              "margin": "0,0",
               "content": [
-				{
-				  "type": "item",
-				  "item": "missile",
-				  "margin": "2,0"
-				},
-				{
-				  "type": "item",
-				  "item": "supermissile",
-				  "margin": "2,0"
-				},
-				{
-				  "type": "item",
-				  "item": "powerbomb",
-				  "margin": "2,0"
-				}
+                {
+                  "type": "item",
+                  "item": "missile",
+                  "margin": "2,0"
+                },
+                {
+                  "type": "item",
+                  "item": "supermissile",
+                  "margin": "2,0"
+                },
+                {
+                  "type": "item",
+                  "item": "powerbomb",
+                  "margin": "2,0"
+                }
               ]
             }
           ]
@@ -109,68 +109,68 @@
           },
           {
             "type": "tabbed",
-			"tabs": [
-			  {
-			    "title": "Full Map",
-				"icon": "images/icon_zebes.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "fullmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Crateria",
-				"icon": "images/icon_starship.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "crateriamap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Brinstar",
-				"icon": "images/icon_etecoon.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "brinstarmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Norfair",
-				"icon": "images/icon_norfair_statue.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "norfairmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Wrecked Ship",
-				"icon": "images/icon_robot.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "wreckedshipmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Maridia",
-				"icon": "images/icon_minidraygon.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "maridiamap"
-				  ]
-				}
-			  }
-			]
+            "tabs": [
+              {
+                "title": "Full Map",
+                "icon": "images/icon_zebes.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "fullmap"
+                  ]
+                }
+              },
+              {
+                "title": "Crateria",
+                "icon": "images/icon_starship.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "crateriamap"
+                  ]
+                }
+              },
+              {
+                "title": "Brinstar",
+                "icon": "images/icon_etecoon.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "brinstarmap"
+                  ]
+                }
+              },
+              {
+                "title": "Norfair",
+                "icon": "images/icon_norfair_statue.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "norfairmap"
+                  ]
+                }
+              },
+              {
+                "title": "Wrecked Ship",
+                "icon": "images/icon_robot.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "wreckedshipmap"
+                  ]
+                }
+              },
+              {
+                "title": "Maridia",
+                "icon": "images/icon_minidraygon.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "maridiamap"
+                  ]
+                }
+              }
+            ]
           }
         ]
       }
@@ -214,68 +214,68 @@
           },
           {
             "type": "tabbed",
-			"tabs": [
-			  {
-			    "title": "Full Map",
-				"icon": "images/icon_zebes.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "fullmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Crateria",
-				"icon": "images/icon_starship.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "crateriamap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Brinstar",
-				"icon": "images/icon_etecoon.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "brinstarmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Norfair",
-				"icon": "images/icon_norfair_statue.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "norfairmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Wrecked Ship",
-				"icon": "images/icon_robot.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "wreckedshipmap"
-				  ]
-				}
-			  },
-			  {
-			    "title": "Maridia",
-				"icon": "images/icon_minidraygon.png",
-				"content": {
-				  "type": "map",
-				  "maps": [
-				    "maridiamap"
-				  ]
-				}
-			  }
-			]
+            "tabs": [
+              {
+                "title": "Full Map",
+                "icon": "images/icon_zebes.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "fullmap"
+                  ]
+                }
+              },
+              {
+                "title": "Crateria",
+                "icon": "images/icon_starship.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "crateriamap"
+                  ]
+                }
+              },
+              {
+                "title": "Brinstar",
+                "icon": "images/icon_etecoon.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "brinstarmap"
+                  ]
+                }
+              },
+              {
+                "title": "Norfair",
+                "icon": "images/icon_norfair_statue.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "norfairmap"
+                  ]
+                }
+              },
+              {
+                "title": "Wrecked Ship",
+                "icon": "images/icon_robot.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "wreckedshipmap"
+                  ]
+                }
+              },
+              {
+                "title": "Maridia",
+                "icon": "images/icon_minidraygon.png",
+                "content": {
+                  "type": "map",
+                  "maps": [
+                    "maridiamap"
+                  ]
+                }
+              }
+            ]
           }
         ]
       }

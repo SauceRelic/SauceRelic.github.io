@@ -1,9 +1,17 @@
+v1.1.6.1:
+  =Added custom chest icons for major and minor items
+  =Reorganized locations to make use of similar logic
+  =Colored locations based on tile color rather than tracker map color
+  =Removed redundant location logic
+  =Changed all tabs in code to double-spaces to ensure uniform formatting on all viewers
+  -Added "pink brinstar missile (top)" to the brinstar map
+  
 v1.1.1.0:
-	-Changed boss icon behavior; looks disabled when boss is defeated, as it behaves in-game
+  +Changed boss icon behavior; looks disabled when boss is defeated, as it behaves in-game
 
 v1.1.0.0:
-	-Added maps for individual sectors to increase location visibility
-	-Shifted all locations by 2 pixels to satisfy my perfectionism
+  +Added maps for individual sectors to increase location visibility
+  .Shifted all locations by 2 pixels to satisfy my perfectionism
 
 v1.0.0.0:
-	-Initial release
+  ++Initial release

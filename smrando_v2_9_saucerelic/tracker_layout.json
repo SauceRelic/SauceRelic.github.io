@@ -27,36 +27,50 @@
               ]
             },
             {
-              "type": "itemgrid",
-              "margin": "5,0,3,0",
-              "item_margin": "0,2",
-              "h_alignment": "left",
-              "v_alignment": "center",
-              "rows": [
-                [ "etank" ],
-                [ "reservetank" ]
-              ]
-            },
-            {
               "type": "array",
-              "orientation": "horizontal",
+              "orientation": "vertical",
               "v_alignment": "center",
               "margin": "0,0",
               "content": [
                 {
-                  "type": "item",
-                  "item": "missile",
-                  "margin": "2,0"
+                  "type": "array",
+                  "orientation": "horizontal",
+                  "v_alignment": "center",
+                  "margin": "0,0",
+                  "content": [
+                    {
+                      "type": "itemgrid",
+                      "margin": "5,0,3,0",
+                      "item_margin": "0,2",
+                      "h_alignment": "left",
+                      "v_alignment": "center",
+                      "rows": [
+                        [ "etank" ],
+                        [ "reservetank" ]
+                      ]
+                    },
+                    {
+                      "type": "item",
+                      "item": "missile",
+                      "margin": "2,0"
+                    },
+                    {
+                      "type": "item",
+                      "item": "supermissile",
+                      "margin": "2,0"
+                    },
+                    {
+                      "type": "item",
+                      "item": "powerbomb",
+                      "margin": "2,0"
+                    }
+                  ]
                 },
                 {
                   "type": "item",
-                  "item": "supermissile",
-                  "margin": "2,0"
-                },
-                {
-                  "type": "item",
-                  "item": "powerbomb",
-                  "margin": "2,0"
+                  "item": "difficulty",
+                  "h_alignment": "center",
+                  "margin": "0,5,0,0"
                 }
               ]
             }

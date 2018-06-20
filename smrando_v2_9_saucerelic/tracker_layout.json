@@ -17,13 +17,14 @@
           "content": [
             {
               "type": "itemgrid",
-              "item_margin": "1,1",
+              "item_margin": "6,1",
               "h_alignment": "left",
               "rows": [
-                [ "charge", "ice", "wave", "spazer", "plasma", "grapple" ],
-                [ "", "", "", "varia", "gravity", "screw" ],
-                [ "kraid", "phantoon", "", "morph", "bomb", "spring" ],
-                [ "draygon", "ridley", "", "hijump", "speed", "space" ]
+                [ "ridley",   "charge", "varia",   "morph",  "hijump" ],
+                [ "phantoon", "ice",    "gravity", "bomb",   "space" ],
+                [ "kraid",    "wave",   "",        "spring", "speed" ],
+                [ "draygon",  "spazer", "grapple", "screw",  "" ],
+                [ "",         "plasma", "xray",    "",       "" ]
               ]
             },
             {
@@ -70,7 +71,7 @@
                   "type": "item",
                   "item": "difficulty",
                   "h_alignment": "center",
-                  "margin": "0,5,0,0"
+                  "margin": "0,8,0,0"
                 }
               ]
             }

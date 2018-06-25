@@ -1311,7 +1311,9 @@
       {
         "name": "Norfair",
         "access_rules": [
-          "@Red Brinstar"
+          "super,@logic/can bomb",
+          "super,@logic/can pb",
+          "super,morph,screw"
         ],
         "children": [
           {
@@ -1326,8 +1328,8 @@
                   {
                     "name": "Ice Beam",
                     "access_rules": [
-                      "@Kraid,varia",
-                      "@Kraid,alltanks:2"
+                      "@logic/kraid,varia",
+                      "@logic/kraid,alltanks:2"
                     ],
                     "sections": [
                       {
@@ -1533,7 +1535,7 @@
                   {
                     "name": "Norfair Missile (below ice)",
                     "access_rules": [
-                      "@Kraid,@logic/can pb,@logic/can hellrun"
+                      "@logic/can pb,@logic/can hellrun"
                     ],
                     "sections": [
                       {

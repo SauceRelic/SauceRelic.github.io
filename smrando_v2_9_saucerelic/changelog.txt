@@ -1,3 +1,6 @@
+v1.1.8.2:
+  -Fixed Norfair logic, norfair locations now correctly appear on map
+
 v1.1.8.1:
   =Rearranged item tracker, including adding xray scope for future logic additions
   =Added difficulty indicator. Currently is just for show, as Tournament logic is the only one implemented

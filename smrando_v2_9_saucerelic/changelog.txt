@@ -1,6 +1,10 @@
+v1.2.9.2:
+  +Added logic for all difficulties other than tournament
+  =Removed single item logic shortcuts (green/yellow doors)
+
 v1.1.8.2:
   -Fixed Norfair logic, norfair locations now correctly appear on map
-
+  
 v1.1.8.1:
   =Rearranged item tracker, including adding xray scope for future logic additions
   =Added difficulty indicator. Currently is just for show, as Tournament logic is the only one implemented
@@ -21,4 +25,4 @@ v1.1.0.0:
   .Shifted all locations by 2 pixels to satisfy my perfectionism
 
 v1.0.0.0:
-  ++Initial release
+  #Initial release

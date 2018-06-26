@@ -5,8 +5,13 @@
       {
         "name": "can hellrun",
         "access_rules": [
-          "alltanks:3",
-          "varia"
+          "varia",
+          
+          "tournament,alltanks:3",
+          
+          "normal,alltanks:3",
+          "hard,alltanks:3",
+          "open,alltanks:3"
         ],
         "item_count": 1
       },
@@ -27,8 +32,13 @@
       {
         "name": "can fly",
         "access_rules": [
-          "@logic/can bomb",
-          "space"
+          "space",
+          
+          "tournament,@logic/can bomb",
+          
+          "normal,@logic/can bomb",
+          "hard,@logic/can bomb",
+          "open,@logic/can bomb"
         ],
         "item_count": 1
       },
@@ -37,20 +47,6 @@
         "access_rules": [
           "missile",
           "super"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "green doors",
-        "access_rules": [
-          "super"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "yellow doors",
-        "access_rules": [
-          "@logic/can pb"
         ],
         "item_count": 1
       },
@@ -73,18 +69,39 @@
       {
         "name": "gauntlet",
         "access_rules": [
-          "@logic/can fly,@logic/can bomb",
-          "@logic/can fly,@logic/can pb,powerbomb2",
-          "@logic/can fly,screw",
-          "@logic/can fly,speed,@logic/can pb,alltanks:2",
-          "hijump,@logic/can bomb",
-          "hijump,@logic/can pb,powerbomb2",
-          "hijump,screw",
-          "hijump,speed,@logic/can pb,alltanks:2",
-          "speed,@logic/can bomb",
-          "speed,@logic/can pb,powerbomb2",
-          "speed,screw",
-          "speed,@logic/can pb,alltanks:2"
+          "tournament,@logic/can bomb",
+          "tournament,@logic/can fly,@logic/can pb,powerbomb2",
+          "tournament,@logic/can fly,screw",
+          "tournament,@logic/can fly,speed,@logic/can pb,alltanks:2",
+          "tournament,hijump,@logic/can pb,powerbomb2",
+          "tournament,hijump,screw",
+          "tournament,hijump,speed,@logic/can pb,alltanks:2",
+          "tournament,speed,@logic/can pb,powerbomb2",
+          "tournament,speed,screw",
+          "tournament,speed,@logic/can pb,alltanks:2",
+          
+          "casual,alltanks:3,@logic/can bomb",
+          "casual,alltanks:3,@logic/can pb,powerbomb2",
+          "casual,alltanks:3,screw",
+          
+          "normal,alltanks:3,@logic/can bomb",
+          "normal,alltanks:3,@logic/can pb,powerbomb2",
+          "normal,alltanks:3,screw",
+          
+          "hard,alltanks:3,@logic/can bomb",
+          "hard,alltanks:3,@logic/can pb,powerbomb2",
+          "hard,alltanks:3,screw",
+          
+          "open,@logic/can bomb",
+          "open,@logic/can fly,@logic/can pb,powerbomb2",
+          "open,@logic/can fly,screw",
+          "open,@logic/can fly,speed,@logic/can pb,alltanks:2",
+          "open,hijump,@logic/can pb,powerbomb2",
+          "open,hijump,screw",
+          "open,hijump,speed,@logic/can pb,alltanks:2",
+          "open,speed,@logic/can pb,powerbomb2",
+          "open,speed,screw",
+          "open,speed,@logic/can pb,alltanks:2"
         ],
         "item_count": 1
       },
@@ -99,62 +116,138 @@
       {
         "name": "red brinstar",
         "access_rules": [
-          "super,@logic/bomb walls,morph",
-          "super,@logic/can pb"
+          "super,@logic/can bomb",
+          "super,@logic/can pb",
+          "super,morph,screw",
+          
+          "open"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "red tower",
+        "access_rules": [
+          "hard,@logic/red brinstar,@logic/can fly",
+          "hard,@logic/red brinstar,ice",
+          "hard,@logic/red brinstar,speed",
+          "hard,@logic/red brinstar,hijump",
+          "hard,@logic/red brinstar,spring,morph"
         ],
         "item_count": 1
       },
       {
         "name": "kraid",
         "access_rules": [
-          "@logic/red brinstar,@logic/bomb passages"
+          "tournament,@logic/red brinstar,@logic/bomb passages",
+          "casual,@logic/red brinstar,@logic/bomb passages",
+          "normal,@logic/red brinstar,@logic/bomb passages",
+          
+          "hard,@logic/red tower,@logic/bomb passages",
+          
+          "open"
         ],
         "item_count": 1
       },
       {
         "name": "heated norfair",
         "access_rules": [
-          "@logic/red brinstar,@logic/can hellrun"
+          "tournament,@logic/red brinstar,@logic/can hellrun",
+          
+          "casual,@logic/red brinstar,@logic/can hellrun,@logic/can fly",
+          "casual,@logic/red brinstar,@logic/can hellrun,hijump",
+          
+          "normal,@logic/red brinstar,@logic/can hellrun,@logic/can fly",
+          "normal,@logic/red brinstar,@logic/can hellrun,hijump",
+          
+          "hard,@logic/red tower,@logic/can fly,@logic/can hellrun",
+          "hard,@logic/red tower,hijump,@logic/can hellrun",
+          "hard,@logic/red tower,alltanks:10",
+          "hard,@logic/red tower,speed,ice,@logic/can hellrun",
+          "hard,@logic/red tower,speed,@logic/can pb,@logic/can hellrun",
+          
+          "open,@logic/can hellrun"
         ],
         "item_count": 1
       },
       {
         "name": "crocomire",
         "access_rules": [
-          "@logic/heated norfair",
-          "@logic/kraid,@logic/can pb,speed,alltanks:2"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "lower norfair",
-        "access_rules": [
-          "@logic/heated norfair,powerbomb,varia,hijump",
-          "@logic/heated norfair,powerbomb,varia,gravity"
+          "tournament,@logic/heated norfair",
+          "tournament,@logic/kraid,@logic/can pb,speed,alltanks:2",
+          
+          "casual,@logic/heated norfair,speed,@logic/can pb",
+          "casual,@logic/heated norfair,wave",
+          
+          "normal,@logic/heated norfair",
+          "normal,@logic/kraid,@logic/can pb,@logic/can hellrun,speed",
+          
+          "hard,@logic/red tower,@logic/heated norfair",
+          "hard,@logic/red tower,@logic/can hellrun,speed",
+          
+          "open,@logic/heated norfair,morph",
+          "open,@logic/can hellrun,speed"
         ],
         "item_count": 1
       },
       {
         "name": "worst room",
         "access_rules": [
-          "@logic/can fly",
-          "ice",
-          "hijump"
+          "tournament,@logic/can fly",
+          "tournament,ice",
+          "tournament,hijump",
+          
+          "casual,@logic/can fly",
+          "casual,hijump",
+          
+          "normal,@logic/can fly",
+          "normal,ice",
+          "normal,speed",
+          
+          "hard,@logic/can fly",
+          "hard,ice",
+          "hard,hijump",
+          "hard,varia",
+          
+          "open"
         ],
         "item_count": 1
       },
       {
         "name": "outer maridia",
         "access_rules": [
-          "@logic/red brinstar,@logic/can pb,gravity",
-          "@logic/red brinstar,@logic/can pb,hijump,ice"
+          "tournament,@logic/red brinstar,@logic/can pb,gravity",
+          "tournament,@logic/red brinstar,@logic/can pb,hijump,ice",
+          
+          "casual,@logic/red brinstar,@logic/can pb,gravity",
+          
+          "normal,@logic/red brinstar,@logic/can pb,gravity",
+          "normal,@logic/red brinstar,@logic/can pb,hijump,ice",
+          
+          "hard,@logic/red tower,@logic/can pb,gravity",
+          "hard,@logic/red tower,@logic/can pb,hijump,ice",
+          
+          "open,gravity",
+          "open,hijump,ice",
+          "open,hijump,morph,spring"
         ],
         "item_count": 1
       },
       {
         "name": "inner maridia",
         "access_rules": [
-          "@logic/red brinstar,@logic/can pb,gravity"
+          "tournament,@logic/red brinstar,@logic/can pb,gravity",
+          
+          "casual,@logic/red brinstar,@logic/can pb,@logic/can fly,gravity",
+          
+          "normal,@logic/red brinstar,@logic/can pb,gravity",
+          "normal,@logic/red brinstar,@logic/can pb,hijump,ice,grapple",
+          
+          "hard,@logic/red tower,@logic/can pb,gravity",
+          "hard,@logic/red tower,@logic/can pb,hijump,ice",
+          
+          "open,gravity",
+          "open,hijump,grapple,ice",
+          "open,hijump,grapple,morph,spring"
         ],
         "item_count": 1
       },
@@ -168,15 +261,46 @@
       {
         "name": "botwoon",
         "access_rules": [
-          "@logic/inner maridia,ice",
-          "@logic/inner maridia,speed"
+          "tournament,@logic/inner maridia,ice",
+          "tournament,@logic/inner maridia,speed",
+          
+          "casual,@logic/inner maridia,speed",
+          
+          "normal,@logic/inner maridia,ice",
+          "normal,@logic/inner maridia,speed",
+          
+          "hard,@logic/inner maridia,ice",
+          "hard,@logic/inner maridia,speed,gravity",
+          
+          "open,@logic/inner maridia,ice,morph",
+          "open,@logic/inner maridia,speed,gravity",
+          "open,@logic/inner maridia,speed,morph"
         ],
         "item_count": 1
       },
       {
         "name": "draygon",
         "access_rules": [
-          "@logic/botwoon,gravity"
+          "tournament,@logic/botwoon",
+          
+          "casual,@logic/botwoon,@logic/can fly",
+          
+          "normal,@logic/botwoon,gravity",
+          "normal,@logic/botwoon,grapple,spring",
+          "normal,@logic/botwoon,grapple,xray",
+          "normal,@logic/botwoon,@logic/crystal flash,spring",
+          "normal,@logic/botwoon,@logic/crystal flash,xray",
+          
+          "hard,@logic/botwoon,gravity",
+          "hard,@logic/botwoon,@logic/crystal flash",
+          "hard,@logic/botwoon,xray",
+          
+          "open,@logic/botwoon,speed,gravity",
+          "open,@logic/botwoon,morph,gravity",
+          "open,@logic/botwoon,morph,grapple,spring",
+          "open,@logic/botwoon,morph,grapple,xray",
+          "open,@logic/botwoon,@logic/crystal flash,spring",
+          "open,@logic/botwoon,@logic/crystal flash,xray"
         ],
         "item_count": 1
       }
@@ -221,7 +345,15 @@
               {
                 "name": "Bomb Torizo",
                 "access_rules": [
-                  "morph,@logic/red doors"
+                  "tournament,morph,@logic/red doors",
+                  
+                  "casual,@logic/bomb passages,@logic/red doors",
+                  
+                  "normal,morph,@logic/red doors",
+                  
+                  "hard,morph,@logic/red doors",
+                  
+                  "open,@logic/red doors"
                 ],
                 "sections": [
                   {
@@ -246,7 +378,13 @@
                 "name": "Terminator",
                 "access_rules": [
                   "@logic/bomb walls",
-                  "speed"
+                  
+                  "tournament,speed",
+
+                  "normal,speed",
+                  "hard,speed",
+                  
+                  "open"
                 ],
                 "sections": [
                   {
@@ -302,7 +440,9 @@
               {
                 "name": "Outside Wrecked Ship (bottom)",
                 "access_rules": [
-                  "@logic/can pb,super"
+                  "super,@logic/can pb",
+                  
+                  "open,morph"
                 ],
                 "sections": [
                   {
@@ -326,7 +466,9 @@
               {
                 "name": "Outside Wrecked Ship (top)",
                 "access_rules": [
-                  "@logic/can pb,super"
+                  "super,@logic/can pb",
+                  
+                  "open"
                 ],
                 "sections": [
                   {
@@ -350,7 +492,9 @@
               {
                 "name": "Outside Wrecked Ship (middle)",
                 "access_rules": [
-                  "@logic/can pb,super"
+                  "super,@logic/can pb",
+                  
+                  "open,morph,super"
                 ],
                 "sections": [
                   {
@@ -374,7 +518,9 @@
               {
                 "name": "Crateria Moat Missile",
                 "access_rules": [
-                  "@logic/can pb,super"
+                  "super,@logic/can pb",
+                  
+                  "open"
                 ],
                 "sections": [
                   {
@@ -536,6 +682,17 @@
                   },
                   {
                     "name": "Brinstar Ceiling E-Tank",
+                    "access_rules": [
+                      "casual,@logic/can fly",
+                      "casual,ice",
+                      "casual,hijump",
+                      "casual,speed",
+                      
+                      "tournament",
+                      "normal",
+                      "hard",
+                      "open"
+                    ],
                     "sections": [
                       {
                         "name": "Major Item",
@@ -565,7 +722,9 @@
                   {
                     "name": "Blue Brinstar Missile (middle)",
                     "access_rules": [
-                      "morph"
+                      "morph",
+                      
+                      "casual"
                     ],
                     "sections": [
                       {
@@ -613,7 +772,9 @@
                   {
                     "name": "Blue Brinstar Missiles (top)",
                     "access_rules": [
-                      "@logic/can pb"
+                      "@logic/can pb,@logic/red doors",
+                      
+                      "tournament,@logic/can pb"
                     ],
                     "sections": [
                       {
@@ -674,8 +835,18 @@
                   {
                     "name": "Brinstar Reserve Tank",
                     "access_rules": [
-                      "@logic/red doors,speed",
-                      "@logic/red doors,@logic/bomb walls, morph"
+                      "@logic/red doors,@logic/bomb walls,morph",
+                      
+                      "tournament,@logic/red doors,speed",
+                      
+                      "casual,@logic/red doors,@logic/bomb walls,speed",
+                      
+                      "normal,@logic/red doors,speed",
+                      
+                      "hard,@logic/red doors,speed",
+                      
+                      "open,@logic/red doors,speed",
+                      "open,@logic/red doors,morph"
                     ],
                     "sections": [
                       {
@@ -754,7 +925,12 @@
                   {
                     "name": "Green Brinstar Missile (below super)",
                     "access_rules": [
-                      "@logic/bomb passages,@logic/red doors"
+                      "tournament,@logic/bomb passages,@logic/red doors",
+                      "casual,@logic/bomb passages,@logic/red doors",
+                      "normal,@logic/bomb passages,@logic/red doors",
+                      "hard,@logic/bomb passages,@logic/red doors",
+                      
+                      "open,@logic/red doors"
                     ],
                     "sections": [
                       {
@@ -778,8 +954,18 @@
                   {
                     "name": "Green Brinstar Super (top)",
                     "access_rules": [
-                      "@logic/red doors,speed",
-                      "@logic/red doors,@logic/bomb walls,morph"
+                      "@logic/red doors,@logic/bomb walls,morph",
+                      
+                      "tournament,@logic/red doors,speed",
+                      
+                      "casual,@logic/red doors,@logic/bomb walls,speed",
+                      
+                      "normal,@logic/red doors,speed",
+                      
+                      "hard,@logic/red doors,speed",
+                      
+                      "open,@logic/red doors,speed",
+                      "open,@logic/red doors,morph"
                     ],
                     "sections": [
                       {
@@ -837,8 +1023,10 @@
                   {
                     "name": "Green Brinstar Missile (pipe)",
                     "access_rules": [
-                      "@logic/bomb passages,@logic/green doors",
-                      "@logic/can pb"
+                      "@logic/bomb passages,super",
+                      "@logic/can pb",
+                      
+                      "open,morph"
                     ],
                     "sections": [
                       {
@@ -862,7 +1050,7 @@
                   {
                     "name": "Green Brinstar Super (bottom)",
                     "access_rules": [
-                      "@logic/can pb,@logic/green doors"
+                      "@logic/can pb,super"
                     ],
                     "sections": [
                       {
@@ -892,7 +1080,9 @@
             "color": "#704858",
             "access_rules": [
               "@logic/bomb walls,@logic/red doors",
-              "@logic/can pb"
+              "@logic/can pb",
+              
+              "open"
             ],
             "children": [
               {
@@ -949,7 +1139,17 @@
                     "name": "Brinstar Gate E-Tank",
                     "access_rules": [
                       "@logic/can pb,wave",
-                      "@logic/can pb,super,hijump"
+                      
+                      "tournament,@logic/can pb,super,hijump",
+                      
+                      "casual,@logic/can pb,super",
+                      
+                      "normal,@logic/can pb,super",
+                      
+                      "hard,@logic/can pb,super",
+                      
+                      "open,wave",
+                      "open,super"
                     ],
                     "sections": [
                       {
@@ -1077,7 +1277,9 @@
             "access_rules": [
               "super,@logic/can bomb",
               "super,@logic/can pb",
-              "super,morph,screw"
+              "super,morph,screw",
+              
+              "open"
             ],
             "children": [
               {
@@ -1090,8 +1292,18 @@
                     "access_rules": [
                       "@logic/can pb,grapple",
                       "@logic/can pb,space",
-                      "@logic/can pb,varia,alltanks:4",
-                      "@logic/can pb,alltanks:6"
+                      
+                      "tournament,@logic/can pb,varia,alltanks:4",
+                      "tournament,@logic/can pb,alltanks:6",
+                      
+                      "normal,@logic/can pb,varia,alltanks:4",
+                      "normal,@logic/can pb,gravity,alltanks:3",
+                      "normal,@logic/can pb,alltanks:6",
+                      
+                      "hard,@logic/can pb,alltanks:1",
+                      
+                      "open,@logic/can pb,varia,alltanks:3",
+                      "open,@logic/can pb,alltanks:6"
                     ],
                     "sections": [
                       {
@@ -1114,6 +1326,17 @@
                   },
                   {
                     "name": "Spazer",
+                    "access_rules": [
+                      "tournament",
+                      
+                      "casual,@logic/bomb passages",
+                      
+                      "normal,@logic/bomb passages",
+                      
+                      "hard,@logic/red tower,@logic/bomb passages",
+                      
+                      "open"
+                    ],
                     "sections": [
                       {
                         "name": "Major Item",
@@ -1167,7 +1390,12 @@
                   {
                     "name": "Red Brinstar PB (spikes)",
                     "access_rules": [
-                      "@logic/can pb"
+                      "tournament,@logic/can pb",
+                      "casual,@logic/can pb",
+                      "normal,@logic/can pb",
+                      "hard,@logic/can pb",
+                      
+                      "open,super"
                     ],
                     "sections": [
                       {
@@ -1191,7 +1419,12 @@
                   {
                     "name": "Red Brinstar Missile",
                     "access_rules": [
-                      "@logic/can pb"
+                      "tournament,@logic/can pb",
+                      "casual,@logic/can pb",
+                      "normal,@logic/can pb",
+                      "hard,@logic/can pb",
+                      
+                      "open,@logic/can pb,super"
                     ],
                     "sections": [
                       {
@@ -1220,8 +1453,13 @@
             "name": "Kraid",
             "color": "#007038",
             "access_rules": [
-              "super,@logic/can bomb",
-              "super,@logic/can pb"
+              "tournament,@logic/red brinstar,@logic/bomb passages",
+              "casual,@logic/red brinstar,@logic/bomb passages",
+              "normal,@logic/red brinstar,@logic/bomb passages",
+              
+              "hard,@logic/red tower,@logic/bomb passages",
+              
+              "open"
             ],
             "children": [
               {
@@ -1310,11 +1548,6 @@
       },
       {
         "name": "Norfair",
-        "access_rules": [
-          "super,@logic/can bomb",
-          "super,@logic/can pb",
-          "super,morph,screw"
-        ],
         "children": [
           {
             "name": "Upper Norfair",
@@ -1328,8 +1561,19 @@
                   {
                     "name": "Ice Beam",
                     "access_rules": [
-                      "@logic/kraid,varia",
-                      "@logic/kraid,alltanks:2"
+                      "tournament,@logic/kraid,varia",
+                      "tournament,@logic/kraid,alltanks:2",
+                      
+                      "casual,@logic/kraid,varia,speed",
+                      
+                      "normal,@logic/kraid,varia",
+                      "normal,@logic/kraid,alltanks:2",
+                      
+                      "hard,@logic/kraid,varia",
+                      "hard,@logic/kraid,alltanks:2",
+                      
+                      "open,morph,varia",
+                      "open,morph,alltanks:2"
                     ],
                     "sections": [
                       {
@@ -1376,6 +1620,17 @@
                   },
                   {
                     "name": "Hi-Jump Boots",
+                    "access_rules": [
+                      "tournament,@logic/red brinstar",
+                      
+                      "casual,@logic/red brinstar",
+                      
+                      "normal,@logic/red brinstar",
+                      
+                      "hard,@logic/red tower",
+                      
+                      "open,morph"
+                    ],
                     "sections": [
                       {
                         "name": "Major Item",
@@ -1398,9 +1653,26 @@
                   {
                     "name": "Grapple Beam",
                     "access_rules": [
-                      "@logic/crocomire,@logic/can fly",
-                      "@logic/crocomire,ice",
-                      "@logic/crocomire,speed"
+                      "tournament,@logic/crocomire,@logic/can fly",
+                      "tournament,@logic/crocomire,ice",
+                      "tournament,@logic/crocomire,speed",
+                      
+                      "casual,@logic/crocomire,@logic/can fly",
+                      "casual,@logic/crocomire,ice",
+                      "casual,@logic/crocomire,speed",
+                      
+                      "normal,@logic/crocomire,@logic/can fly",
+                      "normal,@logic/crocomire,ice",
+                      "normal,@logic/crocomire,speed",
+                      
+                      "hard,@logic/crocomire,morph,@logic/can fly",
+                      "hard,@logic/crocomire,morph,ice",
+                      "hard,@logic/crocomire,morph,speed",
+                      
+                      "open,@logic/crocomire,super,gravity",
+                      "open,@logic/crocomire,super,@logic/can fly",
+                      "open,@logic/crocomire,super,hijump,ice",
+                      "open,@logic/crocomire,super,hijump,speed"
                     ],
                     "sections": [
                       {
@@ -1424,13 +1696,25 @@
                   {
                     "name": "Norfair Reserve Tank/Missile",
                     "access_rules": [
-                      "@logic/can hellrun,@logic/can fly",
-                      "@logic/can hellrun,grapple",
-                      "@logic/can hellrun,hijump"
+                      "notopen,@logic/heated norfair,@logic/can fly",
+                      "notopen,@logic/heated norfair,grapple",
+                      "notopen,@logic/heated norfair,hijump",
+                      
+                      "open,@logic/heated norfair,super,morph"
                     ],
                     "sections": [
                       {
                         "name": "Major Item",
+                        "access_rules": [
+                          "tournament",
+                          "casual",
+                          "normal",
+                          
+                          "open",
+                          
+                          "hard,ice",
+                          "hard,spring"
+                        ],
                         "item_count": 1
                       },
                       {
@@ -1456,7 +1740,13 @@
                   {
                     "name": "Speed Booster",
                     "access_rules": [
-                      "@logic/can hellrun"
+                      "tournament,@logic/heated norfair",
+                      
+                      "casual,@logic/heated norfair,hijump",
+                      
+                      "normal,@logic/heated norfair",
+                      "hard,@logic/heated norfair",
+                      "open,@logic/heated norfair"
                     ],
                     "sections": [
                       {
@@ -1480,7 +1770,13 @@
                   {
                     "name": "Wave Beam",
                     "access_rules": [
-                      "@logic/can hellrun"
+                      "tournament,@logic/heated norfair",
+                      
+                      "casual,@logic/heated norfair,hijump",
+                      
+                      "normal,@logic/heated norfair",
+                      "hard,@logic/heated norfair",
+                      "open,@logic/heated norfair"
                     ],
                     "sections": [
                       {
@@ -1511,7 +1807,7 @@
                   {
                     "name": "Norfair Missile (lava room)",
                     "access_rules": [
-                      "@logic/can hellrun"
+                      "@logic/heated norfair"
                     ],
                     "sections": [
                       {
@@ -1535,7 +1831,7 @@
                   {
                     "name": "Norfair Missile (below ice)",
                     "access_rules": [
-                      "@logic/can pb,@logic/can hellrun"
+                      "@logic/kraid,@logic/can pb,@logic/can hellrun"
                     ],
                     "sections": [
                       {
@@ -1584,6 +1880,17 @@
                   },
                   {
                     "name": "Hi-Jump Missile",
+                    "access_rules": [
+                      "tournament,@logic/red brinstar",
+                      
+                      "casual,@logic/red brinstar",
+                      
+                      "normal,@logic/red brinstar",
+                      
+                      "hard,@logic/red tower",
+                      
+                      "open,morph"
+                    ],
                     "sections": [
                       {
                         "name": "Minor Item",
@@ -1605,6 +1912,17 @@
                   },
                   {
                     "name": "Hi-Jump E-Tank",
+                    "access_rules": [
+                      "tournament,@logic/red brinstar",
+                      
+                      "casual,@logic/red brinstar",
+                      
+                      "normal,@logic/red brinstar",
+                      
+                      "hard,@logic/red tower",
+                      
+                      "open"
+                    ],
                     "sections": [
                       {
                         "name": "MINOR ITEM",
@@ -1701,9 +2019,11 @@
                   {
                     "name": "Bubble Norfair Missile (green door)",
                     "access_rules": [
-                      "@logic/can hellrun,@logic/can fly",
-                      "@logic/can hellrun,grapple",
-                      "@logic/can hellrun,hijump"
+                      "notopen,@logic/heated norfair,@logic/can fly",
+                      "notopen,@logic/heated norfair,grapple",
+                      "notopen,@logic/heated norfair,hijump",
+                      
+                      "open,@logic/heated norfair,super"
                     ],
                     "sections": [
                       {
@@ -1727,7 +2047,7 @@
                   {
                     "name": "Bubble Norfair Missile",
                     "access_rules": [
-                      "@logic/can hellrun"
+                      "@logic/heated norfair"
                     ],
                     "sections": [
                       {
@@ -1751,7 +2071,7 @@
                   {
                     "name": "Speed Booster Missile",
                     "access_rules": [
-                      "@logic/can hellrun"
+                      "@logic/heated norfair"
                     ],
                     "sections": [
                       {
@@ -1775,7 +2095,7 @@
                   {
                     "name": "Wave Beam Missile",
                     "access_rules": [
-                      "@logic/can hellrun"
+                      "@logic/heated norfair"
                     ],
                     "sections": [
                       {
@@ -1804,8 +2124,18 @@
             "name": "Lower Norfair",
             "color": "#700010",
             "access_rules": [
-              "super,@logic/can pb,varia,hijump",
-              "super,@logic/can pb,varia,gravity"
+              "tournament,@logic/heated norfair,powerbomb,varia,hijump",
+              "tournament,@logic/heated norfair,powerbomb,varia,gravity",
+              
+              "casual,@logic/heated norfair,@logic/can pb,varia,gravity",
+              
+              "normal,@logic/heated norfair,@logic/can pb,varia,hijump",
+              "normal,@logic/heated norfair,@logic/can pb, varia,gravity",
+              
+              "hard,@logic/heated norfair,@logic/can pb,varia",
+              "hard,@logic/heated norfair,@logic/can pb,alltanks:10,@logic/crystal flash",
+              
+              "open,@logic/heated norfair,varia"
             ],
             "children": [
               {
@@ -1816,7 +2146,15 @@
                   {
                     "name": "Ridley E-Tank",
                     "access_rules": [
-                      "@logic/worst room"
+                      "tournament,@logic/worst room",
+                      
+                      "casual,@logic/worst room,alltanks:5",
+                      
+                      "normal,@logic/worst room,alltanks:2",
+                      
+                      "hard,@logic/worst room,alltanks:2",
+                      
+                      "open,@logic/worst room,@logic/can pb,alltanks:2"
                     ],
                     "sections": [
                       {
@@ -1937,7 +2275,9 @@
                   {
                     "name": "Mickey Mouse Missile",
                     "access_rules": [
-                      "@logic/worst room"
+                      "notopen,@logic/worst room",
+                      
+                      "open,@logic/worst room,morph"
                     ],
                     "sections": [
                       {
@@ -1985,7 +2325,9 @@
                   {
                     "name": "PB Above Fire Fleas",
                     "access_rules": [
-                      "@logic/worst room"
+                      "notopen,@logic/worst room",
+                      
+                      "open,@logic/worst room,@logic/bomb passages"
                     ],
                     "sections": [
                       {
@@ -2009,7 +2351,9 @@
                   {
                     "name": "Power Bombs of Shame",
                     "access_rules": [
-                      "@logic/worst room"
+                      "notopen,@logic/worst room",
+                      
+                      "open,@logic/worst room,@logic/bomb passages"
                     ],
                     "sections": [
                       {
@@ -2033,7 +2377,9 @@
                   {
                     "name": "Missiles Near Wave",
                     "access_rules": [
-                      "@logic/worst room"
+                      "notopen,@logic/worst room",
+                      
+                      "open,@logic/worst room,@logic/bomb passages"
                     ],
                     "sections": [
                       {
@@ -2064,7 +2410,9 @@
         "name": "Wrecked Ship",
         "color": "#707048",
         "access_rules": [
-          "super,@logic/can pb"
+          "super,@logic/can pb",
+          
+          "open"
         ],
         "children": [
           {
@@ -2075,8 +2423,22 @@
               {
                 "name": "Wrecked Ship Reserve Tank",
                 "access_rules": [
-                  "speed,varia",
-                  "speed,alltanks:1"
+                  "tournament,speed,varia",
+                  "tournament,speed,alltanks:1",
+                  
+                  "casual,speed,varia,alltanks:1",
+                  "casual,speed,alltanks:2",
+                  
+                  "normal,speed,varia",
+                  "normal,speed,gravity",
+                  "normal,speed,alltanks:1",
+                  
+                  "hard,speed,varia",
+                  "hard,speed,gravity",
+                  "hard,speed,alltanks:1",
+                  
+                  "open,speed,@logic/can pb,varia",
+                  "open,speed,@logic/can pb,alltanks:1"
                 ],
                 "sections": [
                   {
@@ -2099,6 +2461,18 @@
               },
              {
                 "name": "Wrecked Ship E-Tank",
+                "access_rules": [
+                  "tournament",
+                  
+                  "normal",
+                  "hard",
+                  "open",
+                  
+                  "casual,gravity",
+                  "casual,hijump",
+                  "casual,space",
+                  "casual,speed"
+                ],
                 "sections": [
                   {
                     "name": "Major Item",
@@ -2142,8 +2516,22 @@
               {
                 "name": "Gravity Suit",
                 "access_rules": [
-                  "varia",
-                  "alltanks:1"
+                  "tournament,varia",
+                  "tournament,alltanks:1",
+                  
+                  "casual,varia,alltanks:1",
+                  "casual,alltanks:2",
+                  
+                  "normal,varia",
+                  "normal,gravity",
+                  "normal,alltanks:1",
+                  
+                  "hard,varia",
+                  "hard,gravity",
+                  "hard,alltanks:1",
+                  
+                  "open,morph,varia",
+                  "open,morph,alltanks:1"
                 ],
                 "sections": [
                   {
@@ -2173,6 +2561,11 @@
             "children": [
               {
                 "name": "Wrecked Ship Missile (middle)",
+                "access_rules": [
+                  "notopen",
+                  
+                  "open,@logic/bomb passages"
+                ],
                 "sections": [
                   {
                     "name": "Minor Item",
@@ -2195,8 +2588,22 @@
               {
                 "name": "Gravity Suit Missile",
                 "access_rules": [
-                  "varia",
-                  "alltanks:1"
+                  "tournament,varia",
+                  "tournament,alltanks:1",
+                  
+                  "casual,varia,alltanks:1",
+                  "casual,alltanks:2",
+                  
+                  "normal,varia",
+                  "normal,gravity",
+                  "normal,alltanks:1",
+                  
+                  "hard,varia",
+                  "hard,gravity",
+                  "hard,alltanks:1",
+                  
+                  "open,@logic/bomb passages,varia",
+                  "open,@logic/bomb passages,alltanks:1"
                 ],
                 "sections": [
                   {
@@ -2261,8 +2668,7 @@
       {
         "name": "Maridia",
         "access_rules": [
-          "super,@logic/can pb,gravity",
-          "super,@logic/can pb,hijump,ice"
+          "@logic/outer maridia"
         ],
         "children": [
           {
@@ -2278,8 +2684,11 @@
                     "name": "Mama Turtle E-Tank",
                     "access_rules": [
                       "@logic/can fly",
-                      "speed",
-                      "grapple"
+                      "grapple",
+                      
+                      "notopen,speed",
+                      
+                      "open,speed,gravity"
                     ],
                     "sections": [
                       {
@@ -2302,12 +2711,24 @@
                   },
                   {
                     "name": "Maridia Reserve Sand Pit (left)",
+                    "access_rules": [
+                      "tournament",
+                      
+                      "notopen,@logic/inner maridia",
+                      
+                      "open,@logic/inner maridia,morph"
+                    ],
                     "sections": [
                       {
                         "name": "Major Item",
                         "access_rules": [
-                          "@logic/suitless maridia",
-                          "gravity"
+                          "tournament,@logic/suitless maridia",
+                          "tournament,gravity",
+                          
+                          "casual",
+                          "normal",
+                          "hard",
+                          "open"
                         ],
                         "item_count": 1
                       },
@@ -2316,7 +2737,12 @@
                         "chest_unopened_img": "images/minor_unopened.png",
                         "chest_opened_img": "images/minor_opened.png",
                         "access_rules": [
-                          "gravity"
+                          "tournament,gravity",
+                          
+                          "casual",
+                          "normal",
+                          "hard",
+                          "open"
                         ],
                         "item_count": 1
                       }
@@ -2337,9 +2763,23 @@
                   {
                     "name": "Spring Ball",
                     "access_rules": [
-                      "gravity,ice",
-                      "gravity,grapple,@logic/can fly",
-                      "gravity,grapple,hijump"
+                      "tournament,@logic/inner maridia,ice",
+                      "tournament,@logic/inner maridia,grapple,@logic/can fly",
+                      "tournament,@logic/inner maridia,grapple,hijump",
+                      
+                      "casual,grapple,space",
+                      
+                      "normal,gravity,ice",
+                      "normal,gravity,grapple",
+                      "normal,spring,hijump,ice",
+                      
+                      "hard,gravity,ice",
+                      "hard,gravity,grapple",
+                      "hard,spring,hijump,ice",
+                      
+                      "open,morph,gravity,ice",
+                      "open,morph,gravity,grapple",
+                      "open,morph,spring,hijump,ice"
                     ],
                     "sections": [
                       {
@@ -2393,6 +2833,12 @@
                   },
                   {
                     "name": "Green Maridia Super",
+                    "access_rules": [
+                      "notopen",
+                      
+                      "open,morph,spring",
+                      "open,@logic/bomb passages"
+                    ],
                     "sections": [
                       {
                         "name": "Minor Item",
@@ -2436,7 +2882,7 @@
                   {
                     "name": "Maridia Sand Pit Missile (right)",
                     "access_rules": [
-                      "gravity"
+                      "@logic/inner maridia"
                     ],
                     "sections": [
                       {
@@ -2460,7 +2906,9 @@
                   {
                     "name": "Maridia Sand Pit PB",
                     "access_rules": [
-                      "gravity"
+                      "notopen,gravity",
+                      
+                      "open,gravity,morph"
                     ],
                     "sections": [
                       {
@@ -2497,9 +2945,11 @@
                   {
                     "name": "Botwoon E-Tank",
                     "access_rules": [
-                      "gravity,ice",
-                      "gravity,speed",
-                      "hijump,ice,grapple"
+                      "notopen,@logic/botwoon",
+                      
+                      "tournament,@logic/suitless maridia",
+                      
+                      "open,@logic/inner maridia"
                     ],
                     "sections": [
                       {
@@ -2523,8 +2973,7 @@
                   {
                     "name": "Space Jump",
                     "access_rules": [
-                      "gravity,ice",
-                      "gravity,speed"
+                      "@logic/draygon"
                     ],
                     "sections": [
                       {
@@ -2603,8 +3052,7 @@
                   {
                     "name": "Draygon Missle",
                     "access_rules": [
-                      "gravity,ice",
-                      "gravity,speed"
+                      "@logic/botwoon"
                     ],
                     "sections": [
                       {
@@ -2633,7 +3081,7 @@
             "name": "Yellow Maridia",
             "color": "#907830",
             "access_rules": [
-              "gravity"
+              "@logic/inner maridia"
             ],
             "children": [
               {
@@ -2644,11 +3092,32 @@
                   {
                     "name": "Plasma Beam",
                     "access_rules": [
-                      "speed",
-                      "@logic/draygon,charge,@logic/can fly",
-                      "@logic/draygon,charge,hijump",
-                      "@logic/draygon,screw,@logic/can fly",
-                      "@logic/draygon,screw,hijump"
+                      "tournament,speed",
+                      "tournament,@logic/draygon,charge,@logic/can fly",
+                      "tournament,@logic/draygon,charge,hijump",
+                      "tournament,@logic/draygon,screw,@logic/can fly",
+                      "tournament,@logic/draygon,screw,hijump",
+                      
+                      "casual,@logic/draygon,space,plasma",
+                      "casual,@logic/draygon,space,screw",
+                      
+                      "normal,@logic/draygon,speed",
+                      "normal,@logic/draygon,charge,@logic/can fly",
+                      "normal,@logic/draygon,charge,hijump",
+                      "normal,@logic/draygon,screw,@logic/can fly",
+                      "normal,@logic/draygon,screw,hijump",
+                      
+                      "hard,@logic/draygon,speed",
+                      "hard,@logic/draygon,charge,@logic/can fly",
+                      "hard,@logic/draygon,charge,hijump",
+                      "hard,@logic/draygon,screw,@logic/can fly",
+                      "hard,@logic/draygon,screw,hijump",
+                      
+                      "open,@logic/draygon,morph,speed",
+                      "open,@logic/draygon,morph,charge,@logic/can fly",
+                      "open,@logic/draygon,morph,charge,hijump",
+                      "open,@logic/draygon,morph,screw,@logic/can fly",
+                      "open,@logic/draygon,morph,screw,hijump"
                     ],
                     "sections": [
                       {
@@ -2678,6 +3147,11 @@
                 "children": [
                   {
                     "name": "Yellow Maridia Super/Missile",
+                    "access_rules": [
+                      "notopen",
+                      
+                      "open,morph"
+                    ],
                     "sections": [
                       {
                         "name": "2 Minor Items",

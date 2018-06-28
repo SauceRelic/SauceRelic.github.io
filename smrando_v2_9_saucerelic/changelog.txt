@@ -1,3 +1,6 @@
+v1.2.10.2:
+  =Changed default broadcast layout, it looks much nicer and does not include obviously visible items (etanks, missiles, xray, etc.)
+
 v1.2.9.2:
   +Added logic for all difficulties other than tournament
   =Removed single item logic shortcuts (green/yellow doors)

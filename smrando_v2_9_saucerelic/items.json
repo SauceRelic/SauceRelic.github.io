@@ -235,219 +235,26 @@
   },
   {
     "name": "Missile Capacity",
-    "type": "progressive",
-    "allow_disabled": "false",
-    "stages": [
-      {
-        "img": "images/vertMiss00.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/vertMiss05.png",
-        "codes": "missile"
-      },
-      {
-        "img": "images/vertMiss10.png",
-        "codes": "missile2"
-      },
-      {
-        "img": "images/vertMiss15.png"
-      },
-      {
-        "img": "images/vertMiss20.png"
-      },
-      {
-        "img": "images/vertMiss25.png"
-      },
-      {
-        "img": "images/vertMiss30.png"
-      },
-      {
-        "img": "images/vertMiss35.png"
-      },
-      {
-        "img": "images/vertMiss40.png"
-      },
-      {
-        "img": "images/vertMiss45.png"
-      },
-      {
-        "img": "images/vertMiss50.png"
-      },
-      {
-        "img": "images/vertMiss55.png"
-      },
-      {
-        "img": "images/vertMiss60.png"
-      },
-      {
-        "img": "images/vertMiss65.png"
-      },
-      {
-        "img": "images/vertMiss70.png"
-      },
-      {
-        "img": "images/vertMiss75.png"
-      },
-      {
-        "img": "images/vertMiss80.png"
-      },
-      {
-        "img": "images/vertMiss85.png"
-      },
-      {
-        "img": "images/vertMiss90.png"
-      },
-      {
-        "img": "images/vertMiss95.png"
-      },
-      {
-        "img": "images/vertMiss100.png"
-      },
-      {
-        "img": "images/vertMiss105.png"
-      },
-      {
-        "img": "images/vertMiss110.png"
-      },
-      {
-        "img": "images/vertMiss115.png"
-      },
-      {
-        "img": "images/vertMiss120.png"
-      },
-      {
-        "img": "images/vertMiss125.png"
-      },
-      {
-        "img": "images/vertMiss130.png"
-      },
-      {
-        "img": "images/vertMiss135.png"
-      },
-      {
-        "img": "images/vertMiss140.png"
-      },
-      {
-        "img": "images/vertMiss145.png"
-      },
-      {
-        "img": "images/vertMiss150.png"
-      },
-      {
-        "img": "images/vertMiss155.png"
-      },
-      {
-        "img": "images/vertMiss160.png"
-      },
-      {
-        "img": "images/vertMiss165.png"
-      },
-      {
-        "img": "images/vertMiss170.png"
-      },
-      {
-        "img": "images/vertMiss175.png"
-      },
-      {
-        "img": "images/vertMiss180.png"
-      },
-      {
-        "img": "images/vertMiss185.png"
-      },
-      {
-        "img": "images/vertMiss190.png"
-      },
-      {
-        "img": "images/vertMiss195.png"
-      }
-    ]
+    "type": "consumable",
+    "img": "images/missile.png",
+    "max_quantity": 255,
+    "increment": 5,
+    "codes": "missile"
   },
   {
     "name": "Super Missile Capacity",
-    "type": "progressive",
-    "allow_disabled": "false",
-    "stages": [
-      {
-        "img": "images/vertSuMi00.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/vertSuMi05.png",
-        "codes": "supermissile,super"
-      },
-      {
-        "img": "images/vertSuMi10.png",
-        "codes": "supermissile2,super2"
-      },
-      {
-        "img": "images/vertSuMi15.png"
-      },
-      {
-        "img": "images/vertSuMi20.png"
-      },
-      {
-        "img": "images/vertSuMi25.png"
-      },
-      {
-        "img": "images/vertSuMi30.png"
-      },
-      {
-        "img": "images/vertSuMi35.png"
-      },
-      {
-        "img": "images/vertSuMi40.png"
-      },
-      {
-        "img": "images/vertSuMi45.png"
-      },
-      {
-        "img": "images/vertSuMi50.png"
-      }
-    ]
+    "type": "consumable",
+    "img": "images/super.png",
+    "max_quantity": 100,
+    "increment": 5,
+    "codes": "supermissile,super"
   },
   {
     "name": "Power Bomb Capacity",
-    "type": "progressive",
-    "allow_disabled": "false",
-    "stages": [
-      {
-        "img": "images/vertBomb00.png",
-        "img_mods": "@disabled"
-      },
-      {
-        "img": "images/vertBomb05.png",
-        "codes": "powerbomb"
-      },
-      {
-        "img": "images/vertBomb10.png",
-        "codes": "powerbomb2"
-      },
-      {
-        "img": "images/vertBomb15.png",
-        "codes": "powerbomb3"
-      },
-      {
-        "img": "images/vertBomb20.png"
-      },
-      {
-        "img": "images/vertBomb25.png"
-      },
-      {
-        "img": "images/vertBomb30.png"
-      },
-      {
-        "img": "images/vertBomb35.png"
-      },
-      {
-        "img": "images/vertBomb40.png"
-      },
-      {
-        "img": "images/vertBomb45.png"
-      },
-      {
-        "img": "images/vertBomb50.png"
-      }
-    ]
+    "type": "consumable",
+    "img": "images/powerbomb.png",
+    "max_quantity": 100,
+    "increment": 5,
+    "codes": "powerbomb,pb"
   }
 ]

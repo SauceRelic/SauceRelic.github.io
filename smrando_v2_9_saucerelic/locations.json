@@ -62,7 +62,7 @@
       {
         "name": "crystal flash",
         "access_rules": [
-          "missile2,super2,powerbomb3"
+          "missile:10,super:10,powerbomb:15"
         ],
         "item_count": 1
       },
@@ -70,36 +70,36 @@
         "name": "gauntlet",
         "access_rules": [
           "tournament,@logic/can bomb",
-          "tournament,@logic/can fly,@logic/can pb,powerbomb2",
+          "tournament,@logic/can fly,@logic/can pb,powerbomb:10",
           "tournament,@logic/can fly,screw",
           "tournament,@logic/can fly,speed,@logic/can pb,alltanks:2",
-          "tournament,hijump,@logic/can pb,powerbomb2",
+          "tournament,hijump,@logic/can pb,powerbomb:10",
           "tournament,hijump,screw",
           "tournament,hijump,speed,@logic/can pb,alltanks:2",
-          "tournament,speed,@logic/can pb,powerbomb2",
+          "tournament,speed,@logic/can pb,powerbomb:10",
           "tournament,speed,screw",
           "tournament,speed,@logic/can pb,alltanks:2",
           
           "casual,alltanks:3,@logic/can bomb",
-          "casual,alltanks:3,@logic/can pb,powerbomb2",
+          "casual,alltanks:3,@logic/can pb,powerbomb:10",
           "casual,alltanks:3,screw",
           
           "normal,alltanks:3,@logic/can bomb",
-          "normal,alltanks:3,@logic/can pb,powerbomb2",
+          "normal,alltanks:3,@logic/can pb,powerbomb:10",
           "normal,alltanks:3,screw",
           
           "hard,alltanks:3,@logic/can bomb",
-          "hard,alltanks:3,@logic/can pb,powerbomb2",
+          "hard,alltanks:3,@logic/can pb,powerbomb:10",
           "hard,alltanks:3,screw",
           
           "open,@logic/can bomb",
-          "open,@logic/can fly,@logic/can pb,powerbomb2",
+          "open,@logic/can fly,@logic/can pb,powerbomb:10",
           "open,@logic/can fly,screw",
           "open,@logic/can fly,speed,@logic/can pb,alltanks:2",
-          "open,hijump,@logic/can pb,powerbomb2",
+          "open,hijump,@logic/can pb,powerbomb:10",
           "open,hijump,screw",
           "open,hijump,speed,@logic/can pb,alltanks:2",
-          "open,speed,@logic/can pb,powerbomb2",
+          "open,speed,@logic/can pb,powerbomb:10",
           "open,speed,screw",
           "open,speed,@logic/can pb,alltanks:2"
         ],

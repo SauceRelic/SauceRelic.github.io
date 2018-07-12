@@ -1,4 +1,9 @@
-v.2.11.2:
+v1.2.14.2:
+  =Changed ammo to consumable type with custom increment
+  =Rearranged tracker layout to accommodate new ammo images
+  =Recolored and resized some images to make images more consistent
+
+v1.2.11.2:
   =Added optional difficulty icons with bordered text for readability if needed (change item img to 'images/diff_***_border.png' to use)
 
 v1.2.10.2:

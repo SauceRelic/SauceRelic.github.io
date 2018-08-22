@@ -3,6 +3,7 @@
   "packages": [
     {
       "name": "Super Metroid Randomizer - v2.9",
+      "game_name": "Super Metroid Randomizer",
       "author": "SauceRelic",
       "version": "1.2.14.2",
       "uid": "smrando_v2_9_saucerelic",

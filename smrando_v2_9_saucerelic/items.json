@@ -51,13 +51,6 @@
     "codes": "charge"
   },
   {
-    "name": "Ice Beam",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/ice.png",
-    "codes": "ice"
-  },
-  {
     "name": "Wave Beam",
     "type": "toggle",
     "loop": "true",
@@ -65,11 +58,11 @@
     "codes": "wave"
   },
   {
-    "name": "Spazer Beam",
+    "name": "Ice Beam",
     "type": "toggle",
     "loop": "true",
-    "img": "images/spazer.png",
-    "codes": "spazer"
+    "img": "images/ice.png",
+    "codes": "ice"
   },
   {
     "name": "Plasma Beam",
@@ -77,6 +70,13 @@
     "loop": "true",
     "img": "images/plasma.png",
     "codes": "plasma"
+  },
+  {
+    "name": "Spazer Beam",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/spazer.png",
+    "codes": "spazer"
   },
   {
     "name": "Varia Suit",
@@ -114,13 +114,6 @@
     "codes": "spring"
   },
   {
-    "name": "Screw Attack",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/screw.png",
-    "codes": "screw"
-  },
-  {
     "name": "High Jump",
     "type": "toggle",
     "loop": "true",
@@ -154,6 +147,13 @@
     "loop": "true",
     "img": "images/xray.png",
     "codes": "xray"
+  },
+  {
+    "name": "Screw Attack",
+    "type": "toggle",
+    "loop": "true",
+    "img": "images/screw.png",
+    "codes": "screw"
   },
   {
     "name": "Ridley",

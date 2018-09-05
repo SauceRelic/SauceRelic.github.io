@@ -1,3 +1,6 @@
+v1.2.14.3:
+  -Fixed Wrecked Ship E-Tank/top missile locations on indiv. map
+
 v1.2.14.2:
   =Changed ammo to consumable type with custom increment
   =Rearranged tracker layout to accommodate new ammo images

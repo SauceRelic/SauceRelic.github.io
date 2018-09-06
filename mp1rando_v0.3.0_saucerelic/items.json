@@ -58,7 +58,7 @@
     "type": "toggle",
     "loop": "true",
     "img": "images/super.png",
-    "codes": "super"
+    "codes": "supermissile,super"
   },
   {
     "name": "Wave Buster",
@@ -163,7 +163,7 @@
     "type": "consumable",
     "img": "images/etank.png",
     "max_quantity": 14,
-    "codes": "etank"
+    "codes": "etank,etanks"
   },
   {
     "name": "Missile Capacity",
@@ -171,14 +171,14 @@
     "img": "images/missile.png",
     "max_quantity": 250,
     "increment": 5,
-    "codes": "missile"
+    "codes": "missile,missiles"
   },
   {
     "name": "Power Bomb Capacity",
     "type": "consumable",
     "img": "images/powerbomb.png",
     "max_quantity": 8,
-    "codes": "powerbomb,pb"
+    "codes": "powerbomb,powerbombs,pb,pbs"
   },
   {
     "name": "Artifact of Truth",

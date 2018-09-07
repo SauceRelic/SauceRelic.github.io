@@ -116,6 +116,7 @@
         ],
         "item_count": 1
       },
+      // Only used for hard/sequence breaks
       {
         "name": "mags thardus",
         "sections": [
@@ -126,6 +127,7 @@
         ],
         "item_count": 1
       },
+      // Only used for hard/sequence breaks
       {
         "name": "mags frozenpike",
         "sections": [
@@ -171,15 +173,30 @@
       {
         "name": "frigate",
         "access_rules": [
-          "glitchless,@can/bomb,missile,space,gravity,wave,ice,thermal"
+          "@can/bomb,missile,space,gravity,wave,ice,thermal"
         ],
         "item_count": 1
       },
       {
         "name": "chozohote",
         "access_rules": [
-          "glitchless,@can/bomb,missile,spider,space,wave,boost",
-          "glitchless,@can/bomb,missile,spider,space,ice"
+          "@can/bomb,missile,spider,space,wave,boost",
+          "@can/bomb,missile,spider,space,ice"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "frigate break",
+        "access_rules": [
+          "@can/bomb,missile,ice,[space],[gravity],[wave],[thermal]"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "chozohote break",
+        "access_rules": [
+          "@can/bomb,missile,[spider],[space],[wave],[boost]",
+          "@can/bomb,missile,[spider],[space],[ice]"
         ],
         "item_count": 1
       }
@@ -187,31 +204,332 @@
   },
   {
     "name": "Tallon Overworld",
-    "sections": [
+    "children": [
+      {
+        "name": "Landing Site",
+        "access_rules": [
+          // Global access
+          "morph",
 
+          // Globally visible
+          "{}"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Alcove",
+        "access_rules": [
+          // Global access
+          "@can/bomb,boost",
+          "space",
+
+          // Normal access
+          "normal",
+
+          // Hard access
+          "hard",
+
+          // Sequence breaks
+          "[space]"
+        ],
+        "sections": [
+          {
+            "name": "Space Jump",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Artifact Temple",
+        "access_rules": [
+          // Global access
+          "missile"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Truth",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Root Cave",
+        "access_rules": [
+          // Global access
+          "missile,space,grapple,xray",
+
+          // Normal access
+          "normal,missile,space,grapple",
+
+          // Hard access
+          "hard,missile,space",
+
+          // Sequence breaks
+          "missile,space,[grapple],[xray]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Arbor Chamber",
+        "access_rules": [
+          // Global access
+          "missile,space,plasma,grapple,xray",
+
+          // Normal access
+          "normal,missile,space,plasma,grapple",
+
+          // Hard access
+          "hard,missile,space,@can/bomb",
+          "hard,missile,space,plasma",
+
+          // Sequence breaks
+          "missile,space,plasma,[grapple],[xray]",
+          "missile,space,@can/bomb,[plasma],[grapple],[xray]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel B",
+        "access_rules": [
+          // Global access
+          "missile"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Frigate Crash Site",
+        "access_rules": [
+          // Global access
+          "missile,morph,space,gravity",
+
+          // Normal access
+          "normal,missile,morph,space",
+
+          // Hard access
+          "hard,missile,morph",
+
+          // Sequence breaks
+          "missile,morph,[space],[gravity]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Overgrown Cavern",
+        "access_rules": [
+          // Glitchless access
+          "@reqs/chozohote,wave,ice,boost",
+          "@reqs/frigate,boost",
+
+          // Normal access
+          "normal,@can/bomb,missile,wave,ice,space",
+
+          // Hard access
+          "hard,@can/bomb,missile,ice",
+
+          // Sequence breaks
+          "@reqs/chozohote break,ice,[wave],[boost]",
+          "@reqs/frigate break,[boost]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Cargo Freight Lift to Deck Gamma",
+        "access_rules": [
+          // Glitchless access
+          "@reqs/frigate",
+
+          // Normal access
+          "normal,@can/bomb,missile,gravity,space,wave,ice",
+
+          // Hard access
+          "hard,@can/bomb,missile,ice,gravity",
+
+          // Sequence breaks
+          "@reqs/frigate break,gravity"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Biohazard Containment",
+        "access_rules": [
+          // Glitchless access
+          "@reqs/frigate,@can/super",
+
+          // Normal access
+          "normal,@can/bomb,@can/super,gravity,space,wave,ice",
+
+          // Hard access
+          "hard,@can/bomb,@can/super,ice,gravity",
+
+          // Sequence breaks
+          "@reqs/frigate break,@can/super,gravity"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Hydro Access Tunnel",
+        "access_rules": [
+          // Glitchless access
+          "@reqs/frigate",
+
+          // Normal access
+          "normal,@can/bomb,missile,gravity,space,wave,ice",
+
+          // Hard access
+          "hard,@can/bomb,missile,ice,gravity",
+
+          // Sequence breaks
+          "@reqs/frigate break,gravity"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Great Tree Chamber",
+        "access_rules": [
+          // Glitchless access
+          "xray,@reqs/chozohote,wave,ice,boost",
+          "xray,@reqs/frigate,boost",
+
+          // Normal access
+          "normal,@can/bomb,missile,space,ice",
+
+          // Hard access
+          "hard,@can/bomb,missile,ice",
+
+          // Sequence breaks
+          "@reqs/chozohote break,ice,[xray],[wave],[boost]",
+          "@reqs/frigate break,[xray],[boost]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Life Grove Tunnel",
+        "access_rules": [
+          // Global access
+          "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
+
+          // Normal access
+          "normal,@can/bomb,@can/pb,missile,boost,space,wave,ice",
+
+          // Hard access
+          "hard,@can/bomb,@can/pb,missile,ice,space",
+          "hard,@can/bomb,@can/pb,missile,ice,spider",
+
+          // Sequence breaks
+          "@can/bomb,@can/pb,missile,ice,space,[spider],[boost],[wave]",
+          "@can/bomb,@can/pb,missile,ice,spider,[space],[boost],[wave]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Life Grove",
+        "access_rules": [
+          // Global access
+          "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
+
+          // Normal access
+          "normal,@can/bomb,@can/pb,missile,boost,space,wave,ice",
+
+          // Hard access
+          "hard,@can/bomb,@can/pb,missile,ice,space",
+          "hard,@can/bomb,@can/pb,missile,ice,spider",
+
+          // Sequence breaks
+          "@can/bomb,@can/pb,missile,ice,space,[spider],[boost],[wave]",
+          "@can/bomb,@can/pb,missile,ice,spider,[space],[boost],[wave]"
+        ],
+        "sections": [
+          {
+            "name": "X-Ray Visor",
+            "item_count": 1
+          },
+          {
+            "name": "Artifact of Chozo",
+            "item_count": 1
+          }
+        ]
+      }
     ]
   },
   {
     "name": "Chozo Ruins",
-    "sections": [
-
+    "children": [
+      {
+        "name": "Main Plaza"
+      }
     ]
   },
   {
     "name": "Magmoor Caverns",
-    "sections": [
+    "children": [
 
     ]
   },
   {
     "name": "Phendrana Drifts",
-    "sections": [
+    "children": [
 
     ]
   },
   {
     "name": "Phazon Mines",
-    "sections": [
+    "children": [
 
     ]
   }

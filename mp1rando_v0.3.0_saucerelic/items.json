@@ -2,25 +2,25 @@
   {
     "name": "Difficulty",
     "type": "progressive",
-    "allow_disabled": "false",
-    "loop": "true",
+    "allow_disabled": false,
+    "loop": true,
     "stages": [
       {
         "name": "No Glitches",
         "img": "images/diff_glitchless.png",
-        "inherit_codes": "false",
+        "inherit_codes": false,
         "codes": "difficulty,glitchless"
       },
       {
         "name": "Normal",
         "img": "images/diff_normal.png",
-        "inherit_codes": "false",
+        "inherit_codes": false,
         "codes": "normal"
       },
       {
         "name": "Hard",
         "img": "images/diff_hard.png",
-        "inherit_codes": "false",
+        "inherit_codes": false,
         "codes": "hard"
       }
     ]
@@ -28,35 +28,35 @@
   {
     "name": "Charge Beam",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/charge.png",
     "codes": "charge"
   },
   {
     "name": "Wave Beam",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/wave.png",
     "codes": "wave"
   },
   {
     "name": "Ice Beam",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/ice.png",
     "codes": "ice"
   },
   {
     "name": "Plasma Beam",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/plasma.png",
     "codes": "plasma"
   },
   {
     "name": "Super Missile",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/super.png",
     "codes": "supermissile,super"
   },
@@ -84,77 +84,87 @@
   {
     "name": "Grapple Beam",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/grapple.png",
     "codes": "grapple"
   },
   {
     "name": "Varia Suit",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/varia.png",
     "codes": "varia"
   },
   {
     "name": "Gravity Suit",
-    "type": "toggle",
-    "loop": "true",
-    "img": "images/gravity.png",
-    "codes": "gravity"
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/gravity.png",
+        "img_mods": "@disabled",
+        "codes": "notgravity"
+      },
+      {
+        "img": "images/gravity.png",
+        "codes": "gravity"
+      }
+    ]
   },
   {
     "name": "Phazon Suit",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/phazon.png",
     "codes": "phazon"
   },
   {
     "name": "Morph Ball",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/morph.png",
     "codes": "morph"
   },
   {
     "name": "Bomb",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/bomb.png",
-    "codes": "bomb"
+    "codes": "bomb,bombs"
   },
   {
     "name": "Boost Ball",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/boost.png",
     "codes": "boost"
   },
   {
     "name": "Spider Ball",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/spider.png",
     "codes": "spider"
   },
   {
     "name": "Space Jump Boots",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/space.png",
     "codes": "space"
   },
   {
     "name": "Thermal Visor",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/thermal.png",
     "codes": "thermal"
   },
   {
     "name": "X-Ray Visor",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "img": "images/xray.png",
     "codes": "xray"
   },
@@ -183,73 +193,73 @@
   {
     "name": "Artifact of Truth",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "truth,art1"
   },
   {
     "name": "Artifact of Strength",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "strength,art2"
   },
   {
     "name": "Artifact of Elder",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "elder,art3"
   },
   {
     "name": "Artifact of Wild",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "wild,art4"
   },
   {
     "name": "Artifact of Lifegiver",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "lifegiver,art5"
   },
   {
     "name": "Artifact of World",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "world,art6"
   },
   {
     "name": "Artifact of Sun",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "sun,art7"
   },
   {
     "name": "Artifact of Warrior",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "warrior,art8"
   },
   {
     "name": "Artifact of Newborn",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "newborn,art9"
   },
   {
     "name": "Artifact of Spirit",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "spirit,art10"
   },
   {
     "name": "Artifact of Nature",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "nature,art11"
   },
   {
     "name": "Artifact of Chozo",
     "type": "toggle",
-    "loop": "true",
+    "loop": true,
     "codes": "chozo,art12"
   }
 ]

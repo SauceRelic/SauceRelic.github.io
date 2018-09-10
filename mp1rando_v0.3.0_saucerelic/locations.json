@@ -511,7 +511,627 @@
     "name": "Chozo Ruins",
     "children": [
       {
-        "name": "Main Plaza"
+        "name": "Main Plaza",
+        "sections": [
+          {
+            "name": "Locked Door (E-Tank)",
+            "access_rules": [
+              // Global access
+              "missile,morph",
+
+              // Normal access
+              "normal,space",
+
+              // Hard access
+              "hard,space",
+
+              // Sequence breaks
+              "space,[missile],[morph]"
+
+              // Global visibility
+              "{}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Half-Pipe (Missile)",
+            "access_rules": [
+              // Global access
+              "morph,boost",
+
+              // Normal access
+              "normal,space",
+
+              // Hard access
+              "hard,space",
+              "hard,@can/bomb",
+
+              // Sequence breaks
+              "space,[morph],[boost]",
+              "@can/bomb,[morph],[boost]",
+
+              // Global visibility
+              "{}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Grapple Ledge (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb,@has/any suit,missile,grapple,boost,wave",
+
+              // Normal access
+              "normal,space",
+
+              // Hard access
+              "hard,space",
+              "hard,grapple",
+
+              // Sequence breaks
+              "space,@has/suit break,[morph],[bomb],[missile],[grapple],[boost],[wave]",
+              "grapple,@has/suit break,[morph],[bomb],[missile],[boost],[wave]",
+
+              // Global visibility
+              "{}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Tree (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/super,space",
+
+              // Normal access
+              "normal,@can/super",
+
+              // Hard access
+              "hard,@can/super",
+              "hard,@can/bomb,missile,space",
+
+              // Sequence breaks
+              "@can/super,[space]",
+              "@can/bomb,missile,space,[charge],[super]"
+            ],
+            "item_count": 1,
+          }
+        ]
+      },
+      {
+        "name": "Ruined Fountain",
+        "access_rules": [
+          // Global access
+          "@can/bomb,missile,spider",
+
+          // Global visibility
+          "{morph}"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Ruined Shrine",
+        "sections": [
+          {
+            "name": "Beetle Battle (Morph Ball)",
+            "access_rules": [
+              // Global access and escape
+              "missile,morph",
+              "missile,space",
+
+              // Global access and visibility (can leave before item pickup)
+              "{missile}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Half-Pipe (Missile)",
+            "access_rules": [
+              // Global access
+              "missile,morph,boost",
+
+              // Normal access
+              "normal,missile,morph,space",
+
+              // Hard access
+              "hard,missile,morph",
+
+              // Sequence breaks
+              "missile,morph,[boost]",
+              "missile,morph,space,[boost]"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Lower Tunnel (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb or pb,missile"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Vault",
+        "access_rules": [
+          // Global access
+          "@can/bomb,missile",
+
+          // Global visibility
+          "{missile,morph}"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber",
+        "access_rules": [
+          // Global access
+          "@can/bomb,@has/any suit,missile,grapple,wave,boost,spider",
+
+          // Hard access
+          "hard,@can/bomb,@has/any suit,wave,grapple,boost,spider",
+          "hard,@can/bomb,space,spider",
+
+          // Sequence breaks
+          "@can/bomb,@has/any suit,wave,grapple,boost,spider,[missile]",
+          "@can/bomb,space,spider,@has/suit break,[missile],[grapple],[wave],[boost]"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Training Chamber Access",
+        "access_rules": [
+          // Global access
+          "@has/any suit,missile,morph,grapple,wave",
+
+          // Hard access
+          "hard,morph,wave,@has/any suit,space",
+          "hard,morph,wave,@has/any suit,grapple",
+          "hard,morph,wave,space,etank:2",
+          "hard,morph,@can/bomb,space",
+
+          // Sequence breaks
+          "morph,wave,@has/any suit,space,[grapple],[missile]",
+          "morph,wave,@has/any suit,grapple,[missile]",
+          "morph,wave,space,etank:2,@has/suit break,[grapple],[missile]",
+          "morph,@can/bomb,space,@has/suit break,[missile],[grapple],[wave]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Magma Pool",
+        "access_rules": [
+          // Global access
+          "@can/pb,@has/any suit,missile,grapple",
+
+          // Hard access
+          "hard,@can/pb,@has/any suit,space",
+          "hard,@can/pb,@has/any suit,grapple",
+          "hard,@can/pb,etank:1,space",
+          "hard,@can/bomb,@has/any suit,missile,boost",
+
+          // Sequence breaks
+          "@can/pb,@has/any suit,space,[missile],[grapple]",
+          "@can/pb,@has/any suit,grapple,[missile]",
+          "@can/pb,etank:1,space,@has/suit break,[missile],[grapple]",
+          "@can/bomb,@has/any suit,missile,boost,[powerbomb],[space],[grapple]"
+        ],
+        "sections": [
+          {
+            "name": "Power Bomb",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Tower of Light",
+        "access_rules": [
+          // Global access
+          "@can/bomb,missile:40,boost,spider,wave,space",
+
+          // Normal access
+          "normal,missile,wave,space",
+
+          // Hard access
+          "hard,missile,wave,space",
+          "hard,missile,wave,@can/bomb",
+
+          // Sequence breaks
+          "missile,wave,space,[missile:40],[morph],[bomb],[boost],[spider]",
+          "missile,wave,@can/bomb,[missile:40],[boost],[spider],[space]"
+        ],
+        "sections": [
+          {
+            "name": "Wavebuster",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Tower Chamber",
+        "access_rules": [
+          // Global access
+          "@can/bomb,missile,boost,spider,wave,gravity,space",
+
+          // Normal access
+          "normal,missile,wave,space",
+          "normal,missile,wave,morph,boost,notgravity",
+
+          // Hard access
+          "hard,missile,wave",
+
+          // Sequence breaks
+          "missile,wave,[morph],[bomb],[boost],[spider],[gravity],[space]",
+          "missile,wave,morph,boost,notgravity,[bomb],[spider],[space],[gravity]"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Lifegiver",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ruined Nursery",
+        "access_rules": [
+          // Global access
+          "@can/bomb",
+
+          // Global visibility
+          "{}"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ruined Gallery",
+        "sections": [
+          {
+            "name": "Missile Wall (Missile)",
+            "access_rules": [
+              // Global access
+              "missile"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Tunnel (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Transport Access North",
+        "access_rules": [
+          // Global access
+          "missile"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Gathering Hall",
+        "access_rules": [
+          // Global access
+          "@can/bomb or pb,missile,space",
+
+          // Normal access
+          "normal,@can/bomb,missile",
+
+          // Hard access
+          "hard,missile,@can/bomb",
+          "hard,missile,@can/pb,space",
+
+          // Sequence breaks
+          "missile,@can/bomb,[space]"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Hive Totem",
+        // No requirements
+        "sections": [
+          {
+            "name": "Missile Launcher",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Sunchamber",
+        "sections": [
+          {
+            "name": "Flaahgra (Varia Suit)",
+            "access_rules": [
+              // Global access
+              "@can/bomb,missile"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Ghosts (Artifact of Wild)",
+            "access_rules": [
+              // Global access
+              "@can/bomb,@can/super,spider",
+
+              // Hard access
+              "hard,@can/bomb,missile",
+
+              // Sequence breaks
+              "@can/bomb,missile,[charge],[super],[spider]"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall Access",
+        "access_rules": [
+          // Global access
+          "missile,morph"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Watery Hall",
+        "sections": [
+          {
+            "name": "Scan Puzzle (Charge Beam)",
+            "access_rules": [
+              // Global access
+              "missile,morph"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Underwater (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb,missile,gravity,space",
+
+              // Normal access
+              "normal,missile,space,morph,etank:1",
+              "normal,missile,space,morph,gravity",
+              "normal,missile,space,@can/bomb",
+
+              // Hard access
+              "hard,missile,morph,etank:1",
+
+              // Sequence breaks
+              "missile,morph,etank:1,[bomb],[gravity],[space]"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Dynamo",
+        "sections": [
+          {
+            "name": "Lower Dynamo (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb or pb,missile"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Spider Track (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb or pb,missile,spider"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Burn Dome",
+        "access_rules": [
+          // Global access and escape
+          "@can/bomb,missile"
+        ],
+        "sections": [
+          {
+            "name": "Tunnel (Missile)",
+            "access_rules": [
+              // Global access (must reload if neither burn dome item is bombs)
+              "{missile,@can/bomb or pb}"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Incinerator Drone (Morph Bomb)",
+            "access_rules": [
+              // Global access (must reload if neither burn dome item is bombs)
+              "{missile,morph}"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Furnace",
+        "sections": [
+          {
+            "name": "Spider Tracks ()",
+            "access_rules": [
+              // Global access
+              "@can/bomb,@can/pb,missile,boost,spider",
+
+              // Normal access
+              "normal,@can/bomb,missile,spider,space",
+
+              // Hard access
+              "hard,@can/bomb,missile,space",
+
+              // Sequence breaks
+              "@can/bomb,missile,space,[powerbomb],[boost],[space]"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Tunnel ()",
+            "access_rules": [
+              // Global access
+              "@can/bomb,missile"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Hall of the Elders",
+        "access_rules": [
+          // Global access
+          "@reqs/chozohote,ice",
+
+          // Normal access
+          "normal,@can/bomb,missile,ice,space",
+
+          // Hard access
+          "hard,@can/bomb,missile,space",
+          "hard,@can/bomb,missile,ice,spider",
+
+          // Sequence breaks
+          "@reqs/chozohote break,space,[ice]",
+          "@reqs/chozohote break,ice,spider"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Crossway",
+        "access_rules": [
+          // Global access
+          "@can/bomb,missile,boost,spider,wave",
+          "@can/bomb,missile,boost,spider,ice",
+
+          // Normal access
+          "normal,@can/bomb,missile,space,wave",
+          "normal,@can/bomb,missile,space,ice",
+
+          // Hard access
+          "hard,@can/bomb,missile,space",
+
+          // Sequence breaks
+          "@can/bomb,missile,space,[boost],[spider],[wave]",
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Elder Chamber",
+        "access_rules": [
+          // Global access
+          "@reqs/chozohote,ice,plasma",
+
+          // Normal access
+          "normal,@can/bomb,missile,ice,plasma,space",
+
+          // Hard access
+          "hard,@can/bomb,missile,ice,plasma,space",
+          "hard,@can/bomb,missile,ice,plasma,spider",
+          "hard,@can/bomb,missile,space,boost",
+
+          // Sequence breaks
+          "@reqs/chozohote break,space,boost,[ice],[plasma]"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of World",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Antechamber",
+        "access_rules": [
+          // Global access and escape
+          "@reqs/chozohote,wave,boost,ice",
+          "@reqs/frigate,boost,ice",
+
+          // Normal access and escape
+          "normal,@can/bomb,missile,space,wave,ice",
+
+          // Hard access and escape
+          "hard,missile,ice,@can/bomb",
+          "hard,missile,ice,space",
+          "hard,missile,@can/pb,@can/bomb,space",
+
+          // Global access (must reload if not ice)
+          "{@reqs/chozohote,wave,boost}",
+          "{@reqs/frigate,boost}",
+
+          // Normal access (must reload if not ice)
+          "{normal,@can/bomb,missile,space,wave}",
+
+          // Hard access (must reload if not ice or powerbombs)
+          "{hard,missile,@can/bomb,space}"
+        ],
+        "sections": [
+          {
+            "name": "Ice Beam",
+            "item_count": 1
+          }
+        ]
       }
     ]
   },

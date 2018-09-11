@@ -80,10 +80,7 @@
           "@can/bomb,missile,@has/any suit",
 
           // Hard access
-          "hard,@can/bomb,missile,etank:5,space",
-
-          // Sequence breaks
-          "@can/bomb,missile,etank:5,space,@has/suit break"
+          "[hard],@can/bomb,missile,etank:5,space"
         ],
         "item_count": 1
       },
@@ -94,25 +91,14 @@
           "missile,morph,wave,space,spider,@has/any suit"
 
           // Normal access
-          "normal,missile,morph,wave,space,@has/any suit",
-          "normal,missile,morph,wave,space,etank:2",
+          "[normal],missile,morph,wave,space,@has/any suit",
+          "[normal],missile,morph,wave,space,etank:2",
 
           // Hard access
-          "hard,missile,morph,wave,space,@has/any suit",
-          "hard,missile,morph,wave,space,etank:1",
-          "hard,missile,morph,wave,spider,@has/any suit",
-          "hard,missile,morph,wave,spider,etank:2",
-
-          // Sequence breaks
-          "glitchless,missile,morph,wave,space,@has/any suit,[spider]",
-          "glitchless,missile,morph,wave,space,etank:1,@has/suit break,[spider]",
-          "glitchless,missile,morph,wave,spider,@has/any suit,[space]",
-          "glitchless,missile,morph,wave,spider,etank:2,@has/suit break,[space]",
-
-          "normal,missile,morph,wave,space,@has/any suit",
-          "normal,missile,morph,wave,space,etank:1,[etank:2]",
-          "normal,missile,morph,wave,spider,@has/any suit,[space]",
-          "normal,missile,morph,wave,spider,etank:2,@has/suit break,[space]"
+          "[hard],missile,morph,wave,space,@has/any suit",
+          "[hard],missile,morph,wave,space,etank:1",
+          "[hard],missile,morph,wave,spider,@has/any suit",
+          "[hard],missile,morph,wave,spider,etank:2"
         ],
         "item_count": 1
       },
@@ -120,10 +106,10 @@
       {
         "name": "mags thardus",
         "sections": [
-          "[hard],missile,morph,wave,space,@has/any suit",
-          "[hard],missile,morph,wave,space,etank:1",
-          "[hard],missile,morph,wave,spider,boost,@has/any suit",
-          "[hard],missile,morph,wave,spider,boost,etank:2"
+          "missile,morph,wave,space,@has/any suit",
+          "missile,morph,wave,space,etank:1",
+          "missile,morph,wave,spider,boost,@has/any suit",
+          "missile,morph,wave,spider,boost,etank:2"
         ],
         "item_count": 1
       },
@@ -131,10 +117,10 @@
       {
         "name": "mags frozenpike",
         "sections": [
-          "[hard],missile,morph,wave,ice,space,@has/any suit",
-          "[hard],missile,morph,wave,ice,space,etank:1",
-          "[hard],missile,morph,wave,ice,spider,@has/any suit",
-          "[hard],missile,morph,wave,ice,spider,etank:2"
+          "missile,morph,wave,ice,space,@has/any suit",
+          "missile,morph,wave,ice,space,etank:1",
+          "missile,morph,wave,ice,spider,@has/any suit",
+          "missile,morph,wave,ice,spider,etank:2"
         ],
         "item_count": 1
       },
@@ -145,13 +131,10 @@
           "@can/bomb,missile,wave,ice,space,gravity,thermal",
 
           // Normal access
-          "normal,@can/bomb,missile,wave,ice,space",
+          "[normal],@can/bomb,missile,wave,ice,space",
 
           // Hard access
-          "hard,@can/bomb,missile,wave,ice",
-
-          // Sequence breaks
-          "@can/bomb,missile,wave,ice,[space],[gravity],[thermal]"
+          "[hard],@can/bomb,missile,wave,ice"
         ],
         "item_count": 1
       },
@@ -162,11 +145,8 @@
           "@can/bomb,@can/pb,missile,wave,ice,space,spider,@has/any suit",
 
           // Hard access
-          "hard,@can/bomb,@can/pb,missile,wave,ice,space,@has/any suit",
-          "hard,@can/bomb,@can/pb,missile,wave,ice,space,etank:1",
-
-          // Sequence breaks
-          "@can/bomb,@can/pb,missile,wave,ice,space,etank:1,@has/suit break,[spider]"
+          "[hard],@can/bomb,@can/pb,missile,wave,ice,space,@has/any suit",
+          "[hard],@can/bomb,@can/pb,missile,wave,ice,space,etank:1"
         ],
         "item_count": 1
       },
@@ -230,13 +210,10 @@
           "space",
 
           // Normal access
-          "normal",
+          "[normal]",
 
           // Hard access
-          "hard",
-
-          // Sequence breaks
-          "[space]"
+          "[hard]"
         ],
         "sections": [
           {
@@ -265,13 +242,10 @@
           "missile,space,grapple,xray",
 
           // Normal access
-          "normal,missile,space,grapple",
+          "[normal],missile,space,grapple",
 
           // Hard access
-          "hard,missile,space",
-
-          // Sequence breaks
-          "missile,space,[grapple],[xray]"
+          "[hard],missile,space"
         ],
         "sections": [
           {
@@ -287,15 +261,11 @@
           "missile,space,plasma,grapple,xray",
 
           // Normal access
-          "normal,missile,space,plasma,grapple",
+          "[normal],missile,space,plasma,grapple",
 
           // Hard access
-          "hard,missile,space,@can/bomb",
-          "hard,missile,space,plasma",
-
-          // Sequence breaks
-          "missile,space,plasma,[grapple],[xray]",
-          "missile,space,@can/bomb,[plasma],[grapple],[xray]"
+          "[hard],missile,space,@can/bomb",
+          "[hard],missile,space,plasma"
         ],
         "sections": [
           {
@@ -324,13 +294,10 @@
           "missile,morph,space,gravity",
 
           // Normal access
-          "normal,missile,morph,space",
+          "[normal],missile,morph,space",
 
           // Hard access
-          "hard,missile,morph",
-
-          // Sequence breaks
-          "missile,morph,[space],[gravity]"
+          "[hard],missile,morph"
         ],
         "sections": [
           {
@@ -342,19 +309,15 @@
       {
         "name": "Overgrown Cavern",
         "access_rules": [
-          // Glitchless access
+          // Global access
           "@reqs/chozohote,wave,ice,boost",
           "@reqs/frigate,boost",
 
           // Normal access
-          "normal,@can/bomb,missile,wave,ice,space",
+          "[normal],@can/bomb,missile,wave,ice,space",
 
           // Hard access
-          "hard,@can/bomb,missile,ice",
-
-          // Sequence breaks
-          "@reqs/chozohote break,ice,[wave],[boost]",
-          "@reqs/frigate break,[boost]"
+          "[hard],@can/bomb,missile,ice"
         ],
         "sections": [
           {
@@ -366,17 +329,14 @@
       {
         "name": "Cargo Freight Lift to Deck Gamma",
         "access_rules": [
-          // Glitchless access
+          // Global access
           "@reqs/frigate",
 
           // Normal access
-          "normal,@can/bomb,missile,gravity,space,wave,ice",
+          "[normal],@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "hard,@can/bomb,missile,ice,gravity",
-
-          // Sequence breaks
-          "@reqs/frigate break,gravity"
+          "[hard],@can/bomb,missile,ice,gravity"
         ],
         "sections": [
           {
@@ -388,17 +348,14 @@
       {
         "name": "Biohazard Containment",
         "access_rules": [
-          // Glitchless access
+          // Global access
           "@reqs/frigate,@can/super",
 
           // Normal access
-          "normal,@can/bomb,@can/super,gravity,space,wave,ice",
+          "[normal],@can/bomb,@can/super,gravity,space,wave,ice",
 
           // Hard access
-          "hard,@can/bomb,@can/super,ice,gravity",
-
-          // Sequence breaks
-          "@reqs/frigate break,@can/super,gravity"
+          "[hard],@can/bomb,@can/super,ice,gravity"
         ],
         "sections": [
           {
@@ -410,17 +367,14 @@
       {
         "name": "Hydro Access Tunnel",
         "access_rules": [
-          // Glitchless access
+          // Global access
           "@reqs/frigate",
 
           // Normal access
-          "normal,@can/bomb,missile,gravity,space,wave,ice",
+          "[normal],@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "hard,@can/bomb,missile,ice,gravity",
-
-          // Sequence breaks
-          "@reqs/frigate break,gravity"
+          "[hard],@can/bomb,missile,ice,gravity"
         ],
         "sections": [
           {
@@ -432,19 +386,15 @@
       {
         "name": "Great Tree Chamber",
         "access_rules": [
-          // Glitchless access
+          // Global access
           "xray,@reqs/chozohote,wave,ice,boost",
           "xray,@reqs/frigate,boost",
 
           // Normal access
-          "normal,@can/bomb,missile,space,ice",
+          "[normal],@can/bomb,missile,space,ice",
 
           // Hard access
-          "hard,@can/bomb,missile,ice",
-
-          // Sequence breaks
-          "@reqs/chozohote break,ice,[xray],[wave],[boost]",
-          "@reqs/frigate break,[xray],[boost]"
+          "[hard],@can/bomb,missile,ice"
         ],
         "sections": [
           {
@@ -460,15 +410,11 @@
           "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
 
           // Normal access
-          "normal,@can/bomb,@can/pb,missile,boost,space,wave,ice",
+          "[normal],@can/bomb,@can/pb,missile,boost,space,wave,ice",
 
           // Hard access
-          "hard,@can/bomb,@can/pb,missile,ice,space",
-          "hard,@can/bomb,@can/pb,missile,ice,spider",
-
-          // Sequence breaks
-          "@can/bomb,@can/pb,missile,ice,space,[spider],[boost],[wave]",
-          "@can/bomb,@can/pb,missile,ice,spider,[space],[boost],[wave]"
+          "[hard],@can/bomb,@can/pb,missile,ice,space",
+          "[hard],@can/bomb,@can/pb,missile,ice,spider"
         ],
         "sections": [
           {
@@ -484,15 +430,11 @@
           "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
 
           // Normal access
-          "normal,@can/bomb,@can/pb,missile,boost,space,wave,ice",
+          "[normal],@can/bomb,@can/pb,missile,boost,space,wave,ice",
 
           // Hard access
-          "hard,@can/bomb,@can/pb,missile,ice,space",
-          "hard,@can/bomb,@can/pb,missile,ice,spider",
-
-          // Sequence breaks
-          "@can/bomb,@can/pb,missile,ice,space,[spider],[boost],[wave]",
-          "@can/bomb,@can/pb,missile,ice,spider,[space],[boost],[wave]"
+          "[hard],@can/bomb,@can/pb,missile,ice,space",
+          "[hard],@can/bomb,@can/pb,missile,ice,spider"
         ],
         "sections": [
           {
@@ -520,13 +462,10 @@
               "missile,morph",
 
               // Normal access
-              "normal,space",
+              "[normal],space",
 
               // Hard access
-              "hard,space",
-
-              // Sequence breaks
-              "space,[missile],[morph]"
+              "[hard],space"
 
               // Global visibility
               "{}"
@@ -541,15 +480,11 @@
               "morph,boost",
 
               // Normal access
-              "normal,space",
+              "[normal],space",
 
               // Hard access
-              "hard,space",
-              "hard,@can/bomb",
-
-              // Sequence breaks
-              "space,[morph],[boost]",
-              "@can/bomb,[morph],[boost]",
+              "[hard],space",
+              "[hard],@can/bomb"
 
               // Global visibility
               "{}"
@@ -564,15 +499,11 @@
               "@can/bomb,@has/any suit,missile,grapple,boost,wave",
 
               // Normal access
-              "normal,space",
+              "[normal],space",
 
               // Hard access
-              "hard,space",
-              "hard,grapple",
-
-              // Sequence breaks
-              "space,@has/suit break,[morph],[bomb],[missile],[grapple],[boost],[wave]",
-              "grapple,@has/suit break,[morph],[bomb],[missile],[boost],[wave]",
+              "[hard],space",
+              "[hard],grapple"
 
               // Global visibility
               "{}"
@@ -587,15 +518,11 @@
               "@can/super,space",
 
               // Normal access
-              "normal,@can/super",
+              "[normal],@can/super",
 
               // Hard access
-              "hard,@can/super",
-              "hard,@can/bomb,missile,space",
-
-              // Sequence breaks
-              "@can/super,[space]",
-              "@can/bomb,missile,space,[charge],[super]"
+              "[hard],@can/super",
+              "[hard],@can/bomb,missile,space"
             ],
             "item_count": 1,
           }
@@ -641,14 +568,10 @@
               "missile,morph,boost",
 
               // Normal access
-              "normal,missile,morph,space",
+              "[normal],missile,morph,space",
 
               // Hard access
-              "hard,missile,morph",
-
-              // Sequence breaks
-              "missile,morph,[boost]",
-              "missile,morph,space,[boost]"
+              "[hard],missile,morph"
             ],
             "item_count": 1
           },
@@ -686,12 +609,8 @@
           "@can/bomb,@has/any suit,missile,grapple,wave,boost,spider",
 
           // Hard access
-          "hard,@can/bomb,@has/any suit,wave,grapple,boost,spider",
-          "hard,@can/bomb,space,spider",
-
-          // Sequence breaks
-          "@can/bomb,@has/any suit,wave,grapple,boost,spider,[missile]",
-          "@can/bomb,space,spider,@has/suit break,[missile],[grapple],[wave],[boost]"
+          "[hard],@can/bomb,@has/any suit,wave,grapple,boost,spider",
+          "[hard],@can/bomb,space,spider"
         ],
         "sections": [
           {
@@ -707,16 +626,10 @@
           "@has/any suit,missile,morph,grapple,wave",
 
           // Hard access
-          "hard,morph,wave,@has/any suit,space",
-          "hard,morph,wave,@has/any suit,grapple",
-          "hard,morph,wave,space,etank:2",
-          "hard,morph,@can/bomb,space",
-
-          // Sequence breaks
-          "morph,wave,@has/any suit,space,[grapple],[missile]",
-          "morph,wave,@has/any suit,grapple,[missile]",
-          "morph,wave,space,etank:2,@has/suit break,[grapple],[missile]",
-          "morph,@can/bomb,space,@has/suit break,[missile],[grapple],[wave]"
+          "[hard],morph,wave,@has/any suit,space",
+          "[hard],morph,wave,@has/any suit,grapple",
+          "[hard],morph,wave,space,etank:2",
+          "[hard],morph,@can/bomb,space"
         ],
         "sections": [
           {
@@ -732,16 +645,10 @@
           "@can/pb,@has/any suit,missile,grapple",
 
           // Hard access
-          "hard,@can/pb,@has/any suit,space",
-          "hard,@can/pb,@has/any suit,grapple",
-          "hard,@can/pb,etank:1,space",
-          "hard,@can/bomb,@has/any suit,missile,boost",
-
-          // Sequence breaks
-          "@can/pb,@has/any suit,space,[missile],[grapple]",
-          "@can/pb,@has/any suit,grapple,[missile]",
-          "@can/pb,etank:1,space,@has/suit break,[missile],[grapple]",
-          "@can/bomb,@has/any suit,missile,boost,[powerbomb],[space],[grapple]"
+          "[hard],@can/pb,@has/any suit,space",
+          "[hard],@can/pb,@has/any suit,grapple",
+          "[hard],@can/pb,etank:1,space",
+          "[hard],@can/bomb,@has/any suit,missile,boost"
         ],
         "sections": [
           {
@@ -757,15 +664,11 @@
           "@can/bomb,missile:40,boost,spider,wave,space",
 
           // Normal access
-          "normal,missile,wave,space",
+          "[normal],missile,wave,space",
 
           // Hard access
-          "hard,missile,wave,space",
-          "hard,missile,wave,@can/bomb",
-
-          // Sequence breaks
-          "missile,wave,space,[missile:40],[morph],[bomb],[boost],[spider]",
-          "missile,wave,@can/bomb,[missile:40],[boost],[spider],[space]"
+          "[hard],missile,wave,space",
+          "[hard],missile,wave,@can/bomb"
         ],
         "sections": [
           {
@@ -781,15 +684,11 @@
           "@can/bomb,missile,boost,spider,wave,gravity,space",
 
           // Normal access
-          "normal,missile,wave,space",
-          "normal,missile,wave,morph,boost,notgravity",
+          "[normal],missile,wave,space",
+          "[normal],missile,wave,morph,boost,notgravity",
 
           // Hard access
-          "hard,missile,wave",
-
-          // Sequence breaks
-          "missile,wave,[morph],[bomb],[boost],[spider],[gravity],[space]",
-          "missile,wave,morph,boost,notgravity,[bomb],[spider],[space],[gravity]"
+          "[hard],missile,wave"
         ],
         "sections": [
           {
@@ -856,14 +755,11 @@
           "@can/bomb or pb,missile,space",
 
           // Normal access
-          "normal,@can/bomb,missile",
+          "[normal],@can/bomb,missile",
 
           // Hard access
-          "hard,missile,@can/bomb",
-          "hard,missile,@can/pb,space",
-
-          // Sequence breaks
-          "missile,@can/bomb,[space]"
+          "[hard],missile,@can/bomb",
+          "[hard],missile,@can/pb,space"
         ],
         "sections": [
           {
@@ -900,10 +796,7 @@
               "@can/bomb,@can/super,spider",
 
               // Hard access
-              "hard,@can/bomb,missile",
-
-              // Sequence breaks
-              "@can/bomb,missile,[charge],[super],[spider]"
+              "[hard],@can/bomb,missile"
             ],
             "item_count": 1
           }
@@ -940,15 +833,12 @@
               "@can/bomb,missile,gravity,space",
 
               // Normal access
-              "normal,missile,space,morph,etank:1",
-              "normal,missile,space,morph,gravity",
-              "normal,missile,space,@can/bomb",
+              "[normal],missile,space,morph,etank:1",
+              "[normal],missile,space,morph,gravity",
+              "[normal],missile,space,@can/bomb",
 
               // Hard access
-              "hard,missile,morph,etank:1",
-
-              // Sequence breaks
-              "missile,morph,etank:1,[bomb],[gravity],[space]"
+              "[hard],missile,morph,etank:1"
             ],
             "item_count": 1
           }
@@ -1012,13 +902,10 @@
               "@can/bomb,@can/pb,missile,boost,spider",
 
               // Normal access
-              "normal,@can/bomb,missile,spider,space",
+              "[normal],@can/bomb,missile,spider,space",
 
               // Hard access
-              "hard,@can/bomb,missile,space",
-
-              // Sequence breaks
-              "@can/bomb,missile,space,[powerbomb],[boost],[space]"
+              "[hard],@can/bomb,missile,space"
             ],
             "item_count": 1
           },
@@ -1039,15 +926,11 @@
           "@reqs/chozohote,ice",
 
           // Normal access
-          "normal,@can/bomb,missile,ice,space",
+          "[normal],@can/bomb,missile,ice,space",
 
           // Hard access
-          "hard,@can/bomb,missile,space",
-          "hard,@can/bomb,missile,ice,spider",
-
-          // Sequence breaks
-          "@reqs/chozohote break,space,[ice]",
-          "@reqs/chozohote break,ice,spider"
+          "[hard],@can/bomb,missile,space",
+          "[hard],@can/bomb,missile,ice,spider"
         ],
         "sections": [
           {
@@ -1064,14 +947,11 @@
           "@can/bomb,missile,boost,spider,ice",
 
           // Normal access
-          "normal,@can/bomb,missile,space,wave",
-          "normal,@can/bomb,missile,space,ice",
+          "[normal],@can/bomb,missile,space,wave",
+          "[normal],@can/bomb,missile,space,ice",
 
           // Hard access
-          "hard,@can/bomb,missile,space",
-
-          // Sequence breaks
-          "@can/bomb,missile,space,[boost],[spider],[wave]",
+          "[hard],@can/bomb,missile,space"
         ],
         "sections": [
           {
@@ -1087,15 +967,12 @@
           "@reqs/chozohote,ice,plasma",
 
           // Normal access
-          "normal,@can/bomb,missile,ice,plasma,space",
+          "[normal],@can/bomb,missile,ice,plasma,space",
 
           // Hard access
-          "hard,@can/bomb,missile,ice,plasma,space",
-          "hard,@can/bomb,missile,ice,plasma,spider",
-          "hard,@can/bomb,missile,space,boost",
-
-          // Sequence breaks
-          "@reqs/chozohote break,space,boost,[ice],[plasma]"
+          "[hard],@can/bomb,missile,ice,plasma,space",
+          "[hard],@can/bomb,missile,ice,plasma,spider",
+          "[hard],@can/bomb,missile,space,boost"
         ],
         "sections": [
           {
@@ -1112,12 +989,12 @@
           "@reqs/frigate,boost,ice",
 
           // Normal access and escape
-          "normal,@can/bomb,missile,space,wave,ice",
+          "[normal],@can/bomb,missile,space,wave,ice",
 
           // Hard access and escape
-          "hard,missile,ice,@can/bomb",
-          "hard,missile,ice,space",
-          "hard,missile,@can/pb,@can/bomb,space",
+          "[hard],missile,ice,@can/bomb",
+          "[hard],missile,ice,space",
+          "[hard],missile,@can/pb,@can/bomb,space",
 
           // Global access (must reload if not ice)
           "{@reqs/chozohote,wave,boost}",
@@ -1146,7 +1023,13 @@
         "name": "Lava Lake",
         "access_rules": [
           // Global access
-          "@can/bomb or pb,@has/any suit,missile,space"
+          "@can/bomb or pb,@has/any suit,missile,space",
+
+          // Normal access
+          "[normal],@has/any suit,missile,morph",
+
+          // Hard access
+          "[hard],@has/any suit,missile,morph"
         ],
         "sections": [
           {
@@ -1159,7 +1042,13 @@
         "name": "Triclops Pit",
         "access_rules": [
           // Global access
-          "@has/any suit,missile,morph,space,xray"
+          "@has/any suit,missile,morph,space,xray",
+
+          // Normal access
+          "[normal],@has/any suit,missile,morph,space",
+
+          // Hard access
+          "[hard],@has/any suit,missile,morph"
         ],
         "sections": [
           {
@@ -1198,7 +1087,14 @@
         "name": "Shore Tunnel",
         "access_rules": [
           // Global access
-          "@can/pb,@has/any suit,missile,space"
+          "@can/pb,@has/any suit,missile,space",
+
+          // Normal access
+          "[normal],@can/pb,@has/any suit,missile",
+
+          // Hard access
+          "[hard],@can/pb,missile,@has/any suit",
+          "[hard],@can/pb,missile,etank:5"
         ],
         "sections": [
           {
@@ -1214,15 +1110,35 @@
             "name": "Morph Track (Missile)",
             "access_rules": [
               // Global access
-              "@can/bomb,@has/any suit,missile,space"
+              "@can/bomb,@has/any suit,missile,space",
+
+              // Normal access
+              "[normal],@has/any suit,missile,@can/bomb",
+              "[normal],@has/any suit,missile,space",
+
+              // Hard access
+              "[hard],@has/any suit,missile,@can/bomb",
+              "[hard],@has/any suit,missile,space"
             ],
             "item_count": 1
           },
           {
             "name": "Warrior Shrine Tunnel (Powerbomb)",
             "access_rules": [
-              // Global access
-              "@can/pb,@has/any suit,missile,boost,space"
+              // Global access and escape
+              "@can/pb,@has/any suit,missile,boost,space,@can/bomb",
+
+              // Normal access and escape
+              "[normal],@can/bomb,@can/pb,@has/any suit,missile,space",
+
+              // Hard access and escape
+              "[hard],@can/pb,@has/any suit,missile,@can/bomb",
+
+              // Global access (must reload if not bombs)
+              "{@can/pb,@has/any suit,missile,boost,space}",
+
+              // Hard access (must reload if not bombs)
+              "{hard,@can/pb,@has/any suit,missile,space}"
             ],
             "item_count": 1
           }
@@ -1232,7 +1148,14 @@
         "name": "Warrior Shrine",
         "access_rules": [
           // Global access
-          "@has/any suit,missile,morph,boost,space"
+          "@has/any suit,missile,morph,boost,space",
+
+          // Normal access
+          "[normal],@has/any suit,missile,space",
+
+          // Hard access
+          "[hard],@has/any suit,missile,@can/bomb",
+          "[hard],@has/any suit,missile,space"
         ],
         "sections": [
           {
@@ -1247,14 +1170,36 @@
           // Global access and escape
           "@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple,plasma",
 
+          // Normal access and escape
+          "[normal],@can/bomb,@has/any suit,missile,space,wave,ice,boost,plasma",
+
           // Global access and visibility (can see from outside, no reload)
-          "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}"
+          "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}",
+
+          // Normal access and visibility (can see from outside, no reload)
+          "{normal,@can/bomb,@has/any suit,missile,space,wave,ice,boost}"
         ],
         "sections": [
           {
             "name": "Plasma Beam",
             "item_count": 1,
             "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Magmoor Workstation",
+        "access_rules": [
+          // Global access
+          "@has/any suit,missile,morph,space,wave,thermal,grapple,spider",
+
+          // Normal access
+          "[normal],@has/any suit,missile,morph,space,wave"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
           }
         ]
       }

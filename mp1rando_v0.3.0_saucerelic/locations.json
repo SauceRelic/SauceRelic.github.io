@@ -211,7 +211,7 @@
           // Global access
           "morph",
 
-          // Globally visible
+          // Global visibility
           "{}"
         ],
         "sections": [
@@ -628,7 +628,7 @@
               "missile,morph",
               "missile,space",
 
-              // Global access and visibility (can leave before item pickup)
+              // Global access and visibility (can see from outside, no reload)
               "{missile}"
             ],
             "item_count": 1,
@@ -810,7 +810,8 @@
         "sections": [
           {
             "name": "Missile",
-            "item_count": 1
+            "item_count": 1,
+            "capture_item": true
           }
         ]
       },
@@ -987,7 +988,8 @@
               // Global access (must reload if neither burn dome item is bombs)
               "{missile,@can/bomb or pb}"
             ],
-            "item_count": 1
+            "item_count": 1,
+            "capture_item": true
           },
           {
             "name": "Incinerator Drone (Morph Bomb)",
@@ -995,7 +997,8 @@
               // Global access (must reload if neither burn dome item is bombs)
               "{missile,morph}"
             ],
-            "item_count": 1
+            "item_count": 1,
+            "capture_item": true
           }
         ]
       },
@@ -1129,7 +1132,8 @@
         "sections": [
           {
             "name": "Ice Beam",
-            "item_count": 1
+            "item_count": 1,
+            "capture_item": true
           }
         ]
       }
@@ -1138,7 +1142,122 @@
   {
     "name": "Magmoor Caverns",
     "children": [
+      {
+        "name": "Lava Lake",
+        "access_rules": [
+          // Global access
+          "@can/bomb or pb,@has/any suit,missile,space"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Nature",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Triclops Pit",
+        "access_rules": [
+          // Global access
+          "@has/any suit,missile,morph,space,xray"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Storage Cavern",
+        "access_rules": [
+          // Global access
+          "@has/any suit,missile,morph"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Transport Tunnel A",
+        "access_rules": [
+          // Global access
+          "@can/bomb,@has/any suit,missile"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Shore Tunnel",
+        "access_rules": [
+          // Global access
+          "@can/pb,@has/any suit,missile,space"
+        ],
+        "sections": [
+          {
+            "name": "Ice Spreader",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Fiery Shores",
+        "sections": [
+          {
+            "name": "Morph Track (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/bomb,@has/any suit,missile,space"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Warrior Shrine Tunnel (Powerbomb)",
+            "access_rules": [
+              // Global access
+              "@can/pb,@has/any suit,missile,boost,space"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior Shrine",
+        "access_rules": [
+          // Global access
+          "@has/any suit,missile,morph,boost,space"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Strength",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Plasma Processing",
+        "access_rules": [
+          // Global access and escape
+          "@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple,plasma",
 
+          // Global access and visibility (can see from outside, no reload)
+          "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}"
+        ],
+        "sections": [
+          {
+            "name": "Plasma Beam",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      }
     ]
   },
   {

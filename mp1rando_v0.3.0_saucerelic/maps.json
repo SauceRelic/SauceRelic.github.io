@@ -1,15 +1,15 @@
 [
   {
-    "name": "chozoruins",
-    "location_size": 40,
-    "location_border_thickness": 5,
-    "img": "images/map_chozo.png"
-  },
-  {
     "name": "tallonoverworld",
     "location_size": 40,
     "location_border_thickness": 5,
     "img": "images/map_tallon.png"
+  },
+  {
+    "name": "chozoruins",
+    "location_size": 40,
+    "location_border_thickness": 5,
+    "img": "images/map_chozo.png"
   },
   {
     "name": "magmoorcaverns",

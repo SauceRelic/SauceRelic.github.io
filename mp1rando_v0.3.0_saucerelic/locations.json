@@ -1173,11 +1173,19 @@
           // Normal access and escape
           "[normal],@can/bomb,@has/any suit,missile,space,wave,ice,boost,plasma",
 
+          // Hard access and escape
+          "[hard],@can/bomb,missile,wave,ice,space,@has/any suit,plasma",
+          "[hard],@can/bomb,missile,wave,ice,space,etank:1,plasma",
+
           // Global access and visibility (can see from outside, no reload)
           "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}",
 
           // Normal access and visibility (can see from outside, no reload)
-          "{normal,@can/bomb,@has/any suit,missile,space,wave,ice,boost}"
+          "{normal,@can/bomb,@has/any suit,missile,space,wave,ice,boost}",
+
+          // Hard access and visibility (can see from outside, no reload)
+          "{hard,@can/bomb,missile,wave,ice,space,@has/any suit}",
+          "{hard,@can/bomb,missile,wave,ice,space,etank:1}"
         ],
         "sections": [
           {
@@ -1194,7 +1202,10 @@
           "@has/any suit,missile,morph,space,wave,thermal,grapple,spider",
 
           // Normal access
-          "[normal],@has/any suit,missile,morph,space,wave"
+          "[normal],@has/any suit,missile,morph,space,wave",
+
+          // Hard access
+          "[hard],@reqs/phen backwards"
         ],
         "sections": [
           {

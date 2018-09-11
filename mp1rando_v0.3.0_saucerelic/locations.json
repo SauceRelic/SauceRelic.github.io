@@ -1219,7 +1219,95 @@
   {
     "name": "Phendrana Drifts",
     "children": [
+      {
+        "name": "Phendrana Shorelines",
+        "sections": [
+          {
+            "name": "Behind Ice (Missile)",
+            "access_rules": [
+              // Global access
+              "@reqs/phendrana,plasma",
 
+              // Global visibility
+              "{@reqs/phendrana}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Spider Track (Missile)",
+            "access_rules": [
+              // Global access
+              "@reqs/phendrana,@can/super,space,spider"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Chozo Ice Temple",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,space,plasma"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Sun",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins West",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,space,plasma"
+        ],
+        "sections": [
+          {
+            "name": "Powerbomb",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ice Ruins East",
+        "sections": [
+          {
+            "name": "Behind Ice (Missile)",
+            "access_rules": [
+              // Global access
+              "@reqs/phendrana,plasma"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Spider Track (Missile)",
+            "access_rules": [
+              // Global access
+              "@reqs/phendrana,spider"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Chapel of the Elders",
+        "access_rules": [
+          // Global access and escape
+          "@reqs/phendrana,spider,wave,space",
+          "@reqs/phendrana,spider,wave,@can/bomb",
+
+          // Global access and visibility (can see from outside, no reload)
+          "{@reqs/phendrana,spider}"
+        ],
+        "sections": [
+          {
+            "name": "Wave Beam",
+            "item_count": 1
+          }
+        ]
+      }
     ]
   },
   {

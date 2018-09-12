@@ -80,7 +80,7 @@
           "@can/bomb,missile,@has/any suit",
 
           // Hard access
-          "[hard],@can/bomb,missile,etank:5,space"
+          "[hard],sbh,@can/bomb,missile,etank:5,space"
         ],
         "item_count": 1
       },
@@ -91,14 +91,14 @@
           "missile,morph,wave,space,spider,@has/any suit"
 
           // Normal access
-          "[normal],missile,morph,wave,space,@has/any suit",
-          "[normal],missile,morph,wave,space,etank:2",
+          "[normal],sbn,missile,morph,wave,space,@has/any suit",
+          "[normal],sbn,missile,morph,wave,space,etank:2",
 
           // Hard access
-          "[hard],missile,morph,wave,space,@has/any suit",
-          "[hard],missile,morph,wave,space,etank:1",
-          "[hard],missile,morph,wave,spider,@has/any suit",
-          "[hard],missile,morph,wave,spider,etank:2"
+          "[hard],sbh,missile,morph,wave,space,@has/any suit",
+          "[hard],sbh,missile,morph,wave,space,etank:1",
+          "[hard],sbh,missile,morph,wave,spider,@has/any suit",
+          "[hard],sbh,missile,morph,wave,spider,etank:2"
         ],
         "item_count": 1
       },
@@ -131,10 +131,10 @@
           "@can/bomb,missile,wave,ice,space,gravity,thermal",
 
           // Normal access
-          "[normal],@can/bomb,missile,wave,ice,space",
+          "[normal],sbn,@can/bomb,missile,wave,ice,space",
 
           // Hard access
-          "[hard],@can/bomb,missile,wave,ice"
+          "[hard],sbh,@can/bomb,missile,wave,ice"
         ],
         "item_count": 1
       },
@@ -145,8 +145,8 @@
           "@can/bomb,@can/pb,missile,wave,ice,space,spider,@has/any suit",
 
           // Hard access
-          "[hard],@can/bomb,@can/pb,missile,wave,ice,space,@has/any suit",
-          "[hard],@can/bomb,@can/pb,missile,wave,ice,space,etank:1"
+          "[hard],sbh,@can/bomb,@can/pb,missile,wave,ice,space,@has/any suit",
+          "[hard],sbh,@can/bomb,@can/pb,missile,wave,ice,space,etank:1"
         ],
         "item_count": 1
       },
@@ -242,10 +242,10 @@
           "missile,space,grapple,xray",
 
           // Normal access
-          "[normal],missile,space,grapple",
+          "[normal],sbn,missile,space,grapple",
 
           // Hard access
-          "[hard],missile,space"
+          "[hard],sbh,missile,space"
         ],
         "sections": [
           {
@@ -261,11 +261,11 @@
           "missile,space,plasma,grapple,xray",
 
           // Normal access
-          "[normal],missile,space,plasma,grapple",
+          "[normal],sbn,missile,space,plasma,grapple",
 
           // Hard access
-          "[hard],missile,space,@can/bomb",
-          "[hard],missile,space,plasma"
+          "[hard],sbh,missile,space,@can/bomb",
+          "[hard],sbh,missile,space,plasma"
         ],
         "sections": [
           {
@@ -294,10 +294,10 @@
           "missile,morph,space,gravity",
 
           // Normal access
-          "[normal],missile,morph,space",
+          "[normal],sbn,missile,morph,space",
 
           // Hard access
-          "[hard],missile,morph"
+          "[hard],sbh,missile,morph"
         ],
         "sections": [
           {
@@ -314,10 +314,10 @@
           "@reqs/frigate,boost",
 
           // Normal access
-          "[normal],@can/bomb,missile,wave,ice,space",
+          "[normal],sbn,@can/bomb,missile,wave,ice,space",
 
           // Hard access
-          "[hard],@can/bomb,missile,ice"
+          "[hard],sbh,@can/bomb,missile,ice"
         ],
         "sections": [
           {
@@ -333,10 +333,10 @@
           "@reqs/frigate",
 
           // Normal access
-          "[normal],@can/bomb,missile,gravity,space,wave,ice",
+          "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],@can/bomb,missile,ice,gravity"
+          "[hard],sbh,@can/bomb,missile,ice,gravity"
         ],
         "sections": [
           {
@@ -352,10 +352,10 @@
           "@reqs/frigate,@can/super",
 
           // Normal access
-          "[normal],@can/bomb,@can/super,gravity,space,wave,ice",
+          "[normal],sbn,@can/bomb,@can/super,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],@can/bomb,@can/super,ice,gravity"
+          "[hard],sbh,@can/bomb,@can/super,ice,gravity"
         ],
         "sections": [
           {
@@ -371,10 +371,10 @@
           "@reqs/frigate",
 
           // Normal access
-          "[normal],@can/bomb,missile,gravity,space,wave,ice",
+          "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],@can/bomb,missile,ice,gravity"
+          "[hard],sbh,@can/bomb,missile,ice,gravity"
         ],
         "sections": [
           {
@@ -391,10 +391,10 @@
           "xray,@reqs/frigate,boost",
 
           // Normal access
-          "[normal],@can/bomb,missile,space,ice",
+          "[normal],sbn,@can/bomb,missile,space,ice",
 
           // Hard access
-          "[hard],@can/bomb,missile,ice"
+          "[hard],sbh,@can/bomb,missile,ice"
         ],
         "sections": [
           {
@@ -410,11 +410,11 @@
           "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
 
           // Normal access
-          "[normal],@can/bomb,@can/pb,missile,boost,space,wave,ice",
+          "[normal],sbn,@can/bomb,@can/pb,missile,boost,space,wave,ice",
 
           // Hard access
-          "[hard],@can/bomb,@can/pb,missile,ice,space",
-          "[hard],@can/bomb,@can/pb,missile,ice,spider"
+          "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
+          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider"
         ],
         "sections": [
           {
@@ -430,11 +430,11 @@
           "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
 
           // Normal access
-          "[normal],@can/bomb,@can/pb,missile,boost,space,wave,ice",
+          "[normal],sbn,@can/bomb,@can/pb,missile,boost,space,wave,ice",
 
           // Hard access
-          "[hard],@can/bomb,@can/pb,missile,ice,space",
-          "[hard],@can/bomb,@can/pb,missile,ice,spider"
+          "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
+          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider"
         ],
         "sections": [
           {
@@ -462,10 +462,10 @@
               "missile,morph",
 
               // Normal access
-              "[normal],space",
+              "[normal],sbn,space",
 
               // Hard access
-              "[hard],space"
+              "[hard],sbh,space"
 
               // Global visibility
               "{}"
@@ -480,11 +480,11 @@
               "morph,boost",
 
               // Normal access
-              "[normal],space",
+              "[normal],sbn,space",
 
               // Hard access
-              "[hard],space",
-              "[hard],@can/bomb"
+              "[hard],sbh,space",
+              "[hard],sbh,@can/bomb"
 
               // Global visibility
               "{}"
@@ -499,11 +499,11 @@
               "@can/bomb,@has/any suit,missile,grapple,boost,wave",
 
               // Normal access
-              "[normal],space",
+              "[normal],sbn,space",
 
               // Hard access
-              "[hard],space",
-              "[hard],grapple"
+              "[hard],sbh,space",
+              "[hard],sbh,grapple"
 
               // Global visibility
               "{}"
@@ -518,11 +518,11 @@
               "@can/super,space",
 
               // Normal access
-              "[normal],@can/super",
+              "[normal],sbn,@can/super",
 
               // Hard access
-              "[hard],@can/super",
-              "[hard],@can/bomb,missile,space"
+              "[hard],sbh,@can/super",
+              "[hard],sbh,@can/bomb,missile,space"
             ],
             "item_count": 1,
           }
@@ -568,10 +568,10 @@
               "missile,morph,boost",
 
               // Normal access
-              "[normal],missile,morph,space",
+              "[normal],sbn,missile,morph,space",
 
               // Hard access
-              "[hard],missile,morph"
+              "[hard],sbh,missile,morph"
             ],
             "item_count": 1
           },
@@ -609,8 +609,8 @@
           "@can/bomb,@has/any suit,missile,grapple,wave,boost,spider",
 
           // Hard access
-          "[hard],@can/bomb,@has/any suit,wave,grapple,boost,spider",
-          "[hard],@can/bomb,space,spider"
+          "[hard],sbh,@can/bomb,@has/any suit,wave,grapple,boost,spider",
+          "[hard],sbh,@can/bomb,space,spider"
         ],
         "sections": [
           {
@@ -626,10 +626,10 @@
           "@has/any suit,missile,morph,grapple,wave",
 
           // Hard access
-          "[hard],morph,wave,@has/any suit,space",
-          "[hard],morph,wave,@has/any suit,grapple",
-          "[hard],morph,wave,space,etank:2",
-          "[hard],morph,@can/bomb,space"
+          "[hard],sbh,morph,wave,@has/any suit,space",
+          "[hard],sbh,morph,wave,@has/any suit,grapple",
+          "[hard],sbh,morph,wave,space,etank:2",
+          "[hard],sbh,morph,@can/bomb,space"
         ],
         "sections": [
           {
@@ -645,10 +645,10 @@
           "@can/pb,@has/any suit,missile,grapple",
 
           // Hard access
-          "[hard],@can/pb,@has/any suit,space",
-          "[hard],@can/pb,@has/any suit,grapple",
-          "[hard],@can/pb,etank:1,space",
-          "[hard],@can/bomb,@has/any suit,missile,boost"
+          "[hard],sbh,@can/pb,@has/any suit,space",
+          "[hard],sbh,@can/pb,@has/any suit,grapple",
+          "[hard],sbh,@can/pb,etank:1,space",
+          "[hard],sbh,@can/bomb,@has/any suit,missile,boost"
         ],
         "sections": [
           {
@@ -664,11 +664,11 @@
           "@can/bomb,missile:40,boost,spider,wave,space",
 
           // Normal access
-          "[normal],missile,wave,space",
+          "[normal],sbn,missile,wave,space",
 
           // Hard access
-          "[hard],missile,wave,space",
-          "[hard],missile,wave,@can/bomb"
+          "[hard],sbh,missile,wave,space",
+          "[hard],sbh,missile,wave,@can/bomb"
         ],
         "sections": [
           {
@@ -684,11 +684,11 @@
           "@can/bomb,missile,boost,spider,wave,gravity,space",
 
           // Normal access
-          "[normal],missile,wave,space",
-          "[normal],missile,wave,morph,boost,notgravity",
+          "[normal],sbn,missile,wave,space",
+          "[normal],sbn,missile,wave,morph,boost,notgravity",
 
           // Hard access
-          "[hard],missile,wave"
+          "[hard],sbh,missile,wave"
         ],
         "sections": [
           {
@@ -755,11 +755,11 @@
           "@can/bomb or pb,missile,space",
 
           // Normal access
-          "[normal],@can/bomb,missile",
+          "[normal],sbn,@can/bomb,missile",
 
           // Hard access
-          "[hard],missile,@can/bomb",
-          "[hard],missile,@can/pb,space"
+          "[hard],sbh,missile,@can/bomb",
+          "[hard],sbh,missile,@can/pb,space"
         ],
         "sections": [
           {
@@ -796,7 +796,7 @@
               "@can/bomb,@can/super,spider",
 
               // Hard access
-              "[hard],@can/bomb,missile"
+              "[hard],sbh,@can/bomb,missile"
             ],
             "item_count": 1
           }
@@ -833,12 +833,12 @@
               "@can/bomb,missile,gravity,space",
 
               // Normal access
-              "[normal],missile,space,morph,etank:1",
-              "[normal],missile,space,morph,gravity",
-              "[normal],missile,space,@can/bomb",
+              "[normal],sbn,missile,space,morph,etank:1",
+              "[normal],sbn,missile,space,morph,gravity",
+              "[normal],sbn,missile,space,@can/bomb",
 
               // Hard access
-              "[hard],missile,morph,etank:1"
+              "[hard],sbh,missile,morph,etank:1"
             ],
             "item_count": 1
           }
@@ -902,10 +902,10 @@
               "@can/bomb,@can/pb,missile,boost,spider",
 
               // Normal access
-              "[normal],@can/bomb,missile,spider,space",
+              "[normal],sbn,@can/bomb,missile,spider,space",
 
               // Hard access
-              "[hard],@can/bomb,missile,space"
+              "[hard],sbh,@can/bomb,missile,space"
             ],
             "item_count": 1
           },
@@ -926,11 +926,11 @@
           "@reqs/chozohote,ice",
 
           // Normal access
-          "[normal],@can/bomb,missile,ice,space",
+          "[normal],sbn,@can/bomb,missile,ice,space",
 
           // Hard access
-          "[hard],@can/bomb,missile,space",
-          "[hard],@can/bomb,missile,ice,spider"
+          "[hard],sbh,@can/bomb,missile,space",
+          "[hard],sbh,@can/bomb,missile,ice,spider"
         ],
         "sections": [
           {
@@ -947,11 +947,11 @@
           "@can/bomb,missile,boost,spider,ice",
 
           // Normal access
-          "[normal],@can/bomb,missile,space,wave",
-          "[normal],@can/bomb,missile,space,ice",
+          "[normal],sbn,@can/bomb,missile,space,wave",
+          "[normal],sbn,@can/bomb,missile,space,ice",
 
           // Hard access
-          "[hard],@can/bomb,missile,space"
+          "[hard],sbh,@can/bomb,missile,space"
         ],
         "sections": [
           {
@@ -967,12 +967,12 @@
           "@reqs/chozohote,ice,plasma",
 
           // Normal access
-          "[normal],@can/bomb,missile,ice,plasma,space",
+          "[normal],sbn,@can/bomb,missile,ice,plasma,space",
 
           // Hard access
-          "[hard],@can/bomb,missile,ice,plasma,space",
-          "[hard],@can/bomb,missile,ice,plasma,spider",
-          "[hard],@can/bomb,missile,space,boost"
+          "[hard],sbh,@can/bomb,missile,ice,plasma,space",
+          "[hard],sbh,@can/bomb,missile,ice,plasma,spider",
+          "[hard],sbh,@can/bomb,missile,space,boost"
         ],
         "sections": [
           {
@@ -989,12 +989,12 @@
           "@reqs/frigate,boost,ice",
 
           // Normal access and escape
-          "[normal],@can/bomb,missile,space,wave,ice",
+          "[normal],sbn,@can/bomb,missile,space,wave,ice",
 
           // Hard access and escape
-          "[hard],missile,ice,@can/bomb",
-          "[hard],missile,ice,space",
-          "[hard],missile,@can/pb,@can/bomb,space",
+          "[hard],sbh,missile,ice,@can/bomb",
+          "[hard],sbh,missile,ice,space",
+          "[hard],sbh,missile,@can/pb,@can/bomb,space",
 
           // Global access (must reload if not ice)
           "{@reqs/chozohote,wave,boost}",
@@ -1026,10 +1026,10 @@
           "@can/bomb or pb,@has/any suit,missile,space",
 
           // Normal access
-          "[normal],@has/any suit,missile,morph",
+          "[normal],sbn,@has/any suit,missile,morph",
 
           // Hard access
-          "[hard],@has/any suit,missile,morph"
+          "[hard],sbh,@has/any suit,missile,morph"
         ],
         "sections": [
           {
@@ -1045,10 +1045,10 @@
           "@has/any suit,missile,morph,space,xray",
 
           // Normal access
-          "[normal],@has/any suit,missile,morph,space",
+          "[normal],sbn,@has/any suit,missile,morph,space",
 
           // Hard access
-          "[hard],@has/any suit,missile,morph"
+          "[hard],sbh,@has/any suit,missile,morph"
         ],
         "sections": [
           {
@@ -1090,11 +1090,11 @@
           "@can/pb,@has/any suit,missile,space",
 
           // Normal access
-          "[normal],@can/pb,@has/any suit,missile",
+          "[normal],sbn,@can/pb,@has/any suit,missile",
 
           // Hard access
-          "[hard],@can/pb,missile,@has/any suit",
-          "[hard],@can/pb,missile,etank:5"
+          "[hard],sbh,@can/pb,missile,@has/any suit",
+          "[hard],sbh,@can/pb,missile,etank:5"
         ],
         "sections": [
           {
@@ -1113,12 +1113,12 @@
               "@can/bomb,@has/any suit,missile,space",
 
               // Normal access
-              "[normal],@has/any suit,missile,@can/bomb",
-              "[normal],@has/any suit,missile,space",
+              "[normal],sbn,@has/any suit,missile,@can/bomb",
+              "[normal],sbn,@has/any suit,missile,space",
 
               // Hard access
-              "[hard],@has/any suit,missile,@can/bomb",
-              "[hard],@has/any suit,missile,space"
+              "[hard],sbh,@has/any suit,missile,@can/bomb",
+              "[hard],sbh,@has/any suit,missile,space"
             ],
             "item_count": 1
           },
@@ -1129,10 +1129,10 @@
               "@can/pb,@has/any suit,missile,boost,space,@can/bomb",
 
               // Normal access and escape
-              "[normal],@can/bomb,@can/pb,@has/any suit,missile,space",
+              "[normal],sbn,@can/bomb,@can/pb,@has/any suit,missile,space",
 
               // Hard access and escape
-              "[hard],@can/pb,@has/any suit,missile,@can/bomb",
+              "[hard],sbh,@can/pb,@has/any suit,missile,@can/bomb",
 
               // Global access (must reload if not bombs)
               "{@can/pb,@has/any suit,missile,boost,space}",
@@ -1151,11 +1151,11 @@
           "@has/any suit,missile,morph,boost,space",
 
           // Normal access
-          "[normal],@has/any suit,missile,space",
+          "[normal],sbn,@has/any suit,missile,space",
 
           // Hard access
-          "[hard],@has/any suit,missile,@can/bomb",
-          "[hard],@has/any suit,missile,space"
+          "[hard],sbh,@has/any suit,missile,@can/bomb",
+          "[hard],sbh,@has/any suit,missile,space"
         ],
         "sections": [
           {
@@ -1171,11 +1171,11 @@
           "@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple,plasma",
 
           // Normal access and escape
-          "[normal],@can/bomb,@has/any suit,missile,space,wave,ice,boost,plasma",
+          "[normal],sbn,@can/bomb,@has/any suit,missile,space,wave,ice,boost,plasma",
 
           // Hard access and escape
-          "[hard],@can/bomb,missile,wave,ice,space,@has/any suit,plasma",
-          "[hard],@can/bomb,missile,wave,ice,space,etank:1,plasma",
+          "[hard],sbh,@can/bomb,missile,wave,ice,space,@has/any suit,plasma",
+          "[hard],sbh,@can/bomb,missile,wave,ice,space,etank:1,plasma",
 
           // Global access and visibility (can see from outside, no reload)
           "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}",
@@ -1202,10 +1202,10 @@
           "@has/any suit,missile,morph,space,wave,thermal,grapple,spider",
 
           // Normal access
-          "[normal],@has/any suit,missile,morph,space,wave",
+          "[normal],sbn,@has/any suit,missile,morph,space,wave",
 
           // Hard access
-          "[hard],@reqs/phen backwards"
+          "[hard],sbh,@reqs/phen backwards"
         ],
         "sections": [
           {
@@ -1228,6 +1228,11 @@
               // Global access
               "@reqs/phendrana,plasma",
 
+              // Hard access
+              "[hard],sbh,@reqs/phendrana,@can/isg",
+              "[hard],sbh,@reqs/phen backwards,plasma",
+              "[hard],sbh,@reqs/phen backwards,@can/isg",
+
               // Global visibility
               "{@reqs/phendrana}"
             ],
@@ -1238,7 +1243,11 @@
             "name": "Spider Track (Missile)",
             "access_rules": [
               // Global access
-              "@reqs/phendrana,@can/super,space,spider"
+              "@reqs/phendrana,@can/super,space,spider",
+
+              // Hard access
+              "[hard],sbh,@reqs/phendrana,@can/super,spider",
+              "[hard],sbh,@reqs/phen backwards,@can/super,spider"
             ],
             "item_count": 1
           }
@@ -1248,7 +1257,13 @@
         "name": "Chozo Ice Temple",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,space,plasma"
+          "@reqs/phendrana,space,plasma",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,plasma",
+          "[hard],sbh,@reqs/phendrana,@can/isg",
+          "[hard],sbh,@reqs/phen backwards,plasma",
+          "[hard],sbh,@reqs/phen backwards,@can/isg"
         ],
         "sections": [
           {
@@ -1261,7 +1276,11 @@
         "name": "Ice Ruins West",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,space,plasma"
+          "@reqs/phendrana,space,plasma",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,plasma",
+          "[hard],sbh,@reqs/phen backwards,plasma"
         ],
         "sections": [
           {
@@ -1277,7 +1296,12 @@
             "name": "Behind Ice (Missile)",
             "access_rules": [
               // Global access
-              "@reqs/phendrana,plasma"
+              "@reqs/phendrana,plasma",
+
+              // Hard access
+              "[hard],sbh,@reqs/phendrana,@can/isg",
+              "[hard],sbh,@reqs/phen backwards,plasma",
+              "[hard],sbh,@reqs/phen backwards,@can/isg"
             ],
             "item_count": 1
           },
@@ -1285,7 +1309,10 @@
             "name": "Spider Track (Missile)",
             "access_rules": [
               // Global access
-              "@reqs/phendrana,spider"
+              "@reqs/phendrana,spider",
+
+              // Hard access
+              "[hard],sbh,@reqs/phen backwards,spider"
             ],
             "item_count": 1
           }
@@ -1297,8 +1324,18 @@
           // Global access and escape
           "@reqs/phendrana,wave,space",
 
+          // Hard access and escape
+          "[hard],sbh,@reqs/phendrana,wave,space",
+          "[hard],sbh,@reqs/phendrana,wave,@can/bomb",
+          "[hard],sbh,@reqs/phen backwards,wave,space",
+          "[hard],sbh,@reqs/phen backwards,wave,@can/bomb",
+
           // Global access and visibility (can see from outside, no reload)
-          "{@reqs/phendrana,space}"
+          "{@reqs/phendrana,space}",
+
+          // Hard access (can see from outside, no reload)
+          "{hard,@reqs/phendrana}",
+          "{hard,@reqs/phen backwards}"
         ],
         "sections": [
           {
@@ -1311,7 +1348,14 @@
         "name": "Ruined Courtyard",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,boost,space,wave"
+          "@reqs/phendrana,boost,space,wave",
+
+          // Normal access
+          "[normal],sbn,@reqs/phendrana,space,wave",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,wave",
+          "[hard],sbh,@reqs/phen backwards,wave"
         ],
         "sections": [
           {
@@ -1327,7 +1371,11 @@
           "@reqs/phendrana,space",
           "@reqs/phendrana,boost",
 
-          // Global access (softlock only if boxes are destroyed)
+          // Hard access and escape (assumes you will use boxes, potential softlock)
+          "hard,@reqs/phendrana",
+          "hard,@reqs/phen backwards",
+
+          // Global access (reload needed only if boxes are destroyed)
           "{@reqs/phendrana}"
         ],
         "sections": [
@@ -1347,9 +1395,27 @@
           "@reqs/phen backwards,thermal,spider",
           "@reqs/phen backwards,thermal,grapple",
 
+          // Normal access and escape
+          "[normal],sbn,@reqs/phendrana,wave,@can/super,spider",
+          "[normal],sbn,@reqs/phendrana,wave,@can/super,grapple",
+          "[normal],sbn,@reqs/phen backwards,spider",
+          "[normal],sbn,@reqs/phen backwards,grapple",
+
+          // Hard access and escape
+          "[hard],sbh,@reqs/phen backwards,space",
+          "[hard],sbh,@reqs/phen backwards,@can/bomb,spider",
+          "[hard],sbh,@reqs/phen backwards,@can/bomb,grapple",
+
           // Global access (must reload if thardus doesn't drop spider or grapple)
           "{@reqs/phendrana,@can/super,boost,space,wave,thermal}",
-          "{@reqs/phen backwards,thermal}"
+          "{@reqs/phen backwards,thermal}",
+
+          // Normal access (must reload if thardus doesn't drop spider or grapple)
+          "{normal,@reqs/phendrana,wave,@can/super}",
+          "{normal,@reqs/phen backwards}",
+
+          // Hard access (must reload if thardus doesn't drop spider, grapple, or space)
+          "{hard,@reqs/phen backwards,@can/bomb}"
         ],
         "sections": [
           {
@@ -1362,9 +1428,18 @@
       {
         "name": "Quarantine Monitor",
         "access_rules": [
-          // Global access and escape
+          // Global access
           "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
-          "@reqs/phen backwards,thermal,grapple"
+          "@reqs/phen backwards,thermal,grapple",
+
+          // Normal access
+          "[normal],sbn,@reqs/phendrana,@can/super,wave,space,spider",
+          "[normal],sbn,@reqs/phendrana,@can/super,wave,space,grapple",
+          "[normal],sbn,@reqs/phen backwards,grapple",
+
+          // Hard access
+          "[hard],sbh,@reqs/phen backwards,grapple",
+          "[hard],sbh,@reqs/phen backwards,space"
         ],
         "sections": [
           {
@@ -1378,7 +1453,15 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,@can/super,thermal,boost,space,wave",
-          "@reqs/phen backwards,@can/super,thermal,ice"
+          "@reqs/phen backwards,@can/super,thermal,ice",
+
+          // Normal access
+          "[normal],sbn,@reqs/phendrana,@can/super,wave,space",
+          "[normal],sbn,@reqs/phen backwards,ice",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,@can/super,wave",
+          "[hard],sbh,@reqs/phen backwards,@can/super,wave"
         ],
         "sections": [
           {
@@ -1392,7 +1475,15 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,@can/bomb,ice"
+          "@reqs/phen backwards,@can/bomb,ice",
+
+          //  Normal access
+          "[normal],sbn,@reqs/phen backwards,ice",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,space,wave",
+          "[hard],sbh,@reqs/mags thardus",
+          "[hard],sbh,@reqs/mags frozenpike"
         ],
         "sections": [
           {
@@ -1406,7 +1497,18 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,plasma,boost,space,wave",
-          "@reqs/phen backwards,plasma,thermal,ice"
+          "@reqs/phen backwards,plasma,thermal,ice",
+
+          // Normal access
+          "[normal],sbn,@reqs/phendrana,boost,space,wave",
+          "[normal],sbn,@reqs/phen backwards,ice",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,space,wave",
+          "[hard],sbh,@reqs/mags thardus,space",
+          "[hard],sbh,@reqs/mags thardus,spider,boost,plasma",
+          "[hard],sbh,@reqs/mags frozenpike,space",
+          "[hard],sbh,@reqs/mags frozenpike,spider,plasma"
         ],
         "sections": [
           {
@@ -1417,18 +1519,202 @@
       },
       {
         "name": "Research Lab Aether",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,boost,space,wave",
+          "@reqs/phen backwards,thermal,ice",
+
+          // Normal access
+          "[normal],sbn,@reqs/phen backwards,ice",
+
+          // Hard access
+          "[hard],sbh,@reqs/phendrana,space,wave",
+          "[hard],sbh,@reqs/mags thardus",
+          "[hard],sbh,@reqs/mags frozenpike"
+        ],
         "sections": [
           {
             "name": "Tank (E-Tank)",
-            "access_rules": [
-              // Global access
-              "@reqs/phendrana,boost,space,wave",
-              "@reqs/phen backwards,thermal,ice"
-            ],
             "item_count": 1
           },
           {
-            "name": "Morph Track (Missile)"
+            "name": "Morph Track (Missile)",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Research Core",
+        "access_rules": [
+          // Global access and escape
+          "@reqs/phendrana,boost,space,wave,thermal,ice",
+          "@reqs/phen backwards,ice,thermal",
+
+          // Normal access and escape
+          "[normal],sbn,@reqs/phendrana,space,wave,boost",
+          "[normal],sbn,@reqs/phen backwards,ice",
+
+          // Hard access and escape
+          "[hard],sbh,@reqs/phendrana,space,wave",
+          "[hard],sbh,@reqs/mags thardus",
+          "[hard],sbh,@reqs/mags frozenpike",
+
+          // Global access and visibility (can leave room before obtaining)
+          "{@reqs/phendrana,boost,space,wave}",
+          "{@reqs/phen backwards,ice}"
+        ],
+        "sections": [
+          {
+            "name": "Thermal Visor",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Transport Access",
+        "access_rules": [
+          // Global access
+          "thermal,plasma,ice,@reqs/phendrana,boost,space,wave,spider",
+          "thermal,plasma,ice,@reqs/phen backwards",
+
+          // Normal access
+          "[normal],sbn,plasma,ice,@reqs/phendrana,space,wave",
+          "[normal],sbn,plasma,ice,@reqs/phen backwards",
+
+          // Hard access
+          "[hard],sbh,@reqs/phen backwards,ice,plasma",
+
+          // Global visibility
+          "{ice,thermal,@reqs/phendrana,boost,space,wave,spider}",
+          "{ice,@reqs/phen backwards}"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Frost Cave",
+        "access_rules": [
+          // Global access
+          "ice,grapple,@reqs/phendrana,boost,space,wave",
+          "ice,grapple,@reqs/phen backwards",
+
+          // Normal access
+          "[normal],sbn,ice,@reqs/phendrana,space,wave",
+          "[normal],sbn,ice,@reqs/phen backwards",
+
+          // Hard access
+          "[hard],sbh,@reqs/mags frozenpike,space",
+          "[hard],sbh,@reqs/mags frozenpike,grapple",
+
+          // Global visibility
+          "{ice,@reqs/phen backwards}"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Storage Cave",
+        "access_rules": [
+          // Global access
+          "@can/pb,ice,plasma,grapple,@reqs/phendrana,boost,space,wave,thermal",
+          "@can/pb,ice,plasma,grapple,@reqs/phen backwards",
+
+          // Normal access
+          "[normal],sbn,@can/pb,ice,plasma,@reqs/phendrana,space,wave",
+          "[normal],sbn,@can/pb,ice,plasma,@reqs/phen backwards",
+
+          // Hard access
+          "[hard],sbh,@reqs/mags frozenpike,space",
+          "[hard],sbh,@reqs/mags frozenpike,grapple,spider"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Spirit",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Security Cave",
+        "access_rules": [
+          // Global access
+          "ice,grapple,@reqs/phendrana,boost,space,wave",
+          "ice,grapple,@reqs/phen backwards",
+
+          // Normal access
+          "[normal],sbn,ice,grapple,@reqs/phendrana,space,wave",
+
+          // Hard access
+          "[hard],sbh,@reqs/mags frozenpike,space",
+          "[hard],sbh,@reqs/mags frozenpike,grapple,spider"
+        ],
+        "sections": [
+          {
+            "name": "Powerbomb",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Gravity Chamber",
+        "sections": [
+          {
+            "name": "Underwater (Gravity Suit)",
+            "access_rules": [
+              // Global access and escape
+              "@reqs/phendrana,boost,space,wave,gravity,thermal",
+              "@reqs/phen backwards,gravity",
+
+              // Normal access and escape
+              "[normal],sbn,ice,@reqs/phendrana,space,wave,gravity,thermal",
+              "[normal],sbn,ice,@reqs/phen backwards,gravity",
+
+              // Hard access and escape
+              "[hard],sbh,@reqs/mags frozenpike,space,gravity",
+              "[hard],sbh,@reqs/mags frozenpike,grapple,spider,gravity,@can/bomb",
+
+              // Global access (must reload if not gravity)
+              "{@reqs/phendrana,boost,space,wave,thermal}",
+              "{@reqs/phen backwards}",
+
+              // Normal access (must reload if not gravity)
+              "{normal,ice,@reqs/phendrana,space,wave}",
+              "{normal,ice,@reqs/phen backwards}",
+
+              // Hard access (must reload if not gravity)
+              "{hard,@reqs/mags frozenpike,space}",
+              "{hard,@reqs/mags frozenpike,grapple,spider}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Grapple Ledge (Missile)",
+            "access_rules": [
+              // Global access
+              "@can/pb,ice,plasma,gravity,grapple,@reqs/phendrana,boost,space,wave,thermal",
+              "@can/pb,ice,plasma,gravity,grapple,@reqs/phen backwards",
+
+              // Normal access
+              "[normal],sbn,ice,plasma,grapple,@reqs/phendrana,space,wave",
+              "[normal],sbn,ice,plasma,grapple,@reqs/phen backwards",
+
+              // Hard access
+              "[hard],sbh,@reqs/mags frozenpike,space",
+              "[hard],sbh,@reqs/mags frozenpike,plasma,grapple,spider"
+            ],
+            "item_count": 1
           }
         ]
       }

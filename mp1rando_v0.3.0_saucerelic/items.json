@@ -15,16 +15,28 @@
         "name": "Normal",
         "img": "images/diff_normal.png",
         "inherit_codes": false,
-        "codes": "normal"
+        "codes": "normal,sbn"
       },
       {
         "name": "Hard",
         "img": "images/diff_hard.png",
         "inherit_codes": false,
-        "codes": "hard"
+        "codes": "hard,sbh"
       }
     ]
   },
+  {
+    "name": "Include Normal logic as sequence breaks",
+    "type": "toggle",
+    "loop": true,
+    "codes": "sbn"
+  },
+  {
+    "name": "Include Hard logic as sequence breaks",
+    "type": "toggle",
+    "loop": true,
+    "codes": "sbh"
+  }
   {
     "name": "Charge Beam",
     "type": "toggle",

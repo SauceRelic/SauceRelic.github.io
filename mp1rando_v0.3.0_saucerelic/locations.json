@@ -1295,16 +1295,140 @@
         "name": "Chapel of the Elders",
         "access_rules": [
           // Global access and escape
-          "@reqs/phendrana,spider,wave,space",
-          "@reqs/phendrana,spider,wave,@can/bomb",
+          "@reqs/phendrana,wave,space",
 
           // Global access and visibility (can see from outside, no reload)
-          "{@reqs/phendrana,spider}"
+          "{@reqs/phendrana,space}"
         ],
         "sections": [
           {
             "name": "Wave Beam",
             "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ruined Courtyard",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,boost,space,wave"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Phendrana Canyon",
+        "access_rules": [
+          // Global access and escape
+          "@reqs/phendrana,space",
+          "@reqs/phendrana,boost",
+
+          // Global access (softlock only if boxes are destroyed)
+          "{@reqs/phendrana}"
+        ],
+        "sections": [
+          {
+            "name": "Boost Ball",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Cave",
+        "access_rules": [
+          // Global access and escape
+          "@reqs/phendrana,@can/super,boost,space,wave,thermal,spider",
+          "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
+          "@reqs/phen backwards,thermal,spider",
+          "@reqs/phen backwards,thermal,grapple",
+
+          // Global access (must reload if thardus doesn't drop spider or grapple)
+          "{@reqs/phendrana,@can/super,boost,space,wave,thermal}",
+          "{@reqs/phen backwards,thermal}"
+        ],
+        "sections": [
+          {
+            "name": "Spider Ball",
+            "item_count": 1,
+            "capture_item": true
+          }
+        ]
+      },
+      {
+        "name": "Quarantine Monitor",
+        "access_rules": [
+          // Global access and escape
+          "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
+          "@reqs/phen backwards,thermal,grapple"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Hydra",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,@can/super,thermal,boost,space,wave",
+          "@reqs/phen backwards,@can/super,thermal,ice"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Observatory",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,boost,space,wave",
+          "@reqs/phen backwards,@can/bomb,ice"
+        ],
+        "sections": [
+          {
+            "name": "Super Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Control Tower",
+        "access_rules": [
+          // Global access
+          "@reqs/phendrana,plasma,boost,space,wave",
+          "@reqs/phen backwards,plasma,thermal,ice"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Elder",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Research Lab Aether",
+        "sections": [
+          {
+            "name": "Tank (E-Tank)",
+            "access_rules": [
+              // Global access
+              "@reqs/phendrana,boost,space,wave",
+              "@reqs/phen backwards,thermal,ice"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Morph Track (Missile)"
           }
         ]
       }

@@ -88,7 +88,7 @@
         "name": "phen backwards",
         "access_rules":[
           // Global access
-          "missile,morph,wave,space,spider,@has/any suit"
+          "missile,morph,wave,space,spider,@has/any suit",
 
           // Normal access
           "[normal],sbn,missile,morph,wave,space,@has/any suit",
@@ -465,7 +465,7 @@
               "[normal],sbn,space",
 
               // Hard access
-              "[hard],sbh,space"
+              "[hard],sbh,space",
 
               // Global visibility
               "{}"
@@ -484,7 +484,7 @@
 
               // Hard access
               "[hard],sbh,space",
-              "[hard],sbh,@can/bomb"
+              "[hard],sbh,@can/bomb",
 
               // Global visibility
               "{}"
@@ -503,7 +503,7 @@
 
               // Hard access
               "[hard],sbh,space",
-              "[hard],sbh,grapple"
+              "[hard],sbh,grapple",
 
               // Global visibility
               "{}"
@@ -524,7 +524,7 @@
               "[hard],sbh,@can/super",
               "[hard],sbh,@can/bomb,missile,space"
             ],
-            "item_count": 1,
+            "item_count": 1
           }
         ]
       },
@@ -1477,7 +1477,7 @@
           "@reqs/phendrana,boost,space,wave",
           "@reqs/phen backwards,@can/bomb,ice",
 
-          //  Normal access
+          // Normal access
           "[normal],sbn,@reqs/phen backwards,ice",
 
           // Hard access
@@ -1723,7 +1723,348 @@
   {
     "name": "Phazon Mines",
     "children": [
+      {
+        "name": "Main Quarry",
+        "access_rules": [
+          // Global access
+          "@reqs/mines from tallon,spider",
+          "@reqs/mines from magmoor,thermal,grapple",
 
+          // Normal access
+          "[normal],sbn,@reqs/mines from tallon",
+          "[normal],sbn,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,space"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Security Access A",
+        "access_rules": [
+          // Global access
+          "@reqs/mines from tallon,@can/pb",
+          "@reqs/mines from magmoor,grapple",
+
+          // Normal access
+          "[normal],sbn,@reqs/mines from magmoor"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Storage Depot A",
+        "access_rules": [
+          // Global access
+          "plasma,@reqs/mines from tallon,@can/pb",
+          "plasma,@reqs/mines from magmoor,grapple",
+
+          // Normal access
+          "[normal],sbn,plasma,@reqs/mines from magmoor"
+        ],
+        "sections": [
+          {
+            "name": "Flamethrower",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Elite Research",
+        "sections": [
+          {
+            "name": "Phazon Elite (Artifact of Warrior)",
+            "access_rules": [
+              // Global access
+              "boost,@reqs/mines from tallon,@can/pb,spider",
+              "boost,@reqs/mines from magmoor,grapple",
+
+              // Normal access
+              "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
+              "[normal],sbn,boost,@reqs/mines from magmoor",
+
+              // Hard access
+              "[hard],sbh,@reqs/mines from tallon,@can/pb"
+            ],
+            "item_count": 1
+          },
+          {
+            "name": "Laser (Missile)",
+            "access_rules": [
+              // Global access
+              "boost,@reqs/mines from tallon",
+              "boost,@reqs/mines from magmoor,grapple",
+
+              // Normal access
+              "[normal],sbn,boost,@reqs/mines from magmoor",
+
+              // Hard access
+              "[hard],sbh,@reqs/mines from tallon"
+            ],
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Storage Depot B",
+        "access_rules": [
+          // Global access
+          "@reqs/mines from tallon,@can/pb,boost,spider",
+          "@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,@reqs/mines from tallon",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon"
+        ],
+        "sections": [
+          {
+            "name": "Grapple Beam",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall Access",
+        "access_rules": [
+          // Global access
+          "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
+          "boost,xray,plasma,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Phazon Mining Tunnel",
+        "access_rules": [
+          // Global access
+          "boost,xray,plasma,grapple,phazon,@reqs/mines from tallon,@can/pb,spider",
+          "boost,xray,plasma,grapple,phazon,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,plasma,phazon,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,boost,plasma,phazon,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,space",
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,spider"
+        ],
+        "sections": [
+          {
+            "name": "Artifact of Newborn",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Fungal Hall B",
+        "access_rules": [
+          // Global access
+          "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
+          "boost,xray,plasma,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,spider"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Metroid Quarantine A",
+        "access_rules": [
+          // Global access
+          "boost,xray,@reqs/mines from tallon,@can/pb,spider",
+          "boost,xray,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,boost,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Metroid Quarantine B",
+        "access_rules": [
+          // Global access
+          "@can/super,boost,xray,grapple,plasma,@reqs/mines from tallon,@can/pb,spider",
+          "@can/super,boost,xray,grapple,plasma,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,@can/super,plasma,boost,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,@can/super,plasma,boost,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,space",
+          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,spider"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Elite Quarters",
+        "access_rules": [
+          // Global access
+          "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
+          "boost,plasma,xray,grapple,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,plasma,xray,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,spider"
+        ],
+        "sections": [
+          {
+            "name": "Phazon Suit",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Processing Center Access",
+        "access_rules": [
+          // Global access
+          "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
+          "boost,plasma,xray,grapple,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,plasma,xray,@reqs/mines from tallon,@can/pb",
+          "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Phazon Processing Center",
+        "access_rules": [
+          // Global access
+          "@reqs/mines from tallon,@can/pb,spider",
+          "@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,@reqs/mines from tallon,@can/pb",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Elite Control Access",
+        "access_rules": [
+          // Global access
+          "@reqs/mines from tallon,spider",
+          "@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,@reqs/mines from tallon",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon"
+        ],
+        "sections": [
+          {
+            "name": "Missile",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ventilation Shaft",
+        "access_rules": [
+          // Global access
+          "boost,@reqs/mines from tallon,@can/pb,spider",
+          "boost,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,@reqs/mines from tallon",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon,@can/pb"
+        ],
+        "sections": [
+          {
+            "name": "E-Tank",
+            "item_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Central Dynamo",
+        "access_rules": [
+          // Global access
+          "boost,@reqs/mines from tallon,spider",
+          "boost,@reqs/mines from magmoor",
+
+          // Normal access
+          "[normal],sbn,boost,@reqs/mines from tallon",
+
+          // Hard access
+          "[hard],sbh,@reqs/mines from tallon"
+        ],
+        "sections": [
+          {
+            "name": "Powerbombs",
+            "item_count": 1
+          }
+        ]
+      }
     ]
   }
 ]

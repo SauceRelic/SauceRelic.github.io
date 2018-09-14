@@ -1,1 +1,10 @@
-[]
+{
+  "map_enabled": true,
+  "auto_pin_capturing_locations": true,
+  "auto_unpin_on_clear": true,
+  "layout_swap_left_right": false,
+  "disabled_image_filter": "grayscale, dim",
+  "layouts": {
+    
+  }
+}

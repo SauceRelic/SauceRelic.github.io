@@ -29,62 +29,62 @@
     "name": "Include Normal logic as sequence breaks",
     "type": "toggle",
     "loop": true,
-    "codes": "sbn"
+    "codes": "sbn,normalsequencebreaks"
   },
   {
     "name": "Include Hard logic as sequence breaks",
     "type": "toggle",
     "loop": true,
-    "codes": "sbh"
+    "codes": "sbh,hardsequencebreaks"
   }
   {
     "name": "Charge Beam",
     "type": "toggle",
     "loop": true,
     "img": "images/charge.png",
-    "codes": "charge"
+    "codes": "charge,chargebeam"
   },
   {
     "name": "Wave Beam",
     "type": "toggle",
     "loop": true,
     "img": "images/wave.png",
-    "codes": "wave"
+    "codes": "wave,wavebeam"
   },
   {
     "name": "Ice Beam",
     "type": "toggle",
     "loop": true,
     "img": "images/ice.png",
-    "codes": "ice"
+    "codes": "ice,icebeam"
   },
   {
     "name": "Plasma Beam",
     "type": "toggle",
     "loop": true,
     "img": "images/plasma.png",
-    "codes": "plasma"
+    "codes": "plasma,plasmabeam"
   },
   {
     "name": "Super Missile",
     "type": "toggle",
     "loop": true,
     "img": "images/super.png",
-    "codes": "supermissile,super"
+    "codes": "super,supermissile,supermissiles,chargecombo"
   },
   {
     "name": "Wave Buster",
     "type": "toggle_badged",
     "base_item": "wave",
     "img": "images/wavebuster.png",
-    "codes": "buster,wavecombo"
+    "codes": "buster,wavebuster,wavecombo"
   },
   {
     "name": "Ice Spreader",
     "type": "toggle_badged",
     "base_item": "ice",
     "img": "images/icespreader.png",
-    "codes": "spreader,icecombo"
+    "codes": "spreader,icespreader,icecombo"
   },
   {
     "name": "Flamethrower",
@@ -98,14 +98,14 @@
     "type": "toggle",
     "loop": true,
     "img": "images/grapple.png",
-    "codes": "grapple"
+    "codes": "grapple,grapplebeam"
   },
   {
     "name": "Varia Suit",
     "type": "toggle",
     "loop": true,
     "img": "images/varia.png",
-    "codes": "varia"
+    "codes": "varia,variasuit"
   },
   {
     "name": "Gravity Suit",
@@ -116,11 +116,11 @@
       {
         "img": "images/gravity.png",
         "img_mods": "@disabled",
-        "codes": "notgravity"
+        "codes": "notgravity,gravityitem"
       },
       {
         "img": "images/gravity.png",
-        "codes": "gravity"
+        "codes": "gravity,gravitysuit"
       }
     ]
   },
@@ -129,14 +129,14 @@
     "type": "toggle",
     "loop": true,
     "img": "images/phazon.png",
-    "codes": "phazon"
+    "codes": "phazon,phazonsuit"
   },
   {
     "name": "Morph Ball",
     "type": "toggle",
     "loop": true,
     "img": "images/morph.png",
-    "codes": "morph"
+    "codes": "morph,morphball"
   },
   {
     "name": "Bomb",
@@ -150,35 +150,35 @@
     "type": "toggle",
     "loop": true,
     "img": "images/boost.png",
-    "codes": "boost"
+    "codes": "boost,boostball"
   },
   {
     "name": "Spider Ball",
     "type": "toggle",
     "loop": true,
     "img": "images/spider.png",
-    "codes": "spider"
+    "codes": "spider,spiderball"
   },
   {
     "name": "Space Jump Boots",
     "type": "toggle",
     "loop": true,
     "img": "images/space.png",
-    "codes": "space"
+    "codes": "space,spacejump,spacejumpboots"
   },
   {
     "name": "Thermal Visor",
     "type": "toggle",
     "loop": true,
     "img": "images/thermal.png",
-    "codes": "thermal"
+    "codes": "thermal,thermalvisor"
   },
   {
     "name": "X-Ray Visor",
     "type": "toggle",
     "loop": true,
     "img": "images/xray.png",
-    "codes": "xray"
+    "codes": "xray,xrayvisor"
   },
   {
     "name": "E-Tanks",

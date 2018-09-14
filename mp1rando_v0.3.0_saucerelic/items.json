@@ -203,87 +203,190 @@
     "codes": "powerbomb,powerbombs,pb,pbs"
   },
   {
+    "name": "Chozo Artifacts",
+    "type": "consumable",
+    "img": "images/artifacts.png",
+    "max_quantity": 12,
+    "codes": "artifact,artifacts,art,arts,chozoartifact,chozoartifacts,allartifacts"
+  }
+  {
     "name": "Artifact of Truth",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_truth.png",
-    "codes": "truth,art1"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_truth_blue.png"
+      },
+      {
+        "img": "images/art_truth_orange.png",
+        "codes": "truth,artifact1,art1,allartifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Strength",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_strength.png",
-    "codes": "strength,art2"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_strength_blue.png"
+      },
+      {
+        "img": "images/art_strength_orange.png",
+        "codes": "strength,artifact2,art2,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Elder",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_elder.png",
-    "codes": "elder,art3"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_elder_blue.png"
+      },
+      {
+        "img": "images/art_elder_orange.png",
+        "codes": "elder,artifact3,art3,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Wild",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_wild.png",
-    "codes": "wild,art4"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_wild_blue.png"
+      },
+      {
+        "img": "images/art_wild_orange.png",
+        "codes": "wild,artifact4,art4,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Lifegiver",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_lifegiver.png",
-    "codes": "lifegiver,art5"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_lifegiver_blue.png"
+      },
+      {
+        "img": "images/art_lifegiver_orange.png",
+        "codes": "lifegiver,artifact5,art5,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of World",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_world.png",
-    "codes": "world,art6"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_world_blue.png"
+      },
+      {
+        "img": "images/art_world_orange.png",
+        "codes": "world,artifact6,art6,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Sun",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_sun.png",
-    "codes": "sun,art7"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_sun_blue.png"
+      },
+      {
+        "img": "images/art_sun_orange.png",
+        "codes": "sun,artifact7,art7,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Warrior",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_warrior.png",
-    "codes": "warrior,art8"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_warrior_blue.png"
+      },
+      {
+        "img": "images/art_warrior_orange.png",
+        "codes": "warrior,artifact8,art8,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Newborn",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_newborn.png",
-    "codes": "newborn,art9"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_newborn_blue.png"
+      },
+      {
+        "img": "images/art_newborn_orange.png",
+        "codes": "newborn,artifact9,art9,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Spirit",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_spirit.png",
-    "codes": "spirit,art10"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_spirit_blue.png"
+      },
+      {
+        "img": "images/art_spirit_orange.png",
+        "codes": "spirit,artifact10,art10,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Nature",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_nature.png",
-    "codes": "nature,art11"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_nature_blue.png"
+      },
+      {
+        "img": "images/art_nature_orange.png",
+        "codes": "nature,artifact11,art11,artifacts"
+      }
+    ]
   },
   {
     "name": "Artifact of Chozo",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/art_chozo.png",
-    "codes": "chozo,art12"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/art_chozo_blue.png"
+      },
+      {
+        "img": "images/art_chozo_orange.png",
+        "codes": "chozo,artifact12,art12,artifacts"
+      }
+    ]
   }
 ]

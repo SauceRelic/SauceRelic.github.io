@@ -29,12 +29,14 @@
     "name": "Include Normal logic as sequence breaks",
     "type": "toggle",
     "loop": true,
+    "img": "images/option_sbnormal.png",
     "codes": "sbn,normalsequencebreaks"
   },
   {
     "name": "Include Hard logic as sequence breaks",
     "type": "toggle",
     "loop": true,
+    "img": "images/option_sbhard.png",
     "codes": "sbh,hardsequencebreaks"
   }
   {

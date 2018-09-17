@@ -45,7 +45,7 @@
     "loop": true,
     "img": "images/artifactcheck_setting.png",
     "codes": "acsetting,artifactcheck"
-  }
+  },
   {
     "name": "Artifact Temple Checks (icon)",
     "type": "toggle",
@@ -90,22 +90,22 @@
   },
   {
     "name": "Wave Buster",
-    "type": "toggle_badged",
-    "base_item": "wave",
+    "type": "toggle",
+    "loop": true,
     "img": "images/wavebuster.png",
     "codes": "buster,wavebuster,wavecombo"
   },
   {
     "name": "Ice Spreader",
-    "type": "toggle_badged",
-    "base_item": "ice",
+    "type": "toggle",
+    "loop": true,
     "img": "images/icespreader.png",
     "codes": "spreader,icespreader,icecombo"
   },
   {
     "name": "Flamethrower",
-    "type": "toggle_badged",
-    "base_item": "plasma",
+    "type": "toggle",
+    "loop": true,
     "img": "images/flamethrower.png",
     "codes":  "flamethrower,flame,plasmacombo"
   },
@@ -226,7 +226,7 @@
     "img": "images/artifacts.png",
     "max_quantity": 12,
     "codes": "artifact,artifacts,art,arts,chozoartifact,chozoartifacts,allartifacts"
-  }
+  },
   {
     "name": "Artifact of Truth",
     "type": "progressive",

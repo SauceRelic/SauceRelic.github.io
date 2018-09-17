@@ -1,6 +1,6 @@
 {
   "map_enabled": true,
-  "auto_pin_capturing_locations": true,
+  "auto_pin_capturing_locations": false,
   "auto_unpin_on_clear": true,
   "layout_swap_left_right": false,
   "disabled_image_filter": "grayscale, dim",
@@ -17,45 +17,128 @@
           "content": [
             {
               "type": "itemgrid",
-              "item_margin": "6,1",
+              "item_margin": "2,2",
               "h_alignment": "left",
               "rows": [
-                [ "ridley",   "charge", "varia",   "morph",  "hijump" ],
-                [ "phantoon", "ice",    "gravity", "bomb",   "space" ],
-                [ "kraid",    "wave",   "",        "spring", "speed" ],
-                [ "draygon",  "spazer", "grapple", "screw",  "" ],
-                [ "",         "plasma", "xray",    "",       "" ]
+                [ "charge", "super",       "morph",  "varia",       "missile" ],
+                [ "wave",   "wavecombo",   "bomb",   "gravityitem", "etank" ],
+                [ "ice",    "icecombo",    "boost",  "phazon",      "powerbomb" ],
+                [ "plasma", "plasmacombo", "spider", "space",       "grapple" ]
               ]
             },
             {
               "type": "array",
-              "orientation": "vertical",
-              "v_alignment": "center",
+              "orientation": "horizontal",
               "margin": "5,0,0,0",
               "content": [
                 {
-                  "type": "itemgrid",
-                  "margin": "0,0",
-                  "item_margin": "2,0",
-                  "h_alignment": "center",
-                  "rows": [
-                    [ "missile", "supermissile", "powerbomb" ]
-                  ]
-                },
-                {
-                  "type": "itemgrid",
-                  "margin": "0,4,0,0",
-                  "item_margin": "2,0",
-                  "h_alignment": "center",
-                  "rows": [
-                    [ "etank", "reservetank" ]
+                  "type": "canvas",
+                  "width": 220,
+                  "height": 234,
+                  "content": [
+                    {
+                      "type": "item",
+                      "item": "artifact1",
+                      "width": 28,
+                      "height": 37,
+                      "canvas_left": 67,
+                      "canvas_top": 89
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact2",
+                      "width": 37,
+                      "height": 37,
+                      "canvas_left": 130,
+                      "canvas_top": 75
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact3",
+                      "width": 34,
+                      "height": 34,
+                      "canvas_left": 78,
+                      "canvas_top": 129
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact4",
+                      "width": 35,
+                      "height": 38,
+                      "canvas_left": 90,
+                      "canvas_top": 56
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact5",
+                      "width": 20,
+                      "height": 23,
+                      "canvas_left": 120,
+                      "canvas_top": 139
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact6",
+                      "width": 51,
+                      "height": 55,
+                      "canvas_left": 150,
+                      "canvas_top": 31
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact7",
+                      "width": 46,
+                      "height": 41,
+                      "canvas_left": 55,
+                      "canvas_top": 155
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact8",
+                      "width": 35,
+                      "height": 28,
+                      "canvas_left": 137,
+                      "canvas_top": 118
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact9",
+                      "width": 64,
+                      "height": 67,
+                      "canvas_left": 108,
+                      "canvas_top": 166
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact10",
+                      "width": 55,
+                      "height": 83,
+                      "canvas_left": 161,
+                      "canvas_top": 88
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact11",
+                      "width": 66,
+                      "height": 58,
+                      "canvas_left": 84,
+                      "canvas_top": 0
+                    },
+                    {
+                      "type": "item",
+                      "item": "artifact12",
+                      "width": 84,
+                      "height": 130,
+                      "canvas_left": 1,
+                      "canvas_top": 26
+                    }
                   ]
                 },
                 {
                   "type": "item",
                   "item": "difficulty",
-                  "h_alignment": "center",
-                  "margin": "0,16,0,0"
+                  "v_alignment": "center",
+                  "margin": "5,0"
                 }
               ]
             }
@@ -158,13 +241,6 @@
                     "phazonmines"
                   ]
                 }
-              },
-              {
-                "title": "Settings",
-                "icon": "images/icon_settings.png",
-                "content": {
-                  "type":
-                }
               }
             ]
           }
@@ -259,13 +335,6 @@
                   "maps": [
                     "phazonmines"
                   ]
-                }
-              },
-              {
-                "title": "Settings",
-                "icon": "images/icon_settings.png",
-                "content": {
-                  "type":
                 }
               }
             ]

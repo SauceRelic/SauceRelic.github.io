@@ -1461,7 +1461,18 @@
 
           // Hard access
           "[hard],sbh,@reqs/phendrana,@can/super,wave",
-          "[hard],sbh,@reqs/phen backwards,@can/super,wave"
+          "[hard],sbh,@reqs/phen backwards,@can/super,wave",
+
+          // Global visibility
+          "{@reqs/phendrana,boost,space,wave,xray}",
+          "{@reqs/phen backwards,ice,xray}",
+
+          // Normal visibility
+          "{normal,@reqs/phendrana,wave,space,xray}",
+
+          // Hard visibility
+          "{hard,@reqs/phendrana,wave,xray}",
+          "{hard,@reqs/phen backwards,wave,xray}"
         ],
         "sections": [
           {

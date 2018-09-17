@@ -38,7 +38,14 @@
     "loop": true,
     "img": "images/option_sbhard.png",
     "codes": "sbh,hardsequencebreaks"
-  }
+  },
+  {
+    "name": "Artifact Temple Checks",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/artifactcheck.png",
+    "codes": "artifactcheck"
+  },
   {
     "name": "Charge Beam",
     "type": "toggle",
@@ -118,10 +125,12 @@
       {
         "img": "images/gravity.png",
         "img_mods": "@disabled",
+        "inherit_codes": false,
         "codes": "notgravity,gravityitem"
       },
       {
         "img": "images/gravity.png",
+        "inherit_codes": false,
         "codes": "gravity,gravitysuit"
       }
     ]

@@ -110,63 +110,60 @@
             "type": "tabbed",
             "tabs": [
               {
-                "title": "Full Map",
-                "icon": "images/icon_zebes.png",
+                "title": "Tallon Overworld",
+                "icon": "images/icon_tallon.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "fullmap"
+                    "tallonoverworld"
                   ]
                 }
               },
               {
-                "title": "Crateria",
-                "icon": "images/icon_starship.png",
+                "title": "Chozo Ruins",
+                "icon": "images/icon_chozo.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "crateriamap"
+                    "chozoruins"
                   ]
                 }
               },
               {
-                "title": "Brinstar",
-                "icon": "images/icon_etecoon.png",
+                "title": "Magmoor Caverns",
+                "icon": "images/icon_magmoor.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "brinstarmap"
+                    "magmoorcaverns"
                   ]
                 }
               },
               {
-                "title": "Norfair",
-                "icon": "images/icon_norfair_statue.png",
+                "title": "Phendrana Drifts",
+                "icon": "images/icon_phendrana.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "norfairmap"
+                    "phendranadrifts"
                   ]
                 }
               },
               {
-                "title": "Wrecked Ship",
-                "icon": "images/icon_robot.png",
+                "title": "Phazon Mines",
+                "icon": "images/icon_phazon.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "wreckedshipmap"
+                    "phazonmines"
                   ]
                 }
               },
               {
-                "title": "Maridia",
-                "icon": "images/icon_minidraygon.png",
+                "title": "Settings",
+                "icon": "images/icon_settings.png",
                 "content": {
-                  "type": "map",
-                  "maps": [
-                    "maridiamap"
-                  ]
+                  "type":
                 }
               }
             ]
@@ -215,63 +212,60 @@
             "type": "tabbed",
             "tabs": [
               {
-                "title": "Full Map",
-                "icon": "images/icon_zebes.png",
+                "title": "Tallon Overworld",
+                "icon": "images/icon_tallon.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "fullmap"
+                    "tallonoverworld"
                   ]
                 }
               },
               {
-                "title": "Crateria",
-                "icon": "images/icon_starship.png",
+                "title": "Chozo Ruins",
+                "icon": "images/icon_chozo.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "crateriamap"
+                    "chozoruins"
                   ]
                 }
               },
               {
-                "title": "Brinstar",
-                "icon": "images/icon_etecoon.png",
+                "title": "Magmoor Caverns",
+                "icon": "images/icon_magmoor.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "brinstarmap"
+                    "magmoorcaverns"
                   ]
                 }
               },
               {
-                "title": "Norfair",
-                "icon": "images/icon_norfair_statue.png",
+                "title": "Phendrana Drifts",
+                "icon": "images/icon_phendrana.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "norfairmap"
+                    "phendranadrifts"
                   ]
                 }
               },
               {
-                "title": "Wrecked Ship",
-                "icon": "images/icon_robot.png",
+                "title": "Phazon Mines",
+                "icon": "images/icon_phazon.png",
                 "content": {
                   "type": "map",
                   "maps": [
-                    "wreckedshipmap"
+                    "phazonmines"
                   ]
                 }
               },
               {
-                "title": "Maridia",
-                "icon": "images/icon_minidraygon.png",
+                "title": "Settings",
+                "icon": "images/icon_settings.png",
                 "content": {
-                  "type": "map",
-                  "maps": [
-                    "maridiamap"
-                  ]
+                  "type":
                 }
               }
             ]

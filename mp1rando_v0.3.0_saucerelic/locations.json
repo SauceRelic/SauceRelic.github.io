@@ -203,6 +203,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 570,
+            "y": 460
+          }
         ]
       },
       {
@@ -223,6 +230,13 @@
             "name": "Space Jump",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 630,
+            "y": 380
           }
         ]
       },

@@ -19,6 +19,7 @@
               "type": "itemgrid",
               "item_margin": "2,2",
               "h_alignment": "left",
+              "item_size": 48,
               "rows": [
                 [ "charge", "super",       "morph",  "varia",       "missile" ],
                 [ "wave",   "wavecombo",   "bomb",   "gravityitem", "etank" ],
@@ -39,6 +40,7 @@
                     {
                       "type": "item",
                       "item": "artifact1",
+                      "canvas_depth": 1,
                       "width": 28,
                       "height": 37,
                       "canvas_left": 67,
@@ -47,6 +49,7 @@
                     {
                       "type": "item",
                       "item": "artifact2",
+                      "canvas_depth": 1,
                       "width": 37,
                       "height": 37,
                       "canvas_left": 130,
@@ -55,6 +58,7 @@
                     {
                       "type": "item",
                       "item": "artifact3",
+                      "canvas_depth": 1,
                       "width": 34,
                       "height": 34,
                       "canvas_left": 78,
@@ -63,6 +67,7 @@
                     {
                       "type": "item",
                       "item": "artifact4",
+                      "canvas_depth": 1,
                       "width": 35,
                       "height": 38,
                       "canvas_left": 90,
@@ -71,6 +76,7 @@
                     {
                       "type": "item",
                       "item": "artifact5",
+                      "canvas_depth": 1,
                       "width": 20,
                       "height": 23,
                       "canvas_left": 120,
@@ -79,6 +85,7 @@
                     {
                       "type": "item",
                       "item": "artifact6",
+                      "canvas_depth": 2,
                       "width": 51,
                       "height": 55,
                       "canvas_left": 150,
@@ -87,6 +94,7 @@
                     {
                       "type": "item",
                       "item": "artifact7",
+                      "canvas_depth": 0,
                       "width": 46,
                       "height": 41,
                       "canvas_left": 55,
@@ -95,6 +103,7 @@
                     {
                       "type": "item",
                       "item": "artifact8",
+                      "canvas_depth": 1,
                       "width": 35,
                       "height": 28,
                       "canvas_left": 137,
@@ -103,6 +112,7 @@
                     {
                       "type": "item",
                       "item": "artifact9",
+                      "canvas_depth": 1,
                       "width": 64,
                       "height": 67,
                       "canvas_left": 108,
@@ -111,6 +121,7 @@
                     {
                       "type": "item",
                       "item": "artifact10",
+                      "canvas_depth": 0,
                       "width": 55,
                       "height": 83,
                       "canvas_left": 161,
@@ -119,6 +130,7 @@
                     {
                       "type": "item",
                       "item": "artifact11",
+                      "canvas_depth": 0,
                       "width": 66,
                       "height": 58,
                       "canvas_left": 84,
@@ -127,6 +139,7 @@
                     {
                       "type": "item",
                       "item": "artifact12",
+                      "canvas_depth": 0,
                       "width": 84,
                       "height": 130,
                       "canvas_left": 1,

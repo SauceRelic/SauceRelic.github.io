@@ -168,16 +168,22 @@
       "content": [
         {
           "type": "item",
-          "item": "normalsequencebreaks"
+          "item": "normalsequencebreaks",
+          "width": 490,
+          "height": 25
         },
         {
           "type": "item",
-          "item": "hardsequencebreaks"
+          "item": "hardsequencebreaks",
+          "width": 469,
+          "height": 25
         },
         {
           "type": "item",
           "item": "acsetting",
-          "margin": "0,10,0,0"
+          "margin": "0,10,0,0",
+          "width": 263,
+          "height": 24
         }
       ]
     },

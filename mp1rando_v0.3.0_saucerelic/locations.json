@@ -184,9 +184,6 @@
   },
   {
     "name": "Tallon Overworld",
-    "access_rules": [
-      "{artifactcheck}"
-    ],
     "children": [
       {
         "name": "Landing Site",
@@ -223,7 +220,9 @@
           "[normal]",
 
           // Hard access
-          "[hard]"
+          "[hard]",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -264,7 +263,9 @@
           "[normal],sbn,missile,space,grapple",
 
           // Hard access
-          "[hard],sbh,missile,space"
+          "[hard],sbh,missile,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -285,7 +286,9 @@
 
           // Hard access
           "[hard],sbh,missile,space,@can/bomb",
-          "[hard],sbh,missile,space,plasma"
+          "[hard],sbh,missile,space,plasma",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -299,7 +302,9 @@
         "name": "Transport Tunnel B",
         "access_rules": [
           // Global access
-          "missile"
+          "missile",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -319,7 +324,9 @@
           "[normal],sbn,missile,morph,space",
 
           // Hard access
-          "[hard],sbh,missile,morph"
+          "[hard],sbh,missile,morph",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -340,7 +347,9 @@
           "[normal],sbn,@can/bomb,missile,wave,ice,space",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,ice"
+          "[hard],sbh,@can/bomb,missile,ice",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -360,7 +369,9 @@
           "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,ice,gravity"
+          "[hard],sbh,@can/bomb,missile,ice,gravity",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -380,7 +391,9 @@
           "[normal],sbn,@can/bomb,@can/super,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,@can/super,ice,gravity"
+          "[hard],sbh,@can/bomb,@can/super,ice,gravity",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -400,7 +413,9 @@
           "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,ice,gravity"
+          "[hard],sbh,@can/bomb,missile,ice,gravity",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -421,7 +436,9 @@
           "[normal],sbn,@can/bomb,missile,space,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,ice"
+          "[hard],sbh,@can/bomb,missile,ice",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -442,7 +459,9 @@
 
           // Hard access
           "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
-          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider"
+          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -463,7 +482,9 @@
 
           // Hard access
           "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
-          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider"
+          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -482,9 +503,6 @@
   },
   {
     "name": "Chozo Ruins",
-    "access_rules": [
-      "{artifactcheck}"
-    ],
     "children": [
       {
         "name": "Main Plaza",
@@ -556,7 +574,9 @@
 
               // Hard access
               "[hard],sbh,@can/super",
-              "[hard],sbh,@can/bomb,missile,space"
+              "[hard],sbh,@can/bomb,missile,space",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -570,7 +590,9 @@
           "@can/bomb,missile,spider",
 
           // Global visibility
-          "{morph}"
+          "{morph}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -591,7 +613,9 @@
               "missile,space",
 
               // Global access and visibility (can see from outside, no reload)
-              "{missile}"
+              "{missile}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -606,7 +630,9 @@
               "[normal],sbn,missile,morph,space",
 
               // Hard access
-              "[hard],sbh,missile,morph"
+              "[hard],sbh,missile,morph",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -615,7 +641,9 @@
             "name": "Lower Tunnel (Missile)",
             "access_rules": [
               // Global access
-              "@can/bomb or pb,missile"
+              "@can/bomb or pb,missile",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -629,7 +657,9 @@
           "@can/bomb,missile",
 
           // Global visibility
-          "{missile,morph}"
+          "{missile,morph}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -647,7 +677,9 @@
 
           // Hard access
           "[hard],sbh,@can/bomb,@has/any suit,wave,grapple,boost,spider",
-          "[hard],sbh,@can/bomb,space,spider"
+          "[hard],sbh,@can/bomb,space,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -667,7 +699,9 @@
           "[hard],sbh,morph,wave,@has/any suit,space",
           "[hard],sbh,morph,wave,@has/any suit,grapple",
           "[hard],sbh,morph,wave,space,etank:2",
-          "[hard],sbh,morph,@can/bomb,space"
+          "[hard],sbh,morph,@can/bomb,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -687,7 +721,9 @@
           "[hard],sbh,@can/pb,@has/any suit,space",
           "[hard],sbh,@can/pb,@has/any suit,grapple",
           "[hard],sbh,@can/pb,etank:1,space",
-          "[hard],sbh,@can/bomb,@has/any suit,missile,boost"
+          "[hard],sbh,@can/bomb,@has/any suit,missile,boost",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -708,7 +744,9 @@
 
           // Hard access
           "[hard],sbh,missile,wave,space",
-          "[hard],sbh,missile,wave,@can/bomb"
+          "[hard],sbh,missile,wave,@can/bomb",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -729,7 +767,9 @@
           "[normal],sbn,missile,wave,morph,boost,notgravity",
 
           // Hard access
-          "[hard],sbh,missile,wave"
+          "[hard],sbh,missile,wave",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -763,7 +803,9 @@
             "name": "Missile Wall (Missile)",
             "access_rules": [
               // Global access
-              "missile"
+              "missile",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -772,7 +814,9 @@
             "name": "Tunnel (Missile)",
             "access_rules": [
               // Global access
-              "@can/bomb"
+              "@can/bomb",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -783,7 +827,9 @@
         "name": "Transport Access North",
         "access_rules": [
           // Global access
-          "missile"
+          "missile",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -804,7 +850,9 @@
 
           // Hard access
           "[hard],sbh,missile,@can/bomb",
-          "[hard],sbh,missile,@can/pb,space"
+          "[hard],sbh,missile,@can/pb,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -832,7 +880,9 @@
             "name": "Flaahgra (Varia Suit)",
             "access_rules": [
               // Global access
-              "@can/bomb,missile"
+              "@can/bomb,missile",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -844,7 +894,9 @@
               "@can/bomb,@can/super,spider",
 
               // Hard access
-              "[hard],sbh,@can/bomb,missile"
+              "[hard],sbh,@can/bomb,missile",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -855,7 +907,9 @@
         "name": "Watery Hall Access",
         "access_rules": [
           // Global access
-          "missile,morph"
+          "missile,morph",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -872,7 +926,9 @@
             "name": "Scan Puzzle (Charge Beam)",
             "access_rules": [
               // Global access
-              "missile,morph"
+              "missile,morph",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -889,7 +945,9 @@
               "[normal],sbn,missile,space,@can/bomb",
 
               // Hard access
-              "[hard],sbh,missile,morph,etank:1"
+              "[hard],sbh,missile,morph,etank:1",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -903,7 +961,9 @@
             "name": "Lower Dynamo (Missile)",
             "access_rules": [
               // Global access
-              "@can/bomb or pb,missile"
+              "@can/bomb or pb,missile",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -912,7 +972,9 @@
             "name": "Spider Track (Missile)",
             "access_rules": [
               // Global access
-              "@can/bomb or pb,missile,spider"
+              "@can/bomb or pb,missile,spider",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -930,7 +992,9 @@
             "name": "Tunnel (Missile)",
             "access_rules": [
               // Global access (must reload if neither burn dome item is bombs)
-              "{missile,@can/bomb or pb}"
+              "{missile,@can/bomb or pb}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -939,7 +1003,9 @@
             "name": "Incinerator Drone (Morph Bomb)",
             "access_rules": [
               // Global access (must reload if neither burn dome item is bombs)
-              "{missile,morph}"
+              "{missile,morph}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -959,7 +1025,9 @@
               "[normal],sbn,@can/bomb,missile,spider,space",
 
               // Hard access
-              "[hard],sbh,@can/bomb,missile,space"
+              "[hard],sbh,@can/bomb,missile,space",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -968,7 +1036,9 @@
             "name": "Tunnel ()",
             "access_rules": [
               // Global access
-              "@can/bomb,missile"
+              "@can/bomb,missile",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -986,7 +1056,9 @@
 
           // Hard access
           "[hard],sbh,@can/bomb,missile,space",
-          "[hard],sbh,@can/bomb,missile,ice,spider"
+          "[hard],sbh,@can/bomb,missile,ice,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1008,7 +1080,9 @@
           "[normal],sbn,@can/bomb,missile,space,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,space"
+          "[hard],sbh,@can/bomb,missile,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1030,7 +1104,9 @@
           // Hard access
           "[hard],sbh,@can/bomb,missile,ice,plasma,space",
           "[hard],sbh,@can/bomb,missile,ice,plasma,spider",
-          "[hard],sbh,@can/bomb,missile,space,boost"
+          "[hard],sbh,@can/bomb,missile,space,boost",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1063,7 +1139,9 @@
           "{normal,@can/bomb,missile,space,wave}",
 
           // Hard access (must reload if not ice or powerbombs)
-          "{hard,missile,@can/bomb,space}"
+          "{hard,missile,@can/bomb,space}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1077,9 +1155,6 @@
   },
   {
     "name": "Magmoor Caverns",
-    "access_rules": [
-      "{artifactcheck}"
-    ],
     "children": [
       {
         "name": "Lava Lake",
@@ -1091,7 +1166,9 @@
           "[normal],sbn,@has/any suit,missile,morph",
 
           // Hard access
-          "[hard],sbh,@has/any suit,missile,morph"
+          "[hard],sbh,@has/any suit,missile,morph",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1111,7 +1188,9 @@
           "[normal],sbn,@has/any suit,missile,morph,space",
 
           // Hard access
-          "[hard],sbh,@has/any suit,missile,morph"
+          "[hard],sbh,@has/any suit,missile,morph",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1125,7 +1204,9 @@
         "name": "Storage Cavern",
         "access_rules": [
           // Global access
-          "@has/any suit,missile,morph"
+          "@has/any suit,missile,morph",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1139,7 +1220,9 @@
         "name": "Transport Tunnel A",
         "access_rules": [
           // Global access
-          "@can/bomb,@has/any suit,missile"
+          "@can/bomb,@has/any suit,missile",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1160,7 +1243,9 @@
 
           // Hard access
           "[hard],sbh,@can/pb,missile,@has/any suit",
-          "[hard],sbh,@can/pb,missile,etank:5"
+          "[hard],sbh,@can/pb,missile,etank:5",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1185,7 +1270,9 @@
 
               // Hard access
               "[hard],sbh,@has/any suit,missile,@can/bomb",
-              "[hard],sbh,@has/any suit,missile,space"
+              "[hard],sbh,@has/any suit,missile,space",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1206,7 +1293,9 @@
               "{@can/pb,@has/any suit,missile,boost,space}",
 
               // Hard access (must reload if not bombs)
-              "{hard,@can/pb,@has/any suit,missile,space}"
+              "{hard,@can/pb,@has/any suit,missile,space}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1224,7 +1313,9 @@
 
           // Hard access
           "[hard],sbh,@has/any suit,missile,@can/bomb",
-          "[hard],sbh,@has/any suit,missile,space"
+          "[hard],sbh,@has/any suit,missile,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1255,7 +1346,9 @@
 
           // Hard access and visibility (can see from outside, no reload)
           "{hard,@can/bomb,missile,wave,ice,space,@has/any suit}",
-          "{hard,@can/bomb,missile,wave,ice,space,etank:1}"
+          "{hard,@can/bomb,missile,wave,ice,space,etank:1}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1275,7 +1368,9 @@
           "[normal],sbn,@has/any suit,missile,morph,space,wave",
 
           // Hard access
-          "[hard],sbh,@reqs/phen backwards"
+          "[hard],sbh,@reqs/phen backwards",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1289,9 +1384,6 @@
   },
   {
     "name": "Phendrana Drifts",
-    "access_rules": [
-      "{artifactcheck}"
-    ],
     "children": [
       {
         "name": "Phendrana Shorelines",
@@ -1308,7 +1400,9 @@
               "[hard],sbh,@reqs/phen backwards,@can/isg",
 
               // Global visibility
-              "{@reqs/phendrana}"
+              "{@reqs/phendrana}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1321,7 +1415,9 @@
 
               // Hard access
               "[hard],sbh,@reqs/phendrana,@can/super,spider",
-              "[hard],sbh,@reqs/phen backwards,@can/super,spider"
+              "[hard],sbh,@reqs/phen backwards,@can/super,spider",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1338,7 +1434,9 @@
           "[hard],sbh,@reqs/phendrana,plasma",
           "[hard],sbh,@reqs/phendrana,@can/isg",
           "[hard],sbh,@reqs/phen backwards,plasma",
-          "[hard],sbh,@reqs/phen backwards,@can/isg"
+          "[hard],sbh,@reqs/phen backwards,@can/isg",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1356,7 +1454,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/phendrana,plasma",
-          "[hard],sbh,@reqs/phen backwards,plasma"
+          "[hard],sbh,@reqs/phen backwards,plasma",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1378,7 +1478,9 @@
               // Hard access
               "[hard],sbh,@reqs/phendrana,@can/isg",
               "[hard],sbh,@reqs/phen backwards,plasma",
-              "[hard],sbh,@reqs/phen backwards,@can/isg"
+              "[hard],sbh,@reqs/phen backwards,@can/isg",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1390,7 +1492,9 @@
               "@reqs/phendrana,spider",
 
               // Hard access
-              "[hard],sbh,@reqs/phen backwards,spider"
+              "[hard],sbh,@reqs/phen backwards,spider",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1414,7 +1518,9 @@
 
           // Hard access (can see from outside, no reload)
           "{hard,@reqs/phendrana}",
-          "{hard,@reqs/phen backwards}"
+          "{hard,@reqs/phen backwards}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1435,7 +1541,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/phendrana,wave",
-          "[hard],sbh,@reqs/phen backwards,wave"
+          "[hard],sbh,@reqs/phen backwards,wave",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1457,7 +1565,9 @@
           "hard,@reqs/phen backwards",
 
           // Global access (reload needed only if boxes are destroyed)
-          "{@reqs/phendrana}"
+          "{@reqs/phendrana}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1496,7 +1606,9 @@
           "{normal,@reqs/phen backwards}",
 
           // Hard access (must reload if thardus doesn't drop spider, grapple, or space)
-          "{hard,@reqs/phen backwards,@can/bomb}"
+          "{hard,@reqs/phen backwards,@can/bomb}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1520,7 +1632,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/phen backwards,grapple",
-          "[hard],sbh,@reqs/phen backwards,space"
+          "[hard],sbh,@reqs/phen backwards,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1554,7 +1668,9 @@
 
           // Hard visibility
           "{hard,@reqs/phendrana,wave,xray}",
-          "{hard,@reqs/phen backwards,wave,xray}"
+          "{hard,@reqs/phen backwards,wave,xray}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1577,7 +1693,9 @@
           // Hard access
           "[hard],sbh,@reqs/phendrana,space,wave",
           "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike"
+          "[hard],sbh,@reqs/mags frozenpike",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1603,7 +1721,9 @@
           "[hard],sbh,@reqs/mags thardus,space",
           "[hard],sbh,@reqs/mags thardus,spider,boost,plasma",
           "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,spider,plasma"
+          "[hard],sbh,@reqs/mags frozenpike,spider,plasma",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1626,7 +1746,9 @@
           // Hard access
           "[hard],sbh,@reqs/phendrana,space,wave",
           "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike"
+          "[hard],sbh,@reqs/mags frozenpike",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1659,7 +1781,9 @@
 
           // Global access and visibility (can leave room before obtaining)
           "{@reqs/phendrana,boost,space,wave}",
-          "{@reqs/phen backwards,ice}"
+          "{@reqs/phen backwards,ice}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1685,7 +1809,9 @@
 
           // Global visibility
           "{ice,thermal,@reqs/phendrana,boost,space,wave,spider}",
-          "{ice,@reqs/phen backwards}"
+          "{ice,@reqs/phen backwards}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1711,7 +1837,9 @@
           "[hard],sbh,@reqs/mags frozenpike,grapple",
 
           // Global visibility
-          "{ice,@reqs/phen backwards}"
+          "{ice,@reqs/phen backwards}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1734,7 +1862,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple,spider"
+          "[hard],sbh,@reqs/mags frozenpike,grapple,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1756,7 +1886,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple,spider"
+          "[hard],sbh,@reqs/mags frozenpike,grapple,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1794,7 +1926,9 @@
 
               // Hard access (must reload if not gravity)
               "{hard,@reqs/mags frozenpike,space}",
-              "{hard,@reqs/mags frozenpike,grapple,spider}"
+              "{hard,@reqs/mags frozenpike,grapple,spider}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1812,7 +1946,9 @@
 
               // Hard access
               "[hard],sbh,@reqs/mags frozenpike,space",
-              "[hard],sbh,@reqs/mags frozenpike,plasma,grapple,spider"
+              "[hard],sbh,@reqs/mags frozenpike,plasma,grapple,spider",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1823,9 +1959,6 @@
   },
   {
     "name": "Phazon Mines",
-    "access_rules": [
-      "{artifactcheck}"
-    ],
     "children": [
       {
         "name": "Main Quarry",
@@ -1839,7 +1972,9 @@
           "[normal],sbn,@reqs/mines from magmoor",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon,space"
+          "[hard],sbh,@reqs/mines from tallon,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1857,7 +1992,9 @@
           "@reqs/mines from magmoor,grapple",
 
           // Normal access
-          "[normal],sbn,@reqs/mines from magmoor"
+          "[normal],sbn,@reqs/mines from magmoor",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1875,7 +2012,9 @@
           "plasma,@reqs/mines from magmoor,grapple",
 
           // Normal access
-          "[normal],sbn,plasma,@reqs/mines from magmoor"
+          "[normal],sbn,plasma,@reqs/mines from magmoor",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1900,7 +2039,9 @@
               "[normal],sbn,boost,@reqs/mines from magmoor",
 
               // Hard access
-              "[hard],sbh,@reqs/mines from tallon,@can/pb"
+              "[hard],sbh,@reqs/mines from tallon,@can/pb",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1916,7 +2057,9 @@
               "[normal],sbn,boost,@reqs/mines from magmoor",
 
               // Hard access
-              "[hard],sbh,@reqs/mines from tallon"
+              "[hard],sbh,@reqs/mines from tallon",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1934,7 +2077,9 @@
           "[normal],sbn,@reqs/mines from tallon",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon"
+          "[hard],sbh,@reqs/mines from tallon",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1956,7 +2101,9 @@
           "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -1979,7 +2126,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,spider"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2002,7 +2151,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,spider"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2024,7 +2175,9 @@
           "[normal],sbn,boost,@reqs/mines from magmoor",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2047,7 +2200,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,spider"
+          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2070,7 +2225,9 @@
 
           // Hard access
           "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,spider"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,spider",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2092,7 +2249,9 @@
           "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2113,7 +2272,9 @@
           "[normal],sbn,@reqs/mines from tallon,@can/pb",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2134,7 +2295,9 @@
           "[normal],sbn,@reqs/mines from tallon",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon"
+          "[hard],sbh,@reqs/mines from tallon",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2155,7 +2318,9 @@
           "[normal],sbn,boost,@reqs/mines from tallon",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb"
+          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -2176,7 +2341,9 @@
           "[normal],sbn,boost,@reqs/mines from tallon",
 
           // Hard access
-          "[hard],sbh,@reqs/mines from tallon"
+          "[hard],sbh,@reqs/mines from tallon",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {

@@ -33,119 +33,8 @@
               "margin": "5,0,0,0",
               "content": [
                 {
-                  "type": "canvas",
-                  "width": 220,
-                  "height": 234,
-                  "content": [
-                    {
-                      "type": "item",
-                      "item": "artifact1",
-                      "canvas_depth": 1,
-                      "width": 28,
-                      "height": 37,
-                      "canvas_left": 67,
-                      "canvas_top": 89
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact2",
-                      "canvas_depth": 1,
-                      "width": 37,
-                      "height": 37,
-                      "canvas_left": 130,
-                      "canvas_top": 75
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact3",
-                      "canvas_depth": 1,
-                      "width": 34,
-                      "height": 34,
-                      "canvas_left": 78,
-                      "canvas_top": 129
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact4",
-                      "canvas_depth": 1,
-                      "width": 35,
-                      "height": 38,
-                      "canvas_left": 90,
-                      "canvas_top": 56
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact5",
-                      "canvas_depth": 1,
-                      "width": 20,
-                      "height": 23,
-                      "canvas_left": 120,
-                      "canvas_top": 139
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact6",
-                      "canvas_depth": 2,
-                      "width": 51,
-                      "height": 55,
-                      "canvas_left": 150,
-                      "canvas_top": 31
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact7",
-                      "canvas_depth": 0,
-                      "width": 46,
-                      "height": 41,
-                      "canvas_left": 55,
-                      "canvas_top": 155
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact8",
-                      "canvas_depth": 1,
-                      "width": 35,
-                      "height": 28,
-                      "canvas_left": 137,
-                      "canvas_top": 118
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact9",
-                      "canvas_depth": 1,
-                      "width": 64,
-                      "height": 67,
-                      "canvas_left": 108,
-                      "canvas_top": 166
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact10",
-                      "canvas_depth": 0,
-                      "width": 55,
-                      "height": 83,
-                      "canvas_left": 161,
-                      "canvas_top": 88
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact11",
-                      "canvas_depth": 0,
-                      "width": 66,
-                      "height": 58,
-                      "canvas_left": 84,
-                      "canvas_top": 0
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact12",
-                      "canvas_depth": 0,
-                      "width": 84,
-                      "height": 130,
-                      "canvas_left": 1,
-                      "canvas_top": 26
-                    }
-                  ]
+                  "type": "layout",
+                  "key": "fancyartifacts"
                 },
                 {
                   "type": "item",
@@ -160,6 +49,144 @@
       ]
     },
 
+    "fancyartifacts": {
+      "type": "canvas",
+      "width": 220,
+      "height": 234,
+      "content": [
+        {
+          "type": "item",
+          "item": "artifact1",
+          "canvas_depth": 1,
+          "width": 28,
+          "height": 37,
+          "canvas_left": 67,
+          "canvas_top": 89
+        },
+        {
+          "type": "item",
+          "item": "artifact2",
+          "canvas_depth": 1,
+          "width": 37,
+          "height": 37,
+          "canvas_left": 130,
+          "canvas_top": 75
+        },
+        {
+          "type": "item",
+          "item": "artifact3",
+          "canvas_depth": 1,
+          "width": 34,
+          "height": 34,
+          "canvas_left": 78,
+          "canvas_top": 129
+        },
+        {
+          "type": "item",
+          "item": "artifact4",
+          "canvas_depth": 1,
+          "width": 35,
+          "height": 38,
+          "canvas_left": 90,
+          "canvas_top": 56
+        },
+        {
+          "type": "item",
+          "item": "artifact5",
+          "canvas_depth": 1,
+          "width": 20,
+          "height": 23,
+          "canvas_left": 120,
+          "canvas_top": 139
+        },
+        {
+          "type": "item",
+          "item": "artifact6",
+          "canvas_depth": 2,
+          "width": 51,
+          "height": 55,
+          "canvas_left": 150,
+          "canvas_top": 31
+        },
+        {
+          "type": "item",
+          "item": "artifact7",
+          "canvas_depth": 0,
+          "width": 46,
+          "height": 41,
+          "canvas_left": 55,
+          "canvas_top": 155
+        },
+        {
+          "type": "item",
+          "item": "artifact8",
+          "canvas_depth": 1,
+          "width": 35,
+          "height": 28,
+          "canvas_left": 137,
+          "canvas_top": 118
+        },
+        {
+          "type": "item",
+          "item": "artifact9",
+          "canvas_depth": 1,
+          "width": 64,
+          "height": 67,
+          "canvas_left": 108,
+          "canvas_top": 166
+        },
+        {
+          "type": "item",
+          "item": "artifact10",
+          "canvas_depth": 0,
+          "width": 55,
+          "height": 83,
+          "canvas_left": 161,
+          "canvas_top": 88
+        },
+        {
+          "type": "item",
+          "item": "artifact11",
+          "canvas_depth": 0,
+          "width": 66,
+          "height": 58,
+          "canvas_left": 84,
+          "canvas_top": 0
+        },
+        {
+          "type": "item",
+          "item": "artifact12",
+          "canvas_depth": 0,
+          "width": 84,
+          "height": 130,
+          "canvas_left": 1,
+          "canvas_top": 26
+        }
+      ]
+    },
+
+    "settings": {
+      "type": "array",
+      "orientation": "vertical",
+      "h_alignment": "center",
+      "margin": "0,20,0,0",
+      "content": [
+        {
+          "type": "item",
+          "item": "normalsequencebreaks"
+        },
+        {
+          "type": "item",
+          "item": "hardsequencebreaks"
+        },
+        {
+          "type": "item",
+          "item": "acsetting",
+          "margin": "0,10,0,0"
+        }
+      ]
+    },
+
     "tracker_capture_item": {
       "type": "container",
       "content": {
@@ -167,6 +194,7 @@
         "key": "shared_item_grid"
       }
     },
+
     "tracker_default": {
       "type": "container",
       "background": "#000000",
@@ -253,6 +281,14 @@
                   "maps": [
                     "phazonmines"
                   ]
+                }
+              },
+              {
+                "title": "Settings",
+                "icon": "images/icon_settings.png",
+                "content": {
+                  "type": "layout",
+                  "key": "settings"
                 }
               }
             ]
@@ -348,6 +384,14 @@
                   "maps": [
                     "phazonmines"
                   ]
+                }
+              },
+              {
+                "title": "Settings",
+                "icon": "images/icon_settings.png",
+                "content": {
+                  "type": "layout",
+                  "key": "settings"
                 }
               }
             ]

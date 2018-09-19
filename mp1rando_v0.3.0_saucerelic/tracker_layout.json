@@ -160,6 +160,28 @@
       ]
     },
 
+    "settings": {
+      "type": "array",
+      "orientation": "vertical",
+      "h_alignment": "center",
+      "margin": "0,20,0,0",
+      "content": [
+        {
+          "type": "item",
+          "item": "normalsequencebreaks"
+        },
+        {
+          "type": "item",
+          "item": "hardsequencebreaks"
+        },
+        {
+          "type": "item",
+          "item": "acsetting",
+          "margin": "0,10,0,0"
+        }
+      ]
+    },
+
     "tracker_capture_item": {
       "type": "container",
       "content": {
@@ -253,6 +275,14 @@
                   "maps": [
                     "phazonmines"
                   ]
+                }
+              },
+              {
+                "title": "Settings",
+                "icon": "images/icon_settings.png",
+                "content": {
+                  "type": "layout",
+                  "key": "settings"
                 }
               }
             ]
@@ -348,6 +378,14 @@
                   "maps": [
                     "phazonmines"
                   ]
+                }
+              },
+              {
+                "title": "Settings",
+                "icon": "images/icon_settings.png",
+                "content": {
+                  "type": "layout",
+                  "key": "settings"
                 }
               }
             ]

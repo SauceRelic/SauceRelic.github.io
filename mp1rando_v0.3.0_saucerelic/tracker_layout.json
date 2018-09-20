@@ -19,6 +19,7 @@
               "type": "itemgrid",
               "item_margin": "2,2",
               "h_alignment": "left",
+              "v_alignment": "center",
               "item_size": 48,
               "rows": [
                 [ "charge", "super",       "morph",  "varia",       "missile" ],
@@ -28,132 +29,126 @@
               ]
             },
             {
-              "type": "array",
-              "orientation": "horizontal",
-              "margin": "5,0,0,0",
+              "type": "canvas",
+              "margin": "10,0",
+              "v_alignment": "center",
+              "width": 220,
+              "height": 234,
               "content": [
                 {
-                  "type": "canvas",
-                  "width": 220,
-                  "height": 234,
-                  "content": [
-                    {
-                      "type": "item",
-                      "item": "artifact1",
-                      "canvas_depth": 1,
-                      "width": 28,
-                      "height": 37,
-                      "canvas_left": 67,
-                      "canvas_top": 89
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact2",
-                      "canvas_depth": 1,
-                      "width": 37,
-                      "height": 37,
-                      "canvas_left": 130,
-                      "canvas_top": 75
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact3",
-                      "canvas_depth": 1,
-                      "width": 34,
-                      "height": 34,
-                      "canvas_left": 78,
-                      "canvas_top": 129
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact4",
-                      "canvas_depth": 1,
-                      "width": 35,
-                      "height": 38,
-                      "canvas_left": 90,
-                      "canvas_top": 56
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact5",
-                      "canvas_depth": 1,
-                      "width": 20,
-                      "height": 23,
-                      "canvas_left": 120,
-                      "canvas_top": 139
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact6",
-                      "canvas_depth": 2,
-                      "width": 51,
-                      "height": 55,
-                      "canvas_left": 150,
-                      "canvas_top": 31
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact7",
-                      "canvas_depth": 0,
-                      "width": 46,
-                      "height": 41,
-                      "canvas_left": 55,
-                      "canvas_top": 155
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact8",
-                      "canvas_depth": 1,
-                      "width": 35,
-                      "height": 28,
-                      "canvas_left": 137,
-                      "canvas_top": 118
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact9",
-                      "canvas_depth": 1,
-                      "width": 64,
-                      "height": 67,
-                      "canvas_left": 108,
-                      "canvas_top": 166
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact10",
-                      "canvas_depth": 0,
-                      "width": 55,
-                      "height": 83,
-                      "canvas_left": 161,
-                      "canvas_top": 88
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact11",
-                      "canvas_depth": 0,
-                      "width": 66,
-                      "height": 58,
-                      "canvas_left": 84,
-                      "canvas_top": 0
-                    },
-                    {
-                      "type": "item",
-                      "item": "artifact12",
-                      "canvas_depth": 0,
-                      "width": 84,
-                      "height": 130,
-                      "canvas_left": 1,
-                      "canvas_top": 26
-                    }
-                  ]
+                  "type": "item",
+                  "item": "artifact1",
+                  "canvas_depth": 1,
+                  "width": 28,
+                  "height": 37,
+                  "canvas_left": 67,
+                  "canvas_top": 89
                 },
                 {
                   "type": "item",
-                  "item": "difficulty",
-                  "v_alignment": "center",
-                  "margin": "5,0"
+                  "item": "artifact2",
+                  "canvas_depth": 1,
+                  "width": 37,
+                  "height": 37,
+                  "canvas_left": 130,
+                  "canvas_top": 75
+                },
+                {
+                  "type": "item",
+                  "item": "artifact3",
+                  "canvas_depth": 1,
+                  "width": 34,
+                  "height": 34,
+                  "canvas_left": 78,
+                  "canvas_top": 129
+                },
+                {
+                  "type": "item",
+                  "item": "artifact4",
+                  "canvas_depth": 1,
+                  "width": 35,
+                  "height": 38,
+                  "canvas_left": 90,
+                  "canvas_top": 56
+                },
+                {
+                  "type": "item",
+                  "item": "artifact5",
+                  "canvas_depth": 1,
+                  "width": 20,
+                  "height": 23,
+                  "canvas_left": 120,
+                  "canvas_top": 139
+                },
+                {
+                  "type": "item",
+                  "item": "artifact6",
+                  "canvas_depth": 2,
+                  "width": 51,
+                  "height": 55,
+                  "canvas_left": 150,
+                  "canvas_top": 31
+                },
+                {
+                  "type": "item",
+                  "item": "artifact7",
+                  "canvas_depth": 0,
+                  "width": 46,
+                  "height": 41,
+                  "canvas_left": 55,
+                  "canvas_top": 155
+                },
+                {
+                  "type": "item",
+                  "item": "artifact8",
+                  "canvas_depth": 1,
+                  "width": 35,
+                  "height": 28,
+                  "canvas_left": 137,
+                  "canvas_top": 118
+                },
+                {
+                  "type": "item",
+                  "item": "artifact9",
+                  "canvas_depth": 1,
+                  "width": 64,
+                  "height": 67,
+                  "canvas_left": 108,
+                  "canvas_top": 166
+                },
+                {
+                  "type": "item",
+                  "item": "artifact10",
+                  "canvas_depth": 0,
+                  "width": 55,
+                  "height": 83,
+                  "canvas_left": 161,
+                  "canvas_top": 88
+                },
+                {
+                  "type": "item",
+                  "item": "artifact11",
+                  "canvas_depth": 0,
+                  "width": 66,
+                  "height": 58,
+                  "canvas_left": 84,
+                  "canvas_top": 0
+                },
+                {
+                  "type": "item",
+                  "item": "artifact12",
+                  "canvas_depth": 0,
+                  "width": 84,
+                  "height": 130,
+                  "canvas_left": 1,
+                  "canvas_top": 26
                 }
               ]
+            },
+            {
+              "type": "item",
+              "item": "difficulty",
+              "v_alignment": "center"
             }
           ]
         }
@@ -189,12 +184,143 @@
     },
 
     "tracker_capture_item": {
-      "type": "container",
-      "content": {
-        "type": "layout",
-        "key": "shared_item_grid"
-      }
+      "type": "array",
+      "orientation": "horizontal",
+      "margin": "0,0",
+      "content": [
+        {
+          "type": "itemgrid",
+          "item_margin": "2,2",
+          "h_alignment": "left",
+          "v_alignment": "center",
+          "item_size": 48,
+          "rows": [
+            [ "charge", "super",       "morph",  "varia",       "missile" ],
+            [ "wave",   "wavecombo",   "bomb",   "gravityitem", "etank" ],
+            [ "ice",    "icecombo",    "boost",  "phazon",      "powerbomb" ],
+            [ "plasma", "plasmacombo", "spider", "space",       "grapple" ]
+          ]
+        },
+        {
+          "type": "canvas",
+          "margin": "10,0",
+          "v_alignment": "center",
+          "width": 220,
+          "height": 234,
+          "content": [
+            {
+              "type": "item",
+              "item": "artifact1",
+              "canvas_depth": 1,
+              "width": 28,
+              "height": 37,
+              "canvas_left": 67,
+              "canvas_top": 89
+            },
+            {
+              "type": "item",
+              "item": "artifact2",
+              "canvas_depth": 1,
+              "width": 37,
+              "height": 37,
+              "canvas_left": 130,
+              "canvas_top": 75
+            },
+            {
+              "type": "item",
+              "item": "artifact3",
+              "canvas_depth": 1,
+              "width": 34,
+              "height": 34,
+              "canvas_left": 78,
+              "canvas_top": 129
+            },
+            {
+              "type": "item",
+              "item": "artifact4",
+              "canvas_depth": 1,
+              "width": 35,
+              "height": 38,
+              "canvas_left": 90,
+              "canvas_top": 56
+            },
+            {
+              "type": "item",
+              "item": "artifact5",
+              "canvas_depth": 1,
+              "width": 20,
+              "height": 23,
+              "canvas_left": 120,
+              "canvas_top": 139
+            },
+            {
+              "type": "item",
+              "item": "artifact6",
+              "canvas_depth": 2,
+              "width": 51,
+              "height": 55,
+              "canvas_left": 150,
+              "canvas_top": 31
+            },
+            {
+              "type": "item",
+              "item": "artifact7",
+              "canvas_depth": 0,
+              "width": 46,
+              "height": 41,
+              "canvas_left": 55,
+              "canvas_top": 155
+            },
+            {
+              "type": "item",
+              "item": "artifact8",
+              "canvas_depth": 1,
+              "width": 35,
+              "height": 28,
+              "canvas_left": 137,
+              "canvas_top": 118
+            },
+            {
+              "type": "item",
+              "item": "artifact9",
+              "canvas_depth": 1,
+              "width": 64,
+              "height": 67,
+              "canvas_left": 108,
+              "canvas_top": 166
+            },
+            {
+              "type": "item",
+              "item": "artifact10",
+              "canvas_depth": 0,
+              "width": 55,
+              "height": 83,
+              "canvas_left": 161,
+              "canvas_top": 88
+            },
+            {
+              "type": "item",
+              "item": "artifact11",
+              "canvas_depth": 0,
+              "width": 66,
+              "height": 58,
+              "canvas_left": 84,
+              "canvas_top": 0
+            },
+            {
+              "type": "item",
+              "item": "artifact12",
+              "canvas_depth": 0,
+              "width": 84,
+              "height": 130,
+              "canvas_left": 1,
+              "canvas_top": 26
+            }
+          ]
+        }
+      ]
     },
+
     "tracker_default": {
       "type": "container",
       "background": "#000000",

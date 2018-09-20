@@ -217,10 +217,10 @@
           "space",
 
           // Normal access
-          "[normal]",
+          "[normal],sbn",
 
           // Hard access
-          "[hard]",
+          "[hard],sbh",
 
           "{artifactcheck}"
         ],

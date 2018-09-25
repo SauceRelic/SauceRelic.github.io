@@ -232,6 +232,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_truth_blue.png"
@@ -247,6 +248,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_strength_blue.png"
@@ -262,6 +264,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_elder_blue.png"
@@ -277,6 +280,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_wild_blue.png"
@@ -292,6 +296,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_lifegiver_blue.png"
@@ -307,6 +312,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_world_blue.png"
@@ -322,6 +328,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_sun_blue.png"
@@ -337,6 +344,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_warrior_blue.png"
@@ -352,6 +360,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_newborn_blue.png"
@@ -367,6 +376,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_spirit_blue.png"
@@ -382,6 +392,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_nature_blue.png"
@@ -397,6 +408,7 @@
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
+    "mask_input": true,
     "stages": [
       {
         "img": "images/art_chozo_blue.png"

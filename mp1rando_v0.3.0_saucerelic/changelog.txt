@@ -1,2 +1,6 @@
-v1.0.0.0:
-  #Initial release
+v0.9.0.0
+  Unfinished release, still missing a few things like:
+	-Broadcast layout
+	-Custom chest icons
+	
+Logic might also need some tweaks.

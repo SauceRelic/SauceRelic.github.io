@@ -22,10 +22,10 @@
               "v_alignment": "center",
               "item_size": 48,
               "rows": [
-                [ "charge", "super",       "morph",  "varia",       "missile" ],
-                [ "wave",   "wavecombo",   "bomb",   "gravityitem", "etank" ],
-                [ "ice",    "icecombo",    "boost",  "phazon",      "powerbomb" ],
-                [ "plasma", "plasmacombo", "spider", "space",       "grapple" ]
+                [ "charge", "super",       "morph",  "space",   "varia",       "missile"   ],
+                [ "wave",   "wavecombo",   "bomb",   "grapple", "gravityitem", "etank"     ],
+                [ "ice",    "icecombo",    "boost",  "thermal", "phazon",      "powerbomb" ],
+                [ "plasma", "plasmacombo", "spider", "xray",    "",            ""          ]
               ]
             },
             {

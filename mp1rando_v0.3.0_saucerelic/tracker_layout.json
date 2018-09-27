@@ -146,9 +146,22 @@
               ]
             },
             {
-              "type": "item",
-              "item": "difficulty",
-              "v_alignment": "center"
+              "type": "array",
+              "orientation": "vertical",
+              "v_alignment": "center",
+              "content": [
+                {
+                  "type": "item",
+                  "item": "difficulty",
+                  "h_alignment": "center"
+                },
+                {
+                  "type": "item",
+                  "item": "artifactcheck",
+                  "h_alignment": "center",
+                  "margin": "0,20,0,0"
+                }
+              ]
             }
           ]
         }

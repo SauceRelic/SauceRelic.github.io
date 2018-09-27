@@ -184,6 +184,7 @@
   },
   {
     "name": "Tallon Overworld",
+    "color": "#316534",
     "children": [
       {
         "name": "Landing Site",
@@ -403,6 +404,7 @@
       },
       {
         "name": "Cargo Freight Lift to Deck Gamma",
+        "color": "#525252",
         "access_rules": [
           // Global access
           "@reqs/frigate",
@@ -432,6 +434,7 @@
       },
       {
         "name": "Biohazard Containment",
+        "color": "#525252",
         "access_rules": [
           // Global access
           "@reqs/frigate,@can/super",
@@ -461,6 +464,7 @@
       },
       {
         "name": "Hydro Access Tunnel",
+        "color": "#525252",
         "access_rules": [
           // Global access
           "@reqs/frigate",
@@ -587,6 +591,7 @@
   },
   {
     "name": "Chozo Ruins",
+    "color": "#8c640f",
     "children": [
       {
         "name": "Main Plaza",
@@ -1407,6 +1412,7 @@
   },
   {
     "name": "Magmoor Caverns",
+    "color": "#933826",
     "children": [
       {
         "name": "Lava Lake",
@@ -1699,6 +1705,7 @@
   },
   {
     "name": "Phendrana Drifts",
+    "color": "#5b7373",
     "children": [
       {
         "name": "Phendrana Shorelines",
@@ -2407,6 +2414,7 @@
   },
   {
     "name": "Phazon Mines",
+    "color": "#4e4759",
     "children": [
       {
         "name": "Main Quarry",

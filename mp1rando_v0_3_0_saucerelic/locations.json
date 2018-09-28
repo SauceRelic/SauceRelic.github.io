@@ -1198,14 +1198,13 @@
       },
       {
         "name": "Burn Dome",
-        "access_rules": [
-          // Global access and escape
-          "@can/bomb,missile"
-        ],
         "sections": [
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
+              // Global access and escape
+              "@can/bomb,missile",
+
               // Global access (must reload if neither burn dome item is bombs)
               "{missile,@can/bomb or pb}",
 
@@ -1217,6 +1216,9 @@
           {
             "name": "Incinerator Drone (Morph Bomb)",
             "access_rules": [
+              // Global access and escape
+              "@can/bomb,missile",
+
               // Global access (must reload if neither burn dome item is bombs)
               "{missile,morph}",
 

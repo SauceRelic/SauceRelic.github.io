@@ -1072,12 +1072,12 @@
         "name": "Crossway",
         "access_rules": [
           // Global access
-          "@can/bomb,missile,boost,spider,wave",
-          "@can/bomb,missile,boost,spider,ice",
+          "@can/bomb,@can/super,boost,spider,wave",
+          "@can/bomb,@can/super,boost,spider,ice",
 
           // Normal access
-          "[normal],sbn,@can/bomb,missile,space,wave",
-          "[normal],sbn,@can/bomb,missile,space,ice",
+          "[normal],sbn,@can/bomb,@can/super,space,wave",
+          "[normal],sbn,@can/bomb,@can/super,space,ice",
 
           // Hard access
           "[hard],sbh,@can/bomb,missile,space",

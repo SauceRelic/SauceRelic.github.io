@@ -40,18 +40,11 @@
     "codes": "sbh,hardsequencebreaks"
   },
   {
-    "name": "Artifact Temple Checks (setting)",
+    "name": "Artifact Temple Checks",
     "type": "toggle",
     "loop": true,
-    "img": "images/artifactcheck_setting.png",
-    "codes": "acsetting,artifactcheck"
-  },
-  {
-    "name": "Artifact Temple Checks (icon)",
-    "type": "toggle",
-    "loop": true,
-    "img": "images/artifactcheck_icon.png",
-    "codes": "acicon,artifactcheck"
+    "img": "images/artifactcheck.png",
+    "codes": "artifactcheck"
   },
   {
     "name": "Charge Beam",

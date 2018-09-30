@@ -105,7 +105,7 @@
       // Only used for hard/sequence breaks
       {
         "name": "mags thardus",
-        "sections": [
+        "access_rules": [
           "missile,morph,wave,space,@has/any suit",
           "missile,morph,wave,space,etank:1",
           "missile,morph,wave,spider,boost,@has/any suit",
@@ -116,7 +116,7 @@
       // Only used for hard/sequence breaks
       {
         "name": "mags frozenpike",
-        "sections": [
+        "access_rules": [
           "missile,morph,wave,ice,space,@has/any suit",
           "missile,morph,wave,ice,space,etank:1",
           "missile,morph,wave,ice,spider,@has/any suit",
@@ -140,7 +140,7 @@
       },
       {
         "name": "mines from magmoor",
-        "sections": [
+        "access_rules": [
           // Global access
           "@can/bomb,@can/pb,missile,wave,ice,space,spider,@has/any suit",
 
@@ -184,6 +184,7 @@
   },
   {
     "name": "Tallon Overworld",
+    "color": "#316534",
     "children": [
       {
         "name": "Landing Site",
@@ -251,6 +252,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 565,
+            "y": 1040
+          }
         ]
       },
       {
@@ -272,6 +280,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 135,
+            "y": 585
           }
         ]
       },
@@ -296,6 +311,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 35,
+            "y": 560
+          }
         ]
       },
       {
@@ -311,6 +333,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 135,
+            "y": 695
           }
         ]
       },
@@ -333,6 +362,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 915,
+            "y": 345
           }
         ]
       },
@@ -357,10 +393,18 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 967,
+            "y": 155
+          }
         ]
       },
       {
         "name": "Cargo Freight Lift to Deck Gamma",
+        "color": "#525252",
         "access_rules": [
           // Global access
           "@reqs/frigate",
@@ -379,10 +423,18 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 1090,
+            "y": 520
+          }
         ]
       },
       {
         "name": "Biohazard Containment",
+        "color": "#525252",
         "access_rules": [
           // Global access
           "@reqs/frigate,@can/super",
@@ -401,10 +453,18 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 909,
+            "y": 700
+          }
         ]
       },
       {
         "name": "Hydro Access Tunnel",
+        "color": "#525252",
         "access_rules": [
           // Global access
           "@reqs/frigate",
@@ -422,6 +482,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 1030,
+            "y": 890
           }
         ]
       },
@@ -446,6 +513,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 1241,
+            "y": 872
+          }
         ]
       },
       {
@@ -468,6 +542,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 1152,
+            "y": 1000
           }
         ]
       },
@@ -497,12 +578,20 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 1152,
+            "y": 1100
+          }
         ]
       }
     ]
   },
   {
     "name": "Chozo Ruins",
+    "color": "#8c640f",
     "children": [
       {
         "name": "Main Plaza",
@@ -581,6 +670,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 505,
+            "y": 655
+          }
         ]
       },
       {
@@ -599,6 +695,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 720,
+            "y": 800
           }
         ]
       },
@@ -648,6 +751,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 207,
+            "y": 707
+          }
         ]
       },
       {
@@ -666,6 +776,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 627,
+            "y": 377
           }
         ]
       },
@@ -686,6 +803,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 560,
+            "y": 1027
           }
         ]
       },
@@ -709,6 +833,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 526,
+            "y": 1075
+          }
         ]
       },
       {
@@ -730,6 +861,13 @@
             "name": "Power Bomb",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 632,
+            "y": 1122
           }
         ]
       },
@@ -754,6 +892,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 60,
+            "y": 780
+          }
         ]
       },
       {
@@ -777,6 +922,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 60,
+            "y": 900
+          }
         ]
       },
       {
@@ -793,6 +945,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 265,
+            "y": 490
           }
         ]
       },
@@ -821,6 +980,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 308,
+            "y": 305
+          }
         ]
       },
       {
@@ -836,6 +1002,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 479,
+            "y": 47
           }
         ]
       },
@@ -860,6 +1033,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1053,
+            "y": 904
+          }
         ]
       },
       {
@@ -870,6 +1050,13 @@
             "name": "Missile Launcher",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 479,
+            "y": 108
           }
         ]
       },
@@ -901,6 +1088,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 810,
+            "y": 450
+          }
         ]
       },
       {
@@ -916,6 +1110,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1020,
+            "y": 795
           }
         ]
       },
@@ -952,6 +1153,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1085,
+            "y": 600
+          }
         ]
       },
       {
@@ -979,18 +1187,24 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1130,
+            "y": 833
+          }
         ]
       },
       {
         "name": "Burn Dome",
-        "access_rules": [
-          // Global access and escape
-          "@can/bomb,missile"
-        ],
         "sections": [
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
+              // Global access and escape
+              "@can/bomb,missile",
+
               // Global access (must reload if neither burn dome item is bombs)
               "{missile,@can/bomb or pb}",
 
@@ -1002,6 +1216,9 @@
           {
             "name": "Incinerator Drone (Morph Bomb)",
             "access_rules": [
+              // Global access and escape
+              "@can/bomb,missile",
+
               // Global access (must reload if neither burn dome item is bombs)
               "{missile,morph}",
 
@@ -1010,13 +1227,20 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1323,
+            "y": 737
+          }
         ]
       },
       {
         "name": "Furnace",
         "sections": [
           {
-            "name": "Spider Tracks ()",
+            "name": "Spider Tracks (Missile)",
             "access_rules": [
               // Global access
               "@can/bomb,@can/pb,missile,boost,spider",
@@ -1033,7 +1257,7 @@
             "capture_item": true
           },
           {
-            "name": "Tunnel ()",
+            "name": "Tunnel (E-Tank)",
             "access_rules": [
               // Global access
               "@can/bomb,missile",
@@ -1042,6 +1266,13 @@
             ],
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1520,
+            "y": 1045
           }
         ]
       },
@@ -1065,6 +1296,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1633,
+            "y": 1012
           }
         ]
       },
@@ -1090,6 +1328,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1642,
+            "y": 870
+          }
         ]
       },
       {
@@ -1113,6 +1358,13 @@
             "name": "Artifact of World",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1718,
+            "y": 1092
           }
         ]
       },
@@ -1149,12 +1401,20 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": 1723,
+            "y": 1288
+          }
         ]
       }
     ]
   },
   {
     "name": "Magmoor Caverns",
+    "color": "#933826",
     "children": [
       {
         "name": "Lava Lake",
@@ -1175,6 +1435,13 @@
             "name": "Artifact of Nature",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 193,
+            "y": 706
           }
         ]
       },
@@ -1198,6 +1465,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 445,
+            "y": 1055
+          }
         ]
       },
       {
@@ -1214,6 +1488,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 204,
+            "y": 1235
+          }
         ]
       },
       {
@@ -1229,6 +1510,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 487,
+            "y": 1245
           }
         ]
       },
@@ -1252,6 +1540,13 @@
             "name": "Ice Spreader",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 823,
+            "y": 1291
           }
         ]
       },
@@ -1300,6 +1595,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 888,
+            "y": 1325
+          }
         ]
       },
       {
@@ -1322,6 +1624,13 @@
             "name": "Artifact of Strength",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 900,
+            "y": 1118
           }
         ]
       },
@@ -1356,6 +1665,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 1198,
+            "y": 648
+          }
         ]
       },
       {
@@ -1378,12 +1694,20 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": 1332,
+            "y": 1041
+          }
         ]
       }
     ]
   },
   {
     "name": "Phendrana Drifts",
+    "color": "#5b7373",
     "children": [
       {
         "name": "Phendrana Shorelines",
@@ -1422,6 +1746,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 745,
+            "y": 505
+          }
         ]
       },
       {
@@ -1444,6 +1775,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 361,
+            "y": 530
+          }
         ]
       },
       {
@@ -1463,6 +1801,13 @@
             "name": "Powerbomb",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 815,
+            "y": 795
           }
         ]
       },
@@ -1499,6 +1844,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1125,
+            "y": 620
+          }
         ]
       },
       {
@@ -1528,6 +1880,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 100,
+            "y": 531
+          }
         ]
       },
       {
@@ -1550,6 +1909,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 740,
+            "y": 1169
           }
         ]
       },
@@ -1574,6 +1940,13 @@
             "name": "Boost Ball",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 240,
+            "y": 1030
           }
         ]
       },
@@ -1616,6 +1989,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1290,
+            "y": 1538
+          }
         ]
       },
       {
@@ -1641,6 +2021,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1498,
+            "y": 1483
           }
         ]
       },
@@ -1678,6 +2065,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1644,
+            "y": 280
+          }
         ]
       },
       {
@@ -1702,6 +2096,13 @@
             "name": "Super Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1537,
+            "y": 544
           }
         ]
       },
@@ -1730,6 +2131,13 @@
             "name": "Artifact of Elder",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1330,
+            "y": 190
           }
         ]
       },
@@ -1761,6 +2169,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1768,
+            "y": 532
+          }
         ]
       },
       {
@@ -1791,6 +2206,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1785,
+            "y": 762
+          }
         ]
       },
       {
@@ -1818,6 +2240,13 @@
             "name": "E-Tank",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 2057,
+            "y": 585
           }
         ]
       },
@@ -1847,6 +2276,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 1952,
+            "y": 1299
+          }
         ]
       },
       {
@@ -1872,6 +2308,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 2108,
+            "y": 1645
+          }
         ]
       },
       {
@@ -1895,6 +2338,13 @@
             "name": "Powerbomb",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 2010,
+            "y": 1782
           }
         ]
       },
@@ -1953,12 +2403,20 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": 2425,
+            "y": 1130
+          }
         ]
       }
     ]
   },
   {
     "name": "Phazon Mines",
+    "color": "#4e4759",
     "children": [
       {
         "name": "Main Quarry",
@@ -1982,6 +2440,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1330,
+            "y": 495
+          }
         ]
       },
       {
@@ -2002,6 +2467,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1295,
+            "y": 560
+          }
         ]
       },
       {
@@ -2021,6 +2493,13 @@
             "name": "Flamethrower",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1127,
+            "y": 351
           }
         ]
       },
@@ -2064,6 +2543,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1090,
+            "y": 196
+          }
         ]
       },
       {
@@ -2086,6 +2572,13 @@
             "name": "Grapple Beam",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1329,
+            "y": 74
           }
         ]
       },
@@ -2110,6 +2603,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 758,
+            "y": 482
           }
         ]
       },
@@ -2136,6 +2636,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 706,
+            "y": 910
+          }
         ]
       },
       {
@@ -2161,6 +2668,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 676,
+            "y": 1251
+          }
         ]
       },
       {
@@ -2184,6 +2698,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1565,
+            "y": 1030
           }
         ]
       },
@@ -2210,6 +2731,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 314,
+            "y": 1365
+          }
         ]
       },
       {
@@ -2235,6 +2763,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 173,
+            "y": 1200
+          }
         ]
       },
       {
@@ -2259,6 +2794,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 177,
+            "y": 1021
+          }
         ]
       },
       {
@@ -2281,6 +2823,13 @@
             "name": "Missile",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 395,
+            "y": 935
           }
         ]
       },
@@ -2305,6 +2854,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1282,
+            "y": 1231
+          }
         ]
       },
       {
@@ -2328,6 +2884,13 @@
             "item_count": 1,
             "capture_item": true
           }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1176,
+            "y": 1498
+          }
         ]
       },
       {
@@ -2350,6 +2913,13 @@
             "name": "Powerbombs",
             "item_count": 1,
             "capture_item": true
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": 1465,
+            "y": 1560
           }
         ]
       }

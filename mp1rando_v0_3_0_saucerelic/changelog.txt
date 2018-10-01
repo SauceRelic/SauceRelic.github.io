@@ -1,3 +1,9 @@
+v0.9.0.3
+  Fixed Crossway logic (now requires supers)
+    *** Be aware that this is a deviation from the current randomizer logic, but will soon be fixed. In the mean time, there is a very
+        rare chance for an unbeatable seed.
+  Added Lava Lake sequence break for glitchless (only according to randomizer logic, does not require glitches)
+
 v0.9.0.2
   Fixed visors not being in the capture grid
 

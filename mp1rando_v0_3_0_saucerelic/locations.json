@@ -1424,7 +1424,7 @@
 
           // Glitchless sequence break (no glitches, just an extreme outlier location)
           "@has/any suit,missile,morph,[bomb]",
-          "@has/any suit,missile,morph,[pb]"
+          "@has/any suit,missile,morph,[pb]",
 
           // Normal access
           "[normal],sbn,@has/any suit,missile,morph",

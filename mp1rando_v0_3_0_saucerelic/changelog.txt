@@ -1,3 +1,6 @@
+v0.9.0.4
+  Fixed missing comma in Lava Lake
+
 v0.9.0.3
   Fixed Crossway logic (now requires supers)
     *** Be aware that this is a deviation from the current randomizer logic, but will soon be fixed. In the mean time, there is a very

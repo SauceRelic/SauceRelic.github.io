@@ -2359,8 +2359,8 @@
             "name": "Underwater (Gravity Suit)",
             "access_rules": [
               // Global access and escape
-              "@reqs/phendrana,boost,space,wave,gravity,thermal",
-              "@reqs/phen backwards,gravity",
+              "@reqs/phendrana,ice,boost,space,wave,gravity,thermal",
+              "@reqs/phen backwards,ice,gravity",
 
               // Normal access and escape
               "[normal],sbn,ice,@reqs/phendrana,space,wave,gravity,thermal",

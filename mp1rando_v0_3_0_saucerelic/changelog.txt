@@ -6,8 +6,13 @@ v0.9.1.0
   - Added visibility for Biohazard Containment if you have xray but can't use supers
   - Added visibility for Gathering hall if you're missing bombs or space
   - Added visibility for Triclops Pit if you're missing xray or space
+  - Added visibility for Phendrana Shorelines spider track
+  - Added visibility for Ice Ruins East behind ice
+  - Added visibility for Ice Ruins West if you have space or are playing hard
+  - Added glitchless sequence break to Ruined Courtyard if you have spider but not boost
   - Removed thermal requirements for phendrana pirate facility locations if you enter phendrana backwards
   - Removed normal access section of Research Lab Aether as a result of thermal visor changes
+  - Fixed Research Lab Hydra not requiring supers for one of the paths
   - Made vanilla path Research Core need either ice or thermal, not both
   - Added sequence break for vanilla path Research core if you memorize thermal spots
   - Cleaned up multiple locations to increase readability and remove unintended redundancy

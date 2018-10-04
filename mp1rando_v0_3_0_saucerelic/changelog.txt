@@ -1,3 +1,16 @@
+v0.9.1.0
+  Made sweeping modifications to multiple locations:
+  - Made the scan dash for Alcove a glitchless sequence break, as it is a very easy glitch and an early check
+  - Added glitchless sequence breaks for frigate that skip thermal visor
+  - Added all difficulties sequence break for Cargo Lift to Deck Gamma, as gravity is not required
+  - Added visibility for Biohazard Containment if you have xray but can't use supers
+  - Added visibility for Gathering hall if you're missing bombs or space
+  - Added visibility for Triclops Pit if you're missing xray or space
+  - Removed thermal requirements for phendrana pirate facility locations if you enter phendrana backwards
+  - Made vanilla path Research Core need either ice or thermal, not both
+  - Added sequence break for vanilla path Research core if you memorize thermal spots
+  - Cleaned up multiple locations to increase readability and remove unintended redundancy
+
 v0.9.0.6
   Did 0.9.0.5 again but for real
 

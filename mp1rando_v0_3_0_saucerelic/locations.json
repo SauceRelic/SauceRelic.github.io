@@ -2371,8 +2371,8 @@
               "[hard],sbh,@reqs/mags frozenpike,grapple,spider,gravity,@can/bomb",
 
               // Global access (must reload if not gravity)
-              "{@reqs/phendrana,boost,space,wave,thermal}",
-              "{@reqs/phen backwards}",
+              "{@reqs/phendrana,ice,boost,space,wave,thermal}",
+              "{@reqs/phen backwards,ice}",
 
               // Normal access (must reload if not gravity)
               "{normal,ice,@reqs/phendrana,space,wave}",

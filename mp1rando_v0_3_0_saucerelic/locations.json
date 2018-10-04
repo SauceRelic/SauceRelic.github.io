@@ -1775,6 +1775,9 @@
               "[hard],sbh,@reqs/phendrana,@can/super,spider",
               "[hard],sbh,@reqs/phen backwards,@can/super,spider",
 
+              // Global visibility
+              "{@reqs/phenrana}",
+
               "{artifactcheck}"
             ],
             "item_count": 1,

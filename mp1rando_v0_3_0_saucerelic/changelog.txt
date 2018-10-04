@@ -10,7 +10,7 @@ v0.9.1.0
   - Added visibility for Ice Ruins East behind ice
   - Added visibility for Ice Ruins West if you have space or are playing hard
   - Added glitchless sequence break to Ruined Courtyard if you have spider but not boost
-  - Removed thermal requirements for phendrana pirate facility locations if you enter phendrana backwards
+  - Removed thermal requirements for phendrana pirate facility locations, excepting Research Core
   - Removed normal access section of Research Lab Aether as a result of thermal visor changes
   - Fixed Research Lab Hydra not requiring supers for one of the paths
   - Made vanilla path Research Core need either ice or thermal, not both

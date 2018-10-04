@@ -1948,6 +1948,9 @@
           "[hard],sbh,@reqs/phendrana,wave",
           "[hard],sbh,@reqs/phen backwards,wave",
 
+          // Glitchless sequence break (easy jump from upper level)
+          "@reqs/phendrana,space,wave,spider,[boost]",
+
           "{artifactcheck}"
         ],
         "sections": [

@@ -1488,6 +1488,9 @@
           // Hard access
           "[hard],sbh,@has/any suit,missile,morph",
 
+          // Global visibility
+          "{@has/any suit,missile,morph}",
+
           "{artifactcheck}"
         ],
         "sections": [

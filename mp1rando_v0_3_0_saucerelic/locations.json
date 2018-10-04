@@ -2234,7 +2234,6 @@
 
           // Normal access and escape
           "[normal],sbn,@reqs/phendrana,space,wave,boost",
-          "[normal],sbn,@reqs/phen backwards,ice",
 
           // Hard access and escape
           "[hard],sbh,@reqs/phendrana,space,wave",

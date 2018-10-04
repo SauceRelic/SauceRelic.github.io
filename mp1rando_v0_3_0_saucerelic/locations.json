@@ -2145,7 +2145,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,plasma,boost,space,wave",
-          "@reqs/phen backwards,plasma,thermal,ice",
+          "@reqs/phen backwards,plasma,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,boost,space,wave",
@@ -2180,7 +2180,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,thermal,ice",
+          "@reqs/phen backwards,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phen backwards,ice",
@@ -2234,7 +2234,7 @@
 
           // Glitchless sequence break (can learn thermal spots, manually aim at enemies)
           "@reqs/phendrana,boost,space,wave,[thermal]",
-          
+
           "{artifactcheck}"
         ],
         "sections": [

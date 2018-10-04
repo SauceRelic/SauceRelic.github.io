@@ -2084,12 +2084,12 @@
         "name": "Research Lab Hydra",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,@can/super,thermal,boost,space,wave",
-          "@reqs/phen backwards,@can/super,thermal,ice",
+          "@reqs/phendrana,@can/super,boost,space,wave",
+          "@reqs/phen backwards,@can/super,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,@can/super,wave,space",
-          "[normal],sbn,@reqs/phen backwards,ice",
+          "[normal],sbn,@reqs/phen backwards,@can/super,ice",
 
           // Hard access
           "[hard],sbh,@reqs/phendrana,@can/super,wave",

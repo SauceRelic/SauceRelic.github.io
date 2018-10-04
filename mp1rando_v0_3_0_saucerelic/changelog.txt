@@ -7,6 +7,7 @@ v0.9.1.0
   - Added visibility for Gathering hall if you're missing bombs or space
   - Added visibility for Triclops Pit if you're missing xray or space
   - Removed thermal requirements for phendrana pirate facility locations if you enter phendrana backwards
+  - Removed normal access section of Research Lab Aether as a result of thermal visor changes
   - Made vanilla path Research Core need either ice or thermal, not both
   - Added sequence break for vanilla path Research core if you memorize thermal spots
   - Cleaned up multiple locations to increase readability and remove unintended redundancy

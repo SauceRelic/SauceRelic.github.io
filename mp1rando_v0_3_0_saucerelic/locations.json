@@ -2216,8 +2216,9 @@
         "name": "Research Core",
         "access_rules": [
           // Global access and escape
-          "@reqs/phendrana,boost,space,wave,thermal,ice",
-          "@reqs/phen backwards,ice,thermal",
+          "@reqs/phendrana,boost,space,wave,thermal",
+          "@reqs/phendrana,boost,space,wave,ice",
+          "@reqs/phen backwards,ice",
 
           // Normal access and escape
           "[normal],sbn,@reqs/phendrana,space,wave,boost",
@@ -2230,8 +2231,10 @@
 
           // Global access and visibility (can leave room before obtaining)
           "{@reqs/phendrana,boost,space,wave}",
-          "{@reqs/phen backwards,ice}",
 
+          // Glitchless sequence break (can learn thermal spots, manually aim at enemies)
+          "@reqs/phendrana,boost,space,wave,[thermal]",
+          
           "{artifactcheck}"
         ],
         "sections": [

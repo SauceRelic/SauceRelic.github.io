@@ -1831,6 +1831,12 @@
           "[hard],sbh,@reqs/phendrana,plasma",
           "[hard],sbh,@reqs/phen backwards,plasma",
 
+          // Global visibility
+          "{@reqs/phendrana,space}",
+
+          // Hard visibility
+          "{hard,@reqs/phendrana}",
+
           "{artifactcheck}"
         ],
         "sections": [

@@ -173,6 +173,13 @@
         "item_count": 1
       },
       {
+        "name": "frigate noT",
+        "access_rules": [
+          "@can/bomb,missile,ice,space,gravity,wave,[thermal]"
+        ],
+        "item_count": 1
+      },
+      {
         "name": "chozohote break",
         "access_rules": [
           "@can/bomb,missile,[spider],[space],[wave],[boost]",
@@ -217,11 +224,11 @@
           "@can/bomb,boost",
           "space",
 
-          // Normal access
-          "[normal],sbn",
+          // Normal access (glitchless sb, extremely easy and early trick)
+          "[normal]",
 
-          // Hard access
-          "[hard],sbh",
+          // Hard access (glitchless sb)
+          "[hard]",
 
           "{artifactcheck}"
         ],
@@ -415,6 +422,15 @@
           // Hard access
           "[hard],sbh,@can/bomb,missile,ice,gravity",
 
+          // Global sequence break (very slow without gravity, thermal spots can be learned)
+          "@reqs/frigate break,space,wave",
+
+          // Normal sequence break (very slow without gravity)
+          "[normal],sbn,@can/bomb,missile,space,wave,ice,[gravity]",
+
+          // Hard sequence break (very slow without gravity)
+          "[hard],sbh,@can/bomb,missile,ice,[gravity]",
+
           "{artifactcheck}"
         ],
         "sections": [
@@ -445,6 +461,12 @@
           // Hard access
           "[hard],sbh,@can/bomb,@can/super,ice,gravity",
 
+          // Glitchless sequence break (thermal spots can be learner)
+          "@reqs/frigate noT,@can/super",
+
+          // Global visibility
+          "{@reqs/frigate,xray}",
+
           "{artifactcheck}"
         ],
         "sections": [
@@ -474,6 +496,9 @@
 
           // Hard access
           "[hard],sbh,@can/bomb,missile,ice,gravity",
+
+          // Glitchless sequence break (thermal spots can be learned)
+          "@reqs/frigate noT",
 
           "{artifactcheck}"
         ],

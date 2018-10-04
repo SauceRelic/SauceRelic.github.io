@@ -1862,6 +1862,9 @@
               "[hard],sbh,@reqs/phen backwards,plasma",
               "[hard],sbh,@reqs/phen backwards,@can/isg",
 
+              // Global visibility
+              "{@reqs/phendrana}",
+
               "{artifactcheck}"
             ],
             "item_count": 1,

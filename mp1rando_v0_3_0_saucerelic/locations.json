@@ -1047,8 +1047,10 @@
           "[normal],sbn,@can/bomb,missile",
 
           // Hard access
-          "[hard],sbh,missile,@can/bomb",
-          "[hard],sbh,missile,@can/pb,space",
+          "[hard],sbh,@can/bomb,missile",
+
+          // Global visibility
+          "{morph,missile}",
 
           "{artifactcheck}"
         ],

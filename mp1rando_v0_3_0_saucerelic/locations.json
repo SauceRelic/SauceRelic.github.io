@@ -2131,7 +2131,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,@can/bomb,ice",
+          "@reqs/phen backwards,@can/bomb,boost,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phen backwards,ice",

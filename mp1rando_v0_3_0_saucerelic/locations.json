@@ -1720,6 +1720,9 @@
           // Hard access
           "[hard],sbh,@reqs/phen backwards",
 
+          // Glitchless sequence break (thermal is easily skippable)
+          "@has/any suit,missile,morph,space,wave,grapple,spider,[thermal]",
+
           "{artifactcheck}"
         ],
         "sections": [

@@ -17,7 +17,7 @@
           "content": [
             {
               "type": "itemgrid",
-              "item_margin": "2,2",
+              "item_margin": "3,3",
               "h_alignment": "left",
               "v_alignment": "center",
               "item_size": 48,
@@ -30,118 +30,118 @@
             },
             {
               "type": "canvas",
-              "margin": "10,0",
+              "margin": "10,5",
               "v_alignment": "center",
-              "width": 220,
-              "height": 234,
+              "width": 250,
+              "height": 237,
               "content": [
                 {
                   "type": "item",
-                  "item": "artifact1",
+                  "item": "truth",
                   "canvas_depth": 1,
-                  "width": 28,
+                  "width": 47,
+                  "height": 35,
+                  "canvas_left": 163,
+                  "canvas_top": 134
+                },
+                {
+                  "type": "item",
+                  "item": "strength",
+                  "canvas_depth": 1,
+                  "width": 53,
+                  "height": 32,
+                  "canvas_left": 111,
+                  "canvas_top": 76
+                },
+                {
+                  "type": "item",
+                  "item": "elder",
+                  "canvas_depth": 1,
+                  "width": 44,
                   "height": 37,
-                  "canvas_left": 67,
-                  "canvas_top": 89
+                  "canvas_left": 115,
+                  "canvas_top": 151
                 },
                 {
                   "type": "item",
-                  "item": "artifact2",
+                  "item": "wild",
                   "canvas_depth": 1,
-                  "width": 37,
-                  "height": 37,
-                  "canvas_left": 130,
-                  "canvas_top": 75
-                },
-                {
-                  "type": "item",
-                  "item": "artifact3",
-                  "canvas_depth": 1,
-                  "width": 34,
-                  "height": 34,
-                  "canvas_left": 78,
-                  "canvas_top": 129
-                },
-                {
-                  "type": "item",
-                  "item": "artifact4",
-                  "canvas_depth": 1,
-                  "width": 35,
-                  "height": 38,
-                  "canvas_left": 90,
-                  "canvas_top": 56
-                },
-                {
-                  "type": "item",
-                  "item": "artifact5",
-                  "canvas_depth": 1,
-                  "width": 20,
-                  "height": 23,
-                  "canvas_left": 120,
-                  "canvas_top": 139
-                },
-                {
-                  "type": "item",
-                  "item": "artifact6",
-                  "canvas_depth": 2,
-                  "width": 51,
-                  "height": 55,
-                  "canvas_left": 150,
-                  "canvas_top": 31
-                },
-                {
-                  "type": "item",
-                  "item": "artifact7",
-                  "canvas_depth": 0,
-                  "width": 46,
+                  "width": 50,
                   "height": 41,
-                  "canvas_left": 55,
-                  "canvas_top": 155
-                },
-                {
-                  "type": "item",
-                  "item": "artifact8",
-                  "canvas_depth": 1,
-                  "width": 35,
-                  "height": 28,
-                  "canvas_left": 137,
-                  "canvas_top": 118
-                },
-                {
-                  "type": "item",
-                  "item": "artifact9",
-                  "canvas_depth": 1,
-                  "width": 64,
-                  "height": 67,
-                  "canvas_left": 108,
-                  "canvas_top": 166
-                },
-                {
-                  "type": "item",
-                  "item": "artifact10",
-                  "canvas_depth": 0,
-                  "width": 55,
-                  "height": 83,
-                  "canvas_left": 161,
+                  "canvas_left": 166,
                   "canvas_top": 88
                 },
                 {
                   "type": "item",
-                  "item": "artifact11",
-                  "canvas_depth": 0,
-                  "width": 66,
-                  "height": 58,
-                  "canvas_left": 84,
-                  "canvas_top": 0
+                  "item": "lifegiver",
+                  "canvas_depth": 1,
+                  "width": 30,
+                  "height": 26,
+                  "canvas_left": 90,
+                  "canvas_top": 134
                 },
                 {
                   "type": "item",
-                  "item": "artifact12",
+                  "item": "world",
+                  "canvas_depth": 2,
+                  "width": 71,
+                  "height": 41,
+                  "canvas_left": 0,
+                  "canvas_top": 115
+                },
+                {
+                  "type": "item",
+                  "item": "sun",
                   "canvas_depth": 0,
-                  "width": 84,
-                  "height": 130,
-                  "canvas_left": 1,
-                  "canvas_top": 26
+                  "width": 34,
+                  "height": 53,
+                  "canvas_left": 216,
+                  "canvas_top": 115
+                },
+                {
+                  "type": "item",
+                  "item": "warrior",
+                  "canvas_depth": 1,
+                  "width": 44,
+                  "height": 35,
+                  "canvas_left": 75,
+                  "canvas_top": 94
+                },
+                {
+                  "type": "item",
+                  "item": "newborn",
+                  "canvas_depth": 1,
+                  "width": 89,
+                  "height": 73,
+                  "canvas_left": 158,
+                  "canvas_top": 164
+                },
+                {
+                  "type": "item",
+                  "item": "spirit",
+                  "canvas_depth": 0,
+                  "width": 93,
+                  "height": 74,
+                  "canvas_left": 53,
+                  "canvas_top": 156
+                },
+                {
+                  "type": "item",
+                  "item": "nature",
+                  "canvas_depth": 0,
+                  "width": 102,
+                  "height": 59,
+                  "canvas_left": 13,
+                  "canvas_top": 52
+                },
+                {
+                  "type": "item",
+                  "item": "chozo",
+                  "canvas_depth": 0,
+                  "width": 126,
+                  "height": 111,
+                  "canvas_left": 120,
+                  "canvas_top": 0
                 }
               ]
             },
@@ -203,7 +203,7 @@
       "content": [
         {
           "type": "itemgrid",
-          "item_margin": "2,2",
+          "item_margin": "3,3",
           "h_alignment": "left",
           "v_alignment": "center",
           "item_size": 48,
@@ -216,118 +216,118 @@
         },
         {
           "type": "canvas",
-          "margin": "10,0",
+          "margin": "10,5",
           "v_alignment": "center",
-          "width": 220,
-          "height": 234,
+          "width": 250,
+          "height": 237,
           "content": [
             {
               "type": "item",
-              "item": "artifact1",
+              "item": "truth",
               "canvas_depth": 1,
-              "width": 28,
+              "width": 47,
+              "height": 35,
+              "canvas_left": 163,
+              "canvas_top": 134
+            },
+            {
+              "type": "item",
+              "item": "strength",
+              "canvas_depth": 1,
+              "width": 53,
+              "height": 32,
+              "canvas_left": 111,
+              "canvas_top": 76
+            },
+            {
+              "type": "item",
+              "item": "elder",
+              "canvas_depth": 1,
+              "width": 44,
               "height": 37,
-              "canvas_left": 67,
-              "canvas_top": 89
+              "canvas_left": 115,
+              "canvas_top": 151
             },
             {
               "type": "item",
-              "item": "artifact2",
+              "item": "wild",
               "canvas_depth": 1,
-              "width": 37,
-              "height": 37,
-              "canvas_left": 130,
-              "canvas_top": 75
-            },
-            {
-              "type": "item",
-              "item": "artifact3",
-              "canvas_depth": 1,
-              "width": 34,
-              "height": 34,
-              "canvas_left": 78,
-              "canvas_top": 129
-            },
-            {
-              "type": "item",
-              "item": "artifact4",
-              "canvas_depth": 1,
-              "width": 35,
-              "height": 38,
-              "canvas_left": 90,
-              "canvas_top": 56
-            },
-            {
-              "type": "item",
-              "item": "artifact5",
-              "canvas_depth": 1,
-              "width": 20,
-              "height": 23,
-              "canvas_left": 120,
-              "canvas_top": 139
-            },
-            {
-              "type": "item",
-              "item": "artifact6",
-              "canvas_depth": 2,
-              "width": 51,
-              "height": 55,
-              "canvas_left": 150,
-              "canvas_top": 31
-            },
-            {
-              "type": "item",
-              "item": "artifact7",
-              "canvas_depth": 0,
-              "width": 46,
+              "width": 50,
               "height": 41,
-              "canvas_left": 55,
-              "canvas_top": 155
-            },
-            {
-              "type": "item",
-              "item": "artifact8",
-              "canvas_depth": 1,
-              "width": 35,
-              "height": 28,
-              "canvas_left": 137,
-              "canvas_top": 118
-            },
-            {
-              "type": "item",
-              "item": "artifact9",
-              "canvas_depth": 1,
-              "width": 64,
-              "height": 67,
-              "canvas_left": 108,
-              "canvas_top": 166
-            },
-            {
-              "type": "item",
-              "item": "artifact10",
-              "canvas_depth": 0,
-              "width": 55,
-              "height": 83,
-              "canvas_left": 161,
+              "canvas_left": 166,
               "canvas_top": 88
             },
             {
               "type": "item",
-              "item": "artifact11",
-              "canvas_depth": 0,
-              "width": 66,
-              "height": 58,
-              "canvas_left": 84,
-              "canvas_top": 0
+              "item": "lifegiver",
+              "canvas_depth": 1,
+              "width": 30,
+              "height": 26,
+              "canvas_left": 90,
+              "canvas_top": 134
             },
             {
               "type": "item",
-              "item": "artifact12",
+              "item": "world",
+              "canvas_depth": 2,
+              "width": 71,
+              "height": 41,
+              "canvas_left": 0,
+              "canvas_top": 115
+            },
+            {
+              "type": "item",
+              "item": "sun",
               "canvas_depth": 0,
-              "width": 84,
-              "height": 130,
-              "canvas_left": 1,
-              "canvas_top": 26
+              "width": 34,
+              "height": 53,
+              "canvas_left": 216,
+              "canvas_top": 115
+            },
+            {
+              "type": "item",
+              "item": "warrior",
+              "canvas_depth": 1,
+              "width": 44,
+              "height": 35,
+              "canvas_left": 75,
+              "canvas_top": 94
+            },
+            {
+              "type": "item",
+              "item": "newborn",
+              "canvas_depth": 1,
+              "width": 89,
+              "height": 73,
+              "canvas_left": 158,
+              "canvas_top": 164
+            },
+            {
+              "type": "item",
+              "item": "spirit",
+              "canvas_depth": 0,
+              "width": 93,
+              "height": 74,
+              "canvas_left": 53,
+              "canvas_top": 156
+            },
+            {
+              "type": "item",
+              "item": "nature",
+              "canvas_depth": 0,
+              "width": 102,
+              "height": 59,
+              "canvas_left": 13,
+              "canvas_top": 52
+            },
+            {
+              "type": "item",
+              "item": "chozo",
+              "canvas_depth": 0,
+              "width": 126,
+              "height": 111,
+              "canvas_left": 120,
+              "canvas_top": 0
             }
           ]
         }

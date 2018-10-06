@@ -1,0 +1,48 @@
+v0.9.1.0
+  Made sweeping modifications to multiple locations:
+  - Made the scan dash for Alcove a glitchless sequence break, as it is a very easy glitch and an early check
+  - Added glitchless sequence breaks for frigate that skip thermal visor
+  - Added all difficulties sequence break for Cargo Lift to Deck Gamma, as gravity is not required
+  - Added visibility for Biohazard Containment if you have xray but can't use supers
+  - Added visibility for Gathering hall if you're missing bombs or space
+  - Added visibility for Triclops Pit if you're missing xray or space
+  - Added visibility for Phendrana Shorelines spider track
+  - Added visibility for Ice Ruins East behind ice
+  - Added visibility for Ice Ruins West if you have space or are playing hard
+  - Added glitchless sequence break to Ruined Courtyard if you have spider but not boost
+  - Removed thermal requirements for phendrana pirate facility locations, excepting Research Core
+  - Removed normal access section of Research Lab Aether as a result of thermal visor changes
+  - Fixed Research Lab Hydra not requiring supers for one of the paths
+  - Made vanilla path Research Core need either ice or thermal, not both
+  - Added sequence break for vanilla path Research core if you memorize thermal spots
+  - Cleaned up multiple locations to increase readability and remove unintended redundancy
+
+v0.9.0.6
+  Did 0.9.0.5 again but for real
+
+v0.9.0.5
+  Added ice beam to Gravity Suit check requirements
+
+v0.9.0.4
+  Fixed missing comma in Lava Lake
+
+v0.9.0.3
+  Fixed Crossway logic (now requires supers)
+    *** Be aware that this is a deviation from the current randomizer logic, but will soon be fixed. In the mean time, there is a very
+        rare chance for an unbeatable seed.
+  Added Lava Lake sequence break for glitchless (only according to randomizer logic, does not require glitches)
+
+v0.9.0.2
+  Fixed visors not being in the capture grid
+
+v0.9.0.1
+  Fixed burn dome appearing blue even if it should be escapable
+
+v0.9.0.0
+  Unfinished release, still missing a few things like:
+	-Custom broadcast layout
+	-Custom chest icons
+  -Upgrade from legacy
+  -Add variants
+
+Logic might also need some tweaks, so this release is partially intended for testing.

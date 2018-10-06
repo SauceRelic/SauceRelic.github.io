@@ -86,7 +86,7 @@
       },
       {
         "name": "phen backwards",
-        "access_rules": [
+        "access_rules":[
           // Global access
           "missile,morph,wave,space,spider,@has/any suit",
 
@@ -173,13 +173,6 @@
         "item_count": 1
       },
       {
-        "name": "frigate noT",
-        "access_rules": [
-          "@can/bomb,missile,ice,space,gravity,wave,[thermal]"
-        ],
-        "item_count": 1
-      },
-      {
         "name": "chozohote break",
         "access_rules": [
           "@can/bomb,missile,[spider],[space],[wave],[boost]",
@@ -224,11 +217,11 @@
           "@can/bomb,boost",
           "space",
 
-          // Normal access (glitchless sb, extremely easy and early trick)
-          "[normal]",
+          // Normal access
+          "[normal],sbn",
 
-          // Hard access (glitchless sb)
-          "[hard]",
+          // Hard access
+          "[hard],sbh",
 
           "{artifactcheck}"
         ],
@@ -307,8 +300,8 @@
           "[normal],sbn,missile,space,plasma,grapple",
 
           // Hard access
-          "[hard],sbh,missile,space,plasma",
           "[hard],sbh,missile,space,@can/bomb",
+          "[hard],sbh,missile,space,plasma",
 
           "{artifactcheck}"
         ],
@@ -387,7 +380,7 @@
           "@reqs/frigate,boost",
 
           // Normal access
-          "[normal],sbn,@can/bomb,missile,ice,wave,space",
+          "[normal],sbn,@can/bomb,missile,wave,ice,space",
 
           // Hard access
           "[hard],sbh,@can/bomb,missile,ice",
@@ -417,19 +410,10 @@
           "@reqs/frigate",
 
           // Normal access
-          "[normal],sbn,@can/bomb,missile,gravity,ice,wave,space",
+          "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,gravity,ice",
-
-          // Global sequence break (very slow without gravity, thermal spots can be learned)
-          "@reqs/frigate break,space,wave",
-
-          // Normal sequence break (very slow without gravity)
-          "[normal],sbn,@can/bomb,missile,ice,wave,space,[gravity]",
-
-          // Hard sequence break (very slow without gravity)
-          "[hard],sbh,@can/bomb,missile,ice,[gravity]",
+          "[hard],sbh,@can/bomb,missile,ice,gravity",
 
           "{artifactcheck}"
         ],
@@ -456,16 +440,10 @@
           "@reqs/frigate,@can/super",
 
           // Normal access
-          "[normal],sbn,@can/bomb,@can/super,gravity,ice,wave,space",
+          "[normal],sbn,@can/bomb,@can/super,gravity,space,wave,ice",
 
           // Hard access
           "[hard],sbh,@can/bomb,@can/super,ice,gravity",
-
-          // Glitchless sequence break (thermal spots can be learner)
-          "@reqs/frigate noT,@can/super",
-
-          // Global visibility
-          "{@reqs/frigate,xray}",
 
           "{artifactcheck}"
         ],
@@ -492,13 +470,10 @@
           "@reqs/frigate",
 
           // Normal access
-          "[normal],sbn,@can/bomb,missile,gravity,ice,wave,space",
+          "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile,gravity,ice",
-
-          // Glitchless sequence break (thermal spots can be learned)
-          "@reqs/frigate noT",
+          "[hard],sbh,@can/bomb,missile,ice,gravity",
 
           "{artifactcheck}"
         ],
@@ -521,11 +496,11 @@
         "name": "Great Tree Chamber",
         "access_rules": [
           // Global access
-          "xray,@reqs/chozohote,ice,wave,boost",
+          "xray,@reqs/chozohote,wave,ice,boost",
           "xray,@reqs/frigate,boost",
 
           // Normal access
-          "[normal],sbn,@can/bomb,missile,ice,space",
+          "[normal],sbn,@can/bomb,missile,space,ice",
 
           // Hard access
           "[hard],sbh,@can/bomb,missile,ice",
@@ -551,10 +526,10 @@
         "name": "Life Grove Tunnel",
         "access_rules": [
           // Global access
-          "@can/bomb,@can/pb,missile,wave,ice,space,boost,spider",
+          "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
 
           // Normal access
-          "[normal],sbn,@can/bomb,@can/pb,missile,wave,ice,space,boost",
+          "[normal],sbn,@can/bomb,@can/pb,missile,boost,space,wave,ice",
 
           // Hard access
           "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
@@ -581,10 +556,10 @@
         "name": "Life Grove",
         "access_rules": [
           // Global access
-          "@can/bomb,@can/pb,missile,wave,ice,space,boost,spider",
+          "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
 
           // Normal access
-          "[normal],sbn,@can/bomb,@can/pb,missile,wave,ice,space,boost",
+          "[normal],sbn,@can/bomb,@can/pb,missile,boost,space,wave,ice",
 
           // Hard access
           "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
@@ -662,7 +637,7 @@
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
               // Global access
-              "@can/bomb,@has/any suit,missile,wave,grapple,boost",
+              "@can/bomb,@has/any suit,missile,grapple,boost,wave",
 
               // Normal access
               "[normal],sbn,space",
@@ -792,7 +767,7 @@
           "@can/bomb,missile",
 
           // Global visibility
-          "{morph,missile}",
+          "{missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -815,7 +790,7 @@
         "name": "Training Chamber",
         "access_rules": [
           // Global access
-          "@can/bomb,@has/any suit,missile,wave,grapple,boost,spider",
+          "@can/bomb,@has/any suit,missile,grapple,wave,boost,spider",
 
           // Hard access
           "[hard],sbh,@can/bomb,@has/any suit,wave,grapple,boost,spider",
@@ -842,13 +817,13 @@
         "name": "Training Chamber Access",
         "access_rules": [
           // Global access
-          "@has/any suit,morph,missile,wave,grapple",
+          "@has/any suit,missile,morph,grapple,wave",
 
           // Hard access
-          "[hard],sbh,@has/any suit,morph,wave,space",
-          "[hard],sbh,@has/any suit,morph,wave,grapple",
+          "[hard],sbh,morph,wave,@has/any suit,space",
+          "[hard],sbh,morph,wave,@has/any suit,grapple",
           "[hard],sbh,morph,wave,space,etank:2",
-          "[hard],sbh,@can/bomb,space",
+          "[hard],sbh,morph,@can/bomb,space",
 
           "{artifactcheck}"
         ],
@@ -1047,10 +1022,8 @@
           "[normal],sbn,@can/bomb,missile",
 
           // Hard access
-          "[hard],sbh,@can/bomb,missile",
-
-          // Global visibility
-          "{morph,missile}",
+          "[hard],sbh,missile,@can/bomb",
+          "[hard],sbh,missile,@can/pb,space",
 
           "{artifactcheck}"
         ],
@@ -1488,9 +1461,6 @@
           // Hard access
           "[hard],sbh,@has/any suit,missile,morph",
 
-          // Global visibility
-          "{@has/any suit,missile,morph}",
-
           "{artifactcheck}"
         ],
         "sections": [
@@ -1720,9 +1690,6 @@
           // Hard access
           "[hard],sbh,@reqs/phen backwards",
 
-          // Glitchless sequence break (thermal is easily skippable)
-          "@has/any suit,missile,morph,space,wave,grapple,spider,[thermal]",
-
           "{artifactcheck}"
         ],
         "sections": [
@@ -1778,9 +1745,6 @@
               "[hard],sbh,@reqs/phendrana,@can/super,spider",
               "[hard],sbh,@reqs/phen backwards,@can/super,spider",
 
-              // Global visibility
-              "{@reqs/phenrana}",
-
               "{artifactcheck}"
             ],
             "item_count": 1,
@@ -1834,12 +1798,6 @@
           "[hard],sbh,@reqs/phendrana,plasma",
           "[hard],sbh,@reqs/phen backwards,plasma",
 
-          // Global visibility
-          "{@reqs/phendrana,space}",
-
-          // Hard visibility
-          "{hard,@reqs/phendrana}",
-
           "{artifactcheck}"
         ],
         "sections": [
@@ -1870,9 +1828,6 @@
               "[hard],sbh,@reqs/phendrana,@can/isg",
               "[hard],sbh,@reqs/phen backwards,plasma",
               "[hard],sbh,@reqs/phen backwards,@can/isg",
-
-              // Global visibility
-              "{@reqs/phendrana}",
 
               "{artifactcheck}"
             ],
@@ -1950,9 +1905,6 @@
           // Hard access
           "[hard],sbh,@reqs/phendrana,wave",
           "[hard],sbh,@reqs/phen backwards,wave",
-
-          // Glitchless sequence break (easy jump from upper level)
-          "@reqs/phendrana,space,wave,spider,[boost]",
 
           "{artifactcheck}"
         ],
@@ -2087,12 +2039,12 @@
         "name": "Research Lab Hydra",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,@can/super,boost,space,wave",
-          "@reqs/phen backwards,@can/super,ice",
+          "@reqs/phendrana,@can/super,thermal,boost,space,wave",
+          "@reqs/phen backwards,@can/super,thermal,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,@can/super,wave,space",
-          "[normal],sbn,@reqs/phen backwards,@can/super,ice",
+          "[normal],sbn,@reqs/phen backwards,ice",
 
           // Hard access
           "[hard],sbh,@reqs/phendrana,@can/super,wave",
@@ -2131,7 +2083,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,@can/bomb,boost,ice",
+          "@reqs/phen backwards,@can/bomb,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phen backwards,ice",
@@ -2163,7 +2115,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,plasma,boost,space,wave",
-          "@reqs/phen backwards,plasma,ice",
+          "@reqs/phen backwards,plasma,thermal,ice",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,boost,space,wave",
@@ -2198,7 +2150,10 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,ice",
+          "@reqs/phen backwards,thermal,ice",
+
+          // Normal access
+          "[normal],sbn,@reqs/phen backwards,ice",
 
           // Hard access
           "[hard],sbh,@reqs/phendrana,space,wave",
@@ -2231,12 +2186,12 @@
         "name": "Research Core",
         "access_rules": [
           // Global access and escape
-          "@reqs/phendrana,boost,space,wave,thermal",
-          "@reqs/phendrana,boost,space,wave,ice",
-          "@reqs/phen backwards,ice",
+          "@reqs/phendrana,boost,space,wave,thermal,ice",
+          "@reqs/phen backwards,ice,thermal",
 
           // Normal access and escape
           "[normal],sbn,@reqs/phendrana,space,wave,boost",
+          "[normal],sbn,@reqs/phen backwards,ice",
 
           // Hard access and escape
           "[hard],sbh,@reqs/phendrana,space,wave",
@@ -2245,9 +2200,7 @@
 
           // Global access and visibility (can leave room before obtaining)
           "{@reqs/phendrana,boost,space,wave}",
-
-          // Glitchless sequence break (can learn thermal spots, manually aim at enemies)
-          "@reqs/phendrana,boost,space,wave,[thermal]",
+          "{@reqs/phen backwards,ice}",
 
           "{artifactcheck}"
         ],

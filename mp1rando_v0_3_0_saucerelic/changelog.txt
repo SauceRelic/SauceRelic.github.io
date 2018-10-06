@@ -1,3 +1,6 @@
+v0.9.0.7
+  Upgraded artifact graphics to match in-game menu and artifact temple layouts.
+
 v0.9.0.6
   Did 0.9.0.5 again but for real
 

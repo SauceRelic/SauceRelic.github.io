@@ -39,10 +39,10 @@
                   "type": "item",
                   "item": "truth",
                   "canvas_depth": 1,
-                  "width": 47,
-                  "height": 35,
-                  "canvas_left": 163,
-                  "canvas_top": 134
+                  "width": 50,
+                  "height": 41,
+                  "canvas_left": 166,
+                  "canvas_top": 88
                 },
                 {
                   "type": "item",
@@ -57,50 +57,14 @@
                   "type": "item",
                   "item": "elder",
                   "canvas_depth": 1,
-                  "width": 44,
-                  "height": 37,
-                  "canvas_left": 115,
-                  "canvas_top": 151
-                },
-                {
-                  "type": "item",
-                  "item": "wild",
-                  "canvas_depth": 1,
-                  "width": 50,
-                  "height": 41,
-                  "canvas_left": 166,
-                  "canvas_top": 88
-                },
-                {
-                  "type": "item",
-                  "item": "lifegiver",
-                  "canvas_depth": 1,
-                  "width": 30,
-                  "height": 26,
-                  "canvas_left": 90,
+                  "width": 47,
+                  "height": 35,
+                  "canvas_left": 163,
                   "canvas_top": 134
                 },
                 {
                   "type": "item",
-                  "item": "world",
-                  "canvas_depth": 2,
-                  "width": 71,
-                  "height": 41,
-                  "canvas_left": 0,
-                  "canvas_top": 115
-                },
-                {
-                  "type": "item",
-                  "item": "sun",
-                  "canvas_depth": 0,
-                  "width": 34,
-                  "height": 53,
-                  "canvas_left": 216,
-                  "canvas_top": 115
-                },
-                {
-                  "type": "item",
-                  "item": "warrior",
+                  "item": "wild",
                   "canvas_depth": 1,
                   "width": 44,
                   "height": 35,
@@ -109,21 +73,30 @@
                 },
                 {
                   "type": "item",
-                  "item": "newborn",
+                  "item": "lifegiver",
                   "canvas_depth": 1,
-                  "width": 89,
-                  "height": 73,
-                  "canvas_left": 158,
-                  "canvas_top": 164
+                  "width": 44,
+                  "height": 37,
+                  "canvas_left": 115,
+                  "canvas_top": 151
                 },
                 {
                   "type": "item",
-                  "item": "spirit",
+                  "item": "warrior",
+                  "canvas_depth": 1,
+                  "width": 30,
+                  "height": 26,
+                  "canvas_left": 90,
+                  "canvas_top": 134
+                },
+                {
+                  "type": "item",
+                  "item": "chozo",
                   "canvas_depth": 0,
-                  "width": 93,
-                  "height": 74,
-                  "canvas_left": 53,
-                  "canvas_top": 156
+                  "width": 126,
+                  "height": 111,
+                  "canvas_left": 120,
+                  "canvas_top": 0
                 },
                 {
                   "type": "item",
@@ -136,12 +109,39 @@
                 },
                 {
                   "type": "item",
-                  "item": "chozo",
+                  "item": "sun",
                   "canvas_depth": 0,
-                  "width": 126,
-                  "height": 111,
-                  "canvas_left": 120,
-                  "canvas_top": 0
+                  "width": 34,
+                  "height": 53,
+                  "canvas_left": 216,
+                  "canvas_top": 115
+                },
+                {
+                  "type": "item",
+                  "item": "world",
+                  "canvas_depth": 2,
+                  "width": 71,
+                  "height": 41,
+                  "canvas_left": 0,
+                  "canvas_top": 115
+                },
+                {
+                  "type": "item",
+                  "item": "spirit",
+                  "canvas_depth": 1,
+                  "width": 89,
+                  "height": 73,
+                  "canvas_left": 158,
+                  "canvas_top": 164
+                },
+                {
+                  "type": "item",
+                  "item": "newborn",
+                  "canvas_depth": 0,
+                  "width": 93,
+                  "height": 74,
+                  "canvas_left": 53,
+                  "canvas_top": 156
                 }
               ]
             },
@@ -225,10 +225,10 @@
               "type": "item",
               "item": "truth",
               "canvas_depth": 1,
-              "width": 47,
-              "height": 35,
-              "canvas_left": 163,
-              "canvas_top": 134
+              "width": 50,
+              "height": 41,
+              "canvas_left": 166,
+              "canvas_top": 88
             },
             {
               "type": "item",
@@ -243,50 +243,14 @@
               "type": "item",
               "item": "elder",
               "canvas_depth": 1,
-              "width": 44,
-              "height": 37,
-              "canvas_left": 115,
-              "canvas_top": 151
-            },
-            {
-              "type": "item",
-              "item": "wild",
-              "canvas_depth": 1,
-              "width": 50,
-              "height": 41,
-              "canvas_left": 166,
-              "canvas_top": 88
-            },
-            {
-              "type": "item",
-              "item": "lifegiver",
-              "canvas_depth": 1,
-              "width": 30,
-              "height": 26,
-              "canvas_left": 90,
+              "width": 47,
+              "height": 35,
+              "canvas_left": 163,
               "canvas_top": 134
             },
             {
               "type": "item",
-              "item": "world",
-              "canvas_depth": 2,
-              "width": 71,
-              "height": 41,
-              "canvas_left": 0,
-              "canvas_top": 115
-            },
-            {
-              "type": "item",
-              "item": "sun",
-              "canvas_depth": 0,
-              "width": 34,
-              "height": 53,
-              "canvas_left": 216,
-              "canvas_top": 115
-            },
-            {
-              "type": "item",
-              "item": "warrior",
+              "item": "wild",
               "canvas_depth": 1,
               "width": 44,
               "height": 35,
@@ -295,21 +259,30 @@
             },
             {
               "type": "item",
-              "item": "newborn",
+              "item": "lifegiver",
               "canvas_depth": 1,
-              "width": 89,
-              "height": 73,
-              "canvas_left": 158,
-              "canvas_top": 164
+              "width": 44,
+              "height": 37,
+              "canvas_left": 115,
+              "canvas_top": 151
             },
             {
               "type": "item",
-              "item": "spirit",
+              "item": "warrior",
+              "canvas_depth": 1,
+              "width": 30,
+              "height": 26,
+              "canvas_left": 90,
+              "canvas_top": 134
+            },
+            {
+              "type": "item",
+              "item": "chozo",
               "canvas_depth": 0,
-              "width": 93,
-              "height": 74,
-              "canvas_left": 53,
-              "canvas_top": 156
+              "width": 126,
+              "height": 111,
+              "canvas_left": 120,
+              "canvas_top": 0
             },
             {
               "type": "item",
@@ -322,12 +295,39 @@
             },
             {
               "type": "item",
-              "item": "chozo",
+              "item": "sun",
               "canvas_depth": 0,
-              "width": 126,
-              "height": 111,
-              "canvas_left": 120,
-              "canvas_top": 0
+              "width": 34,
+              "height": 53,
+              "canvas_left": 216,
+              "canvas_top": 115
+            },
+            {
+              "type": "item",
+              "item": "world",
+              "canvas_depth": 2,
+              "width": 71,
+              "height": 41,
+              "canvas_left": 0,
+              "canvas_top": 115
+            },
+            {
+              "type": "item",
+              "item": "spirit",
+              "canvas_depth": 1,
+              "width": 89,
+              "height": 73,
+              "canvas_left": 158,
+              "canvas_top": 164
+            },
+            {
+              "type": "item",
+              "item": "newborn",
+              "canvas_depth": 0,
+              "width": 93,
+              "height": 74,
+              "canvas_left": 53,
+              "canvas_top": 156
             }
           ]
         }

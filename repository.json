@@ -14,7 +14,7 @@
       "name": "Metroid Prime Randomizer - v0.3.0",
       "game_name": "Metroid Prime Randomizer",
       "author": "SauceRelic",
-      "version": "0.9.0.7",
+      "version": "0.9.0.8",
       "flags": [ "map", "pins", "chathud" ],
       "uid": "mp1rando_v0_3_0_saucerelic",
       "link": "https://saucerelic.github.io/mp1rando_v0_3_0_saucerelic.zip"

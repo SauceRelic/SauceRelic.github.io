@@ -1,3 +1,6 @@
+v0.9.0.8
+  Fixed artifact names for more accurate ChatHUD tracking
+
 v0.9.0.7
   Upgraded artifact graphics to match in-game menu and artifact temple layouts.
 

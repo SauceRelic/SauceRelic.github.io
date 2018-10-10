@@ -301,38 +301,6 @@
     ]
   },
   {
-    "name": "Artifact of World",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "mask_input": true,
-    "stages": [
-      {
-        "img": "images/art_world_blue.png"
-      },
-      {
-        "img": "images/art_world_orange.png",
-        "codes": "world,artifact6,art6,artifacts"
-      }
-    ]
-  },
-  {
-    "name": "Artifact of Sun",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "mask_input": true,
-    "stages": [
-      {
-        "img": "images/art_sun_blue.png"
-      },
-      {
-        "img": "images/art_sun_orange.png",
-        "codes": "sun,artifact7,art7,artifacts"
-      }
-    ]
-  },
-  {
     "name": "Artifact of Warrior",
     "type": "progressive",
     "loop": true,
@@ -344,55 +312,7 @@
       },
       {
         "img": "images/art_warrior_orange.png",
-        "codes": "warrior,artifact8,art8,artifacts"
-      }
-    ]
-  },
-  {
-    "name": "Artifact of Newborn",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "mask_input": true,
-    "stages": [
-      {
-        "img": "images/art_newborn_blue.png"
-      },
-      {
-        "img": "images/art_newborn_orange.png",
-        "codes": "newborn,artifact9,art9,artifacts"
-      }
-    ]
-  },
-  {
-    "name": "Artifact of Spirit",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "mask_input": true,
-    "stages": [
-      {
-        "img": "images/art_spirit_blue.png"
-      },
-      {
-        "img": "images/art_spirit_orange.png",
-        "codes": "spirit,artifact10,art10,artifacts"
-      }
-    ]
-  },
-  {
-    "name": "Artifact of Nature",
-    "type": "progressive",
-    "loop": true,
-    "allow_disabled": false,
-    "mask_input": true,
-    "stages": [
-      {
-        "img": "images/art_nature_blue.png"
-      },
-      {
-        "img": "images/art_nature_orange.png",
-        "codes": "nature,artifact11,art11,artifacts"
+        "codes": "warrior,artifact6,art6,artifacts"
       }
     ]
   },
@@ -408,7 +328,87 @@
       },
       {
         "img": "images/art_chozo_orange.png",
-        "codes": "chozo,artifact12,art12,artifacts"
+        "codes": "chozo,artifact7,art7,artifacts"
+      }
+    ]
+  },
+  {
+    "name": "Artifact of Nature",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "mask_input": true,
+    "stages": [
+      {
+        "img": "images/art_nature_blue.png"
+      },
+      {
+        "img": "images/art_nature_orange.png",
+        "codes": "nature,artifact8,art8,artifacts"
+      }
+    ]
+  },
+  {
+    "name": "Artifact of Sun",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "mask_input": true,
+    "stages": [
+      {
+        "img": "images/art_sun_blue.png"
+      },
+      {
+        "img": "images/art_sun_orange.png",
+        "codes": "sun,artifact9,art9,artifacts"
+      }
+    ]
+  },
+  {
+    "name": "Artifact of World",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "mask_input": true,
+    "stages": [
+      {
+        "img": "images/art_world_blue.png"
+      },
+      {
+        "img": "images/art_world_orange.png",
+        "codes": "world,artifact10,art10,artifacts"
+      }
+    ]
+  },
+  {
+    "name": "Artifact of Spirit",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "mask_input": true,
+    "stages": [
+      {
+        "img": "images/art_spirit_blue.png"
+      },
+      {
+        "img": "images/art_spirit_orange.png",
+        "codes": "spirit,artifact11,art11,artifacts"
+      }
+    ]
+  },
+  {
+    "name": "Artifact of Newborn",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "mask_input": true,
+    "stages": [
+      {
+        "img": "images/art_newborn_blue.png"
+      },
+      {
+        "img": "images/art_newborn_orange.png",
+        "codes": "newborn,artifact12,art12,artifacts"
       }
     ]
   }

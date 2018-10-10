@@ -11,13 +11,13 @@
       "link": "https://saucerelic.github.io/smrando_v2_9_saucerelic.zip"
     },
     {
-      "name": "Metroid Prime Randomizer - v0.3.0",
+      "name": "Metroid Prime Randomizer",
       "game_name": "Metroid Prime Randomizer",
       "author": "SauceRelic",
-      "version": "0.9.0.8",
+      "version": "0.9.1.0",
       "flags": [ "map", "pins", "chathud" ],
-      "uid": "mp1rando_v0_3_0_saucerelic",
-      "link": "https://saucerelic.github.io/mp1rando_v0_3_0_saucerelic.zip"
+      "uid": "mp1rando_saucerelic",
+      "link": "https://saucerelic.github.io/mp1rando_saucerelic.zip"
     }
   ]
 }

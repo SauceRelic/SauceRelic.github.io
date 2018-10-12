@@ -1,49 +1,5 @@
 [
   {
-    "name": "Difficulty",
-    "type": "progressive",
-    "allow_disabled": "false",
-    "loop": "true",
-    "stages": [
-      {
-        "name": "Tournament",
-        "img": "images/diff_tournament.png",
-        "inherit_codes": "false",
-        "codes": "difficulty,tournament,notopen"
-      },
-      {
-        "name": "Casual",
-        "img": "images/diff_casual.png",
-        "inherit_codes": "false",
-        "codes": "casual,notopen"
-      },
-      {
-        "name": "Normal",
-        "img": "images/diff_normal.png",
-        "inherit_codes": "false",
-        "codes": "normal,notopen"
-      },
-      {
-        "name": "Hard",
-        "img": "images/diff_hard.png",
-        "inherit_codes": "false",
-        "codes": "hard,notopen"
-      },
-      {
-        "name": "Open",
-        "img": "images/diff_open.png",
-        "inherit_codes": "false",
-        "codes": "open"
-      },
-      {
-        "name": "Full",
-        "img": "images/diff_full.png",
-        "inherit_codes": "false",
-        "codes": "tournament,notopen"
-      }
-    ]
-  },
-  {
     "name": "Charge Beam",
     "type": "toggle",
     "loop": "true",

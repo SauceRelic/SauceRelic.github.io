@@ -1,3 +1,4 @@
+Tracker:AddItems("items/settings.json")
 Tracker:AddItems("items/items.json")
 
 Tracker:AddMaps("maps/maps.json")

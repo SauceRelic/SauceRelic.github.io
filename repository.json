@@ -2,13 +2,13 @@
   "name": "SauceRelic's Packages",
   "packages": [
     {
-      "name": "Super Metroid Randomizer - v2.9",
+      "name": "Super Metroid Randomizer",
       "game_name": "Super Metroid Randomizer",
       "author": "SauceRelic",
-      "version": "1.2.14.3",
+      "version": "1.3.0.0",
       "flags": [ "map", "pins" ],
-      "uid": "smrando_v2_9_saucerelic",
-      "link": "https://saucerelic.github.io/smrando_v2_9_saucerelic.zip"
+      "uid": "smrando_saucerelic",
+      "link": "https://saucerelic.github.io/smrando_saucerelic.zip"
     },
     {
       "name": "Metroid Prime Randomizer",

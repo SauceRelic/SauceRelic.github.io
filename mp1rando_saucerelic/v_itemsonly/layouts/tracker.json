@@ -1,0 +1,11 @@
+{
+  "tracker_default": {
+    "type": "container",
+    "background": "#000000",
+    "dropshadow": true,
+    "content": {
+      "type": "layout",
+      "key": "shared_item_grid"
+    }
+  }
+}

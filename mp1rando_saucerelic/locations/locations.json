@@ -2052,7 +2052,7 @@
 
           // Global visibility
           "{ice,thermal,@reqs/phendrana,boost,space,wave,spider}",
-          "{ice,@reqs/phen backwards}",
+          "{ice,thermal,@reqs/phen backwards}",
 
           "{artifactcheck}"
         ],

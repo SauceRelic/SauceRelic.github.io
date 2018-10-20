@@ -1,0 +1,189 @@
+[
+  // Out of Bounds Settings
+  {
+    "name": "Root Cave Secret World",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_rootcave.png",
+    "codes": "oob_rootcave"
+  },
+  {
+    "name": "IBBF Wallcrawl for late Chozo access",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_ibbf.png",
+    "codes": "oob_ibbf"
+  },
+  {
+    "name": "Training Chamber Access Wallcrawl",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_trainingchamber.png",
+    "codes": "oob_trainingchamber"
+  },
+  {
+    "name": "Wave/Sun Infinite Speed",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_wavesun.png",
+    "codes": "oob_wavesun"
+  },
+  {
+    "name": "Magmoor Workstation Secret World to Plasma Processing",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_workstation.png",
+    "codes": "oob_workstation"
+  },
+  {
+    "name": "Great Tree Hall Secret World to Life Grove",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_gth.png",
+    "codes": "oob_gth"
+  },
+  {
+    "name": "Early Newborn",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_earlynewborn.png",
+    "codes": "oob_earlynewborn"
+  },
+  {
+    "name": "Allow OOB without Morph Ball Bombs",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_nobombs.png",
+    "codes": "oob_nobombs"
+  },
+  {
+    "name": "Floaty Jump",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/oob_floaty.png",
+    "codes": "oob_floaty"
+  },
+
+
+
+  // Expected Tricks Settings
+  {
+    "name": "Dashing/Scan Dashing",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_scandash.png",
+    "codes": "trick_scandash"
+  },
+  {
+    "name": "Standable Terrain Exploits",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_terrain.png",
+    "codes": "trick_terrain"
+  },
+  {
+    "name": "L Jumping",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_ljump.png",
+    "codes": "trick_ljump"
+  },
+  {
+    "name": "R Jumping",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_rjump.png",
+    "codes": "trick_rjump"
+  },
+  {
+    "name": "Ghetto Jumping",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_ghetto.png",
+    "codes": "trick_ghetto"
+  },
+  {
+    "name": "Sunchamber Ghost Fight Item Early",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_earlywild.png",
+    "codes": "trick_earlywild"
+  },
+  {
+    "name": "Infinite Speed (Early Sun/Magma Pool)",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_sunisg.png",
+    "codes": "trick_sunisg"
+  },
+  {
+    "name": "Infinite Speed (Hall of the Elders)",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_hoteisg.png",
+    "codes": "trick_hoteisg"
+  },
+  {
+    "name": "Great Tree Hall Gate Skip",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_barsskip.png",
+    "codes": "trick_barsskip"
+  },
+  {
+    "name": "Life Grove/Elite Research Spinners Without Boost Ball",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_noboostspinners.png",
+    "codes": "trick_noboostspinners"
+  },
+  {
+    "name": "Spiderless Shafts (Phazon Mines)",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_spiderlessshafts.png",
+    "codes": "trick_spiderlessshafts"
+  },
+  {
+    "name": "Infinite Boost Wall Clip into Elite Research (Mines)",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_eliteib.png",
+    "codes": "trick_eliteib"
+  },
+  {
+    "name": "Phazon Mining Tunnel without Phazon Suit",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_phazontunnelnosuit.png",
+    "codes": "trick_phazontunnelnosuit"
+  },
+  {
+    "name": "Double Bomb Jumping",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_dbj.png",
+    "codes": "trick_dbj"
+  },
+  {
+    "name": "Hyper Bomb Jumps",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_hbj.png",
+    "codes": "trick_hbj"
+  },
+  {
+    "name": "Uber Bomb Jumps",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_ubj.png",
+    "codes": "trick_ubj"
+  },
+  {
+    "name": "Half-pipe Bomb Jumps",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_halfpipebj.png",
+    "codes": "trick_halfpipebj"
+  }
+]

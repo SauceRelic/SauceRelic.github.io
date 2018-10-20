@@ -1,4 +1,12 @@
 [
+  // Generic Logic Settings
+  {
+    "name": "Skip Visors",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/skipvisors.png",
+    "codes": "skipvisors"
+  },
   // Out of Bounds Settings
   {
     "name": "Root Cave Secret World",
@@ -185,5 +193,35 @@
     "loop": true,
     "img": "images/settings/trick_halfpipebj.png",
     "codes": "trick_halfpipebj"
+  },
+  {
+    "name": "Suitless Magmoor Run to Phendrana/Mines",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_vmr.png",
+    "codes": "trick_vmr"
+  },
+  {
+    "name": "Early Magmoor Items Suitless",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/trick_earlymagitems.png",
+    "codes": "trick_earlymagitems"
+  },
+  {
+    "name": "Suitless Magmoor Run Required Tanks",
+    "type": "consumable",
+    "min_quantity": 5,
+    "max_quantity": 14,
+    "img": "images/etank.png",
+    "codes": "vmrtanks"
+  },
+  {
+    "name": "Early Magmoor Items Required Tanks",
+    "type": "consumable",
+    "min_quantity": 7,
+    "max_quantity": 14,
+    "img": "images/etank.png",
+    "codes": "earlyetanks"
   }
 ]

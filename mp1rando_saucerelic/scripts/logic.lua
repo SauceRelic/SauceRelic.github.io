@@ -6,16 +6,16 @@ function antiGravity()
   end
 end
 
-function suitlessEarlyMagmoor()
-  if Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("earlyetanks") then
+function suitlessMagmoorRun()
+  if Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmretanks") then
     return 1
   else
     return 0
   end
 end
 
-function suitlessMagmoorRun()
-  if Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmretanks") then
+function suitlessEarlyMagmoor()
+  if Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("earlyetanks") then
     return 1
   else
     return 0

@@ -42,13 +42,20 @@
         "name": "wallcrawl",
         "access_rules": [
           "morph,space,bomb",
-          "morph,space,set_oobnobombs"
+          "morph,space,oob_nobombs"
         ]
       },
       {
         "name": "floaty",
         "access_rules": [
-          "@can/wallcrawl,set_floatyjump"
+          "@can/wallcrawl,oob_floaty"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "climb frigate crash site",
+        "access_rules": [
+          "trick_terrain,trick_ghetto,missile,morph,ice,space"
         ],
         "item_count": 1
       },
@@ -59,20 +66,48 @@
           "@has/any suit,grapple",
 
           // Logic requires an etank or suit for safety
-          "set_scandash,space,etank:1",
-          "set_scandash,space,@has/any suit",
-          "set_scandash,@can/floaty,etank:1",
-          "set_scandash,@can/floaty,@has/any suit"
+          "trick_scandash,space,etank:1",
+          "trick_scandash,space,@has/any suit",
+          "trick_scandash,@can/floaty,etank:1",
+          "trick_scandash,@can/floaty,@has/any suit"
         ],
         "item_count": 1
       },
       {
         "name": "access tower of light",
         "access_rules": [
+          // Developer intended
           "missile,space,wave,morph,boost,spider",
 
-          "missile,space,wave,set_scandash,set_standableterrain"
-        ]
+          // Dash to the door
+          "missile,space,wave,trick_scandash,trick_standableterrain"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "climb ruined courtyard",
+        "access_rules": [
+          // Developer intended, first pass
+          "space,wave,@can/bomb,boost",
+
+          // Developer intended, shortcut
+          "space,wave,spider",
+
+          // Dirty cheater strats
+          "space,wave,trick_terrain,trick_ghetto"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "climb observatory",
+        "access_rules": [
+          // Developer intended
+          "@can/bomb,boost",
+
+          // Scandash
+          "trick_scandash"
+        ],
+        "item_count": 1
       }
     ]
   },

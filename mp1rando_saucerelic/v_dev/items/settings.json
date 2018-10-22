@@ -1,11 +1,46 @@
 [
   // Generic Logic Settings
   {
+    "name": "Obfuscate Items",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/obfuscate.png",
+    "codes": "obfuscate"
+  },
+  {
     "name": "Skip Visors",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/skipvisors.png",
     "codes": "skipvisors"
+  },
+  {
+    "name": "No Bombs in Burn Dome or Warrior Shrine Tunnel",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/noriskbombs.png",
+    "codes": "noriskbombs"
+  },
+  {
+    "name": "No Spider Ball in Quarantine Cave",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/noriskspider.png",
+    "codes": "noriskspider"
+  },
+  {
+    "name": "No Gravity Suit in Gravity Chamber",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/noriskgravity.png",
+    "codes": "noriskgravity"
+  },
+  {
+    "name": "Require Bombs for Reverse Phendrana Drifts",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/nolatebombs.png",
+    "codes": "nolatebombs"
   },
   // Out of Bounds Settings
   {

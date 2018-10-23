@@ -32,6 +32,22 @@
         "item_count": 1
       },
       {
+        "name": "pass thermal",
+        "access_rules": [
+          "thermal",
+          "skipvisors"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "pass xray",
+        "access_rules": [
+          "xray",
+          "skipvisors"
+        ],
+        "item_count": 1
+      },
+      {
         "name": "isg",
         "access_rules": [
           "morph,bomb,boost"
@@ -108,6 +124,66 @@
           "trick_scandash"
         ],
         "item_count": 1
+      },
+      {
+        "name": "enter quar from court",
+        "access_rules": [
+          "@can/super,@can/pass thermal"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "exit quar to mags",
+        "access_rules": [
+          "spider",
+          "grapple"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "exit quar to court",
+        "access_rules": [
+          // Supers or bombs required to avoid softlock
+          "spider,@can/super",
+          "spider,@can/bomb",
+
+          "trick_ghetto,@can/super",
+          "trick_ghetto,@can/bomb"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "exit mags to far phen",
+        "access_rules": [
+          "morph,ice,spider",
+          "morph,ice,trick_terrain"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "climb ore processing",
+        "access_rules": [
+          "@can/bomb,grapple,spider",
+          "trick_terrain,trick_ghetto"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "climb mines spider shafts",
+        "access_rules": [
+          "spider",
+          "@can/bomb,trick_terrain,trick_spiderlessshafts"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "climb vent shaft",
+        "access_rules": [
+          "boost",
+          "trick_halfpipebj",
+          "space,trick_scandash"
+        ],
+        "item_count": 1
       }
     ]
   },
@@ -138,111 +214,53 @@
     "name": "reqs",
     "sections": [
       {
-        "name": "phendrana",
-        "access_rules": [
-          // Global access
-          "@can/bomb,missile,@has/any suit",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,etank:5,space"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "phen backwards",
-        "access_rules":[
-          // Global access
-          "missile,morph,wave,space,spider,@has/any suit",
-
-          // Normal access
-          "[normal],sbn,missile,morph,wave,space,@has/any suit",
-          "[normal],sbn,missile,morph,wave,space,etank:2",
-
-          // Hard access
-          "[hard],sbh,missile,morph,wave,space,@has/any suit",
-          "[hard],sbh,missile,morph,wave,space,etank:1",
-          "[hard],sbh,missile,morph,wave,spider,@has/any suit",
-          "[hard],sbh,missile,morph,wave,spider,etank:2"
-        ],
-        "item_count": 1
-      },
-      // Only used for hard/sequence breaks
-      {
-        "name": "mags thardus",
-        "access_rules": [
-          "missile,morph,wave,space,@has/any suit",
-          "missile,morph,wave,space,etank:1",
-          "missile,morph,wave,spider,boost,@has/any suit",
-          "missile,morph,wave,spider,boost,etank:2"
-        ],
-        "item_count": 1
-      },
-      // Only used for hard/sequence breaks
-      {
-        "name": "mags frozenpike",
-        "access_rules": [
-          "missile,morph,wave,ice,space,@has/any suit",
-          "missile,morph,wave,ice,space,etank:1",
-          "missile,morph,wave,ice,spider,@has/any suit",
-          "missile,morph,wave,ice,spider,etank:2"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "mines from tallon",
-        "access_rules": [
-          // Global access
-          "@can/bomb,missile,wave,ice,space,gravity,thermal",
-
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,wave,ice,space",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,wave,ice"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "mines from magmoor",
-        "access_rules": [
-          // Global access
-          "@can/bomb,@can/pb,missile,wave,ice,space,spider,@has/any suit",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,@can/pb,missile,wave,ice,space,@has/any suit",
-          "[hard],sbh,@can/bomb,@can/pb,missile,wave,ice,space,etank:1"
-        ],
-        "item_count": 1
-      },
-      {
         "name": "frigate",
         "access_rules": [
-          "@can/bomb,missile,space,gravity,wave,ice,thermal"
+          "missile,morph,space,wave,ice,gravity,@can/pass thermal"
+        ],
+        "item_count": 1
+      },
+      // {
+      //   "name": "late chozo",
+      //   "access_rules": [
+      //     // IBBF
+      //     "missile,@can/wallcrawl,oob_ibbf",
+
+      //     // Climbing Frigate Crash Site to Reflecting Pool
+      //     "@can/climb frigate crash site,@can/bomb",
+
+      //     "missile,@can/bomb,spider,wave,"
+      //   ]
+      // },
+      {
+        "name": "reflecting pool",
+        "access_rules": [
+          // From Overgrown Cavern elevator
+          "@can/climb frigate crash site,bomb",
+
+          // Through late Chozo
+          "@reqs/late chozo,boost,wave",
+          "@reqs/late chozo,boost,trick_hbj",
+          "@reqs/late chozo,trick_ghetto,wave",
+          "@reqs/late chozo,trick_ghetto,trick_hbj"
         ],
         "item_count": 1
       },
       {
-        "name": "chozohote",
+        "name": "early magmoor",
         "access_rules": [
-          "@can/bomb,missile,spider,space,wave,boost",
-          "@can/bomb,missile,spider,space,ice"
+          "missile,$EarlyMagmoor"
         ],
         "item_count": 1
       },
       {
-        "name": "frigate break",
+        "name": "late magmoor",
         "access_rules": [
-          "@can/bomb,missile,ice,[space],[gravity],[wave],[thermal]"
-        ],
-        "item_count": 1
-      },
-      {
-        "name": "chozohote break",
-        "access_rules": [
-          "@can/bomb,missile,[spider],[space],[wave],[boost]",
-          "@can/bomb,missile,[spider],[space],[ice]"
-        ],
-        "item_count": 1
+          // Developer intended
+          "missile,wave,space,$MagmoorRun,morph,spider",
+
+          // 
+        ]
       }
     ]
   }

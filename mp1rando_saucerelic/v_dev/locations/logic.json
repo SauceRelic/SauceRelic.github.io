@@ -286,7 +286,7 @@
         "item_count": 1
       },
       {
-        "name": "front phen",
+        "name": "north phen elevator",
         "access_rules": [
           // Vanilla
           "missile,@can/bomb,@has/any suit",
@@ -297,11 +297,99 @@
         "item_count": 1
       },
       {
-        "name": "back phen",
+        "name": "south phen elevator",
         "access_rules": [
           // Blocked by bombs depending on settings
           "@reqs/late magmoor,morph,@can/bomb",
           "@reqs/late magmoor,morph,$allowBackPhenBombs"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "front phen",
+        "access_rules": [
+          // Immediate access from elevator
+          "@reqs/north phen elevator",
+
+          // Reverse through Thardus
+          "@reqs/south phen elevator,@can/exit quar to court"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "mid phen",
+        "access_rules": [
+          // Ensure backtracking is possible
+          "@reqs/front phen,@can/climb ruined courtyard"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "back phen",
+        "access_rules": [
+          // Through labs
+          "@reqs/mid phen,ice,@can/climb observatory",
+
+          // Through Thardus/south elevator
+          "@reqs/mid phen,ice,@can/enter quar from court,@can/exit quar to mags,@can/exit mags to far phen"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "quarantine cave",
+        "access_rules": [
+          // Immediately from south magmoor
+          "@reqs/south phen elevator",
+
+          // Path through front phen
+          "@reqs/north phen elevator,@can/climb ruined courtyard,@can/enter quar from court"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "phen labs",
+        "access_rules": [
+          // Front path
+          "@reqs/mid phen,@can/climb observatory",
+          
+          // Back path
+          "@reqs/far phen"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "tallon to mines",
+        "access_rules": [
+          // Developer intended
+          "@reqs/frigate,@can/bomb",
+
+          // Bars skip
+          "trick_barsskip,@reqs/reflecting pool,wave,ice"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "mags to mines",
+        "access_rules": [
+          "@reqs/late magmoor,@can/climb ore processing,@can/climb mines spider shafts,@can/pb,ice"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "upper mines",
+        "access_rules": [
+          // No extra requirements from either entrance
+          "@reqs/tallon to mines",
+          "@reqs/mags to mines"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "lower mines",
+        "access_rules": [
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,grapple",
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,trick_terrain,trick_ghetto,trick_dash",
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,trick_terrain,trick_ghetto,trick_rjump"
         ],
         "item_count": 1
       }

@@ -115,7 +115,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/trick_scandash.png",
-    "codes": "trick_scandash"
+    "codes": "trick_dash,trick_scandash"
   },
   {
     "name": "Standable Terrain Exploits",

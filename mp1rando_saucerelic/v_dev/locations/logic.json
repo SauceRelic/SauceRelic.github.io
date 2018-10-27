@@ -220,18 +220,37 @@
         ],
         "item_count": 1
       },
-      // {
-      //   "name": "late chozo",
-      //   "access_rules": [
-      //     // IBBF
-      //     "missile,@can/wallcrawl,oob_ibbf",
+      {
+        "name": "late chozo",
+        "access_rules": [
+          // IBBF
+          "missile,@can/wallcrawl,oob_ibbf",
 
-      //     // Climbing Frigate Crash Site to Reflecting Pool
-      //     "@can/climb frigate crash site,@can/bomb",
+          // Climbing Frigate Crash Site to Reflecting Pool
+          "@can/climb frigate crash site,@can/bomb",
 
-      //     "missile,@can/bomb,spider,wave,"
-      //   ]
-      // },
+          // Inbounds checks
+          //
+          // Vanilla Furnace to Crossway
+          "missile,@can/bomb,spider,wave,boost",
+          "missile,@can/bomb,trick_terrain,wave,boost",
+
+          // Vanilla Furnace to HotE
+          "missile,@can/bomb,spider,ice,space",
+          "missile,@can/bomb,trick_terrain,ice,space",
+
+          // Furnace to Crossway with tricks
+          "missile,@can/bomb,spider,wave,trick_halfpipebj",
+          "missile,@can/bomb,spider,wave,space,trick_ljump",
+          "missile,@can/bomb,spider,wave,space,trick_rjump",
+          "missile,@can/bomb,spider,wave,space,trick_ghetto",
+
+          "missile,@can/bomb,trick_terrain,wave,trick_halfpipebj",
+          "missile,@can/bomb,trick_terrain,wave,space,trick_ljump",
+          "missile,@can/bomb,trick_terrain,wave,space,trick_rjump",
+          "missile,@can/bomb,trick_terrain,wave,space,trick_ghetto"
+        ]
+      },
       {
         "name": "reflecting pool",
         "access_rules": [
@@ -240,9 +259,9 @@
 
           // Through late Chozo
           "@reqs/late chozo,boost,wave",
-          "@reqs/late chozo,boost,trick_hbj",
+          "@reqs/late chozo,boost,trick_hbjpasthote",
           "@reqs/late chozo,trick_ghetto,wave",
-          "@reqs/late chozo,trick_ghetto,trick_hbj"
+          "@reqs/late chozo,trick_ghetto,trick_hbjpasthote"
         ],
         "item_count": 1
       },
@@ -259,8 +278,13 @@
           // Developer intended
           "missile,wave,space,$MagmoorRun,morph,spider",
 
-          // 
-        ]
+          // Skips
+          "missile,wave,space,$MagmoorRun,trick_scandash",
+          "missile,wave,space,$MagmoorRun,trick_ljump",
+          "missile,wave,space,$MagmoorRun,trick_rjump",
+          "missile,wave,space,$MagmoorRun,trick_dbj"
+        ],
+        "item_count": 1
       }
     ]
   }

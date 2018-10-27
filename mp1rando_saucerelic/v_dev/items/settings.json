@@ -114,127 +114,127 @@
     "name": "Dashing/Scan Dashing",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_scandash.png",
-    "codes": "trick_dash,trick_scandash"
+    "img": "images/settings/t_scandash.png",
+    "codes": "t_dash,t_scandash"
   },
   {
     "name": "Standable Terrain Exploits",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_terrain.png",
-    "codes": "trick_terrain"
+    "img": "images/settings/t_terrain.png",
+    "codes": "t_terrain"
   },
   {
     "name": "L Jumping",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_ljump.png",
-    "codes": "trick_ljump"
+    "img": "images/settings/t_ljump.png",
+    "codes": "t_ljump"
   },
   {
     "name": "R Jumping",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_rjump.png",
-    "codes": "trick_rjump"
+    "img": "images/settings/t_rjump.png",
+    "codes": "t_rjump"
   },
   {
     "name": "Ghetto Jumping",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_ghetto.png",
-    "codes": "trick_ghetto"
+    "img": "images/settings/t_ghetto.png",
+    "codes": "t_ghetto"
   },
   {
     "name": "Sunchamber Ghost Fight Item Early",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_earlywild.png",
-    "codes": "trick_earlywild"
+    "img": "images/settings/t_earlywild.png",
+    "codes": "t_earlywild"
   },
   {
     "name": "Infinite Speed (Early Sun/Magma Pool)",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_sunisg.png",
-    "codes": "trick_sunisg"
+    "img": "images/settings/t_sunisg.png",
+    "codes": "t_sunisg"
   },
   {
     "name": "Infinite Speed (Hall of the Elders)",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_hoteisg.png",
-    "codes": "trick_hoteisg"
+    "img": "images/settings/t_hoteisg.png",
+    "codes": "t_hoteisg"
   },
   {
     "name": "Great Tree Hall Gate Skip",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_barsskip.png",
-    "codes": "trick_barsskip"
+    "img": "images/settings/t_barsskip.png",
+    "codes": "t_barsskip"
   },
   {
     "name": "Life Grove/Elite Research Spinners Without Boost Ball",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_noboostspinners.png",
-    "codes": "trick_noboostspinners"
+    "img": "images/settings/t_noboostspinners.png",
+    "codes": "t_noboostspinners"
   },
   {
     "name": "Spiderless Shafts (Phazon Mines)",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_spiderlessshafts.png",
-    "codes": "trick_spiderlessshafts"
+    "img": "images/settings/t_spiderlessshafts.png",
+    "codes": "t_spiderlessshafts"
   },
   {
     "name": "Infinite Boost Wall Clip into Elite Research (Mines)",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_eliteib.png",
-    "codes": "trick_eliteib"
+    "img": "images/settings/t_eliteib.png",
+    "codes": "t_eliteib"
   },
   {
     "name": "Phazon Mining Tunnel without Phazon Suit",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_phazontunnelnosuit.png",
-    "codes": "trick_phazontunnelnosuit"
+    "img": "images/settings/t_phazontunnelnosuit.png",
+    "codes": "t_phazontunnelnosuit"
   },
   {
     "name": "Double Bomb Jumping",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_dbj.png",
-    "codes": "trick_dbj"
+    "img": "images/settings/t_dbj.png",
+    "codes": "t_dbj"
   },
   {
     "name": "Hyper Bomb Jumps past HotE",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_hbjpasthote.png",
-    "codes": "trick_hbjpasthote"
+    "img": "images/settings/t_hbjpasthote.png",
+    "codes": "t_hbjpasthote"
   },
   {
     "name": "Half-pipe Bomb Jumps",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_halfpipebj.png",
-    "codes": "trick_halfpipebj"
+    "img": "images/settings/t_halfpipebj.png",
+    "codes": "t_halfpipebj"
   },
   {
     "name": "Suitless Magmoor Run to Phendrana/Mines",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_vmr.png",
-    "codes": "trick_vmr"
+    "img": "images/settings/t_vmr.png",
+    "codes": "t_vmr"
   },
   {
     "name": "Early Magmoor Items Suitless",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_earlymagitems.png",
-    "codes": "trick_earlymagitems"
+    "img": "images/settings/t_earlymagitems.png",
+    "codes": "t_earlymagitems"
   },
   {
     "name": "Suitless Magmoor Run Required Tanks",

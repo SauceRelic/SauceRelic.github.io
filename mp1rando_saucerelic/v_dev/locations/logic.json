@@ -71,7 +71,7 @@
       {
         "name": "climb frigate crash site",
         "access_rules": [
-          "trick_terrain,trick_ghetto,missile,morph,ice,space"
+          "t_terrain,t_ghetto,missile,morph,ice,space"
         ],
         "item_count": 1
       },
@@ -82,10 +82,10 @@
           "@has/any suit,grapple",
 
           // Logic requires etanks or suit for safety
-          "trick_scandash,space,etank:2",
-          "trick_scandash,space,@has/any suit",
-          "trick_scandash,@can/floaty,etank:2",
-          "trick_scandash,@can/floaty,@has/any suit"
+          "t_scandash,space,etank:2",
+          "t_scandash,space,@has/any suit",
+          "t_scandash,@can/floaty,etank:2",
+          "t_scandash,@can/floaty,@has/any suit"
         ],
         "item_count": 1
       },
@@ -96,7 +96,7 @@
           "missile,space,wave,morph,boost,spider",
 
           // Dash to the door
-          "missile,space,wave,trick_dash,trick_standableterrain"
+          "missile,space,wave,t_dash,t_standableterrain"
         ],
         "item_count": 1
       },
@@ -110,7 +110,7 @@
           "space,wave,spider",
 
           // Dirty cheater strats
-          "space,wave,trick_terrain,trick_ghetto"
+          "space,wave,t_terrain,t_ghetto"
         ],
         "item_count": 1
       },
@@ -121,7 +121,7 @@
           "@can/bomb,boost",
 
           // Scandash
-          "trick_scandash"
+          "t_scandash"
         ],
         "item_count": 1
       },
@@ -147,8 +147,8 @@
           "spider,@can/super",
           "spider,@can/bomb",
 
-          "trick_ghetto,@can/super",
-          "trick_ghetto,@can/bomb"
+          "t_ghetto,@can/super",
+          "t_ghetto,@can/bomb"
         ],
         "item_count": 1
       },
@@ -156,7 +156,7 @@
         "name": "exit mags to far phen",
         "access_rules": [
           "morph,ice,spider",
-          "morph,ice,trick_terrain"
+          "morph,ice,t_terrain"
         ],
         "item_count": 1
       },
@@ -164,7 +164,7 @@
         "name": "climb ore processing",
         "access_rules": [
           "@can/bomb,grapple,spider",
-          "trick_terrain,trick_ghetto"
+          "t_terrain,t_ghetto"
         ],
         "item_count": 1
       },
@@ -172,7 +172,7 @@
         "name": "climb mines spider shafts",
         "access_rules": [
           "spider",
-          "@can/bomb,trick_terrain,trick_spiderlessshafts"
+          "@can/bomb,t_terrain,t_spiderlessshafts"
         ],
         "item_count": 1
       },
@@ -180,8 +180,8 @@
         "name": "climb vent shaft",
         "access_rules": [
           "boost",
-          "trick_halfpipebj",
-          "space,trick_dash"
+          "t_halfpipebj",
+          "space,t_dash"
         ],
         "item_count": 1
       }
@@ -233,22 +233,22 @@
           //
           // Vanilla Furnace to Crossway
           "missile,@can/bomb,spider,wave,boost",
-          "missile,@can/bomb,trick_terrain,wave,boost",
+          "missile,@can/bomb,t_terrain,wave,boost",
 
           // Vanilla Furnace to HotE
           "missile,@can/bomb,spider,ice,space",
-          "missile,@can/bomb,trick_terrain,ice,space",
+          "missile,@can/bomb,t_terrain,ice,space",
 
           // Furnace to Crossway with tricks
-          "missile,@can/bomb,spider,wave,trick_halfpipebj",
-          "missile,@can/bomb,spider,wave,space,trick_ljump",
-          "missile,@can/bomb,spider,wave,space,trick_rjump",
-          "missile,@can/bomb,spider,wave,space,trick_ghetto",
+          "missile,@can/bomb,spider,wave,t_halfpipebj",
+          "missile,@can/bomb,spider,wave,space,t_ljump",
+          "missile,@can/bomb,spider,wave,space,t_rjump",
+          "missile,@can/bomb,spider,wave,space,t_ghetto",
 
-          "missile,@can/bomb,trick_terrain,wave,trick_halfpipebj",
-          "missile,@can/bomb,trick_terrain,wave,space,trick_ljump",
-          "missile,@can/bomb,trick_terrain,wave,space,trick_rjump",
-          "missile,@can/bomb,trick_terrain,wave,space,trick_ghetto"
+          "missile,@can/bomb,t_terrain,wave,t_halfpipebj",
+          "missile,@can/bomb,t_terrain,wave,space,t_ljump",
+          "missile,@can/bomb,t_terrain,wave,space,t_rjump",
+          "missile,@can/bomb,t_terrain,wave,space,t_ghetto"
         ]
       },
       {
@@ -259,9 +259,9 @@
 
           // Through late Chozo
           "@reqs/late chozo,boost,wave",
-          "@reqs/late chozo,boost,trick_hbjpasthote",
-          "@reqs/late chozo,trick_ghetto,wave",
-          "@reqs/late chozo,trick_ghetto,trick_hbjpasthote"
+          "@reqs/late chozo,boost,t_hbjpasthote",
+          "@reqs/late chozo,t_ghetto,wave",
+          "@reqs/late chozo,t_ghetto,t_hbjpasthote"
         ],
         "item_count": 1
       },
@@ -279,9 +279,9 @@
           "missile,wave,space,$MagmoorRun,morph,spider",
 
           // Skips
-          "missile,wave,space,$MagmoorRun,trick_terrain,trick_scandash",
-          "missile,wave,space,$MagmoorRun,trick_terrain,trick_rjump",
-          "missile,wave,space,$MagmoorRun,trick_dbj"
+          "missile,wave,space,$MagmoorRun,t_terrain,t_scandash",
+          "missile,wave,space,$MagmoorRun,t_terrain,t_rjump",
+          "missile,wave,space,$MagmoorRun,t_dbj"
         ],
         "item_count": 1
       },
@@ -292,7 +292,7 @@
           "missile,@can/bomb,@has/any suit",
 
           // Suitless (other reqs probably to avoid lava)
-          "missile,@can/bomb,$MagmoorRun,space,trick_dash,trick_terrain"
+          "missile,@can/bomb,$MagmoorRun,space,t_dash,t_terrain"
         ],
         "item_count": 1
       },
@@ -364,7 +364,7 @@
           "@reqs/frigate,@can/bomb",
 
           // Bars skip
-          "trick_barsskip,@reqs/reflecting pool,wave,ice"
+          "t_barsskip,@reqs/reflecting pool,wave,ice"
         ],
         "item_count": 1
       },
@@ -388,8 +388,8 @@
         "name": "lower mines",
         "access_rules": [
           "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,grapple",
-          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,trick_terrain,trick_ghetto,trick_dash",
-          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,trick_terrain,trick_ghetto,trick_rjump"
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,t_terrain,t_ghetto,t_dash",
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,t_terrain,t_ghetto,t_rjump"
         ],
         "item_count": 1
       }

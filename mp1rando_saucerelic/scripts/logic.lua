@@ -19,7 +19,7 @@ function vis()
 end
 
 function MagmoorRun()
-  if hasItem("trick_vmr") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmretanks")) then
+  if hasItem("t_vmr") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmretanks")) then
     return 1
   else
     return hasItem("varia") or hasItem("gravity") or hasItem("phazon")
@@ -27,7 +27,7 @@ function MagmoorRun()
 end
 
 function EarlyMagmoor()
-  if hasItem("trick_earlymagitems") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("earlyetanks")) then
+  if hasItem("t_earlymagitems") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("earlyetanks")) then
     return 1
   else
     return hasItem("varia") or hasItem("gravity") or hasItem("phazon")

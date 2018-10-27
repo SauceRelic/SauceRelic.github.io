@@ -284,6 +284,26 @@
           "missile,wave,space,$MagmoorRun,trick_dbj"
         ],
         "item_count": 1
+      },
+      {
+        "name": "front phen",
+        "access_rules": [
+          // Vanilla
+          "missile,@can/bomb,@has/any suit",
+
+          // Suitless (other reqs probably to avoid lava)
+          "missile,@can/bomb,$MagmoorRun,space,trick_dash,trick_terrain"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "back phen",
+        "access_rules": [
+          // Blocked by bombs depending on settings
+          "@reqs/late magmoor,morph,@can/bomb",
+          "@reqs/late magmoor,morph,$allowBackPhenBombs"
+        ],
+        "item_count": 1
       }
     ]
   }

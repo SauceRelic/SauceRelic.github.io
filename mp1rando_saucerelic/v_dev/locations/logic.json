@@ -81,10 +81,10 @@
           // Developer intended
           "@has/any suit,grapple",
 
-          // Logic requires an etank or suit for safety
-          "trick_scandash,space,etank:1",
+          // Logic requires etanks or suit for safety
+          "trick_scandash,space,etank:2",
           "trick_scandash,space,@has/any suit",
-          "trick_scandash,@can/floaty,etank:1",
+          "trick_scandash,@can/floaty,etank:2",
           "trick_scandash,@can/floaty,@has/any suit"
         ],
         "item_count": 1
@@ -96,7 +96,7 @@
           "missile,space,wave,morph,boost,spider",
 
           // Dash to the door
-          "missile,space,wave,trick_scandash,trick_standableterrain"
+          "missile,space,wave,trick_dash,trick_standableterrain"
         ],
         "item_count": 1
       },
@@ -181,7 +181,7 @@
         "access_rules": [
           "boost",
           "trick_halfpipebj",
-          "space,trick_scandash"
+          "space,trick_dash"
         ],
         "item_count": 1
       }
@@ -279,9 +279,8 @@
           "missile,wave,space,$MagmoorRun,morph,spider",
 
           // Skips
-          "missile,wave,space,$MagmoorRun,trick_scandash",
-          "missile,wave,space,$MagmoorRun,trick_ljump",
-          "missile,wave,space,$MagmoorRun,trick_rjump",
+          "missile,wave,space,$MagmoorRun,trick_terrain,trick_scandash",
+          "missile,wave,space,$MagmoorRun,trick_terrain,trick_rjump",
           "missile,wave,space,$MagmoorRun,trick_dbj"
         ],
         "item_count": 1

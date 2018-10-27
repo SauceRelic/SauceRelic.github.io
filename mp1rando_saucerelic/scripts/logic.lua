@@ -14,6 +14,10 @@ function allowBackPhenBombs()
   return not hasItem("nolatebombs")
 end
 
+function vis()
+  return not hasItem("obfuscate")
+end
+
 function MagmoorRun()
   if hasItem("trick_vmr") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmretanks")) then
     return 1

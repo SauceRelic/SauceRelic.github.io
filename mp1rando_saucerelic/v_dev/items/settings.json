@@ -209,18 +209,11 @@
     "codes": "trick_dbj"
   },
   {
-    "name": "Hyper Bomb Jumps",
+    "name": "Hyper Bomb Jumps past HotE",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/trick_hbj.png",
-    "codes": "trick_hbj"
-  },
-  {
-    "name": "Uber Bomb Jumps",
-    "type": "toggle",
-    "loop": true,
-    "img": "images/settings/trick_ubj.png",
-    "codes": "trick_ubj"
+    "img": "images/settings/trick_hbjpasthote.png",
+    "codes": "trick_hbjpasthote"
   },
   {
     "name": "Half-pipe Bomb Jumps",

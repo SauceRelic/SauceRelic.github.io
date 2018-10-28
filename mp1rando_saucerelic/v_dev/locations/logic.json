@@ -81,7 +81,10 @@
           // Developer intended
           "@has/any suit,grapple",
 
-          // Logic requires etanks or suit for safety
+          // Jump off debris in the pool
+          "t_terrain,gravity,space",
+
+          // Scandash requires etanks or suit for safety
           "t_scandash,space,etank:2",
           "t_scandash,space,@has/any suit",
           "t_scandash,@can/floaty,etank:2",

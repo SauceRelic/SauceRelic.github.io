@@ -6,12 +6,14 @@
       {
         "name": "Landing Site",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "morph",
 
           // Visibility
           "{$vis}",
 
+          // Hint from Artifact Temple
+          // Included for all non-immediate checks
           "{artifactcheck}"
         ],
         "sections": [
@@ -32,7 +34,7 @@
       {
         "name": "Alcove",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb,boost",
           "space",
 
@@ -62,7 +64,7 @@
       {
         "name": "Artifact Temple",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile"
         ],
         "sections": [
@@ -83,7 +85,7 @@
       {
         "name": "Root Cave",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile,space,grapple,@can/pass xray",
 
           // Dash instead of grapple
@@ -109,7 +111,7 @@
       {
         "name": "Arbor Chamber",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile,space,plasma,grapple,@can/pass xray",
 
           // Dash to skip grapple
@@ -139,7 +141,7 @@
       {
         "name": "Transport Tunnel B",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile",
 
           "{artifactcheck}"
@@ -162,7 +164,7 @@
       {
         "name": "Frigate Crash Site",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile,morph,space,gravity",
 
           // Scan dash from shore
@@ -323,7 +325,7 @@
       {
         "name": "Life Grove Tunnel",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           // Through late Chozo
           "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
           // Through Frigate
@@ -364,7 +366,7 @@
           {
             "name": "X-Ray Visor",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               // Through late Chozo
               "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
               // Through Frigate
@@ -390,7 +392,7 @@
           {
             "name": "Artifact of Chozo",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               // Through late Chozo
               "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
               // Through Frigate
@@ -432,38 +434,24 @@
         "name": "Main Plaza",
         "sections": [
           {
-            "name": "Locked Door (E-Tank)",
-            "access_rules": [
-              // Glitchless
-              "missile,morph",
-
-              // Normal access
-              "[normal],sbn,space",
-
-              // Hard access
-              "[hard],sbh,space",
-
-              // Visibility
-              "{}"
-            ],
-            "item_count": 1,
-            "capture_item": true
-          },
-          {
             "name": "Half-Pipe (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "morph,boost",
 
-              // Normal access
-              "[normal],sbn,space",
+              // Space jump from ledge
+              "t_terrain,space",
 
-              // Hard access
-              "[hard],sbh,space",
-              "[hard],sbh,@can/bomb",
+              // Ghetto jump up the ramp
+              "t_ghetto,space",
+
+              // Half-pipe bomb jump
+              "t_halfpipebj,@can/bomb",
 
               // Visibility
-              "{}"
+              "{$vis}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -471,18 +459,25 @@
           {
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb,@has/any suit,missile,grapple,boost,wave",
 
-              // Normal access
-              "[normal],sbn,space",
+              // Jump from tree and grapple
+              "t_terrain,grapple",
 
-              // Hard access
-              "[hard],sbh,space",
-              "[hard],sbh,grapple",
+              // L jump from the ledge below
+              "t_ljump,space",
+
+              // Dash from tree
+              "t_terrain,t_dash,space",
+
+              // Floaty jump
+              "@can/floaty",
 
               // Visibility
-              "{}"
+              "{$vis}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -490,15 +485,28 @@
           {
             "name": "Tree (Missile)",
             "access_rules": [
-              // Glitchless
-              "@can/super,space",
+              // Developer intended
+              "@can/super,@can/pass xray",
 
-              // Normal access
-              "[normal],sbn,@can/super",
+              // OoB with floaty
+              "oob_trainingchamber,@can/floaty",
 
-              // Hard access
-              "[hard],sbh,@can/super",
-              "[hard],sbh,@can/bomb,missile,space",
+              "{artifactcheck}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Locked Door (E-Tank)",
+            "access_rules": [
+              // Developer intended
+              "missile,morph",
+
+              // L-jump
+              "t_ljump,space",
+
+              // Visibility
+              "{$vis}",
 
               "{artifactcheck}"
             ],
@@ -517,11 +525,14 @@
       {
         "name": "Ruined Fountain",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb,missile,spider",
 
+          // Collision abuse
+          "t_terrain,t_ljump,morph,missile,spider",
+
           // Visibility
-          "{morph}",
+          "{$vis,morph}",
 
           "{artifactcheck}"
         ],
@@ -546,12 +557,17 @@
           {
             "name": "Beetle Battle (Morph Ball)",
             "access_rules": [
-              // Glitchless and escape
+              // Developer intended
               "missile,morph",
+
+              // Developer intended, but later in the game
               "missile,space",
 
-              // Glitchless and visibility (can see from outside, no reload)
-              "{missile}",
+              // Dash off of something
+              "t_terrain,t_dash,missile",
+
+              // Access/visibility (safely visible, but softlock if collected and item does not meet reqs)
+              "{$vis,missile}",
 
               "{artifactcheck}"
             ],
@@ -561,14 +577,17 @@
           {
             "name": "Half-Pipe (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "missile,morph,boost",
 
-              // Normal access
-              "[normal],sbn,missile,morph,space",
+              // Space jump from branch
+              "t_terrain,missile,morph,space",
 
-              // Hard access
-              "[hard],sbh,missile,morph",
+              // Ghetto jump off half-pipe
+              "t_ghetto,missile,morph,space",
+
+              // Half-pipe bomb jump
+              "t_halfpipebj,missile,@can/bomb",
 
               "{artifactcheck}"
             ],
@@ -578,7 +597,7 @@
           {
             "name": "Lower Tunnel (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb or pb,missile",
 
               "{artifactcheck}"
@@ -598,11 +617,11 @@
       {
         "name": "Vault",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb,missile",
 
           // Visibility
-          "{missile,morph}",
+          "{$vis,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -624,12 +643,16 @@
       {
         "name": "Training Chamber",
         "access_rules": [
-          // Glitchless
-          "@can/bomb,@has/any suit,missile,grapple,wave,boost,spider",
+          // Developer intended
+          "@can/cross magma pool,@can/bomb,wave,boost,spider",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,@has/any suit,wave,grapple,boost,spider",
-          "[hard],sbh,@can/bomb,space,spider",
+          // Training Chamber OoB
+          // Access (softlock)
+          "{oob_trainingchamber,@can/wallcrawl,bomb}",
+          // Escape through Wave door
+          "oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
+          // Escape through morph tunnel
+          "oob_trainingchamber,@can/wallcrawl,bomb,boost",
 
           "{artifactcheck}"
         ],
@@ -651,14 +674,14 @@
       {
         "name": "Training Chamber Access",
         "access_rules": [
-          // Glitchless
-          "@has/any suit,missile,morph,grapple,wave",
+          // Developer intended
+          "@can/cross magma pool,@can/bomb,wave",
 
-          // Hard access
-          "[hard],sbh,morph,wave,@has/any suit,space",
-          "[hard],sbh,morph,wave,@has/any suit,grapple",
-          "[hard],sbh,morph,wave,space,etank:2",
-          "[hard],sbh,morph,@can/bomb,space",
+          // Training Chamber OoB
+          // Access (softlock)
+          "{oob_trainingchamber,@can/wallcrawl,bomb}",
+          // Escape through wave door
+          "oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
 
           "{artifactcheck}"
         ],
@@ -680,14 +703,8 @@
       {
         "name": "Magma Pool",
         "access_rules": [
-          // Glitchless
-          "@can/pb,@has/any suit,missile,grapple",
-
-          // Hard access
-          "[hard],sbh,@can/pb,@has/any suit,space",
-          "[hard],sbh,@can/pb,@has/any suit,grapple",
-          "[hard],sbh,@can/pb,etank:1,space",
-          "[hard],sbh,@can/bomb,@has/any suit,missile,boost",
+          // Developer intended
+          "@can/cross magma pool,@can/pb",
 
           "{artifactcheck}"
         ],
@@ -709,15 +726,11 @@
       {
         "name": "Tower of Light",
         "access_rules": [
-          // Glitchless
-          "@can/bomb,missile:40,boost,spider,wave,space",
+          // Developer intended
+          "@can/access tower of light,missile:40",
 
-          // Normal access
-          "[normal],sbn,missile,wave,space",
-
-          // Hard access
-          "[hard],sbh,missile,wave,space",
-          "[hard],sbh,missile,wave,@can/bomb",
+          // Dash up the tower
+          "t_dash,t_terrain,@can/access tower of light",
 
           "{artifactcheck}"
         ],
@@ -739,15 +752,11 @@
       {
         "name": "Tower Chamber",
         "access_rules": [
-          // Glitchless
-          "@can/bomb,missile,boost,spider,wave,gravity,space",
+          // Developer intended
+          "@can/access tower of light,gravity",
 
-          // Normal access
-          "[normal],sbn,missile,wave,space",
-          "[normal],sbn,missile,wave,morph,boost,notgravity",
-
-          // Hard access
-          "[hard],sbh,missile,wave",
+          // Underwater ghetto jump
+          "t_ghetto,@can/access tower of light",
 
           "{artifactcheck}"
         ],
@@ -769,11 +778,13 @@
       {
         "name": "Ruined Nursery",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb",
 
           // Visibility
-          "{}"
+          "{$vis}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -796,7 +807,7 @@
           {
             "name": "Missile Wall (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "missile",
 
               "{artifactcheck}"
@@ -807,7 +818,7 @@
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb",
 
               "{artifactcheck}"
@@ -827,7 +838,7 @@
       {
         "name": "Transport Access North",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile",
 
           "{artifactcheck}"
@@ -850,15 +861,11 @@
       {
         "name": "Gathering Hall",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb or pb,missile,space",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile",
-
-          // Hard access
-          "[hard],sbh,missile,@can/bomb",
-          "[hard],sbh,missile,@can/pb,space",
+          // Double bomb jump instead of space
+          "t_dbj,@can/bomb,missile",
 
           "{artifactcheck}"
         ],
@@ -901,7 +908,7 @@
           {
             "name": "Flaahgra (Varia Suit)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb,missile",
 
               "{artifactcheck}"
@@ -912,11 +919,11 @@
           {
             "name": "Ghosts (Artifact of Wild)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb,@can/super,spider",
 
-              // Hard access
-              "[hard],sbh,@can/bomb,missile",
+              // Early Wild IBJ
+              "t_earlywild,@can/bomb,missile",
 
               "{artifactcheck}"
             ],
@@ -935,7 +942,7 @@
       {
         "name": "Watery Hall Access",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "missile,morph",
 
           "{artifactcheck}"
@@ -961,7 +968,7 @@
           {
             "name": "Scan Puzzle (Charge Beam)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "missile,morph",
 
               "{artifactcheck}"
@@ -972,16 +979,11 @@
           {
             "name": "Underwater (Missile)",
             "access_rules": [
-              // Glitchless
-              "@can/bomb,missile,gravity,space",
+              // Developer intended
+              "morph,missile,gravity,space",
 
-              // Normal access
-              "[normal],sbn,missile,space,morph,etank:1",
-              "[normal],sbn,missile,space,morph,gravity",
-              "[normal],sbn,missile,space,@can/bomb",
-
-              // Hard access
-              "[hard],sbh,missile,morph,etank:1",
+              // Underwater ghetto jump
+              "t_ghetto,morph,missile,space",
 
               "{artifactcheck}"
             ],
@@ -1003,7 +1005,7 @@
           {
             "name": "Lower Dynamo (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb or pb,missile",
 
               "{artifactcheck}"
@@ -1014,8 +1016,11 @@
           {
             "name": "Spider Track (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb or pb,missile,spider",
+
+              // Floaty jump
+              "@can/floaty,@can/bomb or pb,missile",
 
               "{artifactcheck}"
             ],
@@ -1037,10 +1042,10 @@
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
-              // Glitchless and escape
+              // Developer intended and escape
               "@can/bomb,missile",
 
-              // Glitchless (must reload if neither burn dome item is bombs)
+              // Developer intended (must reload if neither burn dome item is bombs)
               "{missile,@can/bomb or pb}",
 
               "{artifactcheck}"
@@ -1051,10 +1056,10 @@
           {
             "name": "Incinerator Drone (Morph Bomb)",
             "access_rules": [
-              // Glitchless and escape
+              // Developer intended and escape
               "@can/bomb,missile",
 
-              // Glitchless (must reload if neither burn dome item is bombs)
+              // Developer intended (must reload if neither burn dome item is bombs)
               "{missile,morph}",
 
               "{artifactcheck}"
@@ -1077,7 +1082,7 @@
           {
             "name": "Spider Tracks (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb,@can/pb,missile,boost,spider",
 
               // Normal access
@@ -1094,7 +1099,7 @@
           {
             "name": "Tunnel (E-Tank)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb,missile",
 
               "{artifactcheck}"
@@ -1114,7 +1119,7 @@
       {
         "name": "Hall of the Elders",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/chozohote,ice",
 
           // Normal access
@@ -1144,7 +1149,7 @@
       {
         "name": "Crossway",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb,@can/super,boost,spider,wave",
           "@can/bomb,@can/super,boost,spider,ice",
 
@@ -1175,7 +1180,7 @@
       {
         "name": "Elder Chamber",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/chozohote,ice,plasma",
 
           // Normal access
@@ -1206,7 +1211,7 @@
       {
         "name": "Antechamber",
         "access_rules": [
-          // Glitchless and escape
+          // Developer intended and escape
           "@reqs/chozohote,wave,boost,ice",
           "@reqs/frigate,boost,ice",
 
@@ -1218,7 +1223,7 @@
           "[hard],sbh,missile,ice,space",
           "[hard],sbh,missile,@can/pb,@can/bomb,space",
 
-          // Glitchless (must reload if not ice)
+          // Developer intended (must reload if not ice)
           "{@reqs/chozohote,wave,boost}",
           "{@reqs/frigate,boost}",
 
@@ -1254,10 +1259,10 @@
       {
         "name": "Lava Lake",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb or pb,@has/any suit,missile,space",
 
-          // Glitchless sequence break (no glitches, just an extreme outlier location)
+          // Developer intended sequence break (no glitches, just an extreme outlier location)
           "@has/any suit,missile,morph,[bomb]",
           "@has/any suit,missile,morph,[pb]",
 
@@ -1287,7 +1292,7 @@
       {
         "name": "Triclops Pit",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@has/any suit,missile,morph,space,xray",
 
           // Normal access
@@ -1316,7 +1321,7 @@
       {
         "name": "Storage Cavern",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@has/any suit,missile,morph",
 
           "{artifactcheck}"
@@ -1339,7 +1344,7 @@
       {
         "name": "Transport Tunnel A",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/bomb,@has/any suit,missile",
 
           "{artifactcheck}"
@@ -1362,7 +1367,7 @@
       {
         "name": "Shore Tunnel",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/pb,@has/any suit,missile,space",
 
           // Normal access
@@ -1395,7 +1400,7 @@
           {
             "name": "Morph Track (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/bomb,@has/any suit,missile,space",
 
               // Normal access
@@ -1414,7 +1419,7 @@
           {
             "name": "Warrior Shrine Tunnel (Powerbomb)",
             "access_rules": [
-              // Glitchless and escape
+              // Developer intended and escape
               "@can/pb,@has/any suit,missile,boost,space,@can/bomb",
 
               // Normal access and escape
@@ -1423,7 +1428,7 @@
               // Hard access and escape
               "[hard],sbh,@can/pb,@has/any suit,missile,@can/bomb",
 
-              // Glitchless (must reload if not bombs)
+              // Developer intended (must reload if not bombs)
               "{@can/pb,@has/any suit,missile,boost,space}",
 
               // Hard access (must reload if not bombs)
@@ -1446,7 +1451,7 @@
       {
         "name": "Warrior Shrine",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@has/any suit,missile,morph,boost,space",
 
           // Normal access
@@ -1476,7 +1481,7 @@
       {
         "name": "Plasma Processing",
         "access_rules": [
-          // Glitchless and escape
+          // Developer intended and escape
           "@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple,plasma",
 
           // Normal access and escape
@@ -1486,7 +1491,7 @@
           "[hard],sbh,@can/bomb,missile,wave,ice,space,@has/any suit,plasma",
           "[hard],sbh,@can/bomb,missile,wave,ice,space,etank:1,plasma",
 
-          // Glitchless and visibility (can see from outside, no reload)
+          // Developer intended and visibility (can see from outside, no reload)
           "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}",
 
           // Normal access and visibility (can see from outside, no reload)
@@ -1516,7 +1521,7 @@
       {
         "name": "Magmoor Workstation",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@has/any suit,missile,morph,space,wave,thermal,grapple,spider",
 
           // Normal access
@@ -1554,7 +1559,7 @@
           {
             "name": "Behind Ice (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@reqs/phendrana,plasma",
 
               // Hard access
@@ -1573,7 +1578,7 @@
           {
             "name": "Spider Track (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@reqs/phendrana,@can/super,space,spider",
 
               // Hard access
@@ -1597,7 +1602,7 @@
       {
         "name": "Chozo Ice Temple",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,space,plasma",
 
           // Hard access
@@ -1626,7 +1631,7 @@
       {
         "name": "Ice Ruins West",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,space,plasma",
 
           // Hard access
@@ -1656,7 +1661,7 @@
           {
             "name": "Behind Ice (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@reqs/phendrana,plasma",
 
               // Hard access
@@ -1672,7 +1677,7 @@
           {
             "name": "Spider Track (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@reqs/phendrana,spider",
 
               // Hard access
@@ -1695,7 +1700,7 @@
       {
         "name": "Chapel of the Elders",
         "access_rules": [
-          // Glitchless and escape
+          // Developer intended and escape
           "@reqs/phendrana,wave,space",
 
           // Hard access and escape
@@ -1704,7 +1709,7 @@
           "[hard],sbh,@reqs/phen backwards,wave,space",
           "[hard],sbh,@reqs/phen backwards,wave,@can/bomb",
 
-          // Glitchless and visibility (can see from outside, no reload)
+          // Developer intended and visibility (can see from outside, no reload)
           "{@reqs/phendrana,space}",
 
           // Hard access (can see from outside, no reload)
@@ -1731,7 +1736,7 @@
       {
         "name": "Ruined Courtyard",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,boost,space,wave",
 
           // Normal access
@@ -1761,7 +1766,7 @@
       {
         "name": "Phendrana Canyon",
         "access_rules": [
-          // Glitchless and escape
+          // Developer intended and escape
           "@reqs/phendrana,space",
           "@reqs/phendrana,boost",
 
@@ -1769,7 +1774,7 @@
           "hard,@reqs/phendrana",
           "hard,@reqs/phen backwards",
 
-          // Glitchless (reload needed only if boxes are destroyed)
+          // Developer intended (reload needed only if boxes are destroyed)
           "{@reqs/phendrana}",
 
           "{artifactcheck}"
@@ -1792,7 +1797,7 @@
       {
         "name": "Quarantine Cave",
         "access_rules": [
-          // Glitchless and escape
+          // Developer intended and escape
           "@reqs/phendrana,@can/super,boost,space,wave,thermal,spider",
           "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
           "@reqs/phen backwards,thermal,spider",
@@ -1809,7 +1814,7 @@
           "[hard],sbh,@reqs/phen backwards,@can/bomb,spider",
           "[hard],sbh,@reqs/phen backwards,@can/bomb,grapple",
 
-          // Glitchless (must reload if thardus doesn't drop spider or grapple)
+          // Developer intended (must reload if thardus doesn't drop spider or grapple)
           "{@reqs/phendrana,@can/super,boost,space,wave,thermal}",
           "{@reqs/phen backwards,thermal}",
 
@@ -1840,7 +1845,7 @@
       {
         "name": "Quarantine Monitor",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
           "@reqs/phen backwards,thermal,grapple",
 
@@ -1873,7 +1878,7 @@
       {
         "name": "Research Lab Hydra",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,@can/super,thermal,boost,space,wave",
           "@reqs/phen backwards,@can/super,thermal,ice",
 
@@ -1916,7 +1921,7 @@
       {
         "name": "Observatory",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,boost,space,wave",
           "@reqs/phen backwards,@can/bomb,ice",
 
@@ -1948,7 +1953,7 @@
       {
         "name": "Control Tower",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,plasma,boost,space,wave",
           "@reqs/phen backwards,plasma,thermal,ice",
 
@@ -1983,7 +1988,7 @@
       {
         "name": "Research Lab Aether",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/phendrana,boost,space,wave",
           "@reqs/phen backwards,thermal,ice",
 
@@ -2020,7 +2025,7 @@
       {
         "name": "Research Core",
         "access_rules": [
-          // Glitchless and escape
+          // Developer intended and escape
           "@reqs/phendrana,boost,space,wave,thermal,ice",
           "@reqs/phen backwards,ice,thermal",
 
@@ -2033,7 +2038,7 @@
           "[hard],sbh,@reqs/mags thardus",
           "[hard],sbh,@reqs/mags frozenpike",
 
-          // Glitchless and visibility (can leave room before obtaining)
+          // Developer intended and visibility (can leave room before obtaining)
           "{@reqs/phendrana,boost,space,wave}",
           "{@reqs/phen backwards,ice}",
 
@@ -2057,7 +2062,7 @@
       {
         "name": "Transport Access",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "thermal,plasma,ice,@reqs/phendrana,boost,space,wave,spider",
           "thermal,plasma,ice,@reqs/phen backwards",
 
@@ -2092,7 +2097,7 @@
       {
         "name": "Frost Cave",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "ice,grapple,@reqs/phendrana,boost,space,wave",
           "ice,grapple,@reqs/phen backwards",
 
@@ -2127,7 +2132,7 @@
       {
         "name": "Storage Cave",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/pb,ice,plasma,grapple,@reqs/phendrana,boost,space,wave,thermal",
           "@can/pb,ice,plasma,grapple,@reqs/phen backwards",
 
@@ -2159,7 +2164,7 @@
       {
         "name": "Security Cave",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "ice,grapple,@reqs/phendrana,boost,space,wave",
           "ice,grapple,@reqs/phen backwards",
 
@@ -2193,7 +2198,7 @@
           {
             "name": "Underwater (Gravity Suit)",
             "access_rules": [
-              // Glitchless and escape
+              // Developer intended and escape
               "@reqs/phendrana,ice,boost,space,wave,gravity,thermal",
               "@reqs/phen backwards,ice,gravity",
 
@@ -2205,7 +2210,7 @@
               "[hard],sbh,@reqs/mags frozenpike,space,gravity",
               "[hard],sbh,@reqs/mags frozenpike,grapple,spider,gravity,@can/bomb",
 
-              // Glitchless (must reload if not gravity)
+              // Developer intended (must reload if not gravity)
               "{@reqs/phendrana,ice,boost,space,wave,thermal}",
               "{@reqs/phen backwards,ice}",
 
@@ -2225,7 +2230,7 @@
           {
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "@can/pb,ice,plasma,gravity,grapple,@reqs/phendrana,boost,space,wave,thermal",
               "@can/pb,ice,plasma,gravity,grapple,@reqs/phen backwards",
 
@@ -2260,7 +2265,7 @@
       {
         "name": "Main Quarry",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/mines from tallon,spider",
           "@reqs/mines from magmoor,thermal,grapple",
 
@@ -2291,7 +2296,7 @@
       {
         "name": "Security Access A",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/mines from tallon,@can/pb",
           "@reqs/mines from magmoor,grapple",
 
@@ -2318,7 +2323,7 @@
       {
         "name": "Storage Depot A",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "plasma,@reqs/mines from tallon,@can/pb",
           "plasma,@reqs/mines from magmoor,grapple",
 
@@ -2348,7 +2353,7 @@
           {
             "name": "Phazon Elite (Artifact of Warrior)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "boost,@reqs/mines from tallon,@can/pb,spider",
               "boost,@reqs/mines from magmoor,grapple",
 
@@ -2367,7 +2372,7 @@
           {
             "name": "Laser (Missile)",
             "access_rules": [
-              // Glitchless
+              // Developer intended
               "boost,@reqs/mines from tallon",
               "boost,@reqs/mines from magmoor,grapple",
 
@@ -2394,7 +2399,7 @@
       {
         "name": "Storage Depot B",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/mines from tallon,@can/pb,boost,spider",
           "@reqs/mines from magmoor",
 
@@ -2424,7 +2429,7 @@
       {
         "name": "Fungal Hall Access",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
           "boost,xray,plasma,@reqs/mines from magmoor",
 
@@ -2455,7 +2460,7 @@
       {
         "name": "Phazon Mining Tunnel",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,xray,plasma,grapple,phazon,@reqs/mines from tallon,@can/pb,spider",
           "boost,xray,plasma,grapple,phazon,@reqs/mines from magmoor",
 
@@ -2487,7 +2492,7 @@
       {
         "name": "Fungal Hall B",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
           "boost,xray,plasma,@reqs/mines from magmoor",
 
@@ -2519,7 +2524,7 @@
       {
         "name": "Metroid Quarantine A",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,xray,@reqs/mines from tallon,@can/pb,spider",
           "boost,xray,@reqs/mines from magmoor",
 
@@ -2550,7 +2555,7 @@
       {
         "name": "Metroid Quarantine B",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@can/super,boost,xray,grapple,plasma,@reqs/mines from tallon,@can/pb,spider",
           "@can/super,boost,xray,grapple,plasma,@reqs/mines from magmoor",
 
@@ -2582,7 +2587,7 @@
       {
         "name": "Elite Quarters",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
           "boost,plasma,xray,grapple,@reqs/mines from magmoor",
 
@@ -2614,7 +2619,7 @@
       {
         "name": "Processing Center Access",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
           "boost,plasma,xray,grapple,@reqs/mines from magmoor",
 
@@ -2645,7 +2650,7 @@
       {
         "name": "Phazon Processing Center",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/mines from tallon,@can/pb,spider",
           "@reqs/mines from magmoor",
 
@@ -2675,7 +2680,7 @@
       {
         "name": "Elite Control Access",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "@reqs/mines from tallon,spider",
           "@reqs/mines from magmoor",
 
@@ -2705,7 +2710,7 @@
       {
         "name": "Ventilation Shaft",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,@reqs/mines from tallon,@can/pb,spider",
           "boost,@reqs/mines from magmoor",
 
@@ -2735,7 +2740,7 @@
       {
         "name": "Central Dynamo",
         "access_rules": [
-          // Glitchless
+          // Developer intended
           "boost,@reqs/mines from tallon,spider",
           "boost,@reqs/mines from magmoor",
 

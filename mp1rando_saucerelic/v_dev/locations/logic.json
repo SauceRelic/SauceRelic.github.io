@@ -183,7 +183,7 @@
         "name": "climb vent shaft",
         "access_rules": [
           "boost",
-          "t_halfpipebj",
+          "t_halfpipebj,@can/bomb",
           "space,t_dash"
         ],
         "item_count": 1
@@ -284,7 +284,7 @@
           // Skips
           "missile,wave,space,$MagmoorRun,t_terrain,t_scandash",
           "missile,wave,space,$MagmoorRun,t_terrain,t_rjump",
-          "missile,wave,space,$MagmoorRun,t_dbj"
+          "missile,wave,space,$MagmoorRun,t_dbj,@can/bomb"
         ],
         "item_count": 1
       },

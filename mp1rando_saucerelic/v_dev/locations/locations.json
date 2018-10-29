@@ -49,6 +49,10 @@
         "sections": [
           {
             "name": "Space Jump",
+            "access_rules": [
+              // Shuffled version
+              "shuf_space"
+            ],
             "item_count": 1,
             "capture_item": true
           }

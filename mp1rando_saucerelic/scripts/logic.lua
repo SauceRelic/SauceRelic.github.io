@@ -6,16 +6,16 @@ function hasItem(item)
   end
 end
 
-function antiGravity()
-  return not hasItem("gravity")
+function missing(item)
+  if hasItem(item) then
+    return false
+  else
+    return true
+  end
 end
 
-function allowBackPhenBombs()
-  return not hasItem("nolatebombs")
-end
-
-function vis()
-  return not hasItem("obfuscate")
+function disabled(item)
+  return missing(item)
 end
 
 function MagmoorRun()

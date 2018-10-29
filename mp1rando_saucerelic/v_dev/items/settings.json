@@ -1,4 +1,47 @@
 [
+  // Shuffling Settings
+  {
+    "name": "Shuffle Artifacts",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/shuf_artifacts.png",
+    "codes": "shuf_artifacts"
+  },
+  {
+    "name": "Shuffle Missile Launcher",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/shuf_launcher.png",
+    "codes": "shuf_launcher"
+  },
+  {
+    "name": "Shuffle Morph Ball",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/shuf_morph.png",
+    "codes": "shuf_morph"
+  },
+  {
+    "name": "Shuffle Bombs",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/shuf_bombs.png",
+    "codes": "shuf_bombs"
+  },
+  {
+    "name": "Shuffle Charge Beam",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/shuf_charge.png",
+    "codes": "shuf_charge"
+  },
+  {
+    "name": "Shuffle Space Jump",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/shuf_space.png",
+    "codes": "shuf_space"
+  },
   // Generic Logic Settings
   {
     "name": "Obfuscate Items",

@@ -1,7 +1,7 @@
 {
   "name": "Metroid Prime Randomizer",
   "game_name": "Metroid Prime Randomizer",
-  "package_version": "0.9.2.1",
+  "package_version": "0.9.2.2",
   "package_uid": "mp1rando_saucerelic",
   "author": "SauceRelic",
   "variants": {
@@ -13,9 +13,9 @@
 //    },
     "v_itemsonly": {
       "display_name": "Items Only"
-    },
-    "v_dev": {
-      "display_name": "Map Tracker - dev Branch"
     }
+    // "v_dev": {
+    //   "display_name": "Map Tracker - dev Branch"
+    // }
   }
 }

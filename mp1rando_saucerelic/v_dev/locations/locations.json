@@ -10,7 +10,7 @@
           "morph",
 
           // Visibility
-          "{$vis}",
+          "{$disabled|obfuscate}",
 
           // Hint from Artifact Temple
           // Included for all non-immediate checks
@@ -171,10 +171,10 @@
           "t_dash,missile,morph",
 
           // Underwater ghetto jump
-          "t_ghetto,morph,space,$antiGravity",
+          "t_ghetto,morph,space,$missing|gravity",
 
           // Visibility
-          "{$vis,missile,morph}",
+          "{$disabled|obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -449,7 +449,7 @@
               "t_halfpipebj,@can/bomb",
 
               // Visibility
-              "{$vis}",
+              "{$disabled|obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -475,7 +475,7 @@
               "@can/floaty",
 
               // Visibility
-              "{$vis}",
+              "{$disabled|obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -506,7 +506,7 @@
               "t_ljump,space",
 
               // Visibility
-              "{$vis}",
+              "{$disabled|obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -532,7 +532,7 @@
           "t_terrain,t_ljump,morph,missile,spider",
 
           // Visibility
-          "{$vis,morph}",
+          "{$disabled|obfuscate,morph}",
 
           "{artifactcheck}"
         ],
@@ -567,7 +567,7 @@
               "t_terrain,t_dash,missile",
 
               // Access/visibility (safely visible, but softlock if collected and item does not meet reqs)
-              "{$vis,missile}",
+              "{$disabled|obfuscate,missile}",
 
               "{artifactcheck}"
             ],
@@ -621,7 +621,7 @@
           "@can/bomb,missile",
 
           // Visibility
-          "{$vis,missile,morph}",
+          "{$disabled|obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -782,7 +782,7 @@
           "@can/bomb",
 
           // Visibility
-          "{$vis}",
+          "{$disabled|obfuscate}",
 
           "{artifactcheck}"
         ],

@@ -304,7 +304,7 @@
         "access_rules": [
           // Blocked by bombs depending on settings
           "@reqs/late magmoor,morph,@can/bomb",
-          "@reqs/late magmoor,morph,$allowBackPhenBombs"
+          "@reqs/late magmoor,morph,$disabled|nolatebombs"
         ],
         "item_count": 1
       },

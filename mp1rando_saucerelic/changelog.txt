@@ -1,3 +1,7 @@
+v0.9.2.2
+  Added sequence breaks for Ruined Courtyard with spider ball
+  Added sequence breaks for most visor checks
+
 v0.9.2.1
   Fixed Transport Access visibility logic
 

@@ -82,7 +82,7 @@
         "name": "Root Cave",
         "access_rules": [
           // Global access
-          "missile,space,grapple,xray",
+          "missile,space,grapple,[xray]",
 
           // Normal access
           "[normal],sbn,missile,space,grapple",
@@ -111,7 +111,7 @@
         "name": "Arbor Chamber",
         "access_rules": [
           // Global access
-          "missile,space,plasma,grapple,xray",
+          "missile,space,plasma,grapple,[xray]",
 
           // Normal access
           "[normal],sbn,missile,space,plasma,grapple",
@@ -313,8 +313,8 @@
         "name": "Great Tree Chamber",
         "access_rules": [
           // Global access
-          "xray,@reqs/chozohote,wave,ice,boost",
-          "xray,@reqs/frigate,boost",
+          "[xray],@reqs/chozohote,wave,ice,boost",
+          "[xray],@reqs/frigate,boost",
 
           // Normal access
           "[normal],sbn,@can/bomb,missile,space,ice",
@@ -1270,7 +1270,7 @@
         "name": "Triclops Pit",
         "access_rules": [
           // Global access
-          "@has/any suit,missile,morph,space,xray",
+          "@has/any suit,missile,morph,space,[xray]",
 
           // Normal access
           "[normal],sbn,@has/any suit,missile,morph,space",
@@ -1499,7 +1499,7 @@
         "name": "Magmoor Workstation",
         "access_rules": [
           // Global access
-          "@has/any suit,missile,morph,space,wave,thermal,grapple,spider",
+          "@has/any suit,missile,morph,space,wave,[thermal],grapple,spider",
 
           // Normal access
           "[normal],sbn,@has/any suit,missile,morph,space,wave",
@@ -1775,10 +1775,10 @@
         "name": "Quarantine Cave",
         "access_rules": [
           // Global access and escape
-          "@reqs/phendrana,@can/super,boost,space,wave,thermal,spider",
-          "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
-          "@reqs/phen backwards,thermal,spider",
-          "@reqs/phen backwards,thermal,grapple",
+          "@reqs/phendrana,@can/super,boost,space,wave,[thermal],spider",
+          "@reqs/phendrana,@can/super,boost,space,wave,[thermal],grapple",
+          "@reqs/phen backwards,[thermal],spider",
+          "@reqs/phen backwards,[thermal],grapple",
 
           // Normal access and escape
           "[normal],sbn,@reqs/phendrana,wave,@can/super,spider",
@@ -1792,8 +1792,8 @@
           "[hard],sbh,@reqs/phen backwards,@can/bomb,grapple",
 
           // Global access (must reload if thardus doesn't drop spider or grapple)
-          "{@reqs/phendrana,@can/super,boost,space,wave,thermal}",
-          "{@reqs/phen backwards,thermal}",
+          "{@reqs/phendrana,@can/super,boost,space,wave,[thermal]}",
+          "{@reqs/phen backwards,[thermal]}",
 
           // Normal access (must reload if thardus doesn't drop spider or grapple)
           "{normal,@reqs/phendrana,wave,@can/super}",
@@ -1823,8 +1823,8 @@
         "name": "Quarantine Monitor",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
-          "@reqs/phen backwards,thermal,grapple",
+          "@reqs/phendrana,@can/super,boost,space,wave,[thermal],grapple",
+          "@reqs/phen backwards,[thermal],grapple",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,@can/super,wave,space,spider",
@@ -1856,8 +1856,8 @@
         "name": "Research Lab Hydra",
         "access_rules": [
           // Global access
-          "@reqs/phendrana,@can/super,thermal,boost,space,wave",
-          "@reqs/phen backwards,@can/super,thermal,ice",
+          "@reqs/phendrana,@can/super,[thermal],boost,space,wave",
+          "@reqs/phen backwards,@can/super,[thermal],ice",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,@can/super,wave,space",
@@ -1932,7 +1932,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,plasma,boost,space,wave",
-          "@reqs/phen backwards,plasma,thermal,ice",
+          "@reqs/phen backwards,plasma,[thermal],ice",
 
           // Normal access
           "[normal],sbn,@reqs/phendrana,boost,space,wave",
@@ -1967,7 +1967,7 @@
         "access_rules": [
           // Global access
           "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,thermal,ice",
+          "@reqs/phen backwards,[thermal],ice",
 
           // Normal access
           "[normal],sbn,@reqs/phen backwards,ice",
@@ -2003,8 +2003,8 @@
         "name": "Research Core",
         "access_rules": [
           // Global access and escape
-          "@reqs/phendrana,boost,space,wave,thermal,ice",
-          "@reqs/phen backwards,ice,thermal",
+          "@reqs/phendrana,boost,space,wave,[thermal],ice",
+          "@reqs/phen backwards,ice,[thermal]",
 
           // Normal access and escape
           "[normal],sbn,@reqs/phendrana,space,wave,boost",
@@ -2040,8 +2040,8 @@
         "name": "Transport Access",
         "access_rules": [
           // Global access
-          "thermal,plasma,ice,@reqs/phendrana,boost,space,wave,spider",
-          "thermal,plasma,ice,@reqs/phen backwards",
+          "[thermal],plasma,ice,@reqs/phendrana,boost,space,wave,spider",
+          "[thermal],plasma,ice,@reqs/phen backwards",
 
           // Normal access
           "[normal],sbn,plasma,ice,@reqs/phendrana,space,wave",
@@ -2051,8 +2051,8 @@
           "[hard],sbh,@reqs/phen backwards,ice,plasma",
 
           // Global visibility
-          "{ice,thermal,@reqs/phendrana,boost,space,wave,spider}",
-          "{ice,thermal,@reqs/phen backwards}",
+          "{ice,[thermal],@reqs/phendrana,boost,space,wave,spider}",
+          "{ice,[thermal],@reqs/phen backwards}",
 
           "{artifactcheck}"
         ],
@@ -2110,7 +2110,7 @@
         "name": "Storage Cave",
         "access_rules": [
           // Global access
-          "@can/pb,ice,plasma,grapple,@reqs/phendrana,boost,space,wave,thermal",
+          "@can/pb,ice,plasma,grapple,@reqs/phendrana,boost,space,wave,[thermal]",
           "@can/pb,ice,plasma,grapple,@reqs/phen backwards",
 
           // Normal access
@@ -2176,11 +2176,11 @@
             "name": "Underwater (Gravity Suit)",
             "access_rules": [
               // Global access and escape
-              "@reqs/phendrana,ice,boost,space,wave,gravity,thermal",
+              "@reqs/phendrana,ice,boost,space,wave,gravity,[thermal]",
               "@reqs/phen backwards,ice,gravity",
 
               // Normal access and escape
-              "[normal],sbn,ice,@reqs/phendrana,space,wave,gravity,thermal",
+              "[normal],sbn,ice,@reqs/phendrana,space,wave,gravity,[thermal]",
               "[normal],sbn,ice,@reqs/phen backwards,gravity",
 
               // Hard access and escape
@@ -2188,7 +2188,7 @@
               "[hard],sbh,@reqs/mags frozenpike,grapple,spider,gravity,@can/bomb",
 
               // Global access (must reload if not gravity)
-              "{@reqs/phendrana,ice,boost,space,wave,thermal}",
+              "{@reqs/phendrana,ice,boost,space,wave,[thermal]}",
               "{@reqs/phen backwards,ice}",
 
               // Normal access (must reload if not gravity)
@@ -2208,7 +2208,7 @@
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
               // Global access
-              "@can/pb,ice,plasma,gravity,grapple,@reqs/phendrana,boost,space,wave,thermal",
+              "@can/pb,ice,plasma,gravity,grapple,@reqs/phendrana,boost,space,wave,[thermal]",
               "@can/pb,ice,plasma,gravity,grapple,@reqs/phen backwards",
 
               // Normal access
@@ -2244,7 +2244,7 @@
         "access_rules": [
           // Global access
           "@reqs/mines from tallon,spider",
-          "@reqs/mines from magmoor,thermal,grapple",
+          "@reqs/mines from magmoor,[thermal],grapple",
 
           // Normal access
           "[normal],sbn,@reqs/mines from tallon",
@@ -2407,8 +2407,8 @@
         "name": "Fungal Hall Access",
         "access_rules": [
           // Global access
-          "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,plasma,@reqs/mines from magmoor",
+          "boost,[xray],plasma,@reqs/mines from tallon,@can/pb,spider",
+          "boost,[xray],plasma,@reqs/mines from magmoor",
 
           // Normal access
           "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
@@ -2438,8 +2438,8 @@
         "name": "Phazon Mining Tunnel",
         "access_rules": [
           // Global access
-          "boost,xray,plasma,grapple,phazon,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,plasma,grapple,phazon,@reqs/mines from magmoor",
+          "boost,[xray],plasma,grapple,phazon,@reqs/mines from tallon,@can/pb,spider",
+          "boost,[xray],plasma,grapple,phazon,@reqs/mines from magmoor",
 
           // Normal access
           "[normal],sbn,boost,plasma,phazon,@reqs/mines from tallon,@can/pb",
@@ -2470,8 +2470,8 @@
         "name": "Fungal Hall B",
         "access_rules": [
           // Global access
-          "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,plasma,@reqs/mines from magmoor",
+          "boost,[xray],plasma,@reqs/mines from tallon,@can/pb,spider",
+          "boost,[xray],plasma,@reqs/mines from magmoor",
 
           // Normal access
           "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
@@ -2502,8 +2502,8 @@
         "name": "Metroid Quarantine A",
         "access_rules": [
           // Global access
-          "boost,xray,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,@reqs/mines from magmoor",
+          "boost,[xray],@reqs/mines from tallon,@can/pb,spider",
+          "boost,[xray],@reqs/mines from magmoor",
 
           // Normal access
           "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
@@ -2533,8 +2533,8 @@
         "name": "Metroid Quarantine B",
         "access_rules": [
           // Global access
-          "@can/super,boost,xray,grapple,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "@can/super,boost,xray,grapple,plasma,@reqs/mines from magmoor",
+          "@can/super,boost,[xray],grapple,plasma,@reqs/mines from tallon,@can/pb,spider",
+          "@can/super,boost,[xray],grapple,plasma,@reqs/mines from magmoor",
 
           // Normal access
           "[normal],sbn,@can/super,plasma,boost,@reqs/mines from tallon,@can/pb",

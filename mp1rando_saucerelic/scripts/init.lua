@@ -2,8 +2,8 @@ Tracker:AddItems("items/settings.json")
 Tracker:AddItems("items/equips.json")
 Tracker:AddItems("items/artifacts.json")
 
-if not (string.find(Tracker.ActiveVariantUID, "v_itemsonly")) then
-  if string.find(Tracker.ActiveVariantUID, "v_dev")) then
+if not string.find(Tracker.ActiveVariantUID, "v_itemsonly") then
+  if string.find(Tracker.ActiveVariantUID, "v_dev") then
     ScriptHost:LoadScript("scripts/logic.lua")
   end
   

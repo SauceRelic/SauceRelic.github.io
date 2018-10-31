@@ -1256,17 +1256,7 @@
         "name": "Lava Lake",
         "access_rules": [
           // Developer intended
-          "@can/bomb or pb,@has/any suit,missile,space",
-
-          // Developer intended sequence break (no glitches, just an extreme outlier location)
-          "@has/any suit,missile,morph,[bomb]",
-          "@has/any suit,missile,morph,[pb]",
-
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,morph",
-
-          // Hard access
-          "[hard],sbh,@has/any suit,missile,morph",
+          "@reqs/early magmoor,missile,morph,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -1289,13 +1279,7 @@
         "name": "Triclops Pit",
         "access_rules": [
           // Developer intended
-          "@has/any suit,missile,morph,space,xray",
-
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,morph,space",
-
-          // Hard access
-          "[hard],sbh,@has/any suit,missile,morph",
+          "@reqs/early magmoor,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -1318,7 +1302,7 @@
         "name": "Storage Cavern",
         "access_rules": [
           // Developer intended
-          "@has/any suit,missile,morph",
+          "@reqs/early magmoor,morph",
 
           "{artifactcheck}"
         ],
@@ -1341,7 +1325,7 @@
         "name": "Transport Tunnel A",
         "access_rules": [
           // Developer intended
-          "@can/bomb,@has/any suit,missile",
+          "@reqs/early magmoor,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -1364,14 +1348,13 @@
         "name": "Shore Tunnel",
         "access_rules": [
           // Developer intended
-          "@can/pb,@has/any suit,missile,space",
+          "@reqs/early magmoor,@can/pb,space",
 
-          // Normal access
-          "[normal],sbn,@can/pb,@has/any suit,missile",
+          // Escape using a DBJ
+          "t_dbj,@reqs/early magmoor,@can/pb,bomb",
 
-          // Hard access
-          "[hard],sbh,@can/pb,missile,@has/any suit",
-          "[hard],sbh,@can/pb,missile,etank:5",
+          // Softlockable (need space or a dbj to escape)
+          "{@reqs/early magmoor,@can/pb}",
 
           "{artifactcheck}"
         ],
@@ -1397,15 +1380,10 @@
             "name": "Morph Track (Missile)",
             "access_rules": [
               // Developer intended
-              "@can/bomb,@has/any suit,missile,space",
+              "@reqs/early magmoor,@can/bomb",
 
-              // Normal access
-              "[normal],sbn,@has/any suit,missile,@can/bomb",
-              "[normal],sbn,@has/any suit,missile,space",
-
-              // Hard access
-              "[hard],sbh,@has/any suit,missile,@can/bomb",
-              "[hard],sbh,@has/any suit,missile,space",
+              // Jump on the morph ball tunnel
+              "t_terrain,@reqs/early magmoor,space",
 
               "{artifactcheck}"
             ],
@@ -1415,20 +1393,23 @@
           {
             "name": "Warrior Shrine Tunnel (Powerbomb)",
             "access_rules": [
-              // Developer intended and escape
-              "@can/pb,@has/any suit,missile,boost,space,@can/bomb",
+              // Developer intended
+              "@reqs/early magmoor,@can/pb,bomb,space,boost",
 
-              // Normal access and escape
-              "[normal],sbn,@can/bomb,@can/pb,@has/any suit,missile,space",
+              // DBJ up to spinner
+              "t_dbj,@reqs/early magmoor,@can/pb,bomb,boost",
 
-              // Hard access and escape
-              "[hard],sbh,@can/pb,@has/any suit,missile,@can/bomb",
+              // Dash off puffer/pirate instead of spinner
+              "t_dash,@reqs/early magmoor,@can/pb,bomb,space",
+              
+              // DBJ and dash
+              "t_dbj,t_dash,@reqs/early magmoor,@can/pb,bomb",
 
-              // Developer intended (must reload if not bombs)
-              "{@can/pb,@has/any suit,missile,boost,space}",
-
-              // Hard access (must reload if not bombs)
-              "{hard,@can/pb,@has/any suit,missile,space}",
+              // Softlockable (need bombs to escape)
+              "{@reqs/early magmoor,@can/pb,space,boost}",
+              "{t_dbj,@reqs/early magmoor,@can/pb,boost}",
+              "{t_dash,@reqs/early magmoor,@can/pb,space}",
+              "{t_dbj,t_dash,@reqs/early magmoor,@can/pb",
 
               "{artifactcheck}"
             ],
@@ -1448,14 +1429,16 @@
         "name": "Warrior Shrine",
         "access_rules": [
           // Developer intended
-          "@has/any suit,missile,morph,boost,space",
+          "@reqs/early magmoor,@can/bomb,space,boost",
 
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,space",
+          // DBJ up to spinner
+          "t_dbj,@reqs/early magmoor,@can/bomb,boost",
 
-          // Hard access
-          "[hard],sbh,@has/any suit,missile,@can/bomb",
-          "[hard],sbh,@has/any suit,missile,space",
+          // Dash off puffer/pirate instead of spinner
+          "t_dash,@reqs/early magmoor,space",
+
+          // DBJ and dash
+          "t_dbj,t_dash,@reqs/early magmoor,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -1474,28 +1457,30 @@
           }
         ]
       },
+// COME BACK TO THIS ONE -----------------------------------------------------------------------------------------
       {
         "name": "Plasma Processing",
         "access_rules": [
           // Developer intended and escape
-          "@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple,plasma",
+          "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
 
-          // Normal access and escape
-          "[normal],sbn,@can/bomb,@has/any suit,missile,space,wave,ice,boost,plasma",
+          // Skip grapple beam to spinners
+          "t_rjump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
 
-          // Hard access and escape
-          "[hard],sbh,@can/bomb,missile,wave,ice,space,@has/any suit,plasma",
-          "[hard],sbh,@can/bomb,missile,wave,ice,space,etank:1,plasma",
+          // Skip grapple and ghetto jump to bomb slot
+          "t_ljump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
 
-          // Developer intended and visibility (can see from outside, no reload)
-          "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}",
+          // Workstation OoB
+          "oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice,grapple,spider,plasma",
 
-          // Normal access and visibility (can see from outside, no reload)
-          "{normal,@can/bomb,@has/any suit,missile,space,wave,ice,boost}",
+          // Skip grapple and OoB
+          "oob_workstation,@can/wallcrawl,t_rjump,t_ghetto,@reqs/late magmoor,ice,spider,plasma",
 
-          // Hard access and visibility (can see from outside, no reload)
-          "{hard,@can/bomb,missile,wave,ice,space,@has/any suit}",
-          "{hard,@can/bomb,missile,wave,ice,space,etank:1}",
+          // Skip grapple, spider track and OoB
+          "oob_workstation,@can/wallcrawl,t_ljump,t_ghetto,@reqs/late magmoor,ice,plasma",
+
+          // Visibility (can see from outside)
+          "{$disabled|obfuscate,@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
 
           "{artifactcheck}"
         ],
@@ -1518,13 +1503,10 @@
         "name": "Magmoor Workstation",
         "access_rules": [
           // Developer intended
-          "@has/any suit,missile,morph,space,wave,thermal,grapple,spider",
+          "@reqs/late magmoor,morph,wave,@can/pass thermal",
 
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,morph,space,wave",
-
-          // Hard access
-          "[hard],sbh,@reqs/phen backwards",
+          // Visibility
+          "{$disabled|obfuscate,@reqs/late magmoor,morph}",
 
           "{artifactcheck}"
         ],

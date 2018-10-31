@@ -49,10 +49,6 @@
         "sections": [
           {
             "name": "Space Jump",
-            "access_rules": [
-              // Shuffled version
-              "shuf_space"
-            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1046,11 +1042,17 @@
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
-              // Developer intended and escape
+              // Developer intended
               "@can/bomb,missile",
 
-              // Developer intended (must reload if neither burn dome item is bombs)
-              "{missile,@can/bomb or pb}",
+              // Developer intended with vanilla bombs
+              "$disabled|shuf_bombs,missile,@can/bomb or pb",
+
+              // Skip bombs with boost
+              "t_boostclips,missile,@can/bomb or pb,boost",
+
+              // Softlockable (must reload if neither burn dome item is bombs)
+              "{$disabled|noriskbombs,missile,@can/bomb or pb}",
 
               "{artifactcheck}"
             ],
@@ -1060,11 +1062,17 @@
           {
             "name": "Incinerator Drone (Morph Bomb)",
             "access_rules": [
-              // Developer intended and escape
+              // Developer intended
               "@can/bomb,missile",
 
-              // Developer intended (must reload if neither burn dome item is bombs)
-              "{missile,morph}",
+              // Developer intended with vanilla bombs
+              "$disabled|shuf_bombs,missile,morph",
+
+              // Skip bombs with boost
+              "t_boostclips,missile,morph,boost",
+
+              // Softlockable (must reload if neither burn dome item is bombs)
+              "{$disabled|noriskbombs,missile,morph}",
 
               "{artifactcheck}"
             ],
@@ -1083,17 +1091,22 @@
       {
         "name": "Furnace",
         "sections": [
+// COME BACK TO THIS ONE ------------------------------------------------------------------------------
           {
             "name": "Spider Tracks (Missile)",
             "access_rules": [
               // Developer intended
               "@can/bomb,@can/pb,missile,boost,spider",
 
-              // Normal access
-              "[normal],sbn,@can/bomb,missile,spider,space",
+              // Floaty jump
+              "@can/bomb,missile,@can/floaty",
 
-              // Hard access
-              "[hard],sbh,@can/bomb,missile,space",
+              // DBJ to item
+              "t_terrain,t_dbj,@can/bomb,missile,space",
+              "t_terrain,t_dbj,@can/bomb,missile,spider",
+
+              // Skip halfpipe by abusing terrain
+              "t_terrain,@can/bomb,missile,space,spider",
 
               "{artifactcheck}"
             ],
@@ -1105,6 +1118,9 @@
             "access_rules": [
               // Developer intended
               "@can/bomb,missile",
+
+              // Skipping bombs with boost (softlock if not bombs)
+              "{t_boostclips,missile,morph,boost}",
 
               "{artifactcheck}"
             ],
@@ -1124,14 +1140,13 @@
         "name": "Hall of the Elders",
         "access_rules": [
           // Developer intended
-          "@reqs/chozohote,ice",
+          "@reqs/late chozo,@can/bomb,space,spider,ice",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,ice,space",
+          // Climb to first bomb slot
+          "t_terrain,@reqs/late chozo,@can/bomb,space,ice",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,space",
-          "[hard],sbh,@can/bomb,missile,ice,spider",
+          // Infinite speed glitch
+          "t_terrain,t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
 
           "{artifactcheck}"
         ],
@@ -1154,15 +1169,10 @@
         "name": "Crossway",
         "access_rules": [
           // Developer intended
-          "@can/bomb,@can/super,boost,spider,wave",
-          "@can/bomb,@can/super,boost,spider,ice",
+          "@reqs/late chozo,@can/bomb,@can/super,boost,spider",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,@can/super,space,wave",
-          "[normal],sbn,@can/bomb,@can/super,space,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,space",
+          // L jump and ledge clip into tunnel
+          "t_terrain,t_ljump,@reqs/late chozo,space",
 
           "{artifactcheck}"
         ],
@@ -1184,16 +1194,14 @@
       {
         "name": "Elder Chamber",
         "access_rules": [
-          // Developer intended
-          "@reqs/chozohote,ice,plasma",
+          // Developer intended, ice required to avoid making HotE item unobtainable
+          "@reqs/late chozo,@can/bomb,space,spider,ice,plasma",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,ice,plasma,space",
+          // Climb to first bomb slot
+          "t_terrain,@reqs/late chozo,@can/bomb,space,ice,plasma",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,ice,plasma,space",
-          "[hard],sbh,@can/bomb,missile,ice,plasma,spider",
-          "[hard],sbh,@can/bomb,missile,space,boost",
+          // Infinite speed glitch
+          "t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
 
           "{artifactcheck}"
         ],
@@ -1215,27 +1223,11 @@
       {
         "name": "Antechamber",
         "access_rules": [
-          // Developer intended and escape
-          "@reqs/chozohote,wave,boost,ice",
-          "@reqs/frigate,boost,ice",
+          // Developer intended
+          "@reqs/reflecting pool,missile,ice",
 
-          // Normal access and escape
-          "[normal],sbn,@can/bomb,missile,space,wave,ice",
-
-          // Hard access and escape
-          "[hard],sbh,missile,ice,@can/bomb",
-          "[hard],sbh,missile,ice,space",
-          "[hard],sbh,missile,@can/pb,@can/bomb,space",
-
-          // Developer intended (must reload if not ice)
-          "{@reqs/chozohote,wave,boost}",
-          "{@reqs/frigate,boost}",
-
-          // Normal access (must reload if not ice)
-          "{normal,@can/bomb,missile,space,wave}",
-
-          // Hard access (must reload if not ice or powerbombs)
-          "{hard,missile,@can/bomb,space}",
+          // Visibility (visible from outside)
+          "{$disabled|obfuscate,@reqs/reflecting pool,missile}",
 
           "{artifactcheck}"
         ],

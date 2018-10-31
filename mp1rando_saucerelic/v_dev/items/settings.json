@@ -266,6 +266,13 @@
     "codes": "t_halfpipebj"
   },
   {
+    "name": "Allow Boost Ball for morph tunnels that need bombs",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/t_boostclips.png",
+    "codes": "t_boostclips"
+  },
+  {
     "name": "Suitless Magmoor Run to Phendrana/Mines",
     "type": "toggle",
     "loop": true,

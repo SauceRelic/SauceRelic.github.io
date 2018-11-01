@@ -2125,12 +2125,8 @@
       {
         "name": "Security Access A",
         "access_rules": [
-          // Developer intended
-          "@reqs/mines from tallon,@can/pb",
-          "@reqs/mines from magmoor,grapple",
-
-          // Normal access
-          "[normal],sbn,@reqs/mines from magmoor",
+          // Developer intended w/ check for infinite boost possibility
+          "@reqs/upper mines,@can/pb,$ERIB",
 
           "{artifactcheck}"
         ],
@@ -2152,12 +2148,8 @@
       {
         "name": "Storage Depot A",
         "access_rules": [
-          // Developer intended
-          "plasma,@reqs/mines from tallon,@can/pb",
-          "plasma,@reqs/mines from magmoor,grapple",
-
-          // Normal access
-          "[normal],sbn,plasma,@reqs/mines from magmoor",
+          // Developer intended w/ check for infinite boost possibility
+          "@reqs/upper mines,@can/pb,plasma,$ERIB",
 
           "{artifactcheck}"
         ],
@@ -2182,16 +2174,8 @@
           {
             "name": "Phazon Elite (Artifact of Warrior)",
             "access_rules": [
-              // Developer intended
-              "boost,@reqs/mines from tallon,@can/pb,spider",
-              "boost,@reqs/mines from magmoor,grapple",
-
-              // Normal access
-              "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
-              "[normal],sbn,boost,@reqs/mines from magmoor",
-
-              // Hard access
-              "[hard],sbh,@reqs/mines from tallon,@can/pb",
+              // Developer intended w/ check for infinite boost possibility
+              "@reqs/upper mines,@can/pb,$ERIB",
 
               "{artifactcheck}"
             ],
@@ -2202,14 +2186,7 @@
             "name": "Laser (Missile)",
             "access_rules": [
               // Developer intended
-              "boost,@reqs/mines from tallon",
-              "boost,@reqs/mines from magmoor,grapple",
-
-              // Normal access
-              "[normal],sbn,boost,@reqs/mines from magmoor",
-
-              // Hard access
-              "[hard],sbh,@reqs/mines from tallon",
+              "@reqs/upper mines,@can/bomb,boost,@can/pass xray",
 
               "{artifactcheck}"
             ],
@@ -2229,14 +2206,10 @@
         "name": "Storage Depot B",
         "access_rules": [
           // Developer intended
-          "@reqs/mines from tallon,@can/pb,boost,spider",
-          "@reqs/mines from magmoor",
+          "@reqs/mags to mines",
 
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon",
+          // Reverse mines
+          "@reqs/tallon to mines,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2259,15 +2232,10 @@
         "name": "Fungal Hall Access",
         "access_rules": [
           // Developer intended
-          "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,plasma,@reqs/mines from magmoor",
+          "@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider",
 
-          // Normal access
-          "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
+          // Exit Metroid Quarantine A without spider
+          "t_ghetto,t_terrain,t_dash,@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2290,16 +2258,13 @@
         "name": "Phazon Mining Tunnel",
         "access_rules": [
           // Developer intended
-          "boost,xray,plasma,grapple,phazon,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,plasma,grapple,phazon,@reqs/mines from magmoor",
+          "@reqs/lower mines,phazon",
 
-          // Normal access
-          "[normal],sbn,boost,plasma,phazon,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,phazon,@reqs/mines from magmoor",
+          // Early Newborn inbounds
+          "t_phazontunnelnosuit,@reqs/lower mines,boost,etank:11",
 
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,spider",
+          // Early Newborn wallcrawl
+          "t_phazontunnelnosuit,oob_earlynewborn,@can/wallcrawl,@reqs/lower mines",
 
           "{artifactcheck}"
         ],
@@ -2321,17 +2286,10 @@
       {
         "name": "Fungal Hall B",
         "access_rules": [
-          // Developer intended
-          "boost,xray,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,plasma,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,spider",
+          // Developer intended w/ thermal
+          "@reqs/lower mines,@can/pass thermal",
+          //                    w/ xray
+          "@reqs/lower mines,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2354,15 +2312,10 @@
         "name": "Metroid Quarantine A",
         "access_rules": [
           // Developer intended
-          "boost,xray,@reqs/mines from tallon,@can/pb,spider",
-          "boost,xray,@reqs/mines from magmoor",
+          "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider",
 
-          // Normal access
-          "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+          // Skip spider ball
+          "t_ghetto,t_terrain,t_dash,@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2385,16 +2338,10 @@
         "name": "Metroid Quarantine B",
         "access_rules": [
           // Developer intended
-          "@can/super,boost,xray,grapple,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "@can/super,boost,xray,grapple,plasma,@reqs/mines from magmoor",
+          "@reqs/lower mines,@can/super",
 
-          // Normal access
-          "[normal],sbn,@can/super,plasma,boost,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,@can/super,plasma,boost,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,spider",
+          // Visibility
+          "{$disabled|obfuscate,@reqs/lower mines,xray}",
 
           "{artifactcheck}"
         ],
@@ -2417,16 +2364,7 @@
         "name": "Elite Quarters",
         "access_rules": [
           // Developer intended
-          "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
-          "boost,plasma,xray,grapple,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,spider",
+          "@reqs/lower mines,xray",
 
           "{artifactcheck}"
         ],
@@ -2449,15 +2387,7 @@
         "name": "Processing Center Access",
         "access_rules": [
           // Developer intended
-          "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
-          "boost,plasma,xray,grapple,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
+          "@reqs/lower mines,xray",
 
           "{artifactcheck}"
         ],
@@ -2480,14 +2410,7 @@
         "name": "Phazon Processing Center",
         "access_rules": [
           // Developer intended
-          "@reqs/mines from tallon,@can/pb,spider",
-          "@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon,@can/pb",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+          "@reqs/upper mines,@can/pb,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2510,14 +2433,7 @@
         "name": "Elite Control Access",
         "access_rules": [
           // Developer intended
-          "@reqs/mines from tallon,spider",
-          "@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon",
+          "@reqs/upper mines,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2540,14 +2456,7 @@
         "name": "Ventilation Shaft",
         "access_rules": [
           // Developer intended
-          "boost,@reqs/mines from tallon,@can/pb,spider",
-          "boost,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+          "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2570,14 +2479,7 @@
         "name": "Central Dynamo",
         "access_rules": [
           // Developer intended
-          "boost,@reqs/mines from tallon,spider",
-          "boost,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon",
+          "@reqs/upper mines,@can/bomb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],

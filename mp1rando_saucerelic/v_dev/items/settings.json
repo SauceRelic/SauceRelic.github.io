@@ -114,7 +114,7 @@
     "codes": "oob_ibbf"
   },
   {
-    "name": "Training Chamber Access Wallcrawl",
+    "name": "Training Chamber (Access) Wallcrawl",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_trainingchamber.png",
@@ -128,7 +128,7 @@
     "codes": "oob_wavesun"
   },
   {
-    "name": "Magmoor Workstation Secret World to Plasma Processing",
+    "name": "Magmoor Workstation SW to Plasma Processing",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_workstation.png",

@@ -35,7 +35,7 @@
         "name": "pass thermal",
         "access_rules": [
           "thermal",
-          "skipvisors"
+          "$disabled|r_requirevisors"
         ],
         "item_count": 1
       },
@@ -43,7 +43,7 @@
         "name": "pass xray",
         "access_rules": [
           "xray",
-          "skipvisors"
+          "$disabled|r_requirevisors"
         ],
         "item_count": 1
       },
@@ -304,7 +304,7 @@
         "access_rules": [
           // Blocked by bombs depending on settings
           "@reqs/late magmoor,morph,@can/bomb",
-          "@reqs/late magmoor,morph,$disabled|nolatebombs"
+          "@reqs/late magmoor,morph,$disabled|r_nolatebombs"
         ],
         "item_count": 1
       },

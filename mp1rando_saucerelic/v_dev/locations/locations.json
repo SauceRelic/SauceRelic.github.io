@@ -10,7 +10,7 @@
           "morph",
 
           // Visibility
-          "{$disabled|obfuscate}",
+          "{$disabled|r_obfuscate}",
 
           // Hint from Artifact Temple
           // Included for all non-immediate checks
@@ -174,7 +174,7 @@
           "t_ghetto,morph,space,$missing|gravity",
 
           // Visibility
-          "{$disabled|obfuscate,missile,morph}",
+          "{$disabled|r_obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -449,7 +449,7 @@
               "t_halfpipebj,@can/bomb",
 
               // Visibility
-              "{$disabled|obfuscate}",
+              "{$disabled|r_obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -475,7 +475,7 @@
               "@can/floaty",
 
               // Visibility
-              "{$disabled|obfuscate}",
+              "{$disabled|r_obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -506,7 +506,7 @@
               "t_ljump,space",
 
               // Visibility
-              "{$disabled|obfuscate}",
+              "{$disabled|r_obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -532,7 +532,7 @@
           "t_terrain,t_ljump,morph,missile,spider",
 
           // Visibility
-          "{$disabled|obfuscate,morph}",
+          "{$disabled|r_obfuscate,morph}",
 
           "{artifactcheck}"
         ],
@@ -567,7 +567,7 @@
               "t_terrain,t_dash,missile",
 
               // Access/visibility (safely visible, but softlock if collected and item does not meet reqs)
-              "{$disabled|obfuscate,missile}",
+              "{$disabled|r_obfuscate,missile}",
 
               "{artifactcheck}"
             ],
@@ -621,7 +621,7 @@
           "@can/bomb,missile",
 
           // Visibility
-          "{$disabled|obfuscate,missile,morph}",
+          "{$disabled|r_obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -782,7 +782,7 @@
           "@can/bomb",
 
           // Visibility
-          "{$disabled|obfuscate}",
+          "{$disabled|r_obfuscate}",
 
           "{artifactcheck}"
         ],
@@ -1052,7 +1052,7 @@
               "t_boostclips,missile,@can/bomb or pb,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
-              "{$disabled|noriskbombs,missile,@can/bomb or pb}",
+              "{$disabled|r_noriskbombs,missile,@can/bomb or pb}",
 
               "{artifactcheck}"
             ],
@@ -1072,7 +1072,7 @@
               "t_boostclips,missile,morph,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
-              "{$disabled|noriskbombs,missile,morph}",
+              "{$disabled|r_noriskbombs,missile,morph}",
 
               "{artifactcheck}"
             ],
@@ -1227,7 +1227,7 @@
           "@reqs/reflecting pool,missile,ice",
 
           // Visibility (visible from outside)
-          "{$disabled|obfuscate,@reqs/reflecting pool,missile}",
+          "{$disabled|r_obfuscate,@reqs/reflecting pool,missile}",
 
           "{artifactcheck}"
         ],
@@ -1502,7 +1502,7 @@
           "@reqs/late magmoor,morph,wave,@can/pass thermal",
 
           // Visibility
-          "{$disabled|obfuscate,@reqs/late magmoor,morph}",
+          "{$disabled|r_obfuscate,@reqs/late magmoor,morph}",
 
           "{artifactcheck}"
         ],
@@ -1540,7 +1540,7 @@
               "t_sunisg,@can/isg,wave",
 
               // Visibility
-              "{$disabled|obfuscate,@reqs/front phen}",
+              "{$disabled|r_obfuscate,@reqs/front phen}",
 
               "{artifactcheck}"
             ],
@@ -1554,7 +1554,7 @@
               "@reqs/front phen,@can/super,space,spider",
 
               // Visibility
-              "{$disabled|obfuscate,@reqs/front phen}",
+              "{$disabled|r_obfuscate,@reqs/front phen}",
 
               "{artifactcheck}"
             ],
@@ -1745,7 +1745,7 @@
           "@reqs/quarantine cave,spider,@can/pass thermal",
 
           // Escape with grapple
-          "$disabled|noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
+          "$disabled|r_noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
 
           // Softlockable (need spider or grapple to escape)
           "{@reqs/quarantine cave,@can/pass thermal}",
@@ -1800,7 +1800,7 @@
           "@reqs/phen labs,@can/super",
 
           // Visibility
-          "{$disabled|obfuscate,@reqs/phen labs,xray}",
+          "{$disabled|r_obfuscate,@reqs/phen labs,xray}",
 
           "{artifactcheck}"
         ],
@@ -1852,8 +1852,8 @@
           "t_terrain,@reqs/phen labs,bombs",
 
           // Softlockable (need bombs to escape)
-          "{$disabled|noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
-          "{$disabled|noriskbombs,shuf_bombs,t_terrain,@reqs/phen labs}",
+          "{$disabled|r_noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
+          "{$disabled|r_noriskbombs,shuf_bombs,t_terrain,@reqs/phen labs}",
 
           "{artifactcheck}"
         ],
@@ -1930,7 +1930,7 @@
           "@reqs/far phen,plasma",
 
           // Visibility
-          "{$disabled|obfuscate,@reqs/far phen}",
+          "{$disabled|r_obfuscate,@reqs/far phen}",
 
           "{artifactcheck}"
         ],
@@ -1959,7 +1959,7 @@
           "t_dash,@reqs/far phen",
 
           // Visibility
-          "{$disabled|obfuscate,@reqs/far phen}",
+          "{$disabled|r_obfuscate,@reqs/far phen}",
 
           "{artifactcheck}"
         ],
@@ -2050,7 +2050,7 @@
               "@reqs/far phen,gravity",
 
               // Escape and access with underwater ghetto jump
-              "[$disabled|noriskgravity],t_ghetto,@reqs/far phen",
+              "[$disabled|r_noriskgravity],t_ghetto,@reqs/far phen",
 
               // Softlockable (need gravity if you don't know how to ghetto jump)
               "{@reqs/far phen,grapple}",
@@ -2068,7 +2068,7 @@
               "@reqs/far phen,gravity,grapple,plasma",
 
               // Ghetto R jump to the item
-              "[$disabled|noriskgravity],t_ghetto,t_rjump,@reqs/far phen",
+              "[$disabled|r_noriskgravity],t_ghetto,t_rjump,@reqs/far phen",
 
               // Softlockable (in case of falling in)
               "{@reqs/far phen,grapple,plasma}",
@@ -2103,7 +2103,7 @@
           "t_terrain,t_ghetto,t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
 
           // Visibility
-          "{$disabled|obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
+          "{$disabled|r_obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
 
           "{artifactcheck}"
         ],
@@ -2341,7 +2341,7 @@
           "@reqs/lower mines,@can/super",
 
           // Visibility
-          "{$disabled|obfuscate,@reqs/lower mines,xray}",
+          "{$disabled|r_obfuscate,@reqs/lower mines,xray}",
 
           "{artifactcheck}"
         ],

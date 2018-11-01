@@ -257,7 +257,7 @@
     "codes": "t_phazontunnelnosuit"
   },
   {
-    "name": "Double Bomb Jumping",
+    "name": "Double Bomb Jump sequence breaks",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_dbj.png",

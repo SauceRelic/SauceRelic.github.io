@@ -1,7 +1,7 @@
 [
-  // Shuffling Settings
+  // Shuffle
   {
-    "name": "Shuffle Artifacts",
+    "name": "Shuffle Chozo Artifacts",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/shuf_artifacts.png",
@@ -36,56 +36,69 @@
     "codes": "shuf_charge"
   },
   {
-    "name": "Shuffle Space Jump",
+    "name": "Shuffle Space Jump Boots",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/shuf_space.png",
     "codes": "shuf_space"
   },
-  // Generic Logic Settings
+
+
+  // Restrictions
   {
     "name": "Obfuscate Items",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/obfuscate.png",
-    "codes": "obfuscate"
+    "img": "images/settings/r_obfuscate.png",
+    "codes": "r_obfuscate"
   },
   {
-    "name": "Skip Visors",
+    "name": "Require visors for power conduits, invisible platforms, Thardus",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/skipvisors.png",
-    "codes": "skipvisors"
+    "img": "images/settings/r_requirevisors.png",
+    "codes": "r_requirevisors"
   },
   {
-    "name": "No Bombs in Burn Dome or Warrior Shrine Tunnel",
+    "name": "Require Bombs for reverse Phendrana Drifts",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/noriskbombs.png",
-    "codes": "noriskbombs"
+    "img": "images/settings/r_nolatebombs.png",
+    "codes": "r_nolatebombs"
+  },
+  {
+    "name": "No Bombs in 'Point of No Return' Morph Ball tunnels",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/r_noriskbombs.png",
+    "codes": "r_noriskbombs"
+  },
+  // "No early Phazon Suit" does not affect access logic
+  // "Nothing in Crashed Frigate" does not affect access logic
+  {
+    "name": "No Beams in vanilla beam rooms",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/r_noriskbeams.png",
+    "codes": "r_noriskbeams"
   },
   {
     "name": "No Spider Ball in Quarantine Cave",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/noriskspider.png",
-    "codes": "noriskspider"
+    "img": "images/settings/r_noriskspider.png",
+    "codes": "r_noriskspider"
   },
   {
     "name": "No Gravity Suit in Gravity Chamber",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/noriskgravity.png",
-    "codes": "noriskgravity"
+    "img": "images/settings/r_noriskgravity.png",
+    "codes": "r_noriskgravity"
   },
-  {
-    "name": "Require Bombs for Reverse Phendrana Drifts",
-    "type": "toggle",
-    "loop": true,
-    "img": "images/settings/nolatebombs.png",
-    "codes": "nolatebombs"
-  },
-  // Out of Bounds Settings
+
+
+  // Out of Bounds
   {
     "name": "Root Cave Secret World",
     "type": "toggle",
@@ -122,13 +135,6 @@
     "codes": "oob_workstation"
   },
   {
-    "name": "Great Tree Hall Secret World to Life Grove",
-    "type": "toggle",
-    "loop": true,
-    "img": "images/settings/oob_gth.png",
-    "codes": "oob_gth"
-  },
-  {
     "name": "Early Newborn",
     "type": "toggle",
     "loop": true,
@@ -136,7 +142,7 @@
     "codes": "oob_earlynewborn"
   },
   {
-    "name": "Allow OOB without Morph Ball Bombs",
+    "name": "Allow OoB without Morph Ball Bombs",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_nobombs.png",
@@ -151,8 +157,7 @@
   },
 
 
-
-  // Expected Tricks Settings
+  // Expected Tricks
   {
     "name": "Dashing/Scan Dashing",
     "type": "toggle",
@@ -161,7 +166,7 @@
     "codes": "t_dash,t_scandash"
   },
   {
-    "name": "Standable Terrain Exploits",
+    "name": "Standable terrain exploits",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_terrain.png",
@@ -189,18 +194,25 @@
     "codes": "t_ghetto"
   },
   {
-    "name": "Sunchamber Ghost Fight Item Early",
+    "name": "Sunchamber Ghost Fight item early",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_earlywild.png",
     "codes": "t_earlywild"
   },
   {
-    "name": "Infinite Speed (Early Sun/Magma Pool)",
+    "name": "Infinite Speed (Early Sun)",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_sunisg.png",
     "codes": "t_sunisg"
+  },
+  {
+    "name": "Infinite Speed (Magma Pool)",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/t_magmaisg.png",
+    "codes": "t_magmaisg"
   },
   {
     "name": "Infinite Speed (Hall of the Elders)",
@@ -217,7 +229,7 @@
     "codes": "t_barsskip"
   },
   {
-    "name": "Life Grove/Elite Research Spinners Without Boost Ball",
+    "name": "Life Grove spinner without Boost Ball",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_noboostspinners.png",
@@ -252,7 +264,7 @@
     "codes": "t_dbj"
   },
   {
-    "name": "Hyper Bomb Jumps past HotE",
+    "name": "Hyper Bomb Jump past HotE",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_hbjpasthote.png",

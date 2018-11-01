@@ -1534,15 +1534,13 @@
             "name": "Behind Ice (Missile)",
             "access_rules": [
               // Developer intended
-              "@reqs/phendrana,plasma",
+              "@reqs/front phen,plasma",
 
-              // Hard access
-              "[hard],sbh,@reqs/phendrana,@can/isg",
-              "[hard],sbh,@reqs/phen backwards,plasma",
-              "[hard],sbh,@reqs/phen backwards,@can/isg",
+              // Early Sun infinite speed
+              "t_sunisg,@can/isg,wave",
 
               // Visibility
-              "{@reqs/phendrana}",
+              "{$disabled|obfuscate,@reqs/front phen}",
 
               "{artifactcheck}"
             ],
@@ -1553,11 +1551,10 @@
             "name": "Spider Track (Missile)",
             "access_rules": [
               // Developer intended
-              "@reqs/phendrana,@can/super,space,spider",
+              "@reqs/front phen,@can/super,space,spider",
 
-              // Hard access
-              "[hard],sbh,@reqs/phendrana,@can/super,spider",
-              "[hard],sbh,@reqs/phen backwards,@can/super,spider",
+              // Visibility
+              "{$disabled|obfuscate,@reqs/front phen}",
 
               "{artifactcheck}"
             ],
@@ -1577,13 +1574,13 @@
         "name": "Chozo Ice Temple",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,space,plasma",
+          "@reqs/front phen,space,plasma",
 
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,plasma",
-          "[hard],sbh,@reqs/phendrana,@can/isg",
-          "[hard],sbh,@reqs/phen backwards,plasma",
-          "[hard],sbh,@reqs/phen backwards,@can/isg",
+          // Early Sun infinite speed
+          "t_sunisg,@can/isg,@reqs/front phen,wave",
+
+          // Early Sun ISG OoB
+          "oob_wavesun,@can/wallcrawl,t_sunisg,@can/isg,@reqs/front phen",
 
           "{artifactcheck}"
         ],
@@ -1606,11 +1603,7 @@
         "name": "Ice Ruins West",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,space,plasma",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,plasma",
-          "[hard],sbh,@reqs/phen backwards,plasma",
+          "@reqs/front phen,space,plasma",
 
           "{artifactcheck}"
         ],
@@ -1636,12 +1629,7 @@
             "name": "Behind Ice (Missile)",
             "access_rules": [
               // Developer intended
-              "@reqs/phendrana,plasma",
-
-              // Hard access
-              "[hard],sbh,@reqs/phendrana,@can/isg",
-              "[hard],sbh,@reqs/phen backwards,plasma",
-              "[hard],sbh,@reqs/phen backwards,@can/isg",
+              "@reqs/front phen,plasma",
 
               "{artifactcheck}"
             ],
@@ -1652,10 +1640,7 @@
             "name": "Spider Track (Missile)",
             "access_rules": [
               // Developer intended
-              "@reqs/phendrana,spider",
-
-              // Hard access
-              "[hard],sbh,@reqs/phen backwards,spider",
+              "@reqs/front phen,spider",
 
               "{artifactcheck}"
             ],
@@ -1674,21 +1659,11 @@
       {
         "name": "Chapel of the Elders",
         "access_rules": [
-          // Developer intended and escape
-          "@reqs/phendrana,wave,space",
+          // Developer intended
+          "@reqs/front phen,@can/bomb,space,wave",
 
-          // Hard access and escape
-          "[hard],sbh,@reqs/phendrana,wave,space",
-          "[hard],sbh,@reqs/phendrana,wave,@can/bomb",
-          "[hard],sbh,@reqs/phen backwards,wave,space",
-          "[hard],sbh,@reqs/phen backwards,wave,@can/bomb",
-
-          // Developer intended and visibility (can see from outside, no reload)
-          "{@reqs/phendrana,space}",
-
-          // Hard access (can see from outside, no reload)
-          "{hard,@reqs/phendrana}",
-          "{hard,@reqs/phen backwards}",
+          // Visibility (can see from outside, need wave to escape)
+          "{@reqs/front phen,@can/bomb,space}",
 
           "{artifactcheck}"
         ],
@@ -1710,15 +1685,14 @@
       {
         "name": "Ruined Courtyard",
         "access_rules": [
-          // Developer intended
-          "@reqs/phendrana,boost,space,wave",
+          // Developer intended, first pass
+          "@reqs/mid phen,space,wave,@can/bomb,boost",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,space,wave",
+          // Developer intended, shortcut
+          "@reqs/mid phen,space,wave,spider",
 
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,wave",
-          "[hard],sbh,@reqs/phen backwards,wave",
+          // Terrain abuse to climb
+          "t_terrain,t_ljump,@reqs/mid phen,space,wave",
 
           "{artifactcheck}"
         ],
@@ -1741,15 +1715,11 @@
         "name": "Phendrana Canyon",
         "access_rules": [
           // Developer intended and escape
-          "@reqs/phendrana,space",
-          "@reqs/phendrana,boost",
+          "@reqs/front phen,space",
+          "@reqs/front phen,boost",
 
-          // Hard access and escape (assumes you will use boxes, potential softlock)
-          "hard,@reqs/phendrana",
-          "hard,@reqs/phen backwards",
-
-          // Developer intended (reload needed only if boxes are destroyed)
-          "{@reqs/phendrana}",
+          // Softlockable (reload needed only if boxes are destroyed)
+          "{@reqs/front phen}",
 
           "{artifactcheck}"
         ],
@@ -1771,33 +1741,10 @@
       {
         "name": "Quarantine Cave",
         "access_rules": [
-          // Developer intended and escape
-          "@reqs/phendrana,@can/super,boost,space,wave,thermal,spider",
-          "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
-          "@reqs/phen backwards,thermal,spider",
-          "@reqs/phen backwards,thermal,grapple",
+          // Developer intended
+          "@reqs/quarantine cave,spider,@can/pass thermal",
 
-          // Normal access and escape
-          "[normal],sbn,@reqs/phendrana,wave,@can/super,spider",
-          "[normal],sbn,@reqs/phendrana,wave,@can/super,grapple",
-          "[normal],sbn,@reqs/phen backwards,spider",
-          "[normal],sbn,@reqs/phen backwards,grapple",
-
-          // Hard access and escape
-          "[hard],sbh,@reqs/phen backwards,space",
-          "[hard],sbh,@reqs/phen backwards,@can/bomb,spider",
-          "[hard],sbh,@reqs/phen backwards,@can/bomb,grapple",
-
-          // Developer intended (must reload if thardus doesn't drop spider or grapple)
-          "{@reqs/phendrana,@can/super,boost,space,wave,thermal}",
-          "{@reqs/phen backwards,thermal}",
-
-          // Normal access (must reload if thardus doesn't drop spider or grapple)
-          "{normal,@reqs/phendrana,wave,@can/super}",
-          "{normal,@reqs/phen backwards}",
-
-          // Hard access (must reload if thardus doesn't drop spider, grapple, or space)
-          "{hard,@reqs/phen backwards,@can/bomb}",
+          // 
 
           "{artifactcheck}"
         ],

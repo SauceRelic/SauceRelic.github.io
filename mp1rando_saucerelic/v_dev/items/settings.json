@@ -162,7 +162,7 @@
     "name": "Dashing/Scan Dashing",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/t_scandash.png",
+    "img": "images/settings/t_dash.png",
     "codes": "t_dash,t_scandash"
   },
   {
@@ -187,7 +187,7 @@
     "codes": "t_rjump"
   },
   {
-    "name": "Ghetto Jumping",
+    "name": "Ghetto Jumps",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_ghetto.png",

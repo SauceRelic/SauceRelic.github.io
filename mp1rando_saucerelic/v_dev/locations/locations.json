@@ -1457,7 +1457,6 @@
           }
         ]
       },
-// COME BACK TO THIS ONE -----------------------------------------------------------------------------------------
       {
         "name": "Plasma Processing",
         "access_rules": [
@@ -1471,16 +1470,13 @@
           "t_ljump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
 
           // Workstation OoB
-          "oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice,grapple,spider,plasma",
+          "oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
 
-          // Skip grapple and OoB
-          "oob_workstation,@can/wallcrawl,t_rjump,t_ghetto,@reqs/late magmoor,ice,spider,plasma",
-
-          // Skip grapple, spider track and OoB
-          "oob_workstation,@can/wallcrawl,t_ljump,t_ghetto,@reqs/late magmoor,ice,plasma",
-
-          // Visibility (can see from outside)
-          "{$disabled|obfuscate,@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
+          // Visibility (can see from outside, need plasma to escape)
+          "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
+          "{t_rjump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider}",
+          "{t_ljump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
+          "{oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
 
           "{artifactcheck}"
         ],

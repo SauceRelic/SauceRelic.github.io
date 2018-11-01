@@ -33,3 +33,7 @@ function EarlyMagmoor()
     return hasItem("varia") or hasItem("gravity") or hasItem("phazon")
   end
 end
+
+function ERIB()
+  return ((hasItem("t_terrain") and hasItem("t_ghetto")) ? ((hasItem("t_eliteib") and hasItem("boost")) or (hasItem("morph") and hasItem("bombs"))) : true)
+end

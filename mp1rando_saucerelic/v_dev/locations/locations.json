@@ -1744,7 +1744,11 @@
           // Developer intended
           "@reqs/quarantine cave,spider,@can/pass thermal",
 
-          // 
+          // Escape with grapple
+          "$disabled|noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
+
+          // Softlockable (need spider or grapple to escape)
+          "{@reqs/quarantine cave,@can/pass thermal}",
 
           "{artifactcheck}"
         ],
@@ -1767,17 +1771,10 @@
         "name": "Quarantine Monitor",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,@can/super,boost,space,wave,thermal,grapple",
-          "@reqs/phen backwards,thermal,grapple",
+          "@reqs/quarantine cave,@can/pass thermal,spider,grapple",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,@can/super,wave,space,spider",
-          "[normal],sbn,@reqs/phendrana,@can/super,wave,space,grapple",
-          "[normal],sbn,@reqs/phen backwards,grapple",
-
-          // Hard access
-          "[hard],sbh,@reqs/phen backwards,grapple",
-          "[hard],sbh,@reqs/phen backwards,space",
+          // Dash to entrance
+          "t_dash,@reqs/quaranting cave,@can/pass thermal,spider",
 
           "{artifactcheck}"
         ],
@@ -1800,27 +1797,10 @@
         "name": "Research Lab Hydra",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,@can/super,thermal,boost,space,wave",
-          "@reqs/phen backwards,@can/super,thermal,ice",
-
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,@can/super,wave,space",
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,@can/super,wave",
-          "[hard],sbh,@reqs/phen backwards,@can/super,wave",
+          "@reqs/phen labs,@can/super",
 
           // Visibility
-          "{@reqs/phendrana,boost,space,wave,xray}",
-          "{@reqs/phen backwards,ice,xray}",
-
-          // Normal visibility
-          "{normal,@reqs/phendrana,wave,space,xray}",
-
-          // Hard visibility
-          "{hard,@reqs/phendrana,wave,xray}",
-          "{hard,@reqs/phen backwards,wave,xray}",
+          "{$disabled|obfuscate,@reqs/phen labs,xray}",
 
           "{artifactcheck}"
         ],
@@ -1843,16 +1823,7 @@
         "name": "Observatory",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,@can/bomb,ice",
-
-          // Normal access
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike",
+          "@reqs/phen labs,@can/climb observatory",
 
           "{artifactcheck}"
         ],
@@ -1875,19 +1846,14 @@
         "name": "Control Tower",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,plasma,boost,space,wave",
-          "@reqs/phen backwards,plasma,thermal,ice",
+          "@reqs/phen labs,plasma,bombs",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,boost,space,wave",
-          "[normal],sbn,@reqs/phen backwards,ice",
+          // Terrain abuse to item
+          "t_terrain,@reqs/phen labs,bombs",
 
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus,space",
-          "[hard],sbh,@reqs/mags thardus,spider,boost,plasma",
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,spider,plasma",
+          // Softlockable (need bombs to escape)
+          "{$disabled|noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
+          "{$disabled|noriskbombs,shuf_bombs,t_terrain,@reqs/phen labs}",
 
           "{artifactcheck}"
         ],
@@ -1910,16 +1876,7 @@
         "name": "Research Lab Aether",
         "access_rules": [
           // Developer intended
-          "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,thermal,ice",
-
-          // Normal access
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike",
+          "@reqs/phen labs",
 
           "{artifactcheck}"
         ],
@@ -1946,22 +1903,8 @@
       {
         "name": "Research Core",
         "access_rules": [
-          // Developer intended and escape
-          "@reqs/phendrana,boost,space,wave,thermal,ice",
-          "@reqs/phen backwards,ice,thermal",
-
-          // Normal access and escape
-          "[normal],sbn,@reqs/phendrana,space,wave,boost",
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access and escape
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike",
-
-          // Developer intended and visibility (can leave room before obtaining)
-          "{@reqs/phendrana,boost,space,wave}",
-          "{@reqs/phen backwards,ice}",
+          // Developer intended
+          "@reqs/phen labs",
 
           "{artifactcheck}"
         ],
@@ -1984,19 +1927,10 @@
         "name": "Transport Access",
         "access_rules": [
           // Developer intended
-          "thermal,plasma,ice,@reqs/phendrana,boost,space,wave,spider",
-          "thermal,plasma,ice,@reqs/phen backwards",
-
-          // Normal access
-          "[normal],sbn,plasma,ice,@reqs/phendrana,space,wave",
-          "[normal],sbn,plasma,ice,@reqs/phen backwards",
-
-          // Hard access
-          "[hard],sbh,@reqs/phen backwards,ice,plasma",
+          "@reqs/far phen,plasma",
 
           // Visibility
-          "{ice,thermal,@reqs/phendrana,boost,space,wave,spider}",
-          "{ice,thermal,@reqs/phen backwards}",
+          "{$disabled|obfuscate,@reqs/far phen}",
 
           "{artifactcheck}"
         ],
@@ -2019,19 +1953,13 @@
         "name": "Frost Cave",
         "access_rules": [
           // Developer intended
-          "ice,grapple,@reqs/phendrana,boost,space,wave",
-          "ice,grapple,@reqs/phen backwards",
+          "@reqs/far phen,grapple",
 
-          // Normal access
-          "[normal],sbn,ice,@reqs/phendrana,space,wave",
-          "[normal],sbn,ice,@reqs/phen backwards",
-
-          // Hard access
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple",
+          // Dash to ledge
+          "t_dash,@reqs/far phen",
 
           // Visibility
-          "{ice,@reqs/phen backwards}",
+          "{$disabled|obfuscate,@reqs/far phen}",
 
           "{artifactcheck}"
         ],
@@ -2054,16 +1982,15 @@
         "name": "Storage Cave",
         "access_rules": [
           // Developer intended
-          "@can/pb,ice,plasma,grapple,@reqs/phendrana,boost,space,wave,thermal",
-          "@can/pb,ice,plasma,grapple,@reqs/phen backwards",
+          "@reqs/far phen,@can/pb,plasma,grapple",
 
-          // Normal access
-          "[normal],sbn,@can/pb,ice,plasma,@reqs/phendrana,space,wave",
-          "[normal],sbn,@can/pb,ice,plasma,@reqs/phen backwards",
-
-          // Hard access
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple,spider",
+          // Climbing room with terrain abuse and traversing frost/hunter cave:
+          //   with gravity suit
+          "t_ljump,t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
+          //   with a dash
+          "t_ljump,t_terrain,t_dash,@reqs/far phen,@can/pb,plasma",
+          //   with a ghetto jump
+          "t_ljump,t_terrain,t_ghetto,@reqs/far phen,@can/pb,plasma",
 
           "{artifactcheck}"
         ],
@@ -2086,15 +2013,15 @@
         "name": "Security Cave",
         "access_rules": [
           // Developer intended
-          "ice,grapple,@reqs/phendrana,boost,space,wave",
-          "ice,grapple,@reqs/phen backwards",
+          "@reqs/far phen,@can/pb,plasma,grapple",
 
-          // Normal access
-          "[normal],sbn,ice,grapple,@reqs/phendrana,space,wave",
-
-          // Hard access
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple,spider",
+          // Climbing room with terrain abuse and traversing frost/hunter cave:
+          //   with gravity suit
+          "t_ljump,t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
+          //   with a dash
+          "t_ljump,t_terrain,t_dash,@reqs/far phen,@can/pb,plasma",
+          //   with a ghetto jump
+          "t_ljump,t_terrain,t_ghetto,@reqs/far phen,@can/pb,plasma",
 
           "{artifactcheck}"
         ],
@@ -2119,29 +2046,15 @@
           {
             "name": "Underwater (Gravity Suit)",
             "access_rules": [
-              // Developer intended and escape
-              "@reqs/phendrana,ice,boost,space,wave,gravity,thermal",
-              "@reqs/phen backwards,ice,gravity",
+              // Developer intended
+              "@reqs/far phen,gravity",
 
-              // Normal access and escape
-              "[normal],sbn,ice,@reqs/phendrana,space,wave,gravity,thermal",
-              "[normal],sbn,ice,@reqs/phen backwards,gravity",
+              // Escape and access with underwater ghetto jump
+              "[$disabled|noriskgravity],t_ghetto,@reqs/far phen",
 
-              // Hard access and escape
-              "[hard],sbh,@reqs/mags frozenpike,space,gravity",
-              "[hard],sbh,@reqs/mags frozenpike,grapple,spider,gravity,@can/bomb",
-
-              // Developer intended (must reload if not gravity)
-              "{@reqs/phendrana,ice,boost,space,wave,thermal}",
-              "{@reqs/phen backwards,ice}",
-
-              // Normal access (must reload if not gravity)
-              "{normal,ice,@reqs/phendrana,space,wave}",
-              "{normal,ice,@reqs/phen backwards}",
-
-              // Hard access (must reload if not gravity)
-              "{hard,@reqs/mags frozenpike,space}",
-              "{hard,@reqs/mags frozenpike,grapple,spider}",
+              // Softlockable (need gravity if you don't know how to ghetto jump)
+              "{@reqs/far phen,grapple}",
+              "{t_dash,@reqs/far phen}",
 
               "{artifactcheck}"
             ],
@@ -2152,16 +2065,13 @@
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
               // Developer intended
-              "@can/pb,ice,plasma,gravity,grapple,@reqs/phendrana,boost,space,wave,thermal",
-              "@can/pb,ice,plasma,gravity,grapple,@reqs/phen backwards",
+              "@reqs/far phen,gravity,grapple,plasma",
 
-              // Normal access
-              "[normal],sbn,ice,plasma,grapple,@reqs/phendrana,space,wave",
-              "[normal],sbn,ice,plasma,grapple,@reqs/phen backwards",
+              // Ghetto R jump to the item
+              "[$disabled|noriskgravity],t_ghetto,t_rjump,@reqs/far phen",
 
-              // Hard access
-              "[hard],sbh,@reqs/mags frozenpike,space",
-              "[hard],sbh,@reqs/mags frozenpike,plasma,grapple,spider",
+              // Softlockable (in case of falling in)
+              "{@reqs/far phen,grapple,plasma}",
 
               "{artifactcheck}"
             ],
@@ -2187,15 +2097,13 @@
         "name": "Main Quarry",
         "access_rules": [
           // Developer intended
-          "@reqs/mines from tallon,spider",
-          "@reqs/mines from magmoor,thermal,grapple",
+          "@reqs/upper mines,@can/bomb,@can/pass thermal,spider",
 
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon",
-          "[normal],sbn,@reqs/mines from magmoor",
+          // Ghetto and L jump to crane
+          "t_terrain,t_ghetto,t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
 
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,space",
+          // Visibility
+          "{$disabled|obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
 
           "{artifactcheck}"
         ],

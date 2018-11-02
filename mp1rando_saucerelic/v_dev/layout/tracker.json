@@ -1,6 +1,256 @@
 {
   "settings": {
-
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Logical",
+        "icon": "images/icon_settings.png",
+        "content": {
+          "type": "array",
+          "orientation": "horizontal",
+          "margin": "0,0",
+          "content": [
+            {
+              "type": "array",
+              "orientation": "vertical",
+              "margin": "0,0",
+              "content": [
+                {
+                  "type": "array",
+                  "orientation": "vertical",
+                  "margin": "0,0",
+                  "content": [
+                    {
+                      "type": "image",
+                      "image": "images/settings/static_shuffle.png"
+                    },
+                    {
+                      "type": "item",
+                      "item": "shuf_artifacts"
+                    },
+                    {
+                      "type": "item",
+                      "item": "shuf_launcher"
+                    },
+                    {
+                      "type": "item",
+                      "item": "shuf_morph"
+                    },
+                    {
+                      "type": "item",
+                      "item": "shuf_bombs"
+                    },
+                    {
+                      "type": "item",
+                      "item": "shuf_charge"
+                    },
+                    {
+                      "type": "item",
+                      "item": "shuf_space"
+                    }
+                  ]
+                },
+                {
+                  "type": "array",
+                  "orientation": "vertical",
+                  "margin": "0,0",
+                  "content": [
+                    {
+                      "type": "image",
+                      "image": "images/settings/static_restrictions.png"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_obfuscate"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_requirevisors"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_nolatebombs"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_noriskbombs"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_noriskbeams"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_noriskspider"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_noriskgravity"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "vertical",
+              "margin": "0,0",
+              "content": [
+                {
+                  "type": "image",
+                  "image": "images/settings/static_oob.png"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_rootcave"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_ibbf"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_trainingchamber"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_wavesun"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_workstation"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_earlynewborn"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_nobombs"
+                },
+                {
+                  "type": "item",
+                  "item": "oob_floaty"
+                }
+              ]
+            },
+            {
+              "type": "array",
+              "orientation": "vertical",
+              "margin": "0,0",
+              "content": [
+                {
+                  "type": "image",
+                  "image": "images/settings/static_expectedtricks.png"
+                },
+                {
+                  "type": "item",
+                  "item": "t_dash"
+                },
+                {
+                  "type": "item",
+                  "item": "t_terrain"
+                },
+                {
+                  "type": "item",
+                  "item": "t_ljump"
+                },
+                {
+                  "type": "item",
+                  "item": "t_rjump"
+                },
+                {
+                  "type": "item",
+                  "item": "t_ghetto"
+                },
+                {
+                  "type": "item",
+                  "item": "t_earlywild"
+                },
+                {
+                  "type": "item",
+                  "item": "t_sunisg"
+                },
+                {
+                  "type": "item",
+                  "item": "t_magmaisg"
+                },
+                {
+                  "type": "item",
+                  "item": "t_hoteisg"
+                },
+                {
+                  "type": "item",
+                  "item": "t_barsskip"
+                },
+                {
+                  "type": "item",
+                  "item": "t_noboostspinners"
+                },
+                {
+                  "type": "item",
+                  "item": "t_spiderlessshafts"
+                },
+                {
+                  "type": "item",
+                  "item": "t_eliteib"
+                },
+                {
+                  "type": "item",
+                  "item": "t_phazontunnelnosuit"
+                },
+                {
+                  "type": "item",
+                  "item": "t_dbj"
+                },
+                {
+                  "type": "item",
+                  "item": "t_hbjpasthote"
+                },
+                {
+                  "type": "item",
+                  "item": "t_halfpipebj"
+                },
+                {
+                  "type": "item",
+                  "item": "t_boostclips"
+                },
+                {
+                  "type": "array",
+                  "orientation": "horizontal",
+                  "margin": "0,0",
+                  "content": [
+                    {
+                      "type": "item",
+                      "item": "t_vmr"
+                    },
+                    {
+                      "type": "item",
+                      "item": "vmrtanks"
+                    }
+                  ]
+                },
+                {
+                  "type": "array",
+                  "orientation": "horizontal",
+                  "margin": "0,0",
+                  "content": [
+                    {
+                      "type": "item",
+                      "item": "t_earlymagitems"
+                    },
+                    {
+                      "type": "item",
+                      "item": "earlyetanks"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
   },
 
   "tracker_capture_item": {

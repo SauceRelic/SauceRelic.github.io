@@ -13,9 +13,9 @@
 //    },
     "v_itemsonly": {
       "display_name": "Items Only"
+    },
+    "v_dev": {
+      "display_name": "Map Tracker - dev Branch"
     }
-    // "v_dev": {
-    //   "display_name": "Map Tracker - dev Branch"
-    // }
   }
 }

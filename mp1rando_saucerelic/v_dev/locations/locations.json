@@ -1774,7 +1774,7 @@
           "@reqs/quarantine cave,@can/pass thermal,spider,grapple",
 
           // Dash to entrance
-          "t_dash,@reqs/quaranting cave,@can/pass thermal,spider",
+          "t_dash,@reqs/quarantine cave,@can/pass thermal,spider",
 
           "{artifactcheck}"
         ],

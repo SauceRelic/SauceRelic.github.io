@@ -74,7 +74,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/gravity.png",
-    "codes": "gravity,gravitysuit"
+    "codes": "gravity,gravitysuit,gravityitem"
   },
   {
     "name": "Phazon Suit",

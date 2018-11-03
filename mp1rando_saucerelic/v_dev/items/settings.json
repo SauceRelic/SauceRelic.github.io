@@ -1,4 +1,13 @@
 [
+  // Artifact check
+  {
+    "name": "Artifact Temple Checks",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/artifactcheck.png",
+    "codes": "artifactcheck"
+  },
+
   // Shuffle
   {
     "name": "Shuffle Chozo Artifacts",
@@ -301,6 +310,7 @@
   {
     "name": "Suitless Magmoor Run Required Tanks",
     "type": "consumable",
+    "initial_quantity": 5,
     "min_quantity": 5,
     "max_quantity": 14,
     "img": "images/etank.png",
@@ -309,6 +319,7 @@
   {
     "name": "Early Magmoor Items Required Tanks",
     "type": "consumable",
+    "initial_quantity": 7,
     "min_quantity": 7,
     "max_quantity": 14,
     "img": "images/etank.png",

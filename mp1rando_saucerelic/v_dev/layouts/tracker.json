@@ -339,7 +339,6 @@
                   {
                     "type": "item",
                     "item": "artifactcheck",
-                    "margin": "0,20,0,0",
                     "height": 48,
                     "width": 48
                   }

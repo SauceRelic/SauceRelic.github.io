@@ -252,7 +252,8 @@
           "missile,@can/bomb,t_terrain,wave,space,t_ljump",
           "missile,@can/bomb,t_terrain,wave,space,t_rjump",
           "missile,@can/bomb,t_terrain,wave,space,t_ghetto"
-        ]
+        ],
+        "item_count": 1
       },
       {
         "name": "reflecting pool",
@@ -263,8 +264,8 @@
           // Through late Chozo
           "@reqs/late chozo,boost,wave",
           "@reqs/late chozo,boost,t_hbjpasthote",
-          "@reqs/late chozo,t_ghetto,wave",
-          "@reqs/late chozo,t_ghetto,t_hbjpasthote"
+          "@reqs/late chozo,t_terrain,t_ghetto,wave",
+          "@reqs/late chozo,t_terrain,t_ghetto,t_hbjpasthote"
         ],
         "item_count": 1
       },

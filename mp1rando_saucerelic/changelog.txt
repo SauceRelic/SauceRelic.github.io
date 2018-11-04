@@ -1,3 +1,7 @@
+v0.10.0.1
+  Fixed late chozo logic, which was missing an item count
+  Fixed reflecting pool logic not requiring terrain exploits to be enabled
+
 v0.10.0.0
   Added beta branch variant with brand new logic and settings
 

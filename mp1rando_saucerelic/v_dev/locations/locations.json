@@ -1049,7 +1049,7 @@
               "$disabled|shuf_bombs,missile,@can/bomb or pb",
 
               // Skip bombs with boost
-              "t_boostclips,missile,@can/bomb or pb,boost",
+              "t_boostjumps,missile,@can/bomb or pb,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
               "{$disabled|r_noriskbombs,missile,@can/bomb or pb}",
@@ -1069,7 +1069,7 @@
               "$disabled|shuf_bombs,missile,morph",
 
               // Skip bombs with boost
-              "t_boostclips,missile,morph,boost",
+              "t_boostjumps,missile,morph,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
               "{$disabled|r_noriskbombs,missile,morph}",
@@ -1120,7 +1120,7 @@
               "@can/bomb,missile",
 
               // Skipping bombs with boost (softlock if not bombs)
-              "{t_boostclips,missile,morph,boost}",
+              "{t_boostjumps,missile,morph,boost}",
 
               "{artifactcheck}"
             ],

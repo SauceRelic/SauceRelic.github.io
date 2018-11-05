@@ -296,13 +296,13 @@
           "missile,@can/bomb,@has/any suit",
 
           // Skipping bombs with boost
-          "t_boostclips,missile,boost,@has/any suit",
+          "t_boostjumps,missile,boost,@has/any suit",
 
           // Suitless (other reqs probably to avoid lava)
           "$MagmoorRun,missile,@can/bomb,space,t_dash,t_terrain",
 
           // Suitless and bomb skip
-          "t_boostclips,t_dash,t_terrain,$MagmoorRun,missile,boost,space"
+          "t_boostjumps,t_dash,t_terrain,$MagmoorRun,missile,boost,space"
         ],
         "item_count": 1
       },

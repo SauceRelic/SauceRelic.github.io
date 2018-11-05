@@ -55,6 +55,14 @@
         "item_count": 1
       },
       {
+        "name": "morph jump",
+        "access_rules": [
+          "@can/bomb",
+          "t_boostjumps,morph,boost"
+        ],
+        "item_count": 1
+      },
+      {
         "name": "wallcrawl",
         "access_rules": [
           "morph,space,bomb",

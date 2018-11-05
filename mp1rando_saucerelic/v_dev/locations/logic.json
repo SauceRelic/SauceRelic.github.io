@@ -146,8 +146,8 @@
       {
         "name": "exit quar to mags",
         "access_rules": [
-          "spider",
-          "grapple"
+          "@can/pass thermal,spider",
+          "@can/pass thermal,grapple"
         ],
         "item_count": 1
       },
@@ -155,11 +155,11 @@
         "name": "exit quar to court",
         "access_rules": [
           // Supers or bombs required to avoid softlock
-          "spider,@can/super",
-          "spider,@can/bomb",
+          "@can/pass thermal,spider,@can/super",
+          "@can/pass thermal,spider,@can/bomb",
 
-          "t_ghetto,@can/super",
-          "t_ghetto,@can/bomb"
+          "@can/pass thermal,t_ghetto,@can/super",
+          "@can/pass thermal,t_ghetto,@can/bomb"
         ],
         "item_count": 1
       },
@@ -209,15 +209,6 @@
           "phazon"
         ],
         "item_count": 1
-      },
-      {
-        "name": "suit break",
-        "access_rules": [
-          "[varia]",
-          "[gravity]",
-          "[phazon]"
-        ],
-        "item_count": 1
       }
     ]
   },
@@ -243,23 +234,23 @@
           // Inbounds checks
           //
           // Vanilla Furnace to Crossway
-          "missile,@can/bomb,spider,wave,boost",
-          "missile,@can/bomb,t_terrain,wave,boost",
+          "missile,@can/morph jump,spider,wave,boost",
+          "missile,@can/morph jump,t_terrain,wave,boost",
 
           // Vanilla Furnace to HotE
-          "missile,@can/bomb,spider,ice,space",
-          "missile,@can/bomb,t_terrain,ice,space",
+          "missile,@can/morph jump,spider,ice,space",
+          "missile,@can/morph jump,t_terrain,ice,space",
 
           // Furnace to Crossway with tricks
-          "missile,@can/bomb,spider,wave,t_halfpipebj",
-          "missile,@can/bomb,spider,wave,space,t_ljump",
-          "missile,@can/bomb,spider,wave,space,t_rjump",
-          "missile,@can/bomb,spider,wave,space,t_ghetto",
+          "missile,@can/morph jump,spider,wave,t_halfpipebj",
+          "missile,@can/morph jump,spider,wave,space,t_ljump",
+          "missile,@can/morph jump,spider,wave,space,t_rjump",
+          "missile,@can/morph jump,spider,wave,space,t_ghetto",
 
-          "missile,@can/bomb,t_terrain,wave,t_halfpipebj",
-          "missile,@can/bomb,t_terrain,wave,space,t_ljump",
-          "missile,@can/bomb,t_terrain,wave,space,t_rjump",
-          "missile,@can/bomb,t_terrain,wave,space,t_ghetto"
+          "missile,@can/morph jump,t_terrain,wave,t_halfpipebj",
+          "missile,@can/morph jump,t_terrain,wave,space,t_ljump",
+          "missile,@can/morph jump,t_terrain,wave,space,t_rjump",
+          "missile,@can/morph jump,t_terrain,wave,space,t_ghetto"
         ],
         "item_count": 1
       },
@@ -270,10 +261,10 @@
           "@can/climb frigate crash site,bomb",
 
           // Through late Chozo
-          "@reqs/late chozo,boost,wave",
-          "@reqs/late chozo,boost,t_hbjpasthote",
-          "@reqs/late chozo,t_terrain,t_ghetto,wave",
-          "@reqs/late chozo,t_terrain,t_ghetto,t_hbjpasthote"
+          "@reqs/late chozo,space,boost,wave",
+          "@reqs/late chozo,space,boost,t_hbjpasthote",
+          "@reqs/late chozo,space,t_terrain,t_ghetto,wave",
+          "@reqs/late chozo,space,t_terrain,t_ghetto,t_hbjpasthote"
         ],
         "item_count": 1
       },
@@ -301,16 +292,10 @@
         "name": "north phen elevator",
         "access_rules": [
           // Vanilla
-          "missile,@can/bomb,@has/any suit",
-
-          // Skipping bombs with boost
-          "t_boostjumps,missile,boost,@has/any suit",
+          "missile,@can/morph jump,@has/any suit",
 
           // Suitless (other reqs probably to avoid lava)
-          "$MagmoorRun,missile,@can/bomb,space,t_dash,t_terrain",
-
-          // Suitless and bomb skip
-          "t_boostjumps,t_dash,t_terrain,$MagmoorRun,missile,boost,space"
+          "$MagmoorRun,missile,@can/morph jump,space,t_dash,t_terrain",
         ],
         "item_count": 1
       },
@@ -343,7 +328,7 @@
         "item_count": 1
       },
       {
-        "name": "back phen",
+        "name": "far phen",
         "access_rules": [
           // Through labs
           "@reqs/mid phen,ice,@can/climb observatory",

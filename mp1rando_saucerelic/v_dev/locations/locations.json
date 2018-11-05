@@ -197,10 +197,10 @@
         "name": "Overgrown Cavern",
         "access_rules": [
           // Through late Chozo, includes glitchless
-          "@reqs/reflecting pool,space",
+          "@reqs/reflecting pool,@can/bomb",
 
           // Climbing Frigate Crash Site
-          "@can/climb frigate crash site,bomb",
+          "@can/climb frigate crash site",
           
           "{artifactcheck}"
         ],

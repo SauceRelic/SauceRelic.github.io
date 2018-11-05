@@ -98,8 +98,8 @@
           // Developer intended
           "missile,space,wave,morph,boost,spider",
 
-          // Dash to the door
-          "missile,space,wave,t_dash,t_standableterrain"
+          // Jump to the door
+          "missile,space,wave,t_terrain"
         ],
         "item_count": 1
       },

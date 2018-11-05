@@ -1,3 +1,7 @@
+v0.10.0.2
+  Fixed far phendrana logic naming (was named "back phen", but was referenced as "far phen")
+  Fixed Overgrown Cavern logic
+
 v0.10.0.1
   Fixed late chozo logic, which was missing an item count
   Fixed reflecting pool logic not requiring terrain exploits to be enabled

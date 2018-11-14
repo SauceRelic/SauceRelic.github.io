@@ -7,20 +7,24 @@ function hasItem(item)
 end
 
 function missing(item)
-  if hasItem(item) then
-    return false
-  else
-    return true
-  end
+  return not hasItem(item)
 end
 
-function disabled(item)
-  return missing(item)
+function disabled(item,sb)
+  if sb = nil
+    return missing(item)
+  else
+    if missing(item)
+     return true
+    else
+      return missing(sb), AccessibilityLevel.SequenceBreak
+    end
+  end
 end
 
 function MagmoorRun()
   if hasItem("t_vmr") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmretanks")) then
-    return 1
+    return true
   else
     return hasItem("varia") or hasItem("gravity") or hasItem("phazon")
   end
@@ -28,7 +32,7 @@ end
 
 function EarlyMagmoor()
   if hasItem("t_earlymagitems") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("earlyetanks")) then
-    return 1
+    return true
   else
     return hasItem("varia") or hasItem("gravity") or hasItem("phazon")
   end

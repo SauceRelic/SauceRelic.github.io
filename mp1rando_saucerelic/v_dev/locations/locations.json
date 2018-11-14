@@ -39,10 +39,10 @@
           "space",
 
           // ESJ scandash
-          "t_scandash",
+          "@set/t_scandash",
 
           // DBJ off ship
-          "t_terrain,t_dbj,@can/bomb",
+          "@set/t_terrain,@set/t_dbj,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -89,7 +89,7 @@
           "missile,space,grapple,@can/pass xray",
 
           // Dash instead of grapple
-          "t_dash,missile,space,@can/pass xray",
+          "@set/t_dash,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -115,11 +115,11 @@
           "missile,space,plasma,grapple,@can/pass xray",
 
           // Dash to skip grapple
-          "t_dash,missile,space,plasma,@can/pass xray",
+          "@set/t_dash,missile,space,plasma,@can/pass xray",
 
           // Wallcrawl from rootcave
-          "oob_rootcave,missile,space,grapple,@can/pass xray",
-          "oob_rootcave,t_dash,missile,space,@can/pass xray",
+          "@set/oob_rootcave,missile,space,grapple,@can/pass xray",
+          "@set/oob_rootcave,@set/t_dash,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -168,10 +168,10 @@
           "missile,morph,space,gravity",
 
           // Scan dash from shore
-          "t_dash,missile,morph",
+          "@set/t_dash,missile,morph",
 
           // Underwater ghetto jump
-          "t_ghetto,morph,space,$missing|gravity",
+          "@set/t_ghetto,morph,space,$missing|gravity",
 
           // Visibility
           "{$disabled|r_obfuscate,missile,morph}",
@@ -275,7 +275,7 @@
           "@reqs/frigate,@can/bomb",
 
           // Bars skip
-          "t_barsskip,@reqs/reflecting pool,@can/bomb,gravity,ice,space",
+          "@set/t_barsskip,@reqs/reflecting pool,@can/bomb,gravity,ice,space",
 
           "{artifactcheck}"
         ],
@@ -303,7 +303,7 @@
           // Through Frigate
           "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,boost",
           // With reverse bars skip
-          "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,t_barsskip",
+          "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,@set/t_barsskip",
 
           "{artifactcheck}"
         ],
@@ -332,16 +332,16 @@
           "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
 
           // Skipping boost
-          "t_barsskip,t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
-          "t_barsskip,t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
+          "@set/t_barsskip,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
+          "@set/t_barsskip,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
 
           // Skipping spider tracks
-          "t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
-          "t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
+          "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
+          "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
 
           // Max skips
-          "t_barsskip,t_halfpipebj,t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
-          "t_barsskip,t_halfpipebj,t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
+          "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
+          "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
           "{artifactcheck}"
         ],
@@ -373,16 +373,16 @@
               "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
 
               // Skipping boost
-              "t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
-              "t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
+              "@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
+              "@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
 
               // Skipping spider tracks
-              "t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
-              "t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
 
               // Max skips
-              "t_halfpipebj,t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
-              "t_halfpipebj,t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
+              "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
+              "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
               "{artifactcheck}"
             ],
@@ -399,16 +399,16 @@
               "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
 
               // Skipping boost
-              "t_noboostspinners,t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
-              "t_noboostspinners,t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
+              "@set/t_noboostspinners,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
+              "@set/t_noboostspinners,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
 
               // Skipping spider tracks
-              "t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
-              "t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
 
               // Max skips
-              "t_noboostspinners,t_halfpipebj,t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
-              "t_noboostspinners,t_halfpipebj,t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
+              "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
+              "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
               "{artifactcheck}"
             ],
@@ -440,13 +440,13 @@
               "morph,boost",
 
               // Space jump from ledge
-              "t_terrain,space",
+              "@set/t_terrain,space",
 
               // Ghetto jump up the ramp
-              "t_ghetto,space",
+              "@set/t_ghetto,space",
 
               // Half-pipe bomb jump
-              "t_halfpipebj,@can/bomb",
+              "@set/t_halfpipebj,@can/bomb",
 
               // Visibility
               "{$disabled|r_obfuscate}",
@@ -463,13 +463,13 @@
               "@can/bomb,@has/any suit,missile,grapple,boost,wave",
 
               // Jump from tree and grapple
-              "t_terrain,grapple",
+              "@set/t_terrain,grapple",
 
               // L jump from the ledge below
-              "t_ljump,space",
+              "@set/t_ljump,space",
 
               // Dash from tree
-              "t_terrain,t_dash,space",
+              "@set/t_terrain,@set/t_dash,space",
 
               // Floaty jump
               "@can/floaty",
@@ -489,7 +489,7 @@
               "@can/super,@can/pass xray",
 
               // OoB with floaty
-              "oob_trainingchamber,@can/floaty",
+              "@set/oob_trainingchamber,@can/floaty",
 
               "{artifactcheck}"
             ],
@@ -503,7 +503,7 @@
               "missile,morph",
 
               // L-jump
-              "t_ljump,space",
+              "@set/t_ljump,space",
 
               // Visibility
               "{$disabled|r_obfuscate}",
@@ -529,7 +529,7 @@
           "@can/bomb,missile,spider",
 
           // Collision abuse
-          "t_terrain,t_ljump,morph,missile,spider",
+          "@set/t_terrain,@set/t_ljump,morph,missile,spider",
 
           // Visibility
           "{$disabled|r_obfuscate,morph}",
@@ -564,7 +564,7 @@
               "missile,space",
 
               // Dash off of something
-              "t_terrain,t_dash,missile",
+              "@set/t_terrain,@set/t_dash,missile",
 
               // Access/visibility (safely visible, but softlock if collected and item does not meet reqs)
               "{$disabled|r_obfuscate,missile}",
@@ -581,13 +581,13 @@
               "missile,morph,boost",
 
               // Space jump from branch
-              "t_terrain,missile,morph,space",
+              "@set/t_terrain,missile,morph,space",
 
               // Ghetto jump off half-pipe
-              "t_ghetto,missile,morph,space",
+              "@set/t_ghetto,missile,morph,space",
 
               // Half-pipe bomb jump
-              "t_halfpipebj,missile,@can/bomb",
+              "@set/t_halfpipebj,missile,@can/bomb",
 
               "{artifactcheck}"
             ],
@@ -648,11 +648,11 @@
 
           // Training Chamber OoB
           // Access (softlock)
-          "{oob_trainingchamber,@can/wallcrawl,bomb}",
+          "{@set/oob_trainingchamber,@can/wallcrawl,bomb}",
           // Escape through Wave door
-          "oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
+          "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
           // Escape through morph tunnel
-          "oob_trainingchamber,@can/wallcrawl,bomb,boost",
+          "@set/oob_trainingchamber,@can/wallcrawl,bomb,boost",
 
           "{artifactcheck}"
         ],
@@ -679,9 +679,9 @@
 
           // Training Chamber OoB
           // Access (softlock)
-          "{oob_trainingchamber,@can/wallcrawl,bomb}",
+          "{@set/oob_trainingchamber,@can/wallcrawl,bomb}",
           // Escape through wave door
-          "oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
+          "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
 
           "{artifactcheck}"
         ],
@@ -730,7 +730,7 @@
           "@can/access tower of light,missile:40",
 
           // Dash up the tower
-          "t_dash,t_terrain,@can/access tower of light",
+          "@set/t_dash,@set/t_terrain,@can/access tower of light",
 
           "{artifactcheck}"
         ],
@@ -756,7 +756,7 @@
           "@can/access tower of light,gravity",
 
           // Underwater ghetto jump
-          "t_ghetto,@can/access tower of light",
+          "@set/t_ghetto,@can/access tower of light",
 
           "{artifactcheck}"
         ],
@@ -865,7 +865,7 @@
           "@can/bomb or pb,missile,space",
 
           // Double bomb jump instead of space
-          "t_dbj,@can/bomb,missile",
+          "@set/t_dbj,@can/bomb,missile",
 
           "{artifactcheck}"
         ],
@@ -923,7 +923,7 @@
               "@can/bomb,@can/super,spider",
 
               // Early Wild IBJ
-              "t_earlywild,@can/bomb,missile",
+              "@set/t_earlywild,@can/bomb,missile",
 
               "{artifactcheck}"
             ],
@@ -983,7 +983,7 @@
               "morph,missile,gravity,space",
 
               // Underwater ghetto jump
-              "t_ghetto,morph,missile,space",
+              "@set/t_ghetto,morph,missile,space",
 
               "{artifactcheck}"
             ],
@@ -1049,10 +1049,10 @@
               "$disabled|shuf_bombs,missile,@can/bomb or pb",
 
               // Skip bombs with boost
-              "t_boostjumps,missile,@can/bomb or pb,boost",
+              "@set/t_boostjumps,missile,@can/bomb or pb,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
-              "{$disabled|r_noriskbombs,missile,@can/bomb or pb}",
+              "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,@can/bomb or pb}",
 
               "{artifactcheck}"
             ],
@@ -1069,10 +1069,10 @@
               "$disabled|shuf_bombs,missile,morph",
 
               // Skip bombs with boost
-              "t_boostjumps,missile,morph,boost",
+              "@set/t_boostjumps,missile,morph,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
-              "{$disabled|r_noriskbombs,missile,morph}",
+              "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,morph}",
 
               "{artifactcheck}"
             ],
@@ -1102,11 +1102,11 @@
               "@can/bomb,missile,@can/floaty",
 
               // DBJ to item
-              "t_terrain,t_dbj,@can/bomb,missile,space",
-              "t_terrain,t_dbj,@can/bomb,missile,spider",
+              "@set/t_terrain,@set/t_dbj,@can/bomb,missile,space",
+              "@set/t_terrain,@set/t_dbj,@can/bomb,missile,spider",
 
               // Skip halfpipe by abusing terrain
-              "t_terrain,@can/bomb,missile,space,spider",
+              "@set/t_terrain,@can/bomb,missile,space,spider",
 
               "{artifactcheck}"
             ],
@@ -1120,7 +1120,7 @@
               "@can/bomb,missile",
 
               // Skipping bombs with boost (softlock if not bombs)
-              "{t_boostjumps,missile,morph,boost}",
+              "{@set/t_boostjumps,missile,morph,boost}",
 
               "{artifactcheck}"
             ],
@@ -1143,10 +1143,10 @@
           "@reqs/late chozo,@can/bomb,space,spider,ice",
 
           // Climb to first bomb slot
-          "t_terrain,@reqs/late chozo,@can/bomb,space,ice",
+          "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice",
 
           // Infinite speed glitch
-          "t_terrain,t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
+          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
 
           "{artifactcheck}"
         ],
@@ -1172,7 +1172,7 @@
           "@reqs/late chozo,@can/bomb,@can/super,boost,spider",
 
           // L jump and ledge clip into tunnel
-          "t_terrain,t_ljump,@reqs/late chozo,space",
+          "@set/t_terrain,@set/t_ljump,@reqs/late chozo,space",
 
           "{artifactcheck}"
         ],
@@ -1198,10 +1198,10 @@
           "@reqs/late chozo,@can/bomb,space,spider,ice,plasma",
 
           // Climb to first bomb slot
-          "t_terrain,@reqs/late chozo,@can/bomb,space,ice,plasma",
+          "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice,plasma",
 
           // Infinite speed glitch
-          "t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
+          "@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
 
           "{artifactcheck}"
         ],
@@ -1351,7 +1351,7 @@
           "@reqs/early magmoor,@can/pb,space",
 
           // Escape using a DBJ
-          "t_dbj,@reqs/early magmoor,@can/pb,bomb",
+          "@set/t_dbj,@reqs/early magmoor,@can/pb,bomb",
 
           // Softlockable (need space or a dbj to escape)
           "{@reqs/early magmoor,@can/pb}",
@@ -1383,7 +1383,7 @@
               "@reqs/early magmoor,@can/bomb",
 
               // Jump on the morph ball tunnel
-              "t_terrain,@reqs/early magmoor,space",
+              "@set/t_terrain,@reqs/early magmoor,space",
 
               "{artifactcheck}"
             ],
@@ -1397,19 +1397,19 @@
               "@reqs/early magmoor,@can/pb,bomb,space,boost",
 
               // DBJ up to spinner
-              "t_dbj,@reqs/early magmoor,@can/pb,bomb,boost",
+              "@set/t_dbj,@reqs/early magmoor,@can/pb,bomb,boost",
 
               // Dash off puffer/pirate instead of spinner
-              "t_dash,@reqs/early magmoor,@can/pb,bomb,space",
+              "@set/t_dash,@reqs/early magmoor,@can/pb,bomb,space",
               
               // DBJ and dash
-              "t_dbj,t_dash,@reqs/early magmoor,@can/pb,bomb",
+              "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb,bomb",
 
               // Softlockable (need bombs to escape)
               "{@reqs/early magmoor,@can/pb,space,boost}",
-              "{t_dbj,@reqs/early magmoor,@can/pb,boost}",
-              "{t_dash,@reqs/early magmoor,@can/pb,space}",
-              "{t_dbj,t_dash,@reqs/early magmoor,@can/pb",
+              "{@set/t_dbj,@reqs/early magmoor,@can/pb,boost}",
+              "{@set/t_dash,@reqs/early magmoor,@can/pb,space}",
+              "{@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb",
 
               "{artifactcheck}"
             ],
@@ -1432,13 +1432,13 @@
           "@reqs/early magmoor,@can/bomb,space,boost",
 
           // DBJ up to spinner
-          "t_dbj,@reqs/early magmoor,@can/bomb,boost",
+          "@set/t_dbj,@reqs/early magmoor,@can/bomb,boost",
 
           // Dash off puffer/pirate instead of spinner
-          "t_dash,@reqs/early magmoor,space",
+          "@set/t_dash,@reqs/early magmoor,space",
 
           // DBJ and dash
-          "t_dbj,t_dash,@reqs/early magmoor,@can/bomb",
+          "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -1464,19 +1464,19 @@
           "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
 
           // Skip grapple beam to spinners
-          "t_rjump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
+          "@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
 
           // Skip grapple and ghetto jump to bomb slot
-          "t_ljump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
+          "@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
 
           // Workstation OoB
-          "oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
+          "@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
 
           // Visibility (can see from outside, need plasma to escape)
           "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
-          "{t_rjump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider}",
-          "{t_ljump,t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
-          "{oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
+          "{@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider}",
+          "{@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
+          "{@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
 
           "{artifactcheck}"
         ],
@@ -1537,7 +1537,7 @@
               "@reqs/front phen,plasma",
 
               // Early Sun infinite speed
-              "t_sunisg,@can/isg,wave",
+              "@set/t_sunisg,@can/isg,wave",
 
               // Visibility
               "{$disabled|r_obfuscate,@reqs/front phen}",
@@ -1577,10 +1577,10 @@
           "@reqs/front phen,space,plasma",
 
           // Early Sun infinite speed
-          "t_sunisg,@can/isg,@reqs/front phen,wave",
+          "@set/t_sunisg,@can/isg,@reqs/front phen,wave",
 
           // Early Sun ISG OoB
-          "oob_wavesun,@can/wallcrawl,t_sunisg,@can/isg,@reqs/front phen",
+          "@set/oob_wavesun,@can/wallcrawl,@set/t_sunisg,@can/isg,@reqs/front phen",
 
           "{artifactcheck}"
         ],
@@ -1692,7 +1692,7 @@
           "@reqs/mid phen,space,wave,spider",
 
           // Terrain abuse to climb
-          "t_terrain,t_ljump,@reqs/mid phen,space,wave",
+          "@set/t_terrain,@set/t_ljump,@reqs/mid phen,space,wave",
 
           "{artifactcheck}"
         ],
@@ -1745,7 +1745,7 @@
           "@reqs/quarantine cave,spider,@can/pass thermal",
 
           // Escape with grapple
-          "$disabled|r_noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
+          "$disabled|r_noriskspider|sb_r_noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
 
           // Softlockable (need spider or grapple to escape)
           "{@reqs/quarantine cave,@can/pass thermal}",
@@ -1774,7 +1774,7 @@
           "@reqs/quarantine cave,@can/pass thermal,spider,grapple",
 
           // Dash to entrance
-          "t_dash,@reqs/quarantine cave,@can/pass thermal,spider",
+          "@set/t_dash,@reqs/quarantine cave,@can/pass thermal,spider",
 
           "{artifactcheck}"
         ],
@@ -1849,11 +1849,11 @@
           "@reqs/phen labs,plasma,bombs",
 
           // Terrain abuse to item
-          "t_terrain,@reqs/phen labs,bombs",
+          "@set/t_terrain,@reqs/phen labs,bombs",
 
           // Softlockable (need bombs to escape)
-          "{$disabled|r_noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
-          "{$disabled|r_noriskbombs,shuf_bombs,t_terrain,@reqs/phen labs}",
+          "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
+          "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@set/t_terrain,@reqs/phen labs}",
 
           "{artifactcheck}"
         ],
@@ -1956,7 +1956,7 @@
           "@reqs/far phen,grapple",
 
           // Dash to ledge
-          "t_dash,@reqs/far phen",
+          "@set/t_dash,@reqs/far phen",
 
           // Visibility
           "{$disabled|r_obfuscate,@reqs/far phen}",
@@ -1986,11 +1986,11 @@
 
           // Climbing room with terrain abuse and traversing frost/hunter cave:
           //   with gravity suit
-          "t_ljump,t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
+          "@set/t_ljump,@set/t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
           //   with a dash
-          "t_ljump,t_terrain,t_dash,@reqs/far phen,@can/pb,plasma",
+          "@set/t_ljump,@set/t_terrain,@set/t_dash,@reqs/far phen,@can/pb,plasma",
           //   with a ghetto jump
-          "t_ljump,t_terrain,t_ghetto,@reqs/far phen,@can/pb,plasma",
+          "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
           "{artifactcheck}"
         ],
@@ -2017,11 +2017,11 @@
 
           // Climbing room with terrain abuse and traversing frost/hunter cave:
           //   with gravity suit
-          "t_ljump,t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
+          "@set/t_ljump,@set/t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
           //   with a dash
-          "t_ljump,t_terrain,t_dash,@reqs/far phen,@can/pb,plasma",
+          "@set/t_ljump,@set/t_terrain,@set/t_dash,@reqs/far phen,@can/pb,plasma",
           //   with a ghetto jump
-          "t_ljump,t_terrain,t_ghetto,@reqs/far phen,@can/pb,plasma",
+          "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
           "{artifactcheck}"
         ],
@@ -2050,11 +2050,11 @@
               "@reqs/far phen,gravity",
 
               // Escape and access with underwater ghetto jump
-              "[$disabled|r_noriskgravity],t_ghetto,@reqs/far phen",
+              "$disabled|r_noriskgravity|sb_r_noriskgravity,@set/t_ghetto,@reqs/far phen",
 
               // Softlockable (need gravity if you don't know how to ghetto jump)
               "{@reqs/far phen,grapple}",
-              "{t_dash,@reqs/far phen}",
+              "{@set/t_dash,@reqs/far phen}",
 
               "{artifactcheck}"
             ],
@@ -2068,7 +2068,7 @@
               "@reqs/far phen,gravity,grapple,plasma",
 
               // Ghetto R jump to the item
-              "[$disabled|r_noriskgravity],t_ghetto,t_rjump,@reqs/far phen",
+              "$disabled|r_noriskgravity|sb_r_noriskgravity,@set/t_ghetto,@set/t_rjump,@reqs/far phen",
 
               // Softlockable (in case of falling in)
               "{@reqs/far phen,grapple,plasma}",
@@ -2100,7 +2100,7 @@
           "@reqs/upper mines,@can/bomb,@can/pass thermal,spider",
 
           // Ghetto and L jump to crane
-          "t_terrain,t_ghetto,t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
+          "@set/t_terrain,@set/t_ghetto,@set/t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
 
           // Visibility
           "{$disabled|r_obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
@@ -2235,7 +2235,7 @@
           "@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider",
 
           // Exit Metroid Quarantine A without spider
-          "t_ghetto,t_terrain,t_dash,@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
+          "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2261,10 +2261,10 @@
           "@reqs/lower mines,phazon",
 
           // Early Newborn inbounds
-          "t_phazontunnelnosuit,@reqs/lower mines,boost,etank:11",
+          "@set/t_phazontunnelnosuit,@reqs/lower mines,boost,etank:11",
 
           // Early Newborn wallcrawl
-          "t_phazontunnelnosuit,oob_earlynewborn,@can/wallcrawl,@reqs/lower mines",
+          "@set/t_phazontunnelnosuit,@set/oob_earlynewborn,@can/wallcrawl,@reqs/lower mines",
 
           "{artifactcheck}"
         ],
@@ -2315,7 +2315,7 @@
           "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider",
 
           // Skip spider ball
-          "t_ghetto,t_terrain,t_dash,@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
+          "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
           "{artifactcheck}"
         ],

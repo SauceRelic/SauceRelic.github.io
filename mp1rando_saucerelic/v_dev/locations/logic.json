@@ -35,7 +35,7 @@
         "name": "pass thermal",
         "access_rules": [
           "thermal",
-          "$disabled|r_requirevisors"
+          "$disabled|r_requirevisors|sb_r_requirevisors"
         ],
         "item_count": 1
       },
@@ -43,7 +43,7 @@
         "name": "pass xray",
         "access_rules": [
           "xray",
-          "$disabled|r_requirevisors"
+          "$disabled|r_requirevisors|sb_r_requirevisors"
         ],
         "item_count": 1
       },
@@ -58,7 +58,7 @@
         "name": "morph jump",
         "access_rules": [
           "@can/bomb",
-          "t_boostjumps,morph,boost"
+          "@set/t_boostjumps,morph,boost"
         ],
         "item_count": 1
       },
@@ -66,20 +66,20 @@
         "name": "wallcrawl",
         "access_rules": [
           "morph,space,bomb",
-          "morph,space,oob_nobombs"
+          "morph,space,@set/oob_nobombs"
         ]
       },
       {
         "name": "floaty",
         "access_rules": [
-          "@can/wallcrawl,oob_floaty"
+          "@can/wallcrawl,@set/oob_floaty"
         ],
         "item_count": 1
       },
       {
         "name": "climb frigate crash site",
         "access_rules": [
-          "t_terrain,t_ghetto,missile,morph,ice,space"
+          "@set/t_terrain,@set/t_ghetto,missile,morph,ice,space"
         ],
         "item_count": 1
       },
@@ -90,13 +90,13 @@
           "@has/any suit,grapple",
 
           // Jump off debris in the pool
-          "t_terrain,gravity,space",
+          "@set/t_terrain,gravity,space",
 
           // Scandash requires etanks or suit for safety
-          "t_scandash,space,etank:2",
-          "t_scandash,space,@has/any suit",
-          "t_scandash,@can/floaty,etank:2",
-          "t_scandash,@can/floaty,@has/any suit"
+          "@set/t_scandash,space,etank:2",
+          "@set/t_scandash,space,@has/any suit",
+          "@set/t_scandash,@can/floaty,etank:2",
+          "@set/t_scandash,@can/floaty,@has/any suit"
         ],
         "item_count": 1
       },
@@ -107,7 +107,7 @@
           "missile,space,wave,morph,boost,spider",
 
           // Jump to the door
-          "missile,space,wave,t_terrain"
+          "missile,space,wave,@set/t_terrain"
         ],
         "item_count": 1
       },
@@ -121,7 +121,7 @@
           "space,wave,spider",
 
           // Dirty cheater strats
-          "space,wave,t_terrain,t_ghetto"
+          "space,wave,@set/t_terrain,@set/t_ghetto"
         ],
         "item_count": 1
       },
@@ -132,7 +132,7 @@
           "@can/bomb,boost",
 
           // Scandash
-          "t_scandash"
+          "@set/t_scandash"
         ],
         "item_count": 1
       },
@@ -158,8 +158,8 @@
           "@can/pass thermal,spider,@can/super",
           "@can/pass thermal,spider,@can/bomb",
 
-          "@can/pass thermal,t_ghetto,@can/super",
-          "@can/pass thermal,t_ghetto,@can/bomb"
+          "@can/pass thermal,@set/t_ghetto,@can/super",
+          "@can/pass thermal,@set/t_ghetto,@can/bomb"
         ],
         "item_count": 1
       },
@@ -167,7 +167,7 @@
         "name": "exit mags to far phen",
         "access_rules": [
           "morph,ice,spider",
-          "morph,ice,t_terrain"
+          "morph,ice,@set/t_terrain"
         ],
         "item_count": 1
       },
@@ -175,7 +175,7 @@
         "name": "climb ore processing",
         "access_rules": [
           "@can/bomb,grapple,spider",
-          "t_terrain,t_ghetto"
+          "@set/t_terrain,@set/t_ghetto"
         ],
         "item_count": 1
       },
@@ -183,7 +183,7 @@
         "name": "climb mines spider shafts",
         "access_rules": [
           "spider",
-          "@can/bomb,t_terrain,t_spiderlessshafts"
+          "@can/bomb,@set/t_terrain,@set/t_spiderlessshafts"
         ],
         "item_count": 1
       },
@@ -191,8 +191,8 @@
         "name": "climb vent shaft",
         "access_rules": [
           "boost",
-          "t_halfpipebj,@can/bomb",
-          "space,t_dash"
+          "@set/t_halfpipebj,@can/bomb",
+          "space,@set/t_dash"
         ],
         "item_count": 1
       }
@@ -226,7 +226,7 @@
         "name": "late chozo",
         "access_rules": [
           // IBBF
-          "missile,@can/wallcrawl,oob_ibbf",
+          "missile,@can/wallcrawl,@set/oob_ibbf",
 
           // Climbing Frigate Crash Site to Reflecting Pool
           "@can/climb frigate crash site,@can/bomb",
@@ -235,22 +235,22 @@
           //
           // Vanilla Furnace to Crossway
           "missile,@can/morph jump,spider,wave,boost",
-          "missile,@can/morph jump,t_terrain,wave,boost",
+          "missile,@can/morph jump,@set/t_terrain,wave,boost",
 
           // Vanilla Furnace to HotE
           "missile,@can/morph jump,spider,ice,space",
-          "missile,@can/morph jump,t_terrain,ice,space",
+          "missile,@can/morph jump,@set/t_terrain,ice,space",
 
           // Furnace to Crossway with tricks
-          "missile,@can/morph jump,spider,wave,t_halfpipebj",
-          "missile,@can/morph jump,spider,wave,space,t_ljump",
-          "missile,@can/morph jump,spider,wave,space,t_rjump",
-          "missile,@can/morph jump,spider,wave,space,t_ghetto",
+          "missile,@can/morph jump,spider,wave,@set/t_halfpipebj",
+          "missile,@can/morph jump,spider,wave,space,@set/t_ljump",
+          "missile,@can/morph jump,spider,wave,space,@set/t_rjump",
+          "missile,@can/morph jump,spider,wave,space,@set/t_ghetto",
 
-          "missile,@can/morph jump,t_terrain,wave,t_halfpipebj",
-          "missile,@can/morph jump,t_terrain,wave,space,t_ljump",
-          "missile,@can/morph jump,t_terrain,wave,space,t_rjump",
-          "missile,@can/morph jump,t_terrain,wave,space,t_ghetto"
+          "missile,@can/morph jump,@set/t_terrain,wave,@set/t_halfpipebj",
+          "missile,@can/morph jump,@set/t_terrain,wave,space,@set/t_ljump",
+          "missile,@can/morph jump,@set/t_terrain,wave,space,@set/t_rjump",
+          "missile,@can/morph jump,@set/t_terrain,wave,space,@set/t_ghetto"
         ],
         "item_count": 1
       },
@@ -262,9 +262,9 @@
 
           // Through late Chozo
           "@reqs/late chozo,space,boost,wave",
-          "@reqs/late chozo,space,boost,t_hbjpasthote",
-          "@reqs/late chozo,space,t_terrain,t_ghetto,wave",
-          "@reqs/late chozo,space,t_terrain,t_ghetto,t_hbjpasthote"
+          "@reqs/late chozo,space,boost,@set/t_hbjpasthote",
+          "@reqs/late chozo,space,@set/t_terrain,@set/t_ghetto,wave",
+          "@reqs/late chozo,space,@set/t_terrain,@set/t_ghetto,@set/t_hbjpasthote"
         ],
         "item_count": 1
       },
@@ -282,9 +282,9 @@
           "missile,wave,space,$MagmoorRun,morph,spider",
 
           // Skips
-          "missile,wave,space,$MagmoorRun,t_terrain,t_scandash",
-          "missile,wave,space,$MagmoorRun,t_terrain,t_rjump",
-          "missile,wave,space,$MagmoorRun,t_dbj,@can/bomb"
+          "missile,wave,space,$MagmoorRun,@set/t_terrain,@set/t_scandash",
+          "missile,wave,space,$MagmoorRun,@set/t_terrain,@set/t_rjump",
+          "missile,wave,space,$MagmoorRun,@set/t_dbj,@can/bomb"
         ],
         "item_count": 1
       },
@@ -295,7 +295,7 @@
           "missile,@can/morph jump,@has/any suit",
 
           // Suitless (other reqs probably to avoid lava)
-          "$MagmoorRun,missile,@can/morph jump,space,t_dash,t_terrain",
+          "$MagmoorRun,missile,@can/morph jump,space,@set/t_dash,@set/t_terrain",
         ],
         "item_count": 1
       },
@@ -304,7 +304,7 @@
         "access_rules": [
           // Blocked by bombs depending on settings
           "@reqs/late magmoor,morph,@can/bomb",
-          "@reqs/late magmoor,morph,$disabled|r_nolatebombs"
+          "@reqs/late magmoor,morph,$disabled|r_nolatebombs|sb_r_nolatebombs"
         ],
         "item_count": 1
       },
@@ -367,7 +367,7 @@
           "@reqs/frigate,@can/bomb",
 
           // Bars skip
-          "t_barsskip,@reqs/reflecting pool,wave,ice"
+          "@set/t_barsskip,@reqs/reflecting pool,wave,ice"
         ],
         "item_count": 1
       },
@@ -391,8 +391,8 @@
         "name": "lower mines",
         "access_rules": [
           "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,grapple",
-          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,t_terrain,t_ghetto,t_dash",
-          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,t_terrain,t_ghetto,t_rjump"
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,@set/t_terrain,@set/t_ghetto,@set/t_dash",
+          "@reqs/upper mines,@can/bomb,pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider,@set/t_terrain,@set/t_ghetto,@set/t_rjump"
         ],
         "item_count": 1
       }

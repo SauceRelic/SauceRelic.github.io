@@ -1146,7 +1146,7 @@
           "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice",
 
           // Infinite speed glitch
-          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
+          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
           "{artifactcheck}"
         ],
@@ -1201,7 +1201,7 @@
           "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice,plasma",
 
           // Infinite speed glitch
-          "@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost",
+          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
           "{artifactcheck}"
         ],

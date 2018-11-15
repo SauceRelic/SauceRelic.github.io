@@ -11,7 +11,7 @@ function missing(item)
 end
 
 function disabled(item,sb)
-  if sb = nil then
+  if sb == nil then
     return missing(item)
   else
     if missing(item) then

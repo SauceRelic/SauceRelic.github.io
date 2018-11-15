@@ -281,6 +281,9 @@
           // Developer intended
           "missile,wave,space,$MagmoorRun,morph,spider",
 
+          // Sequence break with damage boost (note to self: check with Bash on this one)
+          "missile,wave,space,$MagmoorRun,[morph],[spider]",
+
           // Skips
           "missile,wave,space,$MagmoorRun,@set/t_terrain,@set/t_scandash",
           "missile,wave,space,$MagmoorRun,@set/t_terrain,@set/t_rjump",

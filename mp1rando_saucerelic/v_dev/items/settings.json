@@ -270,6 +270,13 @@
     "codes": "t_terrain"
   },
   {
+    "name": "Damage Boost through Poison Water/Lava",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/t_liquidboost.png",
+    "codes": "t_liquidboost"
+  },
+  {
     "name": "L Jumping",
     "type": "toggle",
     "loop": true,

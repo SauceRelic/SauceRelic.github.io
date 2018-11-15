@@ -172,6 +172,11 @@
                 },
                 {
                   "type": "item",
+                  "item": "t_liquidboost",
+                  "margin": "0,2"
+                },
+                {
+                  "type": "item",
                   "item": "t_dash",
                   "margin": "0,2"
                 },
@@ -422,6 +427,11 @@
                 {
                   "type": "image",
                   "image": "images/settings/static_expectedtricks.png",
+                  "margin": "0,2"
+                },
+                {
+                  "type": "item",
+                  "item": "sb_t_liquidboost",
                   "margin": "0,2"
                 },
                 {

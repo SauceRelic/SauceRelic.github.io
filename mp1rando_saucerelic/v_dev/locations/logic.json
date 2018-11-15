@@ -106,8 +106,20 @@
           // Developer intended
           "missile,space,wave,morph,boost,spider",
 
-          // Jump to the door
-          "missile,space,wave,@set/t_terrain"
+          // Skip boost with a ghetto jump up ramp
+          "@set/t_ghetto,missile,space,wave,spider",
+
+          // L jump to the door from top of ramp
+          "@set/t_ghetto,@set/t_ljump,missile,space,wave",
+
+          // Dash to the door from top of ramp
+          "@set/t_ghetto,@set/t_dash,missile,space,wave",
+
+          // L jump to the door from branch
+          "@set/t_terrain,@set/t_ljump,missile,space,wave",
+
+          // Dash to the door from branch
+          "@set/t_terrain,@set/t_dash,missile,space,wave"
         ],
         "item_count": 1
       },

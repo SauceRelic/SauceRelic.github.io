@@ -1231,6 +1231,9 @@
           // Developer intended
           "@reqs/reflecting pool,missile,ice",
 
+          // Allow vanilla beams, but require visible items
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/reflecting pool,missile",
+
           // Visibility (visible from outside)
           "{$disabled|r_obfuscate,@reqs/reflecting pool,missile}",
 
@@ -1473,15 +1476,23 @@
         "access_rules": [
           // Developer intended and escape
           "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
+          // Allow vanilla beams but require visible items
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
 
           // Skip grapple beam to spinners
           "@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
+          // Allow vanilla beams
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
 
           // Skip grapple and ghetto jump to bomb slot
           "@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
+          // Allow vanilla beams
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
 
           // Workstation OoB
           "@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
+          // Allow vanilla beams
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
 
           // Visibility (can see from outside, need plasma to escape)
           "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
@@ -1673,8 +1684,11 @@
           // Developer intended
           "@reqs/front phen,@can/bomb,space,wave",
 
+          // Allow vanilla beams but require visible items
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/fron phen,@can/bomb,space",
+
           // Visibility (can see from outside, need wave to escape)
-          "{@reqs/front phen,@can/bomb,space}",
+          "{$disabled|r_obfuscate,@reqs/front phen,@can/bomb,space}",
 
           "{artifactcheck}"
         ],

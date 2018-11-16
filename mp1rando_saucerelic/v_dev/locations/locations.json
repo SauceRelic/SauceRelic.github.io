@@ -980,10 +980,16 @@
             "name": "Underwater (Missile)",
             "access_rules": [
               // Developer intended
-              "morph,missile,gravity,space",
+              "morph,missile,space,gravity,bomb",
 
-              // Underwater ghetto jump
-              "@set/t_ghetto,morph,missile,space",
+              // Normal w/ damage boost
+              "morph,missile,space,gravity,@set/t_liquidboost",
+
+              // Underwater ghetto jump w/ Flaahgra
+              "@set/t_ghetto,morph,missile,space,bomb",
+
+              // Underwater ghetto jump w/ damage boost
+              "@set/t_ghetto,morph,missile,space,@set/t_liquidboost",
 
               "{artifactcheck}"
             ],
@@ -1091,7 +1097,6 @@
       {
         "name": "Furnace",
         "sections": [
-// COME BACK TO THIS ONE ------------------------------------------------------------------------------
           {
             "name": "Spider Tracks (Missile)",
             "access_rules": [
@@ -1256,7 +1261,10 @@
         "name": "Lava Lake",
         "access_rules": [
           // Developer intended
-          "@reqs/early magmoor,missile,morph,space,@can/pass xray",
+          "missile,morph,space,$EarlyMagmoor",
+
+          // Damage boost through lava
+          "@set/t_liquidboost,missile,morph,$EarlyMagmoor",
 
           "{artifactcheck}"
         ],
@@ -1380,10 +1388,13 @@
             "name": "Morph Track (Missile)",
             "access_rules": [
               // Developer intended
-              "@reqs/early magmoor,@can/bomb",
+              "missile,$EarlyMagmoor,@can/bomb",
 
               // Jump on the morph ball tunnel
-              "@set/t_terrain,@reqs/early magmoor,space",
+              "@set/t_terrain,missile,$EarlyMagmoor,morph,space",
+
+              // Damage boost through lava from Tallon elevator and jump on tunnel
+              "@set/t_liquidboost,@set/t_terrain,missile,$EarlyMagmoor,space",
 
               "{artifactcheck}"
             ],

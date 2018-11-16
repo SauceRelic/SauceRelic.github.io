@@ -90,7 +90,7 @@
           "@has/any suit,grapple",
 
           // Jump off debris in the pool
-          "@set/t_terrain,gravity,space",
+          "@set/t_liquidboost,@set/t_terrain,gravity,space",
 
           // Scandash requires etanks or suit for safety
           "@set/t_scandash,space,etank:2",
@@ -283,7 +283,14 @@
       {
         "name": "early magmoor",
         "access_rules": [
-          "missile,$EarlyMagmoor"
+          // Developer intended through Lava Lake
+          "missile,$EarlyMagmoor,@can/bomb",
+
+          // Developer intended through Fiery Shores
+          "missile,$EarlyMagmoor,morph,grapple",
+
+          // Damage boost through lava from Tallon elevator
+          "missile,$EarlyMagmoor,@set/t_liquidboost"
         ],
         "item_count": 1
       },
@@ -293,13 +300,17 @@
           // Developer intended
           "missile,wave,space,$MagmoorRun,morph,spider",
 
-          // Sequence break with damage boost (note to self: check with Bash on this one)
-          "missile,wave,space,$MagmoorRun,[morph],[spider]",
-
-          // Skips
+          // Dash across Twin Fires
           "missile,wave,space,$MagmoorRun,@set/t_terrain,@set/t_scandash",
+
+          // R jump across Twin Fires
           "missile,wave,space,$MagmoorRun,@set/t_terrain,@set/t_rjump",
-          "missile,wave,space,$MagmoorRun,@set/t_dbj,@can/bomb"
+
+          // DBJ in lava at Twin Fires
+          "missile,wave,space,$MagmoorRun,@set/t_liquidboost,@set/t_dbj,@can/bomb",
+
+          // Jump out of lava in Twin Fires
+          "missile,wave,space,$MagmoorRun,@set/t_liquidboost,gravity"
         ],
         "item_count": 1
       },

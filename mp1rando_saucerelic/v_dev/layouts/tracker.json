@@ -20,7 +20,7 @@
                 {
                   "type": "image",
                   "image": "images/settings/static_shuffle.png",
-                  "margin": "0,5"
+                  "margin": "0,10"
                 },
                 {
                   "type": "item",
@@ -62,12 +62,11 @@
                 {
                   "type": "array",
                   "orientation": "vertical",
-                  "margin": "0,20",
                   "content": [
                     {
                       "type": "image",
                       "image": "images/settings/static_restrictions.png",
-                      "margin": "0,5"
+                      "margin": "0,10"
                     },
                     {
                       "type": "item",
@@ -114,7 +113,7 @@
                     {
                       "type": "image",
                       "image": "images/settings/static_oob.png",
-                      "margin": "0,5"
+                      "margin": "0,10"
                     },
                     {
                       "type": "item",
@@ -168,7 +167,7 @@
                 {
                   "type": "image",
                   "image": "images/settings/static_expectedtricks.png",
-                  "margin": "0,2"
+                  "margin": "0,10"
                 },
                 {
                   "type": "item",
@@ -326,12 +325,11 @@
                 {
                   "type": "array",
                   "orientation": "vertical",
-                  "margin": "0,20",
                   "content": [
                     {
                       "type": "image",
                       "image": "images/settings/static_restrictions.png",
-                      "margin": "0,5"
+                      "margin": "0,10"
                     },
                     {
                       "type": "item",
@@ -373,7 +371,7 @@
                     {
                       "type": "image",
                       "image": "images/settings/static_oob.png",
-                      "margin": "0,5"
+                      "margin": "0,10"
                     },
                     {
                       "type": "item",
@@ -427,7 +425,7 @@
                 {
                   "type": "image",
                   "image": "images/settings/static_expectedtricks.png",
-                  "margin": "0,2"
+                  "margin": "0,10"
                 },
                 {
                   "type": "item",

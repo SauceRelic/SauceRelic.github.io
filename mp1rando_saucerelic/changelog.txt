@@ -1,3 +1,9 @@
+v1.0.0.0
+  Added sequence break settings, the last big thing I wanted to add before considering this a "complete" tracker
+    (still going to be adding things though)
+  
+  Updated location logic to match beta 6
+
 v0.10.0.2
   Fixed far phendrana logic naming (was named "back phen", but was referenced as "far phen")
   Fixed Overgrown Cavern logic

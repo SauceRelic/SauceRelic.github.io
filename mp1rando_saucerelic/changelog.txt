@@ -1,3 +1,7 @@
+v1.0.1.0
+  Added "No Boost Ball in Lower Mines" option with corresponding logic changes:
+    - @can/climb vent shaft changed, affecting 9 locations
+
 v1.0.0.0
   Added sequence break settings, the last big thing I wanted to add before considering this a "complete" tracker
     (still going to be adding things though)

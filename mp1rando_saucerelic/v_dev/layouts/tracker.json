@@ -102,6 +102,11 @@
                       "type": "item",
                       "item": "r_noriskgravity",
                       "margin": "0,5"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_noriskventshaft",
+                      "margin": "0,5"
                     }
                   ]
                 },
@@ -359,6 +364,11 @@
                     {
                       "type": "item",
                       "item": "sb_r_noriskgravity",
+                      "margin": "0,5"
+                    },
+                    {
+                      "type": "item",
+                      "item": "sb_r_noriskventshaft",
                       "margin": "0,5"
                     }
                   ]

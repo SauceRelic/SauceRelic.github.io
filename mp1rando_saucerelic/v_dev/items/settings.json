@@ -193,6 +193,13 @@
     "img": "images/settings/r_noriskgravity.png",
     "codes": "r_noriskgravity"
   },
+  {
+    "name": "No Boost Ball in Lower Mines",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/r_noriskventshaft.png",
+    "codes": "r_noriskventshaft"
+  },
 
 
   // Out of Bounds

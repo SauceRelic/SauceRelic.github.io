@@ -202,9 +202,14 @@
       {
         "name": "climb vent shaft",
         "access_rules": [
+          // Developer intended
           "boost",
-          "@set/t_halfpipebj,@can/bomb",
-          "space,@set/t_dash"
+
+          // If "No Boost Ball in Lower Mines" is disabled:
+          // Half-pipe bomb jump
+          "$disabled|r_noriskventshaft|sb_r_noriskventshaft,@set/t_halfpipebj,@can/bomb",
+          // Dash up slope
+          "$disabled|r_noriskventshaft|sb_r_noriskventshaft,@set/t_dash,space"
         ],
         "item_count": 1
       }

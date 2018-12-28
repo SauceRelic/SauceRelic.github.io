@@ -532,7 +532,7 @@
           "@set/t_terrain,@set/t_ljump,morph,missile,spider",
 
           // Visibility
-          "{$disabled|r_obfuscate,morph}",
+          "{$disabled|r_obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],

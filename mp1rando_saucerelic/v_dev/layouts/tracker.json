@@ -75,7 +75,12 @@
                     },
                     {
                       "type": "item",
-                      "item": "r_requirevisors",
+                      "item": "r_requirethermal",
+                      "margin": "0,5"
+                    },
+                    {
+                      "type": "item",
+                      "item": "r_requirexray",
                       "margin": "0,5"
                     },
                     {
@@ -338,7 +343,12 @@
                     },
                     {
                       "type": "item",
-                      "item": "sb_r_requirevisors",
+                      "item": "sb_r_requirethermal",
+                      "margin": "0,5"
+                    },
+                    {
+                      "type": "item",
+                      "item": "sb_r_requirexray",
                       "margin": "0,5"
                     },
                     {

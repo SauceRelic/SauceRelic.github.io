@@ -35,7 +35,7 @@
         "name": "pass thermal",
         "access_rules": [
           "thermal",
-          "$disabled|r_requirevisors|sb_r_requirevisors"
+          "$disabled|r_requirethermal|sb_r_requirethermal"
         ],
         "item_count": 1
       },
@@ -43,7 +43,7 @@
         "name": "pass xray",
         "access_rules": [
           "xray",
-          "$disabled|r_requirevisors|sb_r_requirevisors"
+          "$disabled|r_requirexray|sb_r_requirexray"
         ],
         "item_count": 1
       },

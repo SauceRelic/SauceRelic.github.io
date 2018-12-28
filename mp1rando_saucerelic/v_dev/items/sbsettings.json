@@ -1,18 +1,36 @@
 [
   // Restrictions
   {
-    "name": "Require visors for power conduits, invisible platforms, Thardus",
+    "name": "Require Thermal Visor",
     "type": "progressive",
     "loop": true,
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/settings/r_requirevisors.png",
+        "img": "images/settings/r_requirethermal.png",
         "inherit_codes": false,
-        "codes": "sb_r_requirevisors"
+        "codes": "sb_r_requirethermal"
       },
       {
-        "img": "images/settings/r_requirevisors.png",
+        "img": "images/settings/r_requirethermal.png",
+        "img_mods": "@disabled",
+        "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Require X-ray Visor",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/r_requirexray.png",
+        "inherit_codes": false,
+        "codes": "sb_r_requirexray"
+      },
+      {
+        "img": "images/settings/r_requirexray.png",
         "img_mods": "@disabled",
         "inherit_codes": false
       }

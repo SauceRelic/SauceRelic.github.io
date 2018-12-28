@@ -118,8 +118,8 @@
           "@set/t_dash,missile,space,plasma,@can/pass xray",
 
           // Wallcrawl from rootcave
-          "@set/oob_rootcave,missile,space,grapple,@can/pass xray",
-          "@set/oob_rootcave,@set/t_dash,missile,space,@can/pass xray",
+          "@set/oob_rootcave,@can/wallcrawl,missile,space,grapple,@can/pass xray",
+          "@set/oob_rootcave,@can/wallcrawl,@set/t_dash,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],

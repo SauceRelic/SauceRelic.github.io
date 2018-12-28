@@ -72,7 +72,7 @@
       {
         "name": "floaty",
         "access_rules": [
-          "@can/wallcrawl,@set/oob_floaty"
+          "@can/wallcrawl,@set/oob_floaty,$missing|gravity"
         ],
         "item_count": 1
       },

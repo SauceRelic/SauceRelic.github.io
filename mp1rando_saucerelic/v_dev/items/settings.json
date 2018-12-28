@@ -121,7 +121,7 @@
 
   // Restrictions
   {
-    "name": "Obfuscate Items",
+    "name": "Hide Item Icons",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_obfuscate.png",

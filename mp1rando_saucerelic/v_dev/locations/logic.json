@@ -289,7 +289,7 @@
         "name": "early magmoor",
         "access_rules": [
           // Developer intended through Lava Lake
-          "missile,$EarlyMagmoor,@can/bomb",
+          "missile,$EarlyMagmoor,@can/bomb or pb",
 
           // Developer intended through Fiery Shores
           "missile,$EarlyMagmoor,morph,grapple",

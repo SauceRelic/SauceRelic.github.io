@@ -1,3 +1,7 @@
+v1.0.2.0
+  Mirrored randomizer beta updates 8 and 9
+  Fixed early magmoor not allowing powerbombs to get through Lava Lake (change to randomizer pending)
+
 v1.0.1.0
   Added "No Boost Ball in Lower Mines" option with corresponding logic changes:
     - @can/climb vent shaft changed, affecting 9 locations

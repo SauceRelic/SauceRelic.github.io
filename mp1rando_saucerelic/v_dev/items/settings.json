@@ -431,7 +431,7 @@
     "name": "Suitless Magmoor Run Required Tanks",
     "type": "consumable",
     "initial_quantity": 5,
-    "min_quantity": 5,
+    "min_quantity": 3,
     "max_quantity": 14,
     "img": "images/etank.png",
     "codes": "vmrtanks"
@@ -439,7 +439,7 @@
   {
     "name": "Early Magmoor Items Required Tanks",
     "type": "consumable",
-    "initial_quantity": 7,
+    "initial_quantity": 10,
     "min_quantity": 7,
     "max_quantity": 14,
     "img": "images/etank.png",

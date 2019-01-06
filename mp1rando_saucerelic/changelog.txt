@@ -1,3 +1,6 @@
+v1.0.2.1
+  Fixed suitless Magmoor tanks settings, minimum for suitless run is now 3 (from 5)
+
 v1.0.2.0
   Mirrored randomizer beta updates 8 and 9
   Fixed early magmoor not allowing powerbombs to get through Lava Lake (change to randomizer pending)

@@ -439,11 +439,8 @@
               // Developer intended
               "morph,boost",
 
-              // Space jump from ledge
-              "@set/t_terrain,space",
-
-              // Ghetto jump up the ramp
-              "@set/t_ghetto,space",
+              // Space jump from ledge, ghetto up ramp jump from above
+              "space",
 
               // Half-pipe bomb jump
               "@set/t_halfpipebj,@can/bomb",
@@ -460,7 +457,7 @@
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
               // Developer intended
-              "@can/bomb,@has/any suit,missile,grapple,boost,wave",
+              "@can/bomb,@has/heat shielding,missile,grapple,boost,wave",
 
               // Jump from tree and grapple
               "@set/t_terrain,grapple",

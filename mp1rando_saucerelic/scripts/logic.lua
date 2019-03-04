@@ -25,7 +25,7 @@ end
 function MagmoorRun()
   if hasItem("t_vmr") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("vmrtanks")) then
     return true
-  elseif hasItem("varia") or hasItem("gravity") or hasItem("phazon") then
+  elseif hasItem("varia") or (hasItem("hs_anysuit") and (hasItem("gravity") or hasItem("phazon"))) then
     return true
   elseif hasItem("t_vmr") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("sb_vmrtanks")) then
     return true, AccessibilityLevel.SequenceBreak
@@ -39,7 +39,7 @@ end
 function EarlyMagmoor()
   if hasItem("t_earlymagitems") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("earlyetanks")) then
     return true
-  elseif hasItem("varia") or hasItem("gravity") or hasItem("phazon") then
+  elseif hasItem("varia") or (hasItem("hs_anysuit") and (hasItem("gravity") or hasItem("phazon"))) then
     return true
   elseif hasItem("t_earlymagitems") and (Tracker:ProviderCountForCode("etanks") >= Tracker:ProviderCountForCode("sb_earlyetanks")) then
     return true, AccessibilityLevel.SequenceBreak

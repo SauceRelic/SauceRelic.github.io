@@ -87,16 +87,16 @@
         "name": "cross magma pool",
         "access_rules": [
           // Developer intended
-          "@has/any suit,grapple",
+          "@has/heat shielding,grapple",
 
           // Jump off debris in the pool
           "@set/t_liquidboost,@set/t_terrain,gravity,space",
 
           // Scandash requires etanks or suit for safety
           "@set/t_scandash,space,etank:2",
-          "@set/t_scandash,space,@has/any suit",
+          "@set/t_scandash,space,@has/heat shielding",
           "@set/t_scandash,@can/floaty,etank:2",
-          "@set/t_scandash,@can/floaty,@has/any suit"
+          "@set/t_scandash,@can/floaty,@has/heat shielding"
         ],
         "item_count": 1
       },
@@ -315,7 +315,14 @@
           "missile,wave,space,$MagmoorRun,@set/t_liquidboost,@set/t_dbj,@can/bomb",
 
           // Jump out of lava in Twin Fires
-          "missile,wave,space,$MagmoorRun,@set/t_liquidboost,gravity"
+          "missile,wave,space,$MagmoorRun,@set/t_liquidboost,gravity",
+
+          // Through Mines
+          // Developer intended
+          "@reqs/frigate,@can/bomb,@can/pb",
+
+          // Bars skip
+          "@set/t_barsskip,@reqs/reflecting pool,wave,ice,@can/pb"
         ],
         "item_count": 1
       },
@@ -323,7 +330,7 @@
         "name": "north phen elevator",
         "access_rules": [
           // Vanilla
-          "missile,@can/morph jump,@has/any suit",
+          "missile,@can/morph jump,@has/heat shielding",
 
           // Suitless (other reqs probably to avoid lava)
           "$MagmoorRun,missile,@can/morph jump,space,@set/t_dash,@set/t_terrain",

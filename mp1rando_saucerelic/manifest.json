@@ -8,9 +8,6 @@
     "standard": {
       "display_name": "Location Tracker - Beta 10"
     },
-//    "v_presets": {
-//      "display_name": "Map Tracker - Difficulty Presets"
-//    },
     "v_itemsonly": {
       "display_name": "Items Only"
     },

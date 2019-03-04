@@ -219,11 +219,11 @@
     "name": "has",
     "sections": [
       {
-        "name": "any suit",
+        "name": "heat shielding",
         "access_rules": [
           "varia",
-          "gravity",
-          "phazon"
+          "hs_anysuit,gravity",
+          "hs_anysuit,phazon"
         ],
         "item_count": 1
       }

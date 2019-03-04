@@ -6,7 +6,7 @@
   "author": "SauceRelic",
   "variants": {
     "standard": {
-      "display_name": "Map Tracker"
+      "display_name": "Location Tracker - Beta 10"
     },
 //    "v_presets": {
 //      "display_name": "Map Tracker - Difficulty Presets"
@@ -15,7 +15,7 @@
       "display_name": "Items Only"
     },
     "v_dev": {
-      "display_name": "Map Tracker - Beta Branch"
+      "display_name": "Location Tracker - Stable (old)"
     }
   }
 }

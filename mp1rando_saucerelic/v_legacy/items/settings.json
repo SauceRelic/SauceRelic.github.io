@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Difficulty",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "stages": [
+      {
+        "name": "No Glitches",
+        "img": "images/diff_glitchless.png",
+        "inherit_codes": false,
+        "codes": "difficulty,glitchless"
+      },
+      {
+        "name": "Normal",
+        "img": "images/diff_normal.png",
+        "inherit_codes": false,
+        "codes": "normal,sbn"
+      },
+      {
+        "name": "Hard",
+        "img": "images/diff_hard.png",
+        "inherit_codes": false,
+        "codes": "hard,sbh"
+      }
+    ]
+  },
+  {
+    "name": "Include Normal logic as sequence breaks",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/option_sbnormal.png",
+    "codes": "sbn,normalsequencebreaks"
+  },
+  {
+    "name": "Include Hard logic as sequence breaks",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/option_sbhard.png",
+    "codes": "sbh,hardsequencebreaks"
+  },
+  {
+    "name": "Artifact Temple Checks",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/artifactcheck.png",
+    "codes": "artifactcheck"
+  }
+]

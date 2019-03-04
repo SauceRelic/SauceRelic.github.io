@@ -71,22 +71,10 @@
   },
   {
     "name": "Gravity Suit",
-    "type": "progressive",
+    "type": "toggle",
     "loop": true,
-    "allow_disabled": false,
-    "stages": [
-      {
-        "img": "images/gravity.png",
-        "img_mods": "@disabled",
-        "inherit_codes": false,
-        "codes": "notgravity,gravityitem"
-      },
-      {
-        "img": "images/gravity.png",
-        "inherit_codes": false,
-        "codes": "gravity,gravitysuit"
-      }
-    ]
+    "img": "images/gravity.png",
+    "codes": "gravity,gravitysuit,gravityitem"
   },
   {
     "name": "Phazon Suit",

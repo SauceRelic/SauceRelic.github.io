@@ -6,11 +6,15 @@
       {
         "name": "Landing Site",
         "access_rules": [
-          // Global access
+          // Developer intended
           "morph",
 
-          // Global visibility
-          "{}"
+          // Visibility
+          "{$disabled|r_obfuscate}",
+
+          // Hint from Artifact Temple
+          // Included for all non-immediate checks
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -30,15 +34,15 @@
       {
         "name": "Alcove",
         "access_rules": [
-          // Global access
+          // Developer intended
           "@can/bomb,boost",
           "space",
 
-          // Normal access
-          "[normal],sbn",
+          // ESJ scandash
+          "@set/t_scandash",
 
-          // Hard access
-          "[hard],sbh",
+          // DBJ off ship
+          "@set/t_terrain,@set/t_dbj,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -60,7 +64,7 @@
       {
         "name": "Artifact Temple",
         "access_rules": [
-          // Global access
+          // Developer intended
           "missile"
         ],
         "sections": [
@@ -81,14 +85,11 @@
       {
         "name": "Root Cave",
         "access_rules": [
-          // Global access
-          "missile,space,grapple,[xray]",
+          // Developer intended
+          "missile,space,grapple,@can/pass xray",
 
-          // Normal access
-          "[normal],sbn,missile,space,grapple",
-
-          // Hard access
-          "[hard],sbh,missile,space",
+          // Dash instead of grapple
+          "@set/t_dash,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -110,15 +111,15 @@
       {
         "name": "Arbor Chamber",
         "access_rules": [
-          // Global access
-          "missile,space,plasma,grapple,[xray]",
+          // Developer intended
+          "missile,space,plasma,grapple,@can/pass xray",
 
-          // Normal access
-          "[normal],sbn,missile,space,plasma,grapple",
+          // Dash to skip grapple
+          "@set/t_dash,missile,space,plasma,@can/pass xray",
 
-          // Hard access
-          "[hard],sbh,missile,space,@can/bomb",
-          "[hard],sbh,missile,space,plasma",
+          // Wallcrawl from rootcave
+          "@set/oob_rootcave,@can/wallcrawl,missile,space,grapple,@can/pass xray",
+          "@set/oob_rootcave,@can/wallcrawl,@set/t_dash,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -140,7 +141,7 @@
       {
         "name": "Transport Tunnel B",
         "access_rules": [
-          // Global access
+          // Developer intended
           "missile",
 
           "{artifactcheck}"
@@ -163,14 +164,17 @@
       {
         "name": "Frigate Crash Site",
         "access_rules": [
-          // Global access
+          // Developer intended
           "missile,morph,space,gravity",
 
-          // Normal access
-          "[normal],sbn,missile,morph,space",
+          // Scan dash from shore
+          "@set/t_dash,missile,morph",
 
-          // Hard access
-          "[hard],sbh,missile,morph",
+          // Underwater ghetto jump
+          "@set/t_ghetto,morph,space,$missing|gravity",
+
+          // Visibility
+          "{$disabled|r_obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -192,16 +196,12 @@
       {
         "name": "Overgrown Cavern",
         "access_rules": [
-          // Global access
-          "@reqs/chozohote,wave,ice,boost",
-          "@reqs/frigate,boost",
+          // Through late Chozo, includes glitchless
+          "@reqs/reflecting pool,@can/bomb,ice",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,wave,ice,space",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,ice",
-
+          // Climbing Frigate Crash Site
+          "@can/climb frigate crash site",
+          
           "{artifactcheck}"
         ],
         "sections": [
@@ -223,14 +223,8 @@
         "name": "Cargo Freight Lift to Deck Gamma",
         "color": "#525252",
         "access_rules": [
-          // Global access
+          // Frigate with no extra reqs
           "@reqs/frigate",
-
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,ice,gravity",
 
           "{artifactcheck}"
         ],
@@ -253,14 +247,8 @@
         "name": "Biohazard Containment",
         "color": "#525252",
         "access_rules": [
-          // Global access
+          // Frigate with supers
           "@reqs/frigate,@can/super",
-
-          // Normal access
-          "[normal],sbn,@can/bomb,@can/super,gravity,space,wave,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,@can/super,ice,gravity",
 
           "{artifactcheck}"
         ],
@@ -283,14 +271,11 @@
         "name": "Hydro Access Tunnel",
         "color": "#525252",
         "access_rules": [
-          // Global access
-          "@reqs/frigate",
+          // Normal path
+          "@reqs/frigate,@can/bomb",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,gravity,space,wave,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,ice,gravity",
+          // Bars skip
+          "@set/t_barsskip,@reqs/reflecting pool,@can/bomb,gravity,ice,space",
 
           "{artifactcheck}"
         ],
@@ -312,15 +297,13 @@
       {
         "name": "Great Tree Chamber",
         "access_rules": [
-          // Global access
-          "[xray],@reqs/chozohote,wave,ice,boost",
-          "[xray],@reqs/frigate,boost",
+          // Through late Chozo
+          "@can/pass xray,ice,space,@reqs/reflecting pool",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,space,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,ice",
+          // Through Frigate
+          "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,boost",
+          // With reverse bars skip
+          "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,@set/t_barsskip",
 
           "{artifactcheck}"
         ],
@@ -342,15 +325,23 @@
       {
         "name": "Life Grove Tunnel",
         "access_rules": [
-          // Global access
-          "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
+          // Developer intended
+          // Through late Chozo
+          "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
+          // Through Frigate
+          "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,@can/pb,missile,boost,space,wave,ice",
+          // Skipping boost
+          "@set/t_barsskip,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
+          "@set/t_barsskip,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
-          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider",
+          // Skipping spider tracks
+          "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
+          "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
+
+          // Max skips
+          "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
+          "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
           "{artifactcheck}"
         ],
@@ -371,27 +362,56 @@
       },
       {
         "name": "Life Grove",
-        "access_rules": [
-          // Global access
-          "@can/bomb,@can/pb,missile,boost,spider,space,wave,ice",
-
-          // Normal access
-          "[normal],sbn,@can/bomb,@can/pb,missile,boost,space,wave,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,@can/pb,missile,ice,space",
-          "[hard],sbh,@can/bomb,@can/pb,missile,ice,spider",
-
-          "{artifactcheck}"
-        ],
         "sections": [
           {
             "name": "X-Ray Visor",
+            "access_rules": [
+              // Developer intended
+              // Through late Chozo
+              "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
+              // Through Frigate
+              "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
+
+              // Skipping boost
+              "@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
+              "@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
+
+              // Skipping spider tracks
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
+
+              // Max skips
+              "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
+              "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
+
+              "{artifactcheck}"
+            ],
             "item_count": 1,
             "capture_item": true
           },
           {
             "name": "Artifact of Chozo",
+            "access_rules": [
+              // Developer intended
+              // Through late Chozo
+              "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
+              // Through Frigate
+              "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
+
+              // Skipping boost
+              "@set/t_noboostspinners,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
+              "@set/t_noboostspinners,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
+
+              // Skipping spider tracks
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
+              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
+
+              // Max skips
+              "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
+              "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
+
+              "{artifactcheck}"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -414,38 +434,24 @@
         "name": "Main Plaza",
         "sections": [
           {
-            "name": "Locked Door (E-Tank)",
-            "access_rules": [
-              // Global access
-              "missile,morph",
-
-              // Normal access
-              "[normal],sbn,space",
-
-              // Hard access
-              "[hard],sbh,space",
-
-              // Global visibility
-              "{}"
-            ],
-            "item_count": 1,
-            "capture_item": true
-          },
-          {
             "name": "Half-Pipe (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "morph,boost",
 
-              // Normal access
-              "[normal],sbn,space",
+              // Space jump from ledge
+              "@set/t_terrain,space",
 
-              // Hard access
-              "[hard],sbh,space",
-              "[hard],sbh,@can/bomb",
+              // Ghetto jump up the ramp
+              "@set/t_ghetto,space",
 
-              // Global visibility
-              "{}"
+              // Half-pipe bomb jump
+              "@set/t_halfpipebj,@can/bomb",
+
+              // Visibility
+              "{$disabled|r_obfuscate}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -453,18 +459,25 @@
           {
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb,@has/any suit,missile,grapple,boost,wave",
 
-              // Normal access
-              "[normal],sbn,space",
+              // Jump from tree and grapple
+              "@set/t_terrain,grapple",
 
-              // Hard access
-              "[hard],sbh,space",
-              "[hard],sbh,grapple",
+              // L jump from the ledge below
+              "@set/t_ljump,space",
 
-              // Global visibility
-              "{}"
+              // Dash from tree
+              "@set/t_terrain,@set/t_dash,space",
+
+              // Floaty jump
+              "@can/floaty",
+
+              // Visibility
+              "{$disabled|r_obfuscate}",
+
+              "{artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -472,15 +485,28 @@
           {
             "name": "Tree (Missile)",
             "access_rules": [
-              // Global access
-              "@can/super,space",
+              // Developer intended
+              "@can/super,@can/pass xray",
 
-              // Normal access
-              "[normal],sbn,@can/super",
+              // OoB with floaty
+              "@set/oob_trainingchamber,@can/floaty",
 
-              // Hard access
-              "[hard],sbh,@can/super",
-              "[hard],sbh,@can/bomb,missile,space",
+              "{artifactcheck}"
+            ],
+            "item_count": 1,
+            "capture_item": true
+          },
+          {
+            "name": "Locked Door (E-Tank)",
+            "access_rules": [
+              // Developer intended
+              "missile,morph",
+
+              // L-jump
+              "@set/t_ljump,space",
+
+              // Visibility
+              "{$disabled|r_obfuscate}",
 
               "{artifactcheck}"
             ],
@@ -499,11 +525,14 @@
       {
         "name": "Ruined Fountain",
         "access_rules": [
-          // Global access
+          // Developer intended
           "@can/bomb,missile,spider",
 
-          // Global visibility
-          "{morph}",
+          // Collision abuse
+          "@set/t_terrain,@set/t_ljump,morph,missile,spider",
+
+          // Visibility
+          "{$disabled|r_obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -528,12 +557,17 @@
           {
             "name": "Beetle Battle (Morph Ball)",
             "access_rules": [
-              // Global access and escape
+              // Developer intended
               "missile,morph",
+
+              // Developer intended, but later in the game
               "missile,space",
 
-              // Global access and visibility (can see from outside, no reload)
-              "{missile}",
+              // Dash off of something
+              "@set/t_terrain,@set/t_dash,missile",
+
+              // Access/visibility (safely visible, but softlock if collected and item does not meet reqs)
+              "{$disabled|r_obfuscate,missile}",
 
               "{artifactcheck}"
             ],
@@ -543,14 +577,17 @@
           {
             "name": "Half-Pipe (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "missile,morph,boost",
 
-              // Normal access
-              "[normal],sbn,missile,morph,space",
+              // Space jump from branch
+              "@set/t_terrain,missile,morph,space",
 
-              // Hard access
-              "[hard],sbh,missile,morph",
+              // Ghetto jump off half-pipe
+              "@set/t_ghetto,missile,morph,space",
+
+              // Half-pipe bomb jump
+              "@set/t_halfpipebj,missile,@can/bomb",
 
               "{artifactcheck}"
             ],
@@ -560,7 +597,7 @@
           {
             "name": "Lower Tunnel (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb or pb,missile",
 
               "{artifactcheck}"
@@ -580,11 +617,11 @@
       {
         "name": "Vault",
         "access_rules": [
-          // Global access
+          // Developer intended
           "@can/bomb,missile",
 
-          // Global visibility
-          "{missile,morph}",
+          // Visibility
+          "{$disabled|r_obfuscate,missile,morph}",
 
           "{artifactcheck}"
         ],
@@ -606,12 +643,16 @@
       {
         "name": "Training Chamber",
         "access_rules": [
-          // Global access
-          "@can/bomb,@has/any suit,missile,grapple,wave,boost,spider",
+          // Developer intended
+          "@can/cross magma pool,@can/bomb,wave,boost,spider",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,@has/any suit,wave,grapple,boost,spider",
-          "[hard],sbh,@can/bomb,space,spider",
+          // Training Chamber OoB
+          // Access (softlock)
+          "{@set/oob_trainingchamber,@can/wallcrawl,bomb}",
+          // Escape through Wave door
+          "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
+          // Escape through morph tunnel
+          "@set/oob_trainingchamber,@can/wallcrawl,bomb,boost",
 
           "{artifactcheck}"
         ],
@@ -633,14 +674,14 @@
       {
         "name": "Training Chamber Access",
         "access_rules": [
-          // Global access
-          "@has/any suit,missile,morph,grapple,wave",
+          // Developer intended
+          "@can/cross magma pool,@can/bomb,wave",
 
-          // Hard access
-          "[hard],sbh,morph,wave,@has/any suit,space",
-          "[hard],sbh,morph,wave,@has/any suit,grapple",
-          "[hard],sbh,morph,wave,space,etank:2",
-          "[hard],sbh,morph,@can/bomb,space",
+          // Training Chamber OoB
+          // Access (softlock)
+          "{@set/oob_trainingchamber,@can/wallcrawl,bomb}",
+          // Escape through wave door
+          "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
 
           "{artifactcheck}"
         ],
@@ -662,14 +703,8 @@
       {
         "name": "Magma Pool",
         "access_rules": [
-          // Global access
-          "@can/pb,@has/any suit,missile,grapple",
-
-          // Hard access
-          "[hard],sbh,@can/pb,@has/any suit,space",
-          "[hard],sbh,@can/pb,@has/any suit,grapple",
-          "[hard],sbh,@can/pb,etank:1,space",
-          "[hard],sbh,@can/bomb,@has/any suit,missile,boost",
+          // Developer intended
+          "@can/cross magma pool,@can/pb",
 
           "{artifactcheck}"
         ],
@@ -691,15 +726,11 @@
       {
         "name": "Tower of Light",
         "access_rules": [
-          // Global access
-          "@can/bomb,missile:40,boost,spider,wave,space",
+          // Developer intended
+          "@can/access tower of light,missile:40",
 
-          // Normal access
-          "[normal],sbn,missile,wave,space",
-
-          // Hard access
-          "[hard],sbh,missile,wave,space",
-          "[hard],sbh,missile,wave,@can/bomb",
+          // Dash up the tower
+          "@set/t_dash,@set/t_terrain,@can/access tower of light",
 
           "{artifactcheck}"
         ],
@@ -721,15 +752,11 @@
       {
         "name": "Tower Chamber",
         "access_rules": [
-          // Global access
-          "@can/bomb,missile,boost,spider,wave,gravity,space",
+          // Developer intended
+          "@can/access tower of light,gravity",
 
-          // Normal access
-          "[normal],sbn,missile,wave,space",
-          "[normal],sbn,missile,wave,morph,boost,notgravity",
-
-          // Hard access
-          "[hard],sbh,missile,wave",
+          // Underwater ghetto jump
+          "@set/t_ghetto,@can/access tower of light",
 
           "{artifactcheck}"
         ],
@@ -751,11 +778,13 @@
       {
         "name": "Ruined Nursery",
         "access_rules": [
-          // Global access
+          // Developer intended
           "@can/bomb",
 
-          // Global visibility
-          "{}"
+          // Visibility
+          "{$disabled|r_obfuscate}",
+
+          "{artifactcheck}"
         ],
         "sections": [
           {
@@ -778,7 +807,7 @@
           {
             "name": "Missile Wall (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "missile",
 
               "{artifactcheck}"
@@ -789,7 +818,7 @@
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb",
 
               "{artifactcheck}"
@@ -809,7 +838,7 @@
       {
         "name": "Transport Access North",
         "access_rules": [
-          // Global access
+          // Developer intended
           "missile",
 
           "{artifactcheck}"
@@ -832,15 +861,11 @@
       {
         "name": "Gathering Hall",
         "access_rules": [
-          // Global access
+          // Developer intended
           "@can/bomb or pb,missile,space",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile",
-
-          // Hard access
-          "[hard],sbh,missile,@can/bomb",
-          "[hard],sbh,missile,@can/pb,space",
+          // Double bomb jump instead of space
+          "@set/t_dbj,@can/bomb,missile",
 
           "{artifactcheck}"
         ],
@@ -883,7 +908,7 @@
           {
             "name": "Flaahgra (Varia Suit)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb,missile",
 
               "{artifactcheck}"
@@ -894,11 +919,11 @@
           {
             "name": "Ghosts (Artifact of Wild)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb,@can/super,spider",
 
-              // Hard access
-              "[hard],sbh,@can/bomb,missile",
+              // Early Wild IBJ
+              "@set/t_earlywild,@can/bomb,missile",
 
               "{artifactcheck}"
             ],
@@ -917,7 +942,7 @@
       {
         "name": "Watery Hall Access",
         "access_rules": [
-          // Global access
+          // Developer intended
           "missile,morph",
 
           "{artifactcheck}"
@@ -943,7 +968,7 @@
           {
             "name": "Scan Puzzle (Charge Beam)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "missile,morph",
 
               "{artifactcheck}"
@@ -954,16 +979,17 @@
           {
             "name": "Underwater (Missile)",
             "access_rules": [
-              // Global access
-              "@can/bomb,missile,gravity,space",
+              // Developer intended
+              "morph,missile,space,gravity,bomb",
 
-              // Normal access
-              "[normal],sbn,missile,space,morph,etank:1",
-              "[normal],sbn,missile,space,morph,gravity",
-              "[normal],sbn,missile,space,@can/bomb",
+              // Normal w/ damage boost
+              "morph,missile,space,gravity,@set/t_liquidboost",
 
-              // Hard access
-              "[hard],sbh,missile,morph,etank:1",
+              // Underwater ghetto jump w/ Flaahgra
+              "@set/t_ghetto,morph,missile,space,bomb",
+
+              // Underwater ghetto jump w/ damage boost
+              "@set/t_ghetto,morph,missile,space,@set/t_liquidboost",
 
               "{artifactcheck}"
             ],
@@ -985,7 +1011,7 @@
           {
             "name": "Lower Dynamo (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb or pb,missile",
 
               "{artifactcheck}"
@@ -996,8 +1022,11 @@
           {
             "name": "Spider Track (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb or pb,missile,spider",
+
+              // Floaty jump
+              "@can/floaty,@can/bomb or pb,missile",
 
               "{artifactcheck}"
             ],
@@ -1019,11 +1048,17 @@
           {
             "name": "Tunnel (Missile)",
             "access_rules": [
-              // Global access and escape
+              // Developer intended
               "@can/bomb,missile",
 
-              // Global access (must reload if neither burn dome item is bombs)
-              "{missile,@can/bomb or pb}",
+              // Developer intended with vanilla bombs
+              "$disabled|shuf_bombs,missile,@can/bomb or pb",
+
+              // Skip bombs with boost
+              "@set/t_boostjumps,missile,@can/bomb or pb,boost",
+
+              // Softlockable (must reload if neither burn dome item is bombs)
+              "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,@can/bomb or pb}",
 
               "{artifactcheck}"
             ],
@@ -1033,11 +1068,17 @@
           {
             "name": "Incinerator Drone (Morph Bomb)",
             "access_rules": [
-              // Global access and escape
+              // Developer intended
               "@can/bomb,missile",
 
-              // Global access (must reload if neither burn dome item is bombs)
-              "{missile,morph}",
+              // Developer intended with vanilla bombs
+              "$disabled|shuf_bombs,missile,morph",
+
+              // Skip bombs with boost
+              "@set/t_boostjumps,missile,morph,boost",
+
+              // Softlockable (must reload if neither burn dome item is bombs)
+              "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,morph}",
 
               "{artifactcheck}"
             ],
@@ -1059,14 +1100,18 @@
           {
             "name": "Spider Tracks (Missile)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb,@can/pb,missile,boost,spider",
 
-              // Normal access
-              "[normal],sbn,@can/bomb,missile,spider,space",
+              // Floaty jump
+              "@can/bomb,missile,@can/floaty",
 
-              // Hard access
-              "[hard],sbh,@can/bomb,missile,space",
+              // DBJ to item
+              "@set/t_terrain,@set/t_dbj,@can/bomb,missile,space",
+              "@set/t_terrain,@set/t_dbj,@can/bomb,missile,spider",
+
+              // Skip halfpipe by abusing terrain
+              "@set/t_terrain,@can/bomb,missile,space,spider",
 
               "{artifactcheck}"
             ],
@@ -1076,8 +1121,11 @@
           {
             "name": "Tunnel (E-Tank)",
             "access_rules": [
-              // Global access
+              // Developer intended
               "@can/bomb,missile",
+
+              // Skipping bombs with boost (softlock if not bombs)
+              "{@set/t_boostjumps,missile,morph,boost}",
 
               "{artifactcheck}"
             ],
@@ -1096,15 +1144,14 @@
       {
         "name": "Hall of the Elders",
         "access_rules": [
-          // Global access
-          "@reqs/chozohote,ice",
+          // Developer intended
+          "@reqs/late chozo,@can/bomb,space,spider,ice",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,ice,space",
+          // Climb to first bomb slot
+          "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,space",
-          "[hard],sbh,@can/bomb,missile,ice,spider",
+          // Infinite speed glitch
+          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
           "{artifactcheck}"
         ],
@@ -1126,16 +1173,11 @@
       {
         "name": "Crossway",
         "access_rules": [
-          // Global access
-          "@can/bomb,@can/super,boost,spider,wave",
-          "@can/bomb,@can/super,boost,spider,ice",
+          // Developer intended
+          "@reqs/late chozo,@can/bomb,@can/super,boost,spider",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,@can/super,space,wave",
-          "[normal],sbn,@can/bomb,@can/super,space,ice",
-
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,space",
+          // L jump and ledge clip into tunnel
+          "@set/t_terrain,@set/t_ljump,@reqs/late chozo,space",
 
           "{artifactcheck}"
         ],
@@ -1157,16 +1199,14 @@
       {
         "name": "Elder Chamber",
         "access_rules": [
-          // Global access
-          "@reqs/chozohote,ice,plasma",
+          // Developer intended, ice required to avoid making HotE item unobtainable
+          "@reqs/late chozo,@can/bomb,space,spider,ice,plasma",
 
-          // Normal access
-          "[normal],sbn,@can/bomb,missile,ice,plasma,space",
+          // Climb to first bomb slot
+          "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice,plasma",
 
-          // Hard access
-          "[hard],sbh,@can/bomb,missile,ice,plasma,space",
-          "[hard],sbh,@can/bomb,missile,ice,plasma,spider",
-          "[hard],sbh,@can/bomb,missile,space,boost",
+          // Infinite speed glitch
+          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
           "{artifactcheck}"
         ],
@@ -1188,27 +1228,14 @@
       {
         "name": "Antechamber",
         "access_rules": [
-          // Global access and escape
-          "@reqs/chozohote,wave,boost,ice",
-          "@reqs/frigate,boost,ice",
+          // Developer intended
+          "@reqs/reflecting pool,missile,ice",
 
-          // Normal access and escape
-          "[normal],sbn,@can/bomb,missile,space,wave,ice",
+          // Allow vanilla beams, but require visible items
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/reflecting pool,missile",
 
-          // Hard access and escape
-          "[hard],sbh,missile,ice,@can/bomb",
-          "[hard],sbh,missile,ice,space",
-          "[hard],sbh,missile,@can/pb,@can/bomb,space",
-
-          // Global access (must reload if not ice)
-          "{@reqs/chozohote,wave,boost}",
-          "{@reqs/frigate,boost}",
-
-          // Normal access (must reload if not ice)
-          "{normal,@can/bomb,missile,space,wave}",
-
-          // Hard access (must reload if not ice or powerbombs)
-          "{hard,missile,@can/bomb,space}",
+          // Visibility (visible from outside)
+          "{$disabled|r_obfuscate,@reqs/reflecting pool,missile}",
 
           "{artifactcheck}"
         ],
@@ -1236,18 +1263,11 @@
       {
         "name": "Lava Lake",
         "access_rules": [
-          // Global access
-          "@can/bomb or pb,@has/any suit,missile,space",
+          // Developer intended
+          "missile,morph,space,$EarlyMagmoor",
 
-          // Glitchless sequence break (no glitches, just an extreme outlier location)
-          "@has/any suit,missile,morph,[bomb]",
-          "@has/any suit,missile,morph,[pb]",
-
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,morph",
-
-          // Hard access
-          "[hard],sbh,@has/any suit,missile,morph",
+          // Damage boost through lava
+          "@set/t_liquidboost,missile,morph,$EarlyMagmoor",
 
           "{artifactcheck}"
         ],
@@ -1269,14 +1289,8 @@
       {
         "name": "Triclops Pit",
         "access_rules": [
-          // Global access
-          "@has/any suit,missile,morph,space,[xray]",
-
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,morph,space",
-
-          // Hard access
-          "[hard],sbh,@has/any suit,missile,morph",
+          // Developer intended
+          "@reqs/early magmoor,missile,space,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -1298,8 +1312,8 @@
       {
         "name": "Storage Cavern",
         "access_rules": [
-          // Global access
-          "@has/any suit,missile,morph",
+          // Developer intended
+          "@reqs/early magmoor,morph",
 
           "{artifactcheck}"
         ],
@@ -1321,8 +1335,8 @@
       {
         "name": "Transport Tunnel A",
         "access_rules": [
-          // Global access
-          "@can/bomb,@has/any suit,missile",
+          // Developer intended
+          "@reqs/early magmoor,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -1344,15 +1358,14 @@
       {
         "name": "Shore Tunnel",
         "access_rules": [
-          // Global access
-          "@can/pb,@has/any suit,missile,space",
+          // Developer intended
+          "@reqs/early magmoor,@can/pb,space",
 
-          // Normal access
-          "[normal],sbn,@can/pb,@has/any suit,missile",
+          // Escape using a DBJ
+          "@set/t_dbj,@reqs/early magmoor,@can/pb,bomb",
 
-          // Hard access
-          "[hard],sbh,@can/pb,missile,@has/any suit",
-          "[hard],sbh,@can/pb,missile,etank:5",
+          // Softlockable (need space or a dbj to escape)
+          "{@reqs/early magmoor,@can/pb}",
 
           "{artifactcheck}"
         ],
@@ -1377,16 +1390,14 @@
           {
             "name": "Morph Track (Missile)",
             "access_rules": [
-              // Global access
-              "@can/bomb,@has/any suit,missile,space",
+              // Developer intended
+              "missile,$EarlyMagmoor,@can/bomb",
 
-              // Normal access
-              "[normal],sbn,@has/any suit,missile,@can/bomb",
-              "[normal],sbn,@has/any suit,missile,space",
+              // Jump on the morph ball tunnel
+              "@set/t_terrain,missile,$EarlyMagmoor,morph,space",
 
-              // Hard access
-              "[hard],sbh,@has/any suit,missile,@can/bomb",
-              "[hard],sbh,@has/any suit,missile,space",
+              // Damage boost through lava from Tallon elevator and jump on tunnel
+              "@set/t_liquidboost,@set/t_terrain,missile,$EarlyMagmoor,space",
 
               "{artifactcheck}"
             ],
@@ -1396,20 +1407,23 @@
           {
             "name": "Warrior Shrine Tunnel (Powerbomb)",
             "access_rules": [
-              // Global access and escape
-              "@can/pb,@has/any suit,missile,boost,space,@can/bomb",
+              // Developer intended
+              "@reqs/early magmoor,@can/pb,bomb,space,boost",
 
-              // Normal access and escape
-              "[normal],sbn,@can/bomb,@can/pb,@has/any suit,missile,space",
+              // DBJ up to spinner
+              "@set/t_dbj,@reqs/early magmoor,@can/pb,bomb,boost",
 
-              // Hard access and escape
-              "[hard],sbh,@can/pb,@has/any suit,missile,@can/bomb",
+              // Dash off puffer/pirate instead of spinner
+              "@set/t_dash,@reqs/early magmoor,@can/pb,bomb,space",
+              
+              // DBJ and dash
+              "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb,bomb",
 
-              // Global access (must reload if not bombs)
-              "{@can/pb,@has/any suit,missile,boost,space}",
-
-              // Hard access (must reload if not bombs)
-              "{hard,@can/pb,@has/any suit,missile,space}",
+              // Softlockable (need bombs to escape)
+              "{@reqs/early magmoor,@can/pb,space,boost}",
+              "{@set/t_dbj,@reqs/early magmoor,@can/pb,boost}",
+              "{@set/t_dash,@reqs/early magmoor,@can/pb,space}",
+              "{@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb",
 
               "{artifactcheck}"
             ],
@@ -1428,15 +1442,17 @@
       {
         "name": "Warrior Shrine",
         "access_rules": [
-          // Global access
-          "@has/any suit,missile,morph,boost,space",
+          // Developer intended
+          "@reqs/early magmoor,@can/bomb,space,boost",
 
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,space",
+          // DBJ up to spinner
+          "@set/t_dbj,@reqs/early magmoor,@can/bomb,boost",
 
-          // Hard access
-          "[hard],sbh,@has/any suit,missile,@can/bomb",
-          "[hard],sbh,@has/any suit,missile,space",
+          // Dash off puffer/pirate instead of spinner
+          "@set/t_dash,@reqs/early magmoor,space",
+
+          // DBJ and dash
+          "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/bomb",
 
           "{artifactcheck}"
         ],
@@ -1458,25 +1474,31 @@
       {
         "name": "Plasma Processing",
         "access_rules": [
-          // Global access and escape
-          "@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple,plasma",
+          // Developer intended and escape
+          "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
+          // Allow vanilla beams but require visible items
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
 
-          // Normal access and escape
-          "[normal],sbn,@can/bomb,@has/any suit,missile,space,wave,ice,boost,plasma",
+          // Skip grapple beam to spinners
+          "@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
+          // Allow vanilla beams
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
 
-          // Hard access and escape
-          "[hard],sbh,@can/bomb,missile,wave,ice,space,@has/any suit,plasma",
-          "[hard],sbh,@can/bomb,missile,wave,ice,space,etank:1,plasma",
+          // Skip grapple and ghetto jump to bomb slot
+          "@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
+          // Allow vanilla beams
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
 
-          // Global access and visibility (can see from outside, no reload)
-          "{@can/bomb,@has/any suit,missile,space,wave,ice,boost,spider,grapple}",
+          // Workstation OoB
+          "@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
+          // Allow vanilla beams
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
 
-          // Normal access and visibility (can see from outside, no reload)
-          "{normal,@can/bomb,@has/any suit,missile,space,wave,ice,boost}",
-
-          // Hard access and visibility (can see from outside, no reload)
-          "{hard,@can/bomb,missile,wave,ice,space,@has/any suit}",
-          "{hard,@can/bomb,missile,wave,ice,space,etank:1}",
+          // Visibility (can see from outside, need plasma to escape)
+          "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
+          "{@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider}",
+          "{@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
+          "{@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
 
           "{artifactcheck}"
         ],
@@ -1498,14 +1520,11 @@
       {
         "name": "Magmoor Workstation",
         "access_rules": [
-          // Global access
-          "@has/any suit,missile,morph,space,wave,[thermal],grapple,spider",
+          // Developer intended
+          "@reqs/late magmoor,morph,wave,@can/pass thermal",
 
-          // Normal access
-          "[normal],sbn,@has/any suit,missile,morph,space,wave",
-
-          // Hard access
-          "[hard],sbh,@reqs/phen backwards",
+          // Visibility
+          "{$disabled|r_obfuscate,@reqs/late magmoor,morph}",
 
           "{artifactcheck}"
         ],
@@ -1536,16 +1555,14 @@
           {
             "name": "Behind Ice (Missile)",
             "access_rules": [
-              // Global access
-              "@reqs/phendrana,plasma",
+              // Developer intended
+              "@reqs/front phen,plasma",
 
-              // Hard access
-              "[hard],sbh,@reqs/phendrana,@can/isg",
-              "[hard],sbh,@reqs/phen backwards,plasma",
-              "[hard],sbh,@reqs/phen backwards,@can/isg",
+              // Early Sun infinite speed
+              "@set/t_sunisg,@can/isg,wave",
 
-              // Global visibility
-              "{@reqs/phendrana}",
+              // Visibility
+              "{$disabled|r_obfuscate,@reqs/front phen}",
 
               "{artifactcheck}"
             ],
@@ -1555,12 +1572,11 @@
           {
             "name": "Spider Track (Missile)",
             "access_rules": [
-              // Global access
-              "@reqs/phendrana,@can/super,space,spider",
+              // Developer intended
+              "@reqs/front phen,@can/super,space,spider",
 
-              // Hard access
-              "[hard],sbh,@reqs/phendrana,@can/super,spider",
-              "[hard],sbh,@reqs/phen backwards,@can/super,spider",
+              // Visibility
+              "{$disabled|r_obfuscate,@reqs/front phen}",
 
               "{artifactcheck}"
             ],
@@ -1579,14 +1595,14 @@
       {
         "name": "Chozo Ice Temple",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,space,plasma",
+          // Developer intended
+          "@reqs/front phen,space,plasma",
 
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,plasma",
-          "[hard],sbh,@reqs/phendrana,@can/isg",
-          "[hard],sbh,@reqs/phen backwards,plasma",
-          "[hard],sbh,@reqs/phen backwards,@can/isg",
+          // Early Sun infinite speed
+          "@set/t_sunisg,@can/isg,@reqs/front phen,wave",
+
+          // Early Sun ISG OoB
+          "@set/oob_wavesun,@can/wallcrawl,@set/t_sunisg,@can/isg,@reqs/front phen",
 
           "{artifactcheck}"
         ],
@@ -1608,12 +1624,8 @@
       {
         "name": "Ice Ruins West",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,space,plasma",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,plasma",
-          "[hard],sbh,@reqs/phen backwards,plasma",
+          // Developer intended
+          "@reqs/front phen,space,plasma",
 
           "{artifactcheck}"
         ],
@@ -1638,13 +1650,8 @@
           {
             "name": "Behind Ice (Missile)",
             "access_rules": [
-              // Global access
-              "@reqs/phendrana,plasma",
-
-              // Hard access
-              "[hard],sbh,@reqs/phendrana,@can/isg",
-              "[hard],sbh,@reqs/phen backwards,plasma",
-              "[hard],sbh,@reqs/phen backwards,@can/isg",
+              // Developer intended
+              "@reqs/front phen,plasma",
 
               "{artifactcheck}"
             ],
@@ -1654,11 +1661,8 @@
           {
             "name": "Spider Track (Missile)",
             "access_rules": [
-              // Global access
-              "@reqs/phendrana,spider",
-
-              // Hard access
-              "[hard],sbh,@reqs/phen backwards,spider",
+              // Developer intended
+              "@reqs/front phen,spider",
 
               "{artifactcheck}"
             ],
@@ -1677,21 +1681,14 @@
       {
         "name": "Chapel of the Elders",
         "access_rules": [
-          // Global access and escape
-          "@reqs/phendrana,wave,space",
+          // Developer intended
+          "@reqs/front phen,@can/bomb,space,wave",
 
-          // Hard access and escape
-          "[hard],sbh,@reqs/phendrana,wave,space",
-          "[hard],sbh,@reqs/phendrana,wave,@can/bomb",
-          "[hard],sbh,@reqs/phen backwards,wave,space",
-          "[hard],sbh,@reqs/phen backwards,wave,@can/bomb",
+          // Allow vanilla beams but require visible items
+          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/fron phen,@can/bomb,space",
 
-          // Global access and visibility (can see from outside, no reload)
-          "{@reqs/phendrana,space}",
-
-          // Hard access (can see from outside, no reload)
-          "{hard,@reqs/phendrana}",
-          "{hard,@reqs/phen backwards}",
+          // Visibility (can see from outside, need wave to escape)
+          "{$disabled|r_obfuscate,@reqs/front phen,@can/bomb,space}",
 
           "{artifactcheck}"
         ],
@@ -1713,15 +1710,14 @@
       {
         "name": "Ruined Courtyard",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,boost,space,wave",
+          // Developer intended, first pass
+          "@reqs/mid phen,space,wave,@can/bomb,boost",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,space,wave",
+          // Developer intended, shortcut
+          "@reqs/mid phen,space,wave,spider",
 
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,wave",
-          "[hard],sbh,@reqs/phen backwards,wave",
+          // Terrain abuse to climb
+          "@set/t_terrain,@set/t_ljump,@reqs/mid phen,space,wave",
 
           "{artifactcheck}"
         ],
@@ -1743,16 +1739,12 @@
       {
         "name": "Phendrana Canyon",
         "access_rules": [
-          // Global access and escape
-          "@reqs/phendrana,space",
-          "@reqs/phendrana,boost",
+          // Developer intended and escape
+          "@reqs/front phen,space",
+          "@reqs/front phen,boost",
 
-          // Hard access and escape (assumes you will use boxes, potential softlock)
-          "hard,@reqs/phendrana",
-          "hard,@reqs/phen backwards",
-
-          // Global access (reload needed only if boxes are destroyed)
-          "{@reqs/phendrana}",
+          // Softlockable (reload needed only if boxes are destroyed)
+          "{@reqs/front phen}",
 
           "{artifactcheck}"
         ],
@@ -1774,33 +1766,14 @@
       {
         "name": "Quarantine Cave",
         "access_rules": [
-          // Global access and escape
-          "@reqs/phendrana,@can/super,boost,space,wave,[thermal],spider",
-          "@reqs/phendrana,@can/super,boost,space,wave,[thermal],grapple",
-          "@reqs/phen backwards,[thermal],spider",
-          "@reqs/phen backwards,[thermal],grapple",
+          // Developer intended
+          "@reqs/quarantine cave,spider,@can/pass thermal",
 
-          // Normal access and escape
-          "[normal],sbn,@reqs/phendrana,wave,@can/super,spider",
-          "[normal],sbn,@reqs/phendrana,wave,@can/super,grapple",
-          "[normal],sbn,@reqs/phen backwards,spider",
-          "[normal],sbn,@reqs/phen backwards,grapple",
+          // Escape with grapple
+          "$disabled|r_noriskspider|sb_r_noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
 
-          // Hard access and escape
-          "[hard],sbh,@reqs/phen backwards,space",
-          "[hard],sbh,@reqs/phen backwards,@can/bomb,spider",
-          "[hard],sbh,@reqs/phen backwards,@can/bomb,grapple",
-
-          // Global access (must reload if thardus doesn't drop spider or grapple)
-          "{@reqs/phendrana,@can/super,boost,space,wave,[thermal]}",
-          "{@reqs/phen backwards,[thermal]}",
-
-          // Normal access (must reload if thardus doesn't drop spider or grapple)
-          "{normal,@reqs/phendrana,wave,@can/super}",
-          "{normal,@reqs/phen backwards}",
-
-          // Hard access (must reload if thardus doesn't drop spider, grapple, or space)
-          "{hard,@reqs/phen backwards,@can/bomb}",
+          // Softlockable (need spider or grapple to escape)
+          "{@reqs/quarantine cave,@can/pass thermal}",
 
           "{artifactcheck}"
         ],
@@ -1822,18 +1795,11 @@
       {
         "name": "Quarantine Monitor",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,@can/super,boost,space,wave,[thermal],grapple",
-          "@reqs/phen backwards,[thermal],grapple",
+          // Developer intended
+          "@reqs/quarantine cave,@can/pass thermal,spider,grapple",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,@can/super,wave,space,spider",
-          "[normal],sbn,@reqs/phendrana,@can/super,wave,space,grapple",
-          "[normal],sbn,@reqs/phen backwards,grapple",
-
-          // Hard access
-          "[hard],sbh,@reqs/phen backwards,grapple",
-          "[hard],sbh,@reqs/phen backwards,space",
+          // Dash to entrance
+          "@set/t_dash,@reqs/quarantine cave,@can/pass thermal,spider",
 
           "{artifactcheck}"
         ],
@@ -1855,28 +1821,11 @@
       {
         "name": "Research Lab Hydra",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,@can/super,[thermal],boost,space,wave",
-          "@reqs/phen backwards,@can/super,[thermal],ice",
+          // Developer intended
+          "@reqs/phen labs,@can/super",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,@can/super,wave,space",
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,@can/super,wave",
-          "[hard],sbh,@reqs/phen backwards,@can/super,wave",
-
-          // Global visibility
-          "{@reqs/phendrana,boost,space,wave,xray}",
-          "{@reqs/phen backwards,ice,xray}",
-
-          // Normal visibility
-          "{normal,@reqs/phendrana,wave,space,xray}",
-
-          // Hard visibility
-          "{hard,@reqs/phendrana,wave,xray}",
-          "{hard,@reqs/phen backwards,wave,xray}",
+          // Visibility
+          "{$disabled|r_obfuscate,@reqs/phen labs,xray}",
 
           "{artifactcheck}"
         ],
@@ -1898,17 +1847,8 @@
       {
         "name": "Observatory",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,@can/bomb,ice",
-
-          // Normal access
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike",
+          // Developer intended
+          "@reqs/phen labs,@can/climb observatory",
 
           "{artifactcheck}"
         ],
@@ -1930,20 +1870,15 @@
       {
         "name": "Control Tower",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,plasma,boost,space,wave",
-          "@reqs/phen backwards,plasma,[thermal],ice",
+          // Developer intended
+          "@reqs/phen labs,plasma,bombs",
 
-          // Normal access
-          "[normal],sbn,@reqs/phendrana,boost,space,wave",
-          "[normal],sbn,@reqs/phen backwards,ice",
+          // Terrain abuse to item
+          "@set/t_terrain,@reqs/phen labs,bombs",
 
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus,space",
-          "[hard],sbh,@reqs/mags thardus,spider,boost,plasma",
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,spider,plasma",
+          // Softlockable (need bombs to escape)
+          "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
+          "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@set/t_terrain,@reqs/phen labs}",
 
           "{artifactcheck}"
         ],
@@ -1965,17 +1900,8 @@
       {
         "name": "Research Lab Aether",
         "access_rules": [
-          // Global access
-          "@reqs/phendrana,boost,space,wave",
-          "@reqs/phen backwards,[thermal],ice",
-
-          // Normal access
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike",
+          // Developer intended
+          "@reqs/phen labs",
 
           "{artifactcheck}"
         ],
@@ -2002,22 +1928,8 @@
       {
         "name": "Research Core",
         "access_rules": [
-          // Global access and escape
-          "@reqs/phendrana,boost,space,wave,[thermal],ice",
-          "@reqs/phen backwards,ice,[thermal]",
-
-          // Normal access and escape
-          "[normal],sbn,@reqs/phendrana,space,wave,boost",
-          "[normal],sbn,@reqs/phen backwards,ice",
-
-          // Hard access and escape
-          "[hard],sbh,@reqs/phendrana,space,wave",
-          "[hard],sbh,@reqs/mags thardus",
-          "[hard],sbh,@reqs/mags frozenpike",
-
-          // Global access and visibility (can leave room before obtaining)
-          "{@reqs/phendrana,boost,space,wave}",
-          "{@reqs/phen backwards,ice}",
+          // Developer intended
+          "@reqs/phen labs",
 
           "{artifactcheck}"
         ],
@@ -2039,20 +1951,11 @@
       {
         "name": "Transport Access",
         "access_rules": [
-          // Global access
-          "[thermal],plasma,ice,@reqs/phendrana,boost,space,wave,spider",
-          "[thermal],plasma,ice,@reqs/phen backwards",
+          // Developer intended
+          "@reqs/far phen,plasma",
 
-          // Normal access
-          "[normal],sbn,plasma,ice,@reqs/phendrana,space,wave",
-          "[normal],sbn,plasma,ice,@reqs/phen backwards",
-
-          // Hard access
-          "[hard],sbh,@reqs/phen backwards,ice,plasma",
-
-          // Global visibility
-          "{ice,[thermal],@reqs/phendrana,boost,space,wave,spider}",
-          "{ice,[thermal],@reqs/phen backwards}",
+          // Visibility
+          "{$disabled|r_obfuscate,@reqs/far phen}",
 
           "{artifactcheck}"
         ],
@@ -2074,20 +1977,14 @@
       {
         "name": "Frost Cave",
         "access_rules": [
-          // Global access
-          "ice,grapple,@reqs/phendrana,boost,space,wave",
-          "ice,grapple,@reqs/phen backwards",
+          // Developer intended
+          "@reqs/far phen,grapple",
 
-          // Normal access
-          "[normal],sbn,ice,@reqs/phendrana,space,wave",
-          "[normal],sbn,ice,@reqs/phen backwards",
+          // Dash to ledge
+          "@set/t_dash,@reqs/far phen",
 
-          // Hard access
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple",
-
-          // Global visibility
-          "{ice,@reqs/phen backwards}",
+          // Visibility
+          "{$disabled|r_obfuscate,@reqs/far phen}",
 
           "{artifactcheck}"
         ],
@@ -2109,17 +2006,16 @@
       {
         "name": "Storage Cave",
         "access_rules": [
-          // Global access
-          "@can/pb,ice,plasma,grapple,@reqs/phendrana,boost,space,wave,[thermal]",
-          "@can/pb,ice,plasma,grapple,@reqs/phen backwards",
+          // Developer intended
+          "@reqs/far phen,@can/pb,plasma,grapple",
 
-          // Normal access
-          "[normal],sbn,@can/pb,ice,plasma,@reqs/phendrana,space,wave",
-          "[normal],sbn,@can/pb,ice,plasma,@reqs/phen backwards",
-
-          // Hard access
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple,spider",
+          // Climbing room with terrain abuse and traversing frost/hunter cave:
+          //   with gravity suit
+          "@set/t_ljump,@set/t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
+          //   with a dash
+          "@set/t_ljump,@set/t_terrain,@set/t_dash,@reqs/far phen,@can/pb,plasma",
+          //   with a ghetto jump
+          "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
           "{artifactcheck}"
         ],
@@ -2141,16 +2037,16 @@
       {
         "name": "Security Cave",
         "access_rules": [
-          // Global access
-          "ice,grapple,@reqs/phendrana,boost,space,wave",
-          "ice,grapple,@reqs/phen backwards",
+          // Developer intended
+          "@reqs/far phen,@can/pb,plasma,grapple",
 
-          // Normal access
-          "[normal],sbn,ice,grapple,@reqs/phendrana,space,wave",
-
-          // Hard access
-          "[hard],sbh,@reqs/mags frozenpike,space",
-          "[hard],sbh,@reqs/mags frozenpike,grapple,spider",
+          // Climbing room with terrain abuse and traversing frost/hunter cave:
+          //   with gravity suit
+          "@set/t_ljump,@set/t_terrain,@reqs/far phen,@can/pb,plasma,gravity",
+          //   with a dash
+          "@set/t_ljump,@set/t_terrain,@set/t_dash,@reqs/far phen,@can/pb,plasma",
+          //   with a ghetto jump
+          "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
           "{artifactcheck}"
         ],
@@ -2175,29 +2071,15 @@
           {
             "name": "Underwater (Gravity Suit)",
             "access_rules": [
-              // Global access and escape
-              "@reqs/phendrana,ice,boost,space,wave,gravity,[thermal]",
-              "@reqs/phen backwards,ice,gravity",
+              // Developer intended
+              "@reqs/far phen,gravity",
 
-              // Normal access and escape
-              "[normal],sbn,ice,@reqs/phendrana,space,wave,gravity,[thermal]",
-              "[normal],sbn,ice,@reqs/phen backwards,gravity",
+              // Escape and access with underwater ghetto jump
+              "$disabled|r_noriskgravity|sb_r_noriskgravity,@set/t_ghetto,@reqs/far phen",
 
-              // Hard access and escape
-              "[hard],sbh,@reqs/mags frozenpike,space,gravity",
-              "[hard],sbh,@reqs/mags frozenpike,grapple,spider,gravity,@can/bomb",
-
-              // Global access (must reload if not gravity)
-              "{@reqs/phendrana,ice,boost,space,wave,[thermal]}",
-              "{@reqs/phen backwards,ice}",
-
-              // Normal access (must reload if not gravity)
-              "{normal,ice,@reqs/phendrana,space,wave}",
-              "{normal,ice,@reqs/phen backwards}",
-
-              // Hard access (must reload if not gravity)
-              "{hard,@reqs/mags frozenpike,space}",
-              "{hard,@reqs/mags frozenpike,grapple,spider}",
+              // Softlockable (need gravity if you don't know how to ghetto jump)
+              "{@reqs/far phen,grapple}",
+              "{@set/t_dash,@reqs/far phen}",
 
               "{artifactcheck}"
             ],
@@ -2207,17 +2089,14 @@
           {
             "name": "Grapple Ledge (Missile)",
             "access_rules": [
-              // Global access
-              "@can/pb,ice,plasma,gravity,grapple,@reqs/phendrana,boost,space,wave,[thermal]",
-              "@can/pb,ice,plasma,gravity,grapple,@reqs/phen backwards",
+              // Developer intended
+              "@reqs/far phen,gravity,grapple,plasma",
 
-              // Normal access
-              "[normal],sbn,ice,plasma,grapple,@reqs/phendrana,space,wave",
-              "[normal],sbn,ice,plasma,grapple,@reqs/phen backwards",
+              // Ghetto R jump to the item
+              "$disabled|r_noriskgravity|sb_r_noriskgravity,@set/t_ghetto,@set/t_rjump,@reqs/far phen",
 
-              // Hard access
-              "[hard],sbh,@reqs/mags frozenpike,space",
-              "[hard],sbh,@reqs/mags frozenpike,plasma,grapple,spider",
+              // Softlockable (in case of falling in)
+              "{@reqs/far phen,grapple,plasma}",
 
               "{artifactcheck}"
             ],
@@ -2242,16 +2121,14 @@
       {
         "name": "Main Quarry",
         "access_rules": [
-          // Global access
-          "@reqs/mines from tallon,spider",
-          "@reqs/mines from magmoor,[thermal],grapple",
+          // Developer intended
+          "@reqs/upper mines,@can/bomb,@can/pass thermal,spider",
 
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon",
-          "[normal],sbn,@reqs/mines from magmoor",
+          // Ghetto and L jump to crane
+          "@set/t_terrain,@set/t_ghetto,@set/t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
 
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,space",
+          // Visibility
+          "{$disabled|r_obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
 
           "{artifactcheck}"
         ],
@@ -2273,12 +2150,8 @@
       {
         "name": "Security Access A",
         "access_rules": [
-          // Global access
-          "@reqs/mines from tallon,@can/pb",
-          "@reqs/mines from magmoor,grapple",
-
-          // Normal access
-          "[normal],sbn,@reqs/mines from magmoor",
+          // Developer intended w/ check for infinite boost possibility
+          "@reqs/upper mines,@can/pb,$ERIB",
 
           "{artifactcheck}"
         ],
@@ -2300,12 +2173,8 @@
       {
         "name": "Storage Depot A",
         "access_rules": [
-          // Global access
-          "plasma,@reqs/mines from tallon,@can/pb",
-          "plasma,@reqs/mines from magmoor,grapple",
-
-          // Normal access
-          "[normal],sbn,plasma,@reqs/mines from magmoor",
+          // Developer intended w/ check for infinite boost possibility
+          "@reqs/upper mines,@can/pb,plasma,$ERIB",
 
           "{artifactcheck}"
         ],
@@ -2330,16 +2199,8 @@
           {
             "name": "Phazon Elite (Artifact of Warrior)",
             "access_rules": [
-              // Global access
-              "boost,@reqs/mines from tallon,@can/pb,spider",
-              "boost,@reqs/mines from magmoor,grapple",
-
-              // Normal access
-              "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
-              "[normal],sbn,boost,@reqs/mines from magmoor",
-
-              // Hard access
-              "[hard],sbh,@reqs/mines from tallon,@can/pb",
+              // Developer intended w/ check for infinite boost possibility
+              "@reqs/upper mines,@can/pb,$ERIB",
 
               "{artifactcheck}"
             ],
@@ -2349,15 +2210,8 @@
           {
             "name": "Laser (Missile)",
             "access_rules": [
-              // Global access
-              "boost,@reqs/mines from tallon",
-              "boost,@reqs/mines from magmoor,grapple",
-
-              // Normal access
-              "[normal],sbn,boost,@reqs/mines from magmoor",
-
-              // Hard access
-              "[hard],sbh,@reqs/mines from tallon",
+              // Developer intended
+              "@reqs/upper mines,@can/bomb,boost,@can/pass xray",
 
               "{artifactcheck}"
             ],
@@ -2376,15 +2230,11 @@
       {
         "name": "Storage Depot B",
         "access_rules": [
-          // Global access
-          "@reqs/mines from tallon,@can/pb,boost,spider",
-          "@reqs/mines from magmoor",
+          // Developer intended
+          "@reqs/mags to mines",
 
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon",
+          // Reverse mines
+          "@reqs/tallon to mines,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2406,16 +2256,11 @@
       {
         "name": "Fungal Hall Access",
         "access_rules": [
-          // Global access
-          "boost,[xray],plasma,@reqs/mines from tallon,@can/pb,spider",
-          "boost,[xray],plasma,@reqs/mines from magmoor",
+          // Developer intended
+          "@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider",
 
-          // Normal access
-          "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
+          // Exit Metroid Quarantine A without spider
+          "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2437,17 +2282,14 @@
       {
         "name": "Phazon Mining Tunnel",
         "access_rules": [
-          // Global access
-          "boost,[xray],plasma,grapple,phazon,@reqs/mines from tallon,@can/pb,spider",
-          "boost,[xray],plasma,grapple,phazon,@reqs/mines from magmoor",
+          // Developer intended
+          "@reqs/lower mines,phazon",
 
-          // Normal access
-          "[normal],sbn,boost,plasma,phazon,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,phazon,@reqs/mines from magmoor",
+          // Early Newborn inbounds
+          "@set/t_phazontunnelnosuit,@reqs/lower mines,boost,etank:11",
 
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,phazon,plasma,spider",
+          // Early Newborn wallcrawl
+          "@set/t_phazontunnelnosuit,@set/oob_earlynewborn,@can/wallcrawl,@reqs/lower mines",
 
           "{artifactcheck}"
         ],
@@ -2469,17 +2311,10 @@
       {
         "name": "Fungal Hall B",
         "access_rules": [
-          // Global access
-          "boost,[xray],plasma,@reqs/mines from tallon,@can/pb,spider",
-          "boost,[xray],plasma,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,plasma,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,plasma,spider",
+          // Developer intended w/ thermal
+          "@reqs/lower mines,@can/pass thermal",
+          //                    w/ xray
+          "@reqs/lower mines,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2501,16 +2336,11 @@
       {
         "name": "Metroid Quarantine A",
         "access_rules": [
-          // Global access
-          "boost,[xray],@reqs/mines from tallon,@can/pb,spider",
-          "boost,[xray],@reqs/mines from magmoor",
+          // Developer intended
+          "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray,spider",
 
-          // Normal access
-          "[normal],sbn,boost,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+          // Skip spider ball
+          "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
           "{artifactcheck}"
         ],
@@ -2532,17 +2362,11 @@
       {
         "name": "Metroid Quarantine B",
         "access_rules": [
-          // Global access
-          "@can/super,boost,[xray],grapple,plasma,@reqs/mines from tallon,@can/pb,spider",
-          "@can/super,boost,[xray],grapple,plasma,@reqs/mines from magmoor",
+          // Developer intended
+          "@reqs/lower mines,@can/super",
 
-          // Normal access
-          "[normal],sbn,@can/super,plasma,boost,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,@can/super,plasma,boost,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/super,@can/pb,plasma,spider",
+          // Visibility
+          "{$disabled|r_obfuscate,@reqs/lower mines,xray}",
 
           "{artifactcheck}"
         ],
@@ -2564,17 +2388,8 @@
       {
         "name": "Elite Quarters",
         "access_rules": [
-          // Global access
-          "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
-          "boost,plasma,xray,grapple,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,spider",
+          // Developer intended
+          "@reqs/lower mines,xray",
 
           "{artifactcheck}"
         ],
@@ -2596,16 +2411,8 @@
       {
         "name": "Processing Center Access",
         "access_rules": [
-          // Global access
-          "boost,plasma,xray,grapple,@reqs/mines from tallon,@can/pb,spider",
-          "boost,plasma,xray,grapple,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from tallon,@can/pb",
-          "[normal],sbn,boost,plasma,xray,@reqs/mines from magmoor",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb,xray,plasma,space",
+          // Developer intended
+          "@reqs/lower mines,xray",
 
           "{artifactcheck}"
         ],
@@ -2627,15 +2434,8 @@
       {
         "name": "Phazon Processing Center",
         "access_rules": [
-          // Global access
-          "@reqs/mines from tallon,@can/pb,spider",
-          "@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon,@can/pb",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+          // Developer intended
+          "@reqs/upper mines,@can/pb,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2657,15 +2457,8 @@
       {
         "name": "Elite Control Access",
         "access_rules": [
-          // Global access
-          "@reqs/mines from tallon,spider",
-          "@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon",
+          // Developer intended
+          "@reqs/upper mines,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2687,15 +2480,8 @@
       {
         "name": "Ventilation Shaft",
         "access_rules": [
-          // Global access
-          "boost,@reqs/mines from tallon,@can/pb,spider",
-          "boost,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon,@can/pb",
+          // Developer intended
+          "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],
@@ -2717,15 +2503,8 @@
       {
         "name": "Central Dynamo",
         "access_rules": [
-          // Global access
-          "boost,@reqs/mines from tallon,spider",
-          "boost,@reqs/mines from magmoor",
-
-          // Normal access
-          "[normal],sbn,boost,@reqs/mines from tallon",
-
-          // Hard access
-          "[hard],sbh,@reqs/mines from tallon",
+          // Developer intended
+          "@reqs/upper mines,@can/bomb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
           "{artifactcheck}"
         ],

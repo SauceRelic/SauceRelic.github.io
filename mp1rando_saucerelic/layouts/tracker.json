@@ -51,6 +51,17 @@
                   "type": "item",
                   "item": "shuf_space",
                   "margin": "0,5"
+                },
+                {
+                  "type": "image",
+                  "image": "images/settings/static_heatshield.png",
+                  "margin": "0,100,0,15",
+                  "h_alignment": "center"
+                },
+                {
+                  "type": "item",
+                  "item": "hs_anysuit",
+                  "h_alignment": "center"
                 }
               ]
             },

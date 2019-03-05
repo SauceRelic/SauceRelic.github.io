@@ -1,3 +1,6 @@
+v1.0.3.1
+  Stable logic is now hidden
+
 v1.0.3.0
   Mirrored randomizer beta update 10:
     - Added heat damage prevention option. Previous references to "any suit" are now "heat shielding"

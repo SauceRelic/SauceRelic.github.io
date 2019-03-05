@@ -14,22 +14,22 @@
       "name": "Metroid Prime Randomizer",
       "game_name": "Metroid Prime Randomizer",
       "author": "SauceRelic",
-      "version": "1.0.2.1",
+      "version": "1.0.3.0",
       "flags": [ "map", "pins", "chathud" ],
       "uid": "mp1rando_saucerelic",
       "link": "https://saucerelic.github.io/mp1rando_saucerelic.zip",
       "variants": [
         {
-          "name": "Map Tracker",
+          "name": "Beta 10 Logic",
+          "flags": [ "map", "pins", "chathud" ]
+        },
+        {
+          "name": "Stable Logic (old)",
           "flags": [ "map", "pins", "chathud" ]
         },
         {
           "name": "Items Only",
           "flags": [ "chathud" ]
-        },
-        {
-          "name": "Map Tracker - Beta Branch",
-          "flags": [ "map", "pins", "chathud" ]
         }
       ]
     }

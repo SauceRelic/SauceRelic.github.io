@@ -5,22 +5,13 @@
     "margin": "0,0",
     "content": [
       {
-        "type": "array",
-        "orientation": "horizontal",
-        "margin": "0,0",
-        "content": [
-          {
-            "type": "itemgrid",
-            "item_margin": "6,1",
-            "h_alignment": "left",
-            "rows": [
-              [ "charge", "super",       "morph",  "space",   "varia",       "missile"   ],
-              [ "wave",   "wavecombo",   "bomb",   "grapple", "gravityitem", "etank"     ],
-              [ "ice",    "icecombo",    "boost",  "thermal", "phazon",      "powerbomb" ],
-              [ "plasma", "plasmacombo", "spider", "xray",    "",            ""          ]
-            ]
-          }
-        ]
+        "type": "layout",
+        "key": "shared_item_grid"
+      },
+      {
+        "type": "layout",
+        "key": "artifacts",
+        "margin": "0,0,0,10"
       }
     ]
   }

@@ -630,6 +630,11 @@
                     "key": "shared_item_grid"
                   },
                   {
+                    "type": "layout",
+                    "key": "artifacts",
+                    "margin": "10,0"
+                  },
+                  {
                     "type": "item",
                     "item": "artifactcheck",
                     "height": 48,
@@ -742,6 +747,11 @@
                   {
                     "type": "layout",
                     "key": "shared_item_grid"
+                  },
+                  {
+                    "type": "layout",
+                    "key": "artifacts",
+                    "margin": "10,0"
                   },
                   {
                     "type": "item",

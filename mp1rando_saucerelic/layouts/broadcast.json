@@ -5,8 +5,35 @@
     "margin": "0,0",
     "content": [
       {
-        "type": "layout",
-        "key": "shared_item_grid"
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0,0",
+        "content": [
+          {
+            "type": "itemgrid",
+            "item_margin": "3,3",
+            "v_alignment": "center",
+            "item_size": 48,
+            "rows": [
+              [ "charge", "super",       "morph",  "space"   ],
+              [ "wave",   "wavecombo",   "bomb",   "grapple" ],
+              [ "ice",    "icecombo",    "boost",  "thermal" ],
+              [ "plasma", "plasmacombo", "spider", "xray"    ]
+            ]
+          },
+          {
+            "type": "itemgrid",
+            "margin": "0,0",
+            "item_margin": "3,3",
+            "v_alignment": "center",
+            "item_size": 48,
+            "rows": [
+              [ "varia",       "missile"   ],
+              [ "gravityitem", "etank"     ],
+              [ "phazon",      "powerbomb" ]
+            ]
+          }
+        ]
       },
       {
         "type": "layout",

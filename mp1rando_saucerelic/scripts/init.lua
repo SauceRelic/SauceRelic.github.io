@@ -7,6 +7,7 @@ if not string.find(Tracker.ActiveVariantUID, "v_itemsonly") then
     Tracker:AddItems("items/sbsettings.json")
     Tracker:AddLocations("locations/settings.json")
     ScriptHost:LoadScript("scripts/logic.lua")
+    Tracker:AddLayouts("layouts/settings.json")
   end
   
   Tracker:AddMaps("maps/maps.json")

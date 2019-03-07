@@ -56,6 +56,34 @@
     "codes":  "flamethrower,flame,plasmacombo"
   },
   {
+    "name": "Super Badge",
+    "type": "toggle_badged",
+    "base_item": "charge",
+    "img": "images/badge_super.png",
+    "codes": "superbadge"
+  },
+  {
+    "name": "Buster Badge",
+    "type": "toggle_badged",
+    "base_item": "wave",
+    "img": "images/badge_buster.png",
+    "codes": "busterbadge"
+  },
+  {
+    "name": "Spreader Badge",
+    "type": "toggle_badged",
+    "base_item": "ice",
+    "img": "images/badge_spreader.png",
+    "codes": "spreaderbadge"
+  },
+  {
+    "name": "Flamethrower Badge",
+    "type": "toggle_badged",
+    "base_item": "plasma",
+    "img": "images/badge_flamethrower.png",
+    "codes": "flamebadge"
+  },
+  {
     "name": "Grapple Beam",
     "type": "toggle",
     "loop": true,

@@ -15,6 +15,8 @@ if not string.find(Tracker.ActiveVariantUID, "v_itemsonly") then
   Tracker:AddLocations("locations/locations.json")
 end
 
+ScriptHost:LoadScript("scripts/special.lua")
+
 Tracker:AddLayouts("layouts/shared.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")

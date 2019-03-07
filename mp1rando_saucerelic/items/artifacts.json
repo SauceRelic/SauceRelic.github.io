@@ -4,7 +4,7 @@
     "type": "consumable",
     "img": "images/artifacts.png",
     "max_quantity": 12,
-    "codes": "allartifacts,artifact,artifacts,art,arts,chozoartifact,chozoartifacts"
+    "codes": "artifact,artifacts,art,arts,chozoartifact,chozoartifacts"
   },
   {
     "name": "Chozo Artifacts (Broadcast View)",

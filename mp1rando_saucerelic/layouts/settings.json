@@ -10,7 +10,7 @@
           "tabs": [
             {
               "title": "Restrictions",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_restrictions.png",
               "content": {
                 "type": "array",
                 "orientation": "horizontal",
@@ -73,7 +73,7 @@
             },
             {
               "title": "Tricks",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_tricks.png",
               "content": {
                 "type": "array",
                 "orientation": "vertical",
@@ -246,7 +246,7 @@
             },
             {
               "title": "Out of Bounds",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_oob.png",
               "content": {
                 "type": "array",
                 "orientation": "horizontal",
@@ -309,7 +309,7 @@
             },
             {
               "title": "Shuffling/Misc.",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_shuffle.png",
               "content": {
                 "type": "array",
                 "orientation": "horizontal",
@@ -383,13 +383,13 @@
 
       {
         "title": "Sequence Breaks",
-        "icon": "images/icon_settings.png",
+        "icon": "images/icon_sequencebreaks.png",
         "content": {
           "type": "tabbed",
           "tabs": [
             {
               "title": "Restrictions",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_restrictions.png",
               "content": {
                 "type": "array",
                 "orientation": "horizontal",
@@ -451,7 +451,7 @@
             },
             {
               "title": "Tricks",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_tricks.png",
               "content": {
                 "type": "array",
                 "orientation": "vertical",
@@ -623,7 +623,7 @@
             },
             {
               "title": "Out of Bounds",
-              "icon": "images/icon_settings.png",
+              "icon": "images/icon_oob.png",
               "content": {
                 "type": "array",
                 "orientation": "horizontal",

@@ -1,3 +1,14 @@
+v1.1.0.0
+  Layouts significantly improved:
+    - Items rearranged on main tracker window
+    - Disabled items now default to grayscale for higher visibility
+    - Settings are now divided into tabs
+    - Broadcast layout now includes artifacts
+  
+  Compact artifact counter for broadcast layout added, updates based on the main artifact canvas
+  Beams now have badges to track their respective combos, old style of separate items is still availible
+  Shuffle settings now automatically fill in their respective items when disabled
+
 v1.0.3.1
   Stable logic is now hidden
 
@@ -7,7 +18,8 @@ v1.0.3.0
     - Logic changes:
       * Main Plaza Half-pipe item can be obtained with a trivial space-jump
       * Late Magmoor area can be accessed from Mines, going in from south Tallon with powerbombs
-    - Variants have been renamed and rearranged to highlight the beta branch as the "main" version
+  
+  Variants have been renamed and rearranged to highlight the beta branch as the "main" version
 
 v1.0.2.1
   Fixed suitless Magmoor tanks settings, minimum for suitless run is now 3 (from 5)

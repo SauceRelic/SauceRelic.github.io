@@ -32,56 +32,56 @@
     "type": "toggle",
     "loop": true,
     "img": "images/super.png",
-    "codes": "super,supermissile,supermissiles,chargecombo"
+    "codes": "superitem,super,supermissile,supermissiles,chargecombo"
   },
   {
     "name": "Wave Buster",
     "type": "toggle",
     "loop": true,
     "img": "images/wavebuster.png",
-    "codes": "buster,wavebuster,wavecombo"
+    "codes": "busteritem,buster,wavebuster,wavecombo"
   },
   {
     "name": "Ice Spreader",
     "type": "toggle",
     "loop": true,
     "img": "images/icespreader.png",
-    "codes": "spreader,icespreader,icecombo"
+    "codes": "spreaderitem,spreader,icespreader,icecombo"
   },
   {
     "name": "Flamethrower",
     "type": "toggle",
     "loop": true,
     "img": "images/flamethrower.png",
-    "codes":  "flamethrower,flame,plasmacombo"
+    "codes": "flameitem,flamethrower,flame,plasmacombo"
   },
   {
     "name": "Super Badge",
     "type": "toggle_badged",
     "base_item": "charge",
     "img": "images/badge_super.png",
-    "codes": "superbadge"
+    "codes": "chargebadge,superbadge,super,supermissile,supermissiles,chargecombo"
   },
   {
     "name": "Buster Badge",
     "type": "toggle_badged",
     "base_item": "wave",
     "img": "images/badge_buster.png",
-    "codes": "busterbadge"
+    "codes": "wavebadge,busterbadge,buster,wavebuster,wavecombo"
   },
   {
     "name": "Spreader Badge",
     "type": "toggle_badged",
     "base_item": "ice",
     "img": "images/badge_spreader.png",
-    "codes": "spreaderbadge"
+    "codes": "icebadge,spreaderbadge,spreader,icespreader,icecombo"
   },
   {
     "name": "Flamethrower Badge",
     "type": "toggle_badged",
     "base_item": "plasma",
     "img": "images/badge_flamethrower.png",
-    "codes": "flamebadge"
+    "codes": "plasmabadge,flamebadge,flamethrowerbadge,flamethrower,flame,plasmacombo"
   },
   {
     "name": "Grapple Beam",

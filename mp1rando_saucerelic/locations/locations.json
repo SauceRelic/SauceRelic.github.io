@@ -1766,9 +1766,6 @@
           // Developer intended
           "@reqs/quarantine cave,spider,@can/pass thermal",
 
-          // Escape with grapple
-          "$disabled|r_noriskspider|sb_r_noriskspider,@reqs/quarantine cave,@can/pass thermal,grapple",
-
           // Softlockable (need spider or grapple to escape)
           "{@reqs/quarantine cave,@can/pass thermal}",
 

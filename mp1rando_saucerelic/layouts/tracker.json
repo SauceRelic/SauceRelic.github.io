@@ -1,7 +1,34 @@
 {
   "tracker_capture_item": {
-    "type": "layout",
-    "key": "shared_item_grid"
+    "type": "array",
+    "orientation": "horizontal",
+    "margin": "0,0",
+    "content": [
+      {
+        "type": "itemgrid",
+        "item_margin": "3,3",
+        "v_alignment": "center",
+        "item_size": 48,
+        "rows": [
+          [ "charge", "superitem",    "morph",  "space"   ],
+          [ "wave",   "busteritem",   "bomb",   "grapple" ],
+          [ "ice",    "spreaderitem", "boost",  "thermal" ],
+          [ "plasma", "flameitem",    "spider", "xray"    ]
+        ]
+      },
+      {
+        "type": "itemgrid",
+        "margin": "0,0",
+        "item_margin": "3,3",
+        "v_alignment": "center",
+        "item_size": 48,
+        "rows": [
+          [ "varia",       "missile"   ],
+          [ "gravityitem", "etank"     ],
+          [ "phazon",      "powerbomb" ]
+        ]
+      }
+    ]
   },
 
   "tracker_default": {

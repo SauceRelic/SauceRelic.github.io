@@ -1,6 +1,8 @@
 function tracker_on_accessibility_updated()
+  init()
   ArtifactCounter()
   ShuffleItems()
+  BeamComboLinks()
 end
 
 function ArtifactCounter()
@@ -45,3 +47,39 @@ function VanillaTrack(locationref, setting, item)
     end
   end
 end 
+
+function BeamComboLinks()
+  local superI = Tracker:FindObjectForCode("superitem")
+  local superB = Tracker:FindObjectForCode("superbadge")
+  local busterI = Tracker:FindObjectForCode("busteritem")
+  local busterB = Tracker:FindObjectForCode("busterbadge")
+  local spreaderI = Tracker:FindObjectForCode("spreaderitem")
+  local spreaderB = Tracker:FindObjectForCode("spreaderbadge")
+  local flameI = Tracker:FindObjectForCode("flameitem")
+  local flameB = Tracker:FindObjectForCode("flamebadge")
+
+  superPrev = LinkItems(superI, superB, superPrev)
+  busterPrev = LinkItems(busterI, busterB, busterPrev)
+  spreaderPrev = LinkItems(spreaderI, spreaderB, spreaderPrev)
+  flamePrev = LinkItems(flameI, flameB, flamePrev)
+end
+
+function LinkItems(item, badge, previous)
+  if badge.Active ~= previous then
+    item.Active = badge.Active
+  elseif item.Active ~= previous then
+    badge.Active = item.Active
+  end
+
+  return item.Active
+end
+
+function init()
+  if initialized == nil then
+    initialized = true
+    superPrev = false
+    busterPrev = false
+    spreaderPrev = false
+    flamePrev = false
+  end
+end

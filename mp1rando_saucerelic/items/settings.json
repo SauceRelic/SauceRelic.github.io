@@ -42,7 +42,7 @@
       },
       {
         "img": "images/settings/shuf_artifacts.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -60,7 +60,7 @@
       },
       {
         "img": "images/settings/shuf_launcher.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -78,7 +78,7 @@
       },
       {
         "img": "images/settings/shuf_morph.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -96,7 +96,7 @@
       },
       {
         "img": "images/settings/shuf_bombs.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -114,7 +114,7 @@
       },
       {
         "img": "images/settings/shuf_charge.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -132,7 +132,7 @@
       },
       {
         "img": "images/settings/shuf_space.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -145,6 +145,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_obfuscate.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "r_obfuscate"
   },
   {
@@ -160,7 +161,7 @@
       },
       {
         "img": "images/settings/r_requirethermal.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -178,7 +179,7 @@
       },
       {
         "img": "images/settings/r_requirexray.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -196,7 +197,7 @@
       },
       {
         "img": "images/settings/r_nolatebombs.png",
-        "img_mods": "@disabled",
+        "img_mods": "brightness|0.3",
         "inherit_codes": false
       }
     ]
@@ -206,6 +207,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_noriskbombs.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "r_noriskbombs"
   },
   // "No early Phazon Suit" does not affect access logic
@@ -215,6 +217,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_noriskbeams.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "r_noriskbeams"
   },
   {
@@ -222,6 +225,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_noriskspider.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "r_noriskspider"
   },
   {
@@ -229,6 +233,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_noriskgravity.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "r_noriskgravity"
   },
   {
@@ -236,6 +241,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/r_noriskventshaft.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "r_noriskventshaft"
   },
 
@@ -246,6 +252,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_rootcave.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_rootcave"
   },
   {
@@ -253,6 +260,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_ibbf.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_ibbf"
   },
   {
@@ -260,6 +268,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_trainingchamber.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_trainingchamber"
   },
   {
@@ -267,6 +276,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_wavesun.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_wavesun"
   },
   {
@@ -274,6 +284,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_workstation.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_workstation"
   },
   {
@@ -281,6 +292,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_earlynewborn.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_earlynewborn"
   },
   {
@@ -288,6 +300,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_nobombs.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_nobombs"
   },
   {
@@ -295,6 +308,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/oob_floaty.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "oob_floaty"
   },
 
@@ -305,6 +319,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_dash.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_dash,t_scandash"
   },
   {
@@ -312,6 +327,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_terrain.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_terrain"
   },
   {
@@ -319,6 +335,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_liquidboost.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_liquidboost"
   },
   {
@@ -326,6 +343,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_ljump.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_ljump"
   },
   {
@@ -333,6 +351,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_rjump.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_rjump"
   },
   {
@@ -340,6 +359,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_ghetto.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_ghetto"
   },
   {
@@ -347,6 +367,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_earlywild.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_earlywild"
   },
   {
@@ -354,6 +375,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_sunisg.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_sunisg"
   },
   {
@@ -361,6 +383,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_magmaisg.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_magmaisg"
   },
   {
@@ -368,6 +391,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_hoteisg.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_hoteisg"
   },
   {
@@ -375,6 +399,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_barsskip.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_barsskip"
   },
   {
@@ -382,6 +407,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_noboostspinners.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_noboostspinners"
   },
   {
@@ -389,6 +415,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_spiderlessshafts.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_spiderlessshafts"
   },
   {
@@ -396,6 +423,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_eliteib.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_eliteib"
   },
   {
@@ -403,6 +431,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_phazontunnelnosuit.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_phazontunnelnosuit"
   },
   {
@@ -410,6 +439,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_dbj.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_dbj"
   },
   {
@@ -417,6 +447,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_hbjpasthote.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_hbjpasthote"
   },
   {
@@ -424,6 +455,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_halfpipebj.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_halfpipebj"
   },
   {
@@ -431,6 +463,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_boostjumps.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_boostjumps"
   },
   {
@@ -438,6 +471,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_vmr.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_vmr"
   },
   {
@@ -445,6 +479,7 @@
     "type": "toggle",
     "loop": true,
     "img": "images/settings/t_earlymagitems.png",
+    "disabled_img_mods": "brightness|0.3",
     "codes": "t_earlymagitems"
   },
   {

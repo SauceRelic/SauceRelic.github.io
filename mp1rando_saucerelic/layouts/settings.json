@@ -53,11 +53,6 @@
                       },
                       {
                         "type": "item",
-                        "item": "r_noriskspider",
-                        "margin": "0,5"
-                      },
-                      {
-                        "type": "item",
                         "item": "r_noriskgravity",
                         "margin": "0,5"
                       },
@@ -427,11 +422,6 @@
                       {
                         "type": "item",
                         "item": "sb_r_noriskbeams",
-                        "margin": "0,5"
-                      },
-                      {
-                        "type": "item",
-                        "item": "sb_r_noriskspider",
                         "margin": "0,5"
                       },
                       {

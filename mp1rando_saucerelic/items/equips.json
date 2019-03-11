@@ -60,28 +60,28 @@
     "type": "toggle_badged",
     "base_item": "charge",
     "img": "images/badge_super.png",
-    "codes": "chargebadge,superbadge,super,supermissile,supermissiles,chargecombo"
+    "codes": "superbadge,super,supermissile,supermissiles,chargecombo"
   },
   {
     "name": "Buster Badge",
     "type": "toggle_badged",
     "base_item": "wave",
     "img": "images/badge_buster.png",
-    "codes": "wavebadge,busterbadge,buster,wavebuster,wavecombo"
+    "codes": "busterbadge,buster,wavebuster,wavecombo"
   },
   {
     "name": "Spreader Badge",
     "type": "toggle_badged",
     "base_item": "ice",
     "img": "images/badge_spreader.png",
-    "codes": "icebadge,spreaderbadge,spreader,icespreader,icecombo"
+    "codes": "spreaderbadge,spreader,icespreader,icecombo"
   },
   {
     "name": "Flamethrower Badge",
     "type": "toggle_badged",
     "base_item": "plasma",
     "img": "images/badge_flamethrower.png",
-    "codes": "plasmabadge,flamebadge,flamethrowerbadge,flamethrower,flame,plasmacombo"
+    "codes": "flamebadge,flamethrower,flame,plasmacombo"
   },
   {
     "name": "Grapple Beam",

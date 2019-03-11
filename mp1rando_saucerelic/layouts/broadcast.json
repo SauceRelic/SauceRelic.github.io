@@ -15,10 +15,10 @@
             "v_alignment": "center",
             "item_size": 48,
             "rows": [
-              [ "chargebadge", "morph",  "space"   ],
-              [ "wavebadge",   "bomb",   "grapple" ],
-              [ "icebadge",    "boost",  "thermal" ],
-              [ "plasmabadge", "spider", "xray"    ]
+              [ "superbadge",    "morph",  "space"   ],
+              [ "busterbadge",   "bomb",   "grapple" ],
+              [ "spreaderbadge", "boost",  "thermal" ],
+              [ "flamebadge",    "spider", "xray"    ]
             ]
           },
           {

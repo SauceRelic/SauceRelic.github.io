@@ -1,3 +1,8 @@
+v1.1.0.1
+~ Fixed morph ball missing from one Tower of Light access option
+~ Fixed capturing beam combos
+~ Disabled settings have been made darker to increase contrast
+
 v1.1.0.0
   Layouts significantly improved:
     - Items rearranged on main tracker window

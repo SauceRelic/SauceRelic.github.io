@@ -4,8 +4,19 @@
     "background": "#000000",
     "dropshadow": true,
     "content": {
-      "type": "layout",
-      "key": "shared_item_grid"
+      "type": "array",
+      "orientation": "horizontal",
+      "content": [
+        {
+          "type": "layout",
+          "key": "shared_item_grid"
+        },
+        {
+          "type": "layout",
+          "key": "artifacts",
+          "margin": "10,10"
+        }
+      ]
     }
   }
 }

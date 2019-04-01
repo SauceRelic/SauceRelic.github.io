@@ -27,6 +27,10 @@
           [ "gravityitem", "etank"     ],
           [ "phazon",      "powerbomb" ]
         ]
+      },
+      {
+        "type": "layout",
+        "key": "artifacts"
       }
     ]
   },

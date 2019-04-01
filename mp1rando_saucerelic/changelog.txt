@@ -1,3 +1,7 @@
+v1.1.0.4
+- Removed legacy variant now that 1.0.0+ is released
+~ Readded artifacts to capture layout (thanks SourLyme)
+
 v1.1.0.3
 ~ Fixed items only variant missing artifacts
 

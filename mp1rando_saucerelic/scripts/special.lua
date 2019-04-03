@@ -83,3 +83,8 @@ function init()
     flamePrev = false
   end
 end
+
+function Badge(locref, img)
+  local location = Tracker:FindObjectForCode(locref)
+  location:AddBadge(img)
+end

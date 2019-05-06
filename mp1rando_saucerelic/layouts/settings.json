@@ -164,6 +164,11 @@
                           },
                           {
                             "type": "item",
+                            "item": "t_spiderlessppc",
+                            "margin": "0,2"
+                          },
+                          {
+                            "type": "item",
                             "item": "t_eliteib",
                             "margin": "0,2"
                           },
@@ -532,6 +537,11 @@
                           {
                             "type": "item",
                             "item": "sb_t_spiderlessshafts",
+                            "margin": "0,2"
+                          },
+                          {
+                            "type": "item",
+                            "item": "sb_t_spiderlessppc",
                             "margin": "0,2"
                           },
                           {

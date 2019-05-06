@@ -186,7 +186,7 @@
       {
         "name": "climb ore processing",
         "access_rules": [
-          "@can/bomb,grapple,spider",
+          "@can/bomb,@can/pb,grapple,spider",
           "@set/t_terrain,@set/t_ghetto"
         ],
         "item_count": 1

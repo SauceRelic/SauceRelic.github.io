@@ -230,6 +230,13 @@
         "item_count": 1
       },
       {
+        "name": "t_spiderlessppc",
+        "access_rules": [
+          "t_spiderlessppc",
+          "[t_spiderlessppc],sb_t_spiderlessppc"
+        ]
+      },
+      {
         "name": "t_eliteib",
         "access_rules": [
           "t_eliteib",

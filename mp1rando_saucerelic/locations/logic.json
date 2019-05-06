@@ -319,10 +319,12 @@
 
           // Through Mines
           // Developer intended
-          "@reqs/frigate,@can/bomb,@can/pb",
+          "@reqs/frigate,@can/bomb,@can/pb,spider",
+          "@reqs/frigate,@can/bomb,@can/pb,@set/t_spiderlessppc",
 
           // Bars skip
-          "@set/t_barsskip,@reqs/reflecting pool,wave,ice,@can/pb"
+          "@set/t_barsskip,@reqs/reflecting pool,wave,ice,@can/pb,spider",
+          "@set/t_barsskip,@reqs/reflecting pool,wave,ice,@can/pb,@set/t_spiderlessppc"
         ],
         "item_count": 1
       },

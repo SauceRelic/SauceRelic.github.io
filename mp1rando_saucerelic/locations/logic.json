@@ -407,7 +407,7 @@
           "@reqs/frigate,@can/bomb",
 
           // Bars skip
-          "@set/t_barsskip,@reqs/reflecting pool,wave,ice"
+          "@set/t_barsskip,@reqs/reflecting pool,@can/bomb,wave,ice"
         ],
         "item_count": 1
       },

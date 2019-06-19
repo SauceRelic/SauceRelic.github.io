@@ -2227,8 +2227,11 @@
           // Developer intended
           "@reqs/mags to mines",
 
+          // Reverse mines spiderless
+          "@reqs/tallon to mines,@set/t_terrain,@set/t_ghetto",
+
           // Reverse mines
-          "@reqs/tallon to mines,@can/climb ore processing",
+          "@reqs/tallon to mines,@can/bomb,@can/pb,spider",
 
           "{artifactcheck}"
         ],

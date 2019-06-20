@@ -1,3 +1,8 @@
+v1.1.0.6
+~ Fixed Tallon South to Mines logic to require bombs for the bars skip
+~ Fixed Storage Depot B logic involving climbing spider ball shafts
+| Logic updates mirror v1.1.2/v1.2.0 of the randomizer
+
 v1.1.0.5
 + Added Spiderless Phazon Processing Center setting
 ~ Late Magmoor items through the Mines path now need spider ball or this setting and standable terrain

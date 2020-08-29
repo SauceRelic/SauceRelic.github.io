@@ -42,6 +42,37 @@
       }
     ]
   },
+  {
+    "name": "Point of No Return Items",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/ponr_disabled.png",
+        "inherit_codes": false,
+        "codes": "ponr_disabled"
+      },
+      {
+        "img": "images/settings/ponr_visible.png",
+        "inherit_codes": false,
+        "codes": "ponr_visible"
+      },
+      {
+        "img": "images/settings/ponr_allowall.png",
+        "inherit_codes": false,
+        "codes": "ponr_allowall"
+      }
+    ]
+  },
+  {
+    "name": "Elevator Shuffle",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/elevatorShuffle.png",
+    "disabled_img_mods": "brightness|0.3",
+    "codes": "elevatorShuffle"
+  },
 
   // Tricks
   {

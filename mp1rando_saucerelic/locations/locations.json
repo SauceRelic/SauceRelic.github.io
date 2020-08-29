@@ -9,12 +9,12 @@
           // Developer intended
           "morph",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate}",
 
           // Hint from Artifact Temple
           // Included for all non-immediate checks
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -44,7 +44,7 @@
           // DBJ off ship
           "@set/t_terrain,@set/t_dbj,@can/bomb",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -91,7 +91,7 @@
           // Dash instead of grapple
           "@set/t_dash,missile,space,@can/pass xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -121,7 +121,7 @@
           "@set/oob_rootcave,@can/wallcrawl,missile,space,grapple,@can/pass xray",
           "@set/oob_rootcave,@can/wallcrawl,@set/t_dash,missile,space,@can/pass xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -144,7 +144,7 @@
           // Developer intended
           "missile",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -173,10 +173,10 @@
           // Underwater ghetto jump
           "@set/t_ghetto,morph,space,$missing|gravity",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,missile,morph}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -202,7 +202,7 @@
           // Climbing Frigate Crash Site
           "@can/climb frigate crash site",
           
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -226,7 +226,7 @@
           // Frigate with no extra reqs
           "@reqs/frigate",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -250,7 +250,7 @@
           // Frigate with supers
           "@reqs/frigate,@can/super",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -277,7 +277,7 @@
           // Bars skip
           "@set/t_barsskip,@reqs/reflecting pool,@can/bomb,gravity,ice,space",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -305,7 +305,7 @@
           // With reverse bars skip
           "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,@set/t_barsskip",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -343,7 +343,7 @@
           "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
           "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -384,7 +384,7 @@
               "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
               "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -410,7 +410,7 @@
               "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
               "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -434,27 +434,27 @@
         "name": "Main Plaza",
         "sections": [
           {
-            "name": "Half-Pipe (Missile)",
+            "name": "Half-Pipe",
             "access_rules": [
               // Developer intended
-              "morph,boost",
+              "@can/boost",
 
-              // Space jump from ledge, ghetto up ramp jump from above
-              "space",
+              // Space jump from ledge, ghetto up ramp or jump from above
+              "t_mainPlazaItemsOnlySpaceJump,space",
 
               // Half-pipe bomb jump
-              "@set/t_halfpipebj,@can/bomb",
+              "t_mainPlazaHpbj,@can/bomb",
 
-              // Visibility
+              // Visible, not obtainable
               "{$disabled|r_obfuscate}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Grapple Ledge (Missile)",
+            "name": "Grapple Ledge",
             "access_rules": [
               // Developer intended
               "@can/bomb,@has/heat shielding,missile,grapple,boost,wave",
@@ -471,16 +471,16 @@
               // Floaty jump
               "@can/floaty",
 
-              // Visibility
+              // Visible, not obtainable
               "{$disabled|r_obfuscate}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Tree (Missile)",
+            "name": "Tree",
             "access_rules": [
               // Developer intended
               "@can/super,@can/pass xray",
@@ -488,13 +488,13 @@
               // OoB with floaty
               "@set/oob_trainingchamber,@can/floaty",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Locked Door (E-Tank)",
+            "name": "Locked Door",
             "access_rules": [
               // Developer intended
               "missile,morph",
@@ -502,10 +502,10 @@
               // L-jump
               "@set/t_ljump,space",
 
-              // Visibility
+              // Visible, not obtainable
               "{$disabled|r_obfuscate}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -528,10 +528,10 @@
           // Collision abuse
           "@set/t_terrain,@set/t_ljump,morph,missile,spider",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,missile,morph}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -563,16 +563,16 @@
               // Dash off of something
               "@set/t_terrain,@set/t_dash,missile",
 
-              // Access/visibility (safely visible, but softlock if collected and item does not meet reqs)
+              // Access/Visible, not obtainable (safely visible, but softlock if collected and item does not meet reqs)
               "{$disabled|r_obfuscate,missile}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Half-Pipe (Missile)",
+            "name": "Half-Pipe",
             "access_rules": [
               // Developer intended
               "missile,morph,boost",
@@ -586,18 +586,18 @@
               // Half-pipe bomb jump
               "@set/t_halfpipebj,missile,@can/bomb",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Lower Tunnel (Missile)",
+            "name": "Lower Tunnel",
             "access_rules": [
               // Developer intended
               "@can/bomb or pb,missile",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -617,10 +617,10 @@
           // Developer intended
           "@can/bomb,missile",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,missile,morph}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -651,7 +651,7 @@
           // Escape through morph tunnel
           "@set/oob_trainingchamber,@can/wallcrawl,bomb,boost",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -680,7 +680,7 @@
           // Escape through wave door
           "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -703,7 +703,7 @@
           // Developer intended
           "@can/cross magma pool,@can/pb",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -729,7 +729,7 @@
           // Dash up the tower
           "@set/t_dash,@set/t_terrain,@can/access tower of light",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -755,7 +755,7 @@
           // Underwater ghetto jump
           "@set/t_ghetto,@can/access tower of light",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -778,10 +778,10 @@
           // Developer intended
           "@can/bomb",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -802,23 +802,23 @@
         "name": "Ruined Gallery",
         "sections": [
           {
-            "name": "Missile Wall (Missile)",
+            "name": "Missile Wall",
             "access_rules": [
               // Developer intended
               "missile",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Tunnel (Missile)",
+            "name": "Tunnel",
             "access_rules": [
               // Developer intended
               "@can/bomb",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -838,7 +838,7 @@
           // Developer intended
           "missile",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -864,7 +864,7 @@
           // Double bomb jump instead of space
           "@set/t_dbj,@can/bomb,missile",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -908,7 +908,7 @@
               // Developer intended
               "@can/bomb,missile",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -922,7 +922,7 @@
               // Early Wild IBJ
               "@set/t_earlywild,@can/bomb,missile",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -942,7 +942,7 @@
           // Developer intended
           "missile,morph",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -968,13 +968,13 @@
               // Developer intended
               "missile,morph",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Underwater (Missile)",
+            "name": "Underwater",
             "access_rules": [
               // Developer intended
               "morph,missile,space,gravity,bomb",
@@ -988,7 +988,7 @@
               // Underwater ghetto jump w/ damage boost
               "@set/t_ghetto,morph,missile,space,@set/t_liquidboost",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1006,18 +1006,18 @@
         "name": "Dynamo",
         "sections": [
           {
-            "name": "Lower Dynamo (Missile)",
+            "name": "Lower Dynamo",
             "access_rules": [
               // Developer intended
               "@can/bomb or pb,missile",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Spider Track (Missile)",
+            "name": "Spider Track",
             "access_rules": [
               // Developer intended
               "@can/bomb or pb,missile,spider",
@@ -1025,7 +1025,7 @@
               // Floaty jump
               "@can/floaty,@can/bomb or pb,missile",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1043,7 +1043,7 @@
         "name": "Burn Dome",
         "sections": [
           {
-            "name": "Tunnel (Missile)",
+            "name": "Tunnel",
             "access_rules": [
               // Developer intended
               "@can/bomb,missile",
@@ -1057,7 +1057,7 @@
               // Softlockable (must reload if neither burn dome item is bombs)
               "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,@can/bomb or pb}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1077,7 +1077,7 @@
               // Softlockable (must reload if neither burn dome item is bombs)
               "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,morph}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1095,7 +1095,7 @@
         "name": "Furnace",
         "sections": [
           {
-            "name": "Spider Tracks (Missile)",
+            "name": "Spider Tracks",
             "access_rules": [
               // Developer intended
               "@can/bomb,@can/pb,missile,boost,spider",
@@ -1110,13 +1110,13 @@
               // Skip halfpipe by abusing terrain
               "@set/t_terrain,@can/bomb,missile,space,spider",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Tunnel (E-Tank)",
+            "name": "Tunnel",
             "access_rules": [
               // Developer intended
               "@can/bomb,missile",
@@ -1124,7 +1124,7 @@
               // Skipping bombs with boost (softlock if not bombs)
               "{@set/t_boostjumps,missile,morph,boost}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1150,7 +1150,7 @@
           // Infinite speed glitch
           "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1176,7 +1176,7 @@
           // L jump and ledge clip into tunnel
           "@set/t_terrain,@set/t_ljump,@reqs/late chozo,space",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1205,7 +1205,7 @@
           // Infinite speed glitch
           "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1231,10 +1231,10 @@
           // Allow vanilla beams, but require visible items
           "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/reflecting pool,missile",
 
-          // Visibility (visible from outside)
+          // Visible, not obtainable (visible from outside)
           "{$disabled|r_obfuscate,@reqs/reflecting pool,missile}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1266,7 +1266,7 @@
           // Damage boost through lava
           "@set/t_liquidboost,missile,morph,$EarlyMagmoor",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1289,7 +1289,7 @@
           // Developer intended
           "@reqs/early magmoor,missile,space,@can/pass xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1312,7 +1312,7 @@
           // Developer intended
           "@reqs/early magmoor,morph",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1335,7 +1335,7 @@
           // Developer intended
           "@reqs/early magmoor,@can/bomb",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1364,7 +1364,7 @@
           // Softlockable (need space or a dbj to escape)
           "{@reqs/early magmoor,@can/pb}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1385,7 +1385,7 @@
         "name": "Fiery Shores",
         "sections": [
           {
-            "name": "Morph Track (Missile)",
+            "name": "Morph Track",
             "access_rules": [
               // Developer intended
               "missile,$EarlyMagmoor,@can/bomb",
@@ -1396,7 +1396,7 @@
               // Damage boost through lava from Tallon elevator and jump on tunnel
               "@set/t_liquidboost,@set/t_terrain,missile,$EarlyMagmoor,space",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1422,7 +1422,7 @@
               "{@set/t_dash,@reqs/early magmoor,@can/pb,space}",
               "{@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1451,7 +1451,7 @@
           // DBJ and dash
           "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/bomb",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1491,13 +1491,13 @@
           // Allow vanilla beams
           "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
 
-          // Visibility (can see from outside, need plasma to escape)
+          // Visible, not obtainable (can see from outside, need plasma to escape)
           "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
           "{@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider}",
           "{@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
           "{@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1520,10 +1520,10 @@
           // Developer intended
           "@reqs/late magmoor,morph,wave,@can/pass thermal",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,@reqs/late magmoor,morph}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1550,7 +1550,7 @@
         "name": "Phendrana Shorelines",
         "sections": [
           {
-            "name": "Behind Ice (Missile)",
+            "name": "Behind Ice",
             "access_rules": [
               // Developer intended
               "@reqs/front phen,plasma",
@@ -1558,24 +1558,24 @@
               // Early Sun infinite speed
               "@set/t_sunisg,@can/isg,wave",
 
-              // Visibility
+              // Visible, not obtainable
               "{$disabled|r_obfuscate,@reqs/front phen}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Spider Track (Missile)",
+            "name": "Spider Track",
             "access_rules": [
               // Developer intended
               "@reqs/front phen,@can/super,space,spider",
 
-              // Visibility
+              // Visible, not obtainable
               "{$disabled|r_obfuscate,@reqs/front phen}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1601,7 +1601,7 @@
           // Early Sun ISG OoB
           "@set/oob_wavesun,@can/wallcrawl,@set/t_sunisg,@can/isg,@reqs/front phen",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1624,7 +1624,7 @@
           // Developer intended
           "@reqs/front phen,space,plasma",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1645,23 +1645,23 @@
         "name": "Ice Ruins East",
         "sections": [
           {
-            "name": "Behind Ice (Missile)",
+            "name": "Behind Ice",
             "access_rules": [
               // Developer intended
               "@reqs/front phen,plasma",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Spider Track (Missile)",
+            "name": "Spider Track",
             "access_rules": [
               // Developer intended
               "@reqs/front phen,spider",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1684,10 +1684,10 @@
           // Allow vanilla beams but require visible items
           "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/fron phen,@can/bomb,space",
 
-          // Visibility (can see from outside, need wave to escape)
+          // Visible, not obtainable (can see from outside, need wave to escape)
           "{$disabled|r_obfuscate,@reqs/front phen,@can/bomb,space}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1716,7 +1716,7 @@
           // Terrain abuse to climb
           "@set/t_terrain,@set/t_ljump,@reqs/mid phen,space,wave",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1743,7 +1743,7 @@
           // Softlockable (reload needed only if boxes are destroyed)
           "{@reqs/front phen}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1769,7 +1769,7 @@
           // Softlockable (need spider or grapple to escape)
           "{@reqs/quarantine cave,@can/pass thermal}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1795,7 +1795,7 @@
           // Dash to entrance
           "@set/t_dash,@reqs/quarantine cave,@can/pass thermal,spider",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1818,10 +1818,10 @@
           // Developer intended
           "@reqs/phen labs,@can/super",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,@reqs/phen labs,xray}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1844,7 +1844,7 @@
           // Developer intended
           "@reqs/phen labs,@can/climb observatory",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1874,7 +1874,7 @@
           "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
           "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@set/t_terrain,@reqs/phen labs}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1897,16 +1897,16 @@
           // Developer intended
           "@reqs/phen labs",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
-            "name": "Tank (E-Tank)",
+            "name": "Tank",
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Morph Track (Missile)",
+            "name": "Morph Track",
             "item_count": 1,
             "capture_item": true
           }
@@ -1925,7 +1925,7 @@
           // Developer intended
           "@reqs/phen labs",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1948,10 +1948,10 @@
           // Developer intended
           "@reqs/far phen,plasma",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,@reqs/far phen}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -1977,10 +1977,10 @@
           // Dash to ledge
           "@set/t_dash,@reqs/far phen",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,@reqs/far phen}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2011,7 +2011,7 @@
           //   with a ghetto jump
           "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2042,7 +2042,7 @@
           //   with a ghetto jump
           "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2075,13 +2075,13 @@
               "{@reqs/far phen,grapple}",
               "{@set/t_dash,@reqs/far phen}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Grapple Ledge (Missile)",
+            "name": "Grapple Ledge",
             "access_rules": [
               // Developer intended
               "@reqs/far phen,gravity,grapple,plasma",
@@ -2092,7 +2092,7 @@
               // Softlockable (in case of falling in)
               "{@reqs/far phen,grapple,plasma}",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -2121,10 +2121,10 @@
           // Ghetto and L jump to crane
           "@set/t_terrain,@set/t_ghetto,@set/t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2147,7 +2147,7 @@
           // Developer intended w/ check for infinite boost possibility
           "@reqs/upper mines,@can/pb,$ERIB",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2170,7 +2170,7 @@
           // Developer intended w/ check for infinite boost possibility
           "@reqs/upper mines,@can/pb,plasma,$ERIB",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2196,18 +2196,18 @@
               // Developer intended w/ check for infinite boost possibility
               "@reqs/upper mines,@can/pb,$ERIB",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Laser (Missile)",
+            "name": "Laser",
             "access_rules": [
               // Developer intended
               "@reqs/upper mines,@can/bomb,boost,@can/pass xray",
 
-              "{artifactcheck}"
+              "{hints,artifactcheck}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -2233,7 +2233,7 @@
           // Reverse mines
           "@reqs/tallon to mines,@can/bomb,@can/pb,spider",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2259,7 +2259,7 @@
           // Exit Metroid Quarantine A without spider
           "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2288,7 +2288,7 @@
           // Early Newborn wallcrawl
           "@set/t_phazontunnelnosuit,@set/oob_earlynewborn,@can/wallcrawl,@reqs/lower mines",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2313,7 +2313,7 @@
           //                    w/ xray
           "@reqs/lower mines,@can/pass xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2339,7 +2339,7 @@
           // Skip spider ball
           "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2362,10 +2362,10 @@
           // Developer intended
           "@reqs/lower mines,@can/super",
 
-          // Visibility
+          // Visible, not obtainable
           "{$disabled|r_obfuscate,@reqs/lower mines,xray}",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2388,7 +2388,7 @@
           // Developer intended
           "@reqs/lower mines,xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2411,7 +2411,7 @@
           // Developer intended
           "@reqs/lower mines,xray",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2434,7 +2434,7 @@
           // Developer intended
           "@reqs/upper mines,@can/pb,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2457,7 +2457,7 @@
           // Developer intended
           "@reqs/upper mines,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2480,7 +2480,7 @@
           // Developer intended
           "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {
@@ -2503,7 +2503,7 @@
           // Developer intended
           "@reqs/upper mines,@can/bomb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{artifactcheck}"
+          "{hints,artifactcheck}"
         ],
         "sections": [
           {

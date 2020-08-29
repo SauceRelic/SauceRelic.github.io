@@ -94,7 +94,7 @@ function xrayReqs()
   return hasItem(xray) or hasItem(t_removeXrayReqs)
 end
 
-function hasItemSuit()
+function hasSuit()
   if hasItem(hp_variaonly) then
     return hasItem(varia)
   else

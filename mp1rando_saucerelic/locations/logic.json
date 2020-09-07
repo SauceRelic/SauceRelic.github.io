@@ -335,7 +335,7 @@
           "missile,@can/morph jump,@has/heat shielding",
 
           // Suitless (other reqs probably to avoid lava)
-          "$MagmoorRun,missile,@can/morph jump,space,@set/t_dash,@set/t_terrain",
+          "$MagmoorRun,missile,@can/morph jump,space,@set/t_dash,@set/t_terrain"
         ],
         "item_count": 1
       },

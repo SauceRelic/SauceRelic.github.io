@@ -1,0 +1,217 @@
+[
+  // User toggled anchors as starting points or shuffled elevators
+  {
+    "name": "Tallon Overworld North Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_to_north"
+  },
+  {
+    "name": "Tallon Overworld East Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_to_east"
+  },
+  {
+    "name": "Tallon Overworld West Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_to_west"
+  },
+  {
+    "name": "Tallon Overworld South Elevator to Chozo Ruins (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_to_southchozo"
+  },
+  {
+    "name": "Tallon Overworld South Elevator to Phazon Mines (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_to_southmines"
+  },
+
+  {
+    "name": "Chozo Ruins West Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_cr_west"
+  },  
+  {
+    "name": "Chozo Ruins North Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_cr_north"
+  },  
+  {
+    "name": "Chozo Ruins East Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_cr_east"
+  },
+  {
+    "name": "Chozo Ruins South Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_cr_south"
+  },
+  {
+    "name": "Magmoor North Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_mc_north"
+  },
+  {
+    "name": "Magmoor West Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_mc_west"
+  },
+  {
+    "name": "Magmoor East Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_mc_east"
+  },
+  {
+    "name": "Magmoor South Elevator to Phazon Mines (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_mc_southmines"
+  },
+    {
+    "name": "Magmoor South Elevator to South Phendrana (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_mc_southphen"
+  },
+  {
+    "name": "Phendrana Drifts North Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_pd_north"
+  },
+  {
+    "name": "Phendrana Drifts South Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_pd_south"
+  },
+  {
+    "name": "Phazon Mines East Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_pm_east"
+  },
+  {
+    "name": "Phazon Mines West Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_pm_west"
+  },
+  {
+    "name": "Artifact Temple Elevator (user toggle)",
+    "type": "toggle",
+    "img": "images/elevator.png",
+    "codes": "u_temple"
+  },
+
+
+
+  // Logical anchors
+  {
+    "name": "Tallon Overworld North Elevator",
+    "type": "toggle",
+    "codes": "to_north"
+  },
+  {
+    "name": "Tallon Overworld East Elevator",
+    "type": "toggle",
+    "codes": "to_east"
+  },
+  {
+    "name": "Tallon Overworld West Elevator",
+    "type": "toggle",
+    "codes": "to_west"
+  },
+  {
+    "name": "Tallon Overworld South Elevator to Chozo Ruins",
+    "type": "toggle",
+    "codes": "to_southchozo"
+  },
+  {
+    "name": "Tallon Overworld South Elevator to Phazon Mines",
+    "type": "toggle",
+    "codes": "to_southmines"
+  },
+  {
+    "name": "Chozo Ruins West Elevator",
+    "type": "toggle",
+    "codes": "cr_west"
+  },  
+  {
+    "name": "Chozo Ruins North Elevator",
+    "type": "toggle",
+    "codes": "cr_north"
+  },  
+  {
+    "name": "Chozo Ruins East Elevator",
+    "type": "toggle",
+    "codes": "cr_east"
+  },
+  {
+    "name": "Chozo Ruins South Elevator",
+    "type": "toggle",
+    "codes": "cr_south"
+  },
+  {
+    "name": "Magmoor North Elevator",
+    "type": "toggle",
+    "codes": "mc_north"
+  },
+  {
+    "name": "Magmoor West Elevator",
+    "type": "toggle",
+    "codes": "mc_west"
+  },
+  {
+    "name": "Magmoor East Elevator",
+    "type": "toggle",
+    "codes": "mc_east"
+  },
+  {
+    "name": "Magmoor South Elevator to Phazon Mines",
+    "type": "toggle",
+    "codes": "mc_southmines"
+  },
+    {
+    "name": "Magmoor South Elevator to South Phendrana",
+    "type": "toggle",
+    "codes": "mc_southphen"
+  },
+  {
+    "name": "Phendrana Drifts North Elevator",
+    "type": "toggle",
+    "codes": "pd_north"
+  },
+  {
+    "name": "Phendrana Drifts South Elevator",
+    "type": "toggle",
+    "codes": "pd_south"
+  },
+  {
+    "name": "Phazon Mines East Elevator",
+    "type": "toggle",
+    "codes": "pm_east"
+  },
+  {
+    "name": "Phazon Mines West Elevator",
+    "type": "toggle",
+    "codes": "pm_west"
+  },
+  {
+    "name": "Artifact Temple Elevator",
+    "type": "toggle",
+    "codes": "temple"
+  }
+]

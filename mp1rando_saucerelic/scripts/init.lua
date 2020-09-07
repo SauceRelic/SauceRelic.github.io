@@ -10,6 +10,7 @@ if not string.find(Tracker.ActiveVariantUID, "v_itemsonly") then
     Tracker:AddLayouts("layouts/settings.json")
   end
   
+  Tracker:AddItems("items/anchors.json")
   Tracker:AddMaps("maps/maps.json")
 
   Tracker:AddLocations("locations/logic.json")

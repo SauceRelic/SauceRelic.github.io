@@ -25,7 +25,7 @@
       },
       {
         "img": "images/art_truth_orange.png",
-        "codes": "truth,artifact1,art1,allartifacts"
+        "codes": "truth,artifact1,art1"
       }
     ]
   },
@@ -41,7 +41,7 @@
       },
       {
         "img": "images/art_strength_orange.png",
-        "codes": "strength,artifact2,art2,allartifacts"
+        "codes": "strength,artifact2,art2"
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "img": "images/art_elder_orange.png",
-        "codes": "elder,artifact3,art3,allartifacts"
+        "codes": "elder,artifact3,art3"
       }
     ]
   },
@@ -73,7 +73,7 @@
       },
       {
         "img": "images/art_wild_orange.png",
-        "codes": "wild,artifact4,art4,allartifacts"
+        "codes": "wild,artifact4,art4"
       }
     ]
   },
@@ -89,7 +89,7 @@
       },
       {
         "img": "images/art_lifegiver_orange.png",
-        "codes": "lifegiver,artifact5,art5,allartifacts"
+        "codes": "lifegiver,artifact5,art5"
       }
     ]
   },
@@ -105,7 +105,7 @@
       },
       {
         "img": "images/art_warrior_orange.png",
-        "codes": "warrior,artifact6,art6,allartifacts"
+        "codes": "warrior,artifact6,art6"
       }
     ]
   },
@@ -121,7 +121,7 @@
       },
       {
         "img": "images/art_chozo_orange.png",
-        "codes": "chozo,artifact7,art7,allartifacts"
+        "codes": "chozo,artifact7,art7"
       }
     ]
   },
@@ -137,7 +137,7 @@
       },
       {
         "img": "images/art_nature_orange.png",
-        "codes": "nature,artifact8,art8,allartifacts"
+        "codes": "nature,artifact8,art8"
       }
     ]
   },
@@ -153,7 +153,7 @@
       },
       {
         "img": "images/art_sun_orange.png",
-        "codes": "sun,artifact9,art9,allartifacts"
+        "codes": "sun,artifact9,art9"
       }
     ]
   },
@@ -169,7 +169,7 @@
       },
       {
         "img": "images/art_world_orange.png",
-        "codes": "world,artifact10,art10,allartifacts"
+        "codes": "world,artifact10,art10"
       }
     ]
   },
@@ -185,7 +185,7 @@
       },
       {
         "img": "images/art_spirit_orange.png",
-        "codes": "spirit,artifact11,art11,allartifacts"
+        "codes": "spirit,artifact11,art11"
       }
     ]
   },
@@ -201,7 +201,7 @@
       },
       {
         "img": "images/art_newborn_orange.png",
-        "codes": "newborn,artifact12,art12,allartifacts"
+        "codes": "newborn,artifact12,art12"
       }
     ]
   }

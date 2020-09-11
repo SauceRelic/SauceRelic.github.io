@@ -82,44 +82,29 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/settings/difficulty_none.png",
-        "inherit_codes": false,
-        "codes": "diff_none"
-      },
-      {
-        "img": "images/settings/difficulty_trivial.png",
-        "inherit_codes": false,
-        "codes": "diff_trivial"
-      },
-      {
-        "img": "images/settings/difficulty_easy.png",
-        "inherit_codes": false,
-        "codes": "diff_easy"
-      },
-      {
-        "img": "images/settings/difficulty_normal.png",
-        "inherit_codes": false,
-        "codes": "diff_normal"
-      },
-      {
-        "img": "images/settings/difficulty_hard.png",
-        "inherit_codes": false,
-        "codes": "diff_hard"
-      },
-      {
-        "img": "images/settings/difficulty_insane.png",
-        "inherit_codes": false,
-        "codes": "diff_insane"
-      },
-      {
-        "img": "images/settings/difficulty_oob.png",
-        "inherit_codes": false,
-        "codes": "diff_oob"
-      },
-      {
         "img": "images/settings/difficulty_custom.png",
-        "inherit_codes": false,
-        "codes": "diff_custom"
+        "codes": "difficulty"
+      },
+      {
+        "img": "images/settings/difficulty_none.png"
+      },
+      {
+        "img": "images/settings/difficulty_trivial.png"
+      },
+      {
+        "img": "images/settings/difficulty_easy.png"
+      },
+      {
+        "img": "images/settings/difficulty_normal.png"
+      },
+      {
+        "img": "images/settings/difficulty_hard.png"
+      },
+      {
+        "img": "images/settings/difficulty_insane.png"
+      },
+      {
+        "img": "images/settings/difficulty_oob.png"
       }
     ]
   },

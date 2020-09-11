@@ -147,6 +147,13 @@
     "codes": "space,spacejump,spacejumpboots"
   },
   {
+    "name": "Scan Visor",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/scan.png",
+    "codes": "scan,scanvisor"
+  },
+  {
     "name": "Thermal Visor",
     "type": "toggle",
     "loop": true,

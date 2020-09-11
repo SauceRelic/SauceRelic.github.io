@@ -110,610 +110,1622 @@
   },
   {
     "name": "Alcove with No Items",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/alcoveNoItems.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_alcoveNoItems"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_alcoveNoItems"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Antechamber with Power Bombs",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/antechamberWithPowerBombs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_antechamberWithPowerBombs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_antechamberWithPowerBombs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Arbor Chamber without Plasma Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/arborChamberWithoutPlasma.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_arborChamberWithoutPlasma"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_arborChamberWithoutPlasma"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Arboretum Puzzle Skip",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/arboretumPuzzleSkip.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_arboretumPuzzleSkip"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_arboretumPuzzleSkip"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Chapel of the Elders with Power Bombs",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/chapelOfTheEldersWithPowerBombs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_chapelOfTheEldersWithPowerBombs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_chapelOfTheEldersWithPowerBombs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Chozo Ice Temple Item with Infinite Speed",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/chozoIceTempleItemWithIS.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_chozoIceTempleItemWithIS"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_chozoIceTempleItemWithIS"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Chozo Ice Temple without Space Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/chozoIceTempleWithoutSpaceJump.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_chozoIceTempleWithoutSpaceJump"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_chozoIceTempleWithoutSpaceJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Frigate Crash Site",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbFrigateCrashSite.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbFrigateCrashSite"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbFrigateCrashSite"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Frozen Pike without Bombs",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbFrozenPikeWithoutBombs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbFrozenPikeWithoutBombs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbFrozenPikeWithoutBombs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Observatory without Boost Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbObservatoryWithoutBoost.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbObservatoryWithoutBoost"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbObservatoryWithoutBoost"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Ore Processing without Grapple Beam, Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbOreProcessingWithoutGrappleSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbOreProcessingWithoutGrappleSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbOreProcessingWithoutGrappleSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Phazon Processing Center without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbPhazonProcessingCenterWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbPhazonProcessingCenterWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbPhazonProcessingCenterWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Reflecting Pool without Boost Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbReflectingPoolWithoutBoostBall.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbReflectingPoolWithoutBoostBall"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbReflectingPoolWithoutBoostBall"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Ruined Courtyard without Boost Ball, Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbRuinedCourtyardWithoutBoostSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbRuinedCourtyardWithoutBoostSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbRuinedCourtyardWithoutBoostSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Climb Tower of Light without Missiles",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/climbTowerOfLightWithoutMissiles.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_climbTowerOfLightWithoutMissiles"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_climbTowerOfLightWithoutMissiles"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Crashed Frigate - Gamma Elevator Item without Gravity Suit",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crashedFrigateGammaElevatorWithoutGravity.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crashedFrigateGammaElevatorWithoutGravity"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crashedFrigateGammaElevatorWithoutGravity"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Cross Magma Pool Suitless",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crossMagmaPoolSuitless.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crossMagmaPoolSuitless"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crossMagmaPoolSuitless"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Cross Magma Pool without Grapple Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crossMagmaPoolWithoutGrapple.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crossMagmaPoolWithoutGrapple"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crossMagmaPoolWithoutGrapple"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Cross Twin Fires Tunnel Suitless",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crossTwinFiresTunnelSuitless.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crossTwinFiresTunnelSuitless"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crossTwinFiresTunnelSuitless"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Cross Twin Fires Tunnel without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crossTwinFiresTunnelWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crossTwinFiresTunnelWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crossTwinFiresTunnelWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Crossway - Half Pipe Bomb Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crosswayHpbj.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crosswayHpbj"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crosswayHpbj"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Crossway Item - Fewer Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/crosswayItemFewerReqs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_crosswayItemFewerReqs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_crosswayItemFewerReqs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Destroy Bomb Covers with Power Bombs",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/destroyBombCoversWithPowerBombs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_destroyBombCoversWithPowerBombs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_destroyBombCoversWithPowerBombs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Early Phendrana Behind Ice items with Infinite Speed",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_earlyPhendranaBehindIceItemsWithIS"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Elite Research Laser Item without Boost Ball",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_eliteResearchLaserItemWithoutBoost"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Enter Late Magmoor without Heat Protection",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_lateMagmoorNoHeatProtection"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Exit Phendrana Canyon with No Items",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/exitPhendranaCanyonNoItems.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_exitPhendranaCanyonNoItems"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_exitPhendranaCanyonNoItems"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Exit Quarantine Cave to Ruined Courtyard without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/exitQuarantineCaveRuinedCourtyardSlopeJump.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_exitQuarantineCaveRuinedCourtyardSlopeJump"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_exitQuarantineCaveRuinedCourtyardSlopeJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Fiery Shores Access without Morph Ball and Grapple Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/fieryShoresAccessWithoutMorphGrapple.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_fieryShoresAccessWithoutMorphGrapple"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_fieryShoresAccessWithoutMorphGrapple"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Fiery Shores Item with Space Jump",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_fieryShoresItemSj"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Frigate Crash Site Item with only Scan Visor",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_frigateCrashSiteItemOnlyScanVisor"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Frigate Crash Site Item without Gravity Suit",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/frigateCrashSiteItemWithoutGravitySuit.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_frigateCrashSiteItemWithoutGravitySuit"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_frigateCrashSiteItemWithoutGravitySuit"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Furnace (Upper Tunnel) without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/furnaceAccessWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_furnaceAccessWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_furnaceAccessWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Furnace Spider Track Item with Hyper Bomb Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/furnaceSpiderTrackItemHBJ.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_furnaceSpiderTrackItemHBJ"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_furnaceSpiderTrackItemHBJ"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Furnace Spider Track Item with Space Jump Boots, Bombs",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/furnaceSpiderTrackItemSpaceJumpBombs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_furnaceSpiderTrackItemSpaceJumpBombs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_furnaceSpiderTrackItemSpaceJumpBombs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Gathering Hall Item without Space Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/gatheringHallWithoutSpaceJump.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_gatheringHallWithoutSpaceJump"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_gatheringHallWithoutSpaceJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Gravity Chamber Ledge Item without Grapple, Plasma Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/gravityChamberLedgeItemWithoutGrapplePlasma.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_gravityChamberLedgeItemWithoutGrapplePlasma"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_gravityChamberLedgeItemWithoutGrapplePlasma"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Great Tree Hall - Bars Skip",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/greatTreeHallBarsSkip.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_greatTreeHallBarsSkip"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_greatTreeHallBarsSkip"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Hall of the Elders Bomb Slots without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/hallOfTheEldersBombSlotsWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_hallOfTheEldersBombSlotsWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_hallOfTheEldersBombSlotsWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Hall of the Elders Items with Infinite Speed",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/hallOfTheEldersItemsWithIS.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_hallOfTheEldersItemsWithIS"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_hallOfTheEldersItemsWithIS"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Hydro Access Tunnel without Gravity Suit",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/hydroAccessTunnelWithoutGravity.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_hydroAccessTunnelWithoutGravity"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_hydroAccessTunnelWithoutGravity"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Ice Beam Before Flaahgra Wallcrawl",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/iceBeamBeforeFlaahgraOobWallcrawl.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_iceBeamBeforeFlaahgraOobWallcrawl"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_iceBeamBeforeFlaahgraOobWallcrawl"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Ice Ruins East - Spider Track Item without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/iceRuinsEastSpiderItemWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_iceRuinsEastSpiderItemWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_iceRuinsEastSpiderItemWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Infinite Boost clip into Elite Research",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/eliteResearchInfiniteBoostClip.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_eliteResearchInfiniteBoostClip"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_eliteResearchInfiniteBoostClip"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Lava Lake Item Suitless",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_lavaLakeItemSuitless"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Lava Lake Item with only Missiles",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_lavaLakeItemOnlyMissiles"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Life Grove Spinner without Boost Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/lifeGroveSpinnerWithoutBoostBall.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_lifeGroveSpinnerWithoutBoostBall"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_lifeGroveSpinnerWithoutBoostBall"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Life Grove Tunnel - Half Pipe Bomb Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/lifeGroveTunnelHpbj.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_lifeGroveTunnelHpbj"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_lifeGroveTunnelHpbj"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Lower Phazon Mines without Spider Ball, Grapple Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/lowerPhazonMineWithoutSpiderGrapple.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_lowerPhazonMineWithoutSpiderGrapple"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_lowerPhazonMineWithoutSpiderGrapple"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Magma Pool Item with Infinite Speed",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/magmaPoolItemWithIS.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_magmaPoolItemWithIS"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_magmaPoolItemWithIS"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Main Plaza - Half Pipe Bomb Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/mainPlazaHpbj.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_mainPlazaHpbj"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_mainPlazaHpbj"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Main Plaza Grapple Ledge Item with only Grapple Beam",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_mainPlazaGrappleLedgeOnlyGrapple"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Main Plaza Items with only Space Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/mainPlazaItemsOnlySpaceJump.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_mainPlazaItemsOnlySpaceJump"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_mainPlazaItemsOnlySpaceJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Main Plaza Tree Item without Space Jump",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_mainPlazaTreeNoSpaceJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Main Quarry Item without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/mainQuarryItemWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_mainQuarryItemWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_mainQuarryItemWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Main Quarry to Ore Processing without Grapple Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/mainQuarryToOreProcessingWithoutGrapple.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_mainQuarryToOreProcessingWithoutGrapple"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_mainQuarryToOreProcessingWithoutGrapple"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Observatory Item Puzzle Skip",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/observatoryPuzzleSkip.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_observatoryPuzzleSkip"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_observatoryPuzzleSkip"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Out of Bounds without Morph Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/outOfBoundsWithoutMorphBall.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_outOfBoundsWithoutMorphBall"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_outOfBoundsWithoutMorphBall"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Phazon Mining Tunnel Item without Phazon Suit",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/phazonMiningTunnelItemWithoutPhazonSuit.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_phazonMiningTunnelItemWithoutPhazonSuit"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_phazonMiningTunnelItemWithoutPhazonSuit"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Phendrana Transport South to Transport Access without Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/phendranaTransportSouthToTransportAccessWithoutSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_phendranaTransportSouthToTransportAccessWithoutSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_phendranaTransportSouthToTransportAccessWithoutSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Plasma Processing Item without Grapple Beam, Spider Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/plasmaProcessingItemWithoutGrappleSpider.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_plasmaProcessingItemWithoutGrappleSpider"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_plasmaProcessingItemWithoutGrappleSpider"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Plasma Processing from Magmoor Workstation Out of Bounds",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/plasmaProcessingFromMagmoorWorkstationOob.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_plasmaProcessingFromMagmoorWorkstationOob"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_plasmaProcessingFromMagmoorWorkstationOob"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Quarantine Monitor Dash",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/quarantineMonitorDash.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_quarantineMonitorDash"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_quarantineMonitorDash"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Reach Training Chamber/Access from Out of Bounds",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/trainingChamberAndAccessOobWallcrawl.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_trainingChamberAndAccessOobWallcrawl"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_trainingChamberAndAccessOobWallcrawl"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Reflecting Pool Access without Wave Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/reflectingPoolAccessWithoutWaveBeam.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_reflectingPoolAccessWithoutWaveBeam"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_reflectingPoolAccessWithoutWaveBeam"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Remove Phendrana Depths Grapple Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/removePhendranaDepthsGrappleReqs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_removePhendranaDepthsGrappleReqs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_removePhendranaDepthsGrappleReqs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Remove Thermal Visor Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/removeThermalReqs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_removeThermalReqs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_removeThermalReqs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Remove X-Ray Visor Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/removeXrayReqs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_removeXrayReqs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_removeXrayReqs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Root Cave and Arbor Chamber without Grapple Beam",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/rootCaveArborChamberWithoutGrapple.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_rootCaveArborChamberWithoutGrapple"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_rootCaveArborChamberWithoutGrapple"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Ruined Fountain Flaahgra Skip",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/ruinedFountainItemFlaahgraSkip.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_ruinedFountainItemFlaahgraSkip"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_ruinedFountainItemFlaahgraSkip"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Ruined Nursery without Bombs",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/ruinedNurseryWithoutBombs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_ruinedNurseryWithoutBombs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_ruinedNurseryWithoutBombs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Ruined Shrine Scan Dash Escape",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_ruinedShrineScanDashEscape"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Shore Tunnel Escape without Space Jump Boots",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/shoreTunnelEscapeWithoutSpaceJump.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_shoreTunnelEscapeWithoutSpaceJump"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_shoreTunnelEscapeWithoutSpaceJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Spiderless Shafts in Phazon Mines",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/spiderlessShafts.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_spiderlessShafts"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_spiderlessShafts"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Suitless Magmoor Run",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/suitlessMagmoorRun.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_suitlessMagmoorRun"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_suitlessMagmoorRun"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Suitless Magmoor Run - Minimum Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/suitlessMagmoorRunMinimal.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_suitlessMagmoorRunMinimal"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_suitlessMagmoorRunMinimal"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Sun Tower - Infinite Bomb Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/sunTowerIbj.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_sunTowerIbj"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_sunTowerIbj"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Tower Chamber without Gravity Suit",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/towerChamberNoGravity.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_towerChamberNoGravity"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_towerChamberNoGravity"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Traverse Morph Ball Bomb tunnels with Boost Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/boostThroughBombTunnels.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_boostThroughBombTunnels"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_boostThroughBombTunnels"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Triclops Pit Item with Charge Beam",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_triclopsPitItemWithCharge"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Triclops Pit Item without Space Jump",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_triclopsPitItemWithoutSpaceJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Upper Ruined Shrine and Tower of Light - Fewer Access Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/upperRuinedShrineTowerOfLightFewerAccessReqs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_upperRuinedShrineTowerOfLightFewerAccessReqs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_upperRuinedShrineTowerOfLightFewerAccessReqs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Vault Access from Main Plaza",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_vaultAccessFromMainPlaza"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Ventilation Shaft - Half Pipe Bomb Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/ventShaftHpbj.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_ventShaftHpbj"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_ventShaftHpbj"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Warrior Shrine - Minimum Requirements",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/warriorShrineMinimumReqs.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_warriorShrineMinimumReqs"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_warriorShrineMinimumReqs"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Warrior Shrine without Boost Ball",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/warriorShrineWithoutBoost.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_warriorShrineWithoutBoost"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_warriorShrineWithoutBoost"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Watery Hall (Underwater) Flaahgra Skip",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/wateryHallUnderwaterFlaahgraSkip.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_wateryHallUnderwaterFlaahgraSkip"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_wateryHallUnderwaterFlaahgraSkip"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Watery Hall (Underwater) Slope Jump",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/wateryHallUnderwaterSlopeJump.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_wateryHallUnderwaterSlopeJump"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_wateryHallUnderwaterSlopeJump"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
+  },
+  {
+    "name": "Watery Hall Scan Puzzle Item with Infinite Speed",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_wateryHallScanPuzzleWithIS"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   },
   {
     "name": "Wave/Sun Infinite Speed Out of Bounds",
-    "type": "toggle",
+    "type": "progressive",
     "loop": true,
-    "img": "images/settings/waveSunOobWallcrawlWithIS.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "t_waveSunOobWallcrawlWithIS"
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/settings/checkbox_off.png",
+        "codes": "t_waveSunOobWallcrawlWithIS"
+      },
+      {
+        "img": "images/settings/checkbox_on.png"
+      },
+      {
+        "img": "images/settings/checkbox_outoflogic.png"
+      }
+    ]
   }
 ]

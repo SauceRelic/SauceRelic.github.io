@@ -73,6 +73,14 @@
     "disabled_img_mods": "brightness|0.3",
     "codes": "elevatorShuffle"
   },
+  {
+    "name": "Randomized/Different Starting Area",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/startingArea.png",
+    "disabled_img_mods": "brightness|0.3",
+    "codes": "startingArea"
+  },
 
   // Tricks
   {

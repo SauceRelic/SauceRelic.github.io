@@ -14,6 +14,154 @@ function set(item)
   return has(item)
 end
 
+-- Inverse has(), used only for access rules defined in json
+function missing(item)
+  return not has(item)
+end
+
+-- Selector function for tri-state trick items
+-- 0 is off, 1 is on, and 2 is out of logic but known by user (sequence breakable)
+function trick(code, desiredStage)
+  local setting = Tracker:FindObjectForCode(code)
+  if setting then
+    local cStage = setting.CurrentStage
+    if desiredStage then
+      return cStage == desiredStage
+    else
+      if cStage == 1 then
+        return true
+      elseif cStage == 2 then
+        return true, AccessibilityLevel.SequenceBreak
+      else
+        return false
+      end
+    end
+  end
+end
+
+-- Evaluates a boolean statement consisting of only or operators between terms
+function orN(...)
+  for i,v in ipairs({...}) do
+    if has(v) then
+      return true
+    end
+  end
+  return false
+end
+
+
+-- Evaluates a boolean statement with structure:
+-- (has(x) and ... and has(z)) or (...) or ...
+-- Arguments are either item code strings or "or", which denotes or operators in the structure
+function eval(...)
+  local statementPart = true
+
+  for i,v in ipairs({...}) do
+
+    if v == "or" then
+      if statementPart then
+        return true
+      else
+        statementPart = true
+      end
+
+    else
+      if statementPart then
+        statementPart = has(v)
+      end
+
+    end
+  end
+
+  return statementPart
+end
+
+-- Item combo shortcuts
+function canBomb()
+  return has("morph") and has("bomb")
+end
+
+function canPb()
+  return has("morph") and has("powerbomb")
+end
+
+function canBombOrPb()
+  return has("morph") and (has("bomb") or has("powerbomb"))
+end
+
+function canBoost()
+  return has("morph") and has("boost")
+end
+
+function canSpider()
+  return has("morph") and has("spider")
+end
+
+function canSuper()
+  return has("missile") and has("charge") and has("super")
+end
+
+function thermalReqs(forceLogic)
+  local trick = Tracker:FindObjectForCode("t_removeThermalReqs")
+  if trick then
+    local stage = trick.CurrentStage
+    if stage == 1 then
+      return true
+    elseif stage == 2  and not forceLogic then
+      if has("thermal") then
+        return true
+      else
+        return true, AccessibilityLevel.SequenceBreak
+      end
+    else
+      return has("thermal")
+    end
+  end
+end
+
+function xrayReqs(forceLogic)
+  local trick = Tracker:FindObjectForCode("t_removeXrayReqs")
+  if trick then
+    local stage = trick.CurrentStage
+    if stage == 1 then
+      return true
+    elseif stage == 2 and not forceLogic then
+      if has("xray") then
+        return true
+      else
+        return true, AccessibilityLevel.SequenceBreak
+      end
+    else
+      return has("xray")
+    end
+  end
+end
+
+function hasSuit()
+  if set("hp_variaonly") then
+    return has("varia")
+  else
+    return has("varia") or has("gravity") or has("phazon")
+  end
+end
+
+function canIsg()
+  return has("morph") and has("bomb") and has("boost")
+end
+
+function canWallcrawl()
+  if canBomb() then
+    return true
+  elseif has("space") then
+    return trick("t_outOfBoundsWithoutMorphBall")
+  else
+    return false
+  end
+end
+
+
+-- Recursively checks logic to reach each anchor (in this case, elevators). 
+-- If access to an anchor is changed or forced on by a user toggle, it will not change again, so it is skipped on the next round
 function anchorAccess()
   local anchorsTable = {"temple", "to_north", "to_east", "to_west", "to_southchozo", "to_southmines", "cr_west", "cr_north", "cr_east", "cr_south",
    "mc_north", "mc_west", "mc_east", "mc_southmines", "mc_southphen", "pd_north", "pd_south", "pm_east", "pm_west"}
@@ -193,144 +341,4 @@ function anchorLogic(code)
   end
 
   return false
-end
-
-  
--- Inverse has(), used only for access rules defined in json
-function missing(item)
-  return not has(item)
-end
-
--- Deprecated
---[[function disabled(item,sb)
-  if not sb then
-    return missing(item)
-  else
-    if missing(item) then
-     return true
-    else
-      return missing(sb), AccessibilityLevel.SequenceBreak
-    end
-  end
-end--]]
-
--- Evaluates a boolean statement consisting of only or operators between terms
-function orN(...)
-  for i,v in ipairs({...}) do
-    if has(v) then
-      return true
-    end
-  end
-  return false
-end
-
-
--- Evaluates a boolean statement with structure:
--- (has(x) and ... and has(z)) or (...) or ...
--- Arguments are either item code strings or "or", which denotes or operators in the structure
-function eval(...)
-  local statementPart = true
-
-  for i,v in ipairs({...}) do
-
-    if v == "or" then
-      if statementPart then
-        return true
-      else
-        statementPart = true
-      end
-
-    else
-      if statementPart then
-        statementPart = has(v)
-      end
-
-    end
-  end
-
-  return statementPart
-end
-
-
--- Item combo shortcuts
-function canBomb()
-  return has("morph") and has("bomb")
-end
-
-function canPb()
-  return has("morph") and has("powerbomb")
-end
-
-function canBombOrPb()
-  return has("morph") and (has("bomb") or has("powerbomb"))
-end
-
-function canBoost()
-  return has("morph") and has("boost")
-end
-
-function canSpider()
-  return has("morph") and has("spider")
-end
-
-function canSuper()
-  return has("missile") and has("charge") and has("super")
-end
-
-function thermalReqs(forceLogic)
-  local trick = Tracker:FindObjectForCode("t_removeThermalReqs")
-  if trick then
-    local stage = trick.CurrentStage
-    if stage == 1 then
-      return true
-    elseif stage == 2  and not forceLogic then
-      if has("thermal") then
-        return true
-      else
-        return true, AccessibilityLevel.SequenceBreak
-      end
-    else
-      return has("thermal")
-    end
-  end
-end
-
-function xrayReqs(forceLogic)
-  local trick = Tracker:FindObjectForCode("t_removeXrayReqs")
-  if trick then
-    local stage = trick.CurrentStage
-    if stage == 1 then
-      return true
-    elseif stage == 2 and not forceLogic then
-      if has("xray") then
-        return true
-      else
-        return true, AccessibilityLevel.SequenceBreak
-      end
-    else
-      return has("xray")
-    end
-  end
-end
-
-function hasSuit()
-  if set("hp_variaonly") then
-    return has("varia")
-  else
-    return has("varia") or has("gravity") or has("phazon")
-  end
-end
-
-function canIsg()
-  return has("morph") and has("bomb") and has("boost")
-end
-
-function canWallcrawl()
-  if canBomb() then
-    return true
-  elseif has("space") then
-    return trick("t_outOfBoundsWithoutMorphBall")
-  else
-    return false
-  end
 end

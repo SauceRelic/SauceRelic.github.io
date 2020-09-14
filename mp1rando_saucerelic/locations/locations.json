@@ -1,17 +1,5 @@
 [
   {
-    "name": "Lua function loaders",
-    "sections": [
-      {
-        "name": "Anchor access rules",
-        "access_rules": [
-          "$anchorAccess"
-        ],
-        "item_count": 1
-      }
-    ]
-  },
-  {
     "name": "Tallon Overworld",
     "color": "#316534",
     "children": [

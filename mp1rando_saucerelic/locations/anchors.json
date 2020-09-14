@@ -1,0 +1,364 @@
+[
+  {
+    "name": "Lua function loaders",
+    "sections": [
+      {
+        "name": "Starting area control",
+        "access_rules": [
+          "$startingAreaControl"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "Difficulty presets",
+        "access_rules": [
+          "$difficultySwitch"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "Anchor access rules",
+        "access_rules": [
+          "$anchorAccess"
+        ],
+        "item_count": 1
+      }
+    ]
+  },
+  {
+    "name": "Anchors",
+    "color": "#FFFFFF",
+    "access_rules": [
+      "elevatorShuffle",
+      "startingArea,$startingAreaVis"
+    ],
+    "children": [
+      {
+        "name": "Landing Site",
+        "access_rules": [
+          "startingArea,$startingAreaVis"
+        ],
+        "sections": [
+          {
+            "name": "Starting Area",
+            "hosted_item": "u_to_north"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": 570,
+            "y": 520
+          }
+        ]
+      },
+      {
+        "name": "Artifact Temple",
+        "access_rules": [
+          "startingArea,$startingAreaVis"
+        ],
+        "sections": [
+          {
+            "name": "Starting Area",
+            "hosted_item": "u_temple"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Tallon North Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_to_north"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Tallon East Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_to_east"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Tallon West Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_to_west"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Tallon South Elevator (to Chozo)",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_to_southchozo"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Tallon South Elevator (to Mines)",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_to_southmines"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "tallonoverworld",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Chozo West Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_cr_west"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Chozo North Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_cr_north"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Chozo East Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_cr_east"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Chozo South Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_cr_south"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "chozoruins",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Magmoor North Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_mc_north"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Magmoor West Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_mc_west"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Magmoor East Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_mc_east"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Magmoor South Elevator (to Mines)",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_mc_southmines"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Magmoor South Elevator (to Phendrana)",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_mc_southphen"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "magmoorcaverns",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Phendrana North Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_pd_north"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Phendrana South Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_pd_south"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phendranadrifts",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Mines East Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_pm_east"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": ,
+            "y": 
+          }
+        ]
+      },
+      {
+        "name": "Mines West Elevator",
+        "sections": [
+          {
+            "name": "Starting Area/Shuffled Elevator",
+            "hosted_item": "u_pm_west"
+          }
+        ],
+        "map_locations": [
+          {
+            "map": "phazonmines",
+            "x": ,
+            "y": 
+          }
+        ]
+      }
+    ]
+  }
+]

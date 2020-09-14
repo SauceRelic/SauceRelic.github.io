@@ -160,14 +160,14 @@ function canWallcrawl()
 end
 
 
--- Recursively checks logic to reach each anchor (in this case, elevators). 
+-- Recursively checks logic to reach each anchor (in this case, elevators).
 -- If access to an anchor is changed or forced on by a user toggle, it will not change again, so it is skipped on the next round
 function anchorAccess()
   local anchorsTable = {"temple", "to_north", "to_east", "to_west", "to_southchozo", "to_southmines", "cr_west", "cr_north", "cr_east", "cr_south",
    "mc_north", "mc_west", "mc_east", "mc_southmines", "mc_southphen", "pd_north", "pd_south", "pm_east", "pm_west"}
 
   local resolved = false
-  
+
   while not resolved do
     resolved = true
     local skipTable = {}
@@ -176,7 +176,7 @@ function anchorAccess()
       local skip = false
       local iState = has(code)
       local anchor = Tracker:FindObjectForCode(code)
-      
+
       -- If user toggled the anchor, set in logic, else use standard logic
       if has("u_"..code) then
         anchor.Active = true
@@ -190,7 +190,7 @@ function anchorAccess()
         resolved = false
         table.insert(skipTable, 1, i)
       end
-      
+
       -- Skip on future rounds if forced in logic by user toggle
       if skip then
         table.insert(skipTable, 1, i)
@@ -228,7 +228,7 @@ function anchorLogic(code)
              has("to_southchozo") and trick("t_greatTreeHallBarsSkip",1) and canBomb() and has("gravity") and (thermalReqs(1) or set("ponr_allowall")) or
              has("to_southmines") and has("gravity") and (canBomb() or trick("t_hydroAccessTunnelWithoutGravity",1) and canBoost()) and (thermalReqs(1) or set("ponr_allowall"))
            )
-           
+
   elseif code == "to_west" then
     return not set("elevatorShuffle") and has("mc_east") or
            has("to_north") and has("missile")
@@ -337,7 +337,7 @@ function anchorLogic(code)
   elseif code == "pm_west" then
     return not set("elevatorShuffle") and has("mc_southmines") or
            has("pm_east") and has("ice") and has("wave") and has("space") and canPb() and canBomb() and has("scan") and (canSpider() or set("ponr_allowall") and trick("t_climbOreProcessingWithoutGrappleSpider",1) and trick("t_climbPhazonProcessingCenterWithoutSpider",1)) and (canBoost() or has("grapple") or trick("t_mainQuarryToOreProcessingWithoutGrapple",1))
-    
+
   end
 
   return false

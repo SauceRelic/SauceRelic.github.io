@@ -4,5 +4,14 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"Lua.diagnostics.globals": [
+			"Tracker",
+			"AccessibilityLevel",
+			"ScriptHost"
+		],
+		"Lua.diagnostics.disable": [
+			"lowercase-global"
+		]
+	}
 }

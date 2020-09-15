@@ -10,7 +10,7 @@
           "morph",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate}",
+          "{$nhas|obfuscate}",
 
           // Hint from Artifact Temple
           // Included for all non-immediate checks
@@ -174,7 +174,7 @@
           "@set/t_ghetto,morph,space,$missing|gravity",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,missile,morph}",
+          "{$nhas|obfuscate,missile,morph}",
 
           "{hints,artifactcheck}"
         ],
@@ -446,7 +446,7 @@
               "t_mainPlazaHpbj,@can/bomb",
 
               // Visible, not obtainable
-              "{$disabled|r_obfuscate}",
+              "{$nhas|obfuscate}",
 
               "{hints,artifactcheck}"
             ],
@@ -472,7 +472,7 @@
               "@can/floaty",
 
               // Visible, not obtainable
-              "{$disabled|r_obfuscate}",
+              "{$nhas|obfuscate}",
 
               "{hints,artifactcheck}"
             ],
@@ -503,7 +503,7 @@
               "@set/t_ljump,space",
 
               // Visible, not obtainable
-              "{$disabled|r_obfuscate}",
+              "{$nhas|obfuscate}",
 
               "{hints,artifactcheck}"
             ],
@@ -529,7 +529,7 @@
           "@set/t_terrain,@set/t_ljump,morph,missile,spider",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,missile,morph}",
+          "{$nhas|obfuscate,missile,morph}",
 
           "{hints,artifactcheck}"
         ],
@@ -564,7 +564,7 @@
               "@set/t_terrain,@set/t_dash,missile",
 
               // Access/Visible, not obtainable (safely visible, but softlock if collected and item does not meet reqs)
-              "{$disabled|r_obfuscate,missile}",
+              "{$nhas|obfuscate,missile}",
 
               "{hints,artifactcheck}"
             ],
@@ -618,7 +618,7 @@
           "@can/bomb,missile",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,missile,morph}",
+          "{$nhas|obfuscate,missile,morph}",
 
           "{hints,artifactcheck}"
         ],
@@ -779,7 +779,7 @@
           "@can/bomb",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate}",
+          "{$nhas|obfuscate}",
 
           "{hints,artifactcheck}"
         ],
@@ -1049,13 +1049,13 @@
               "@can/bomb,missile",
 
               // Developer intended with vanilla bombs
-              "$disabled|shuf_bombs,missile,@can/bomb or pb",
+              "$nhas|shuf_bombs,missile,@can/bomb or pb",
 
               // Skip bombs with boost
               "@set/t_boostjumps,missile,@can/bomb or pb,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
-              "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,@can/bomb or pb}",
+              "{$nhas|r_noriskbombs|sb_r_noriskbombs,missile,@can/bomb or pb}",
 
               "{hints,artifactcheck}"
             ],
@@ -1229,10 +1229,10 @@
           "@reqs/reflecting pool,missile,ice",
 
           // Allow vanilla beams, but require visible items
-          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/reflecting pool,missile",
+          "$disabled|r_noriskbeams,[$nhas|obfuscate],@reqs/reflecting pool,missile",
 
           // Visible, not obtainable (visible from outside)
-          "{$disabled|r_obfuscate,@reqs/reflecting pool,missile}",
+          "{$nhas|obfuscate,@reqs/reflecting pool,missile}",
 
           "{hints,artifactcheck}"
         ],
@@ -1474,22 +1474,22 @@
           // Developer intended and escape
           "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
           // Allow vanilla beams but require visible items
-          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
+          "$disabled|r_noriskbeams,[$nhas|obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
 
           // Skip grapple beam to spinners
           "@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
           // Allow vanilla beams
-          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
+          "$disabled|r_noriskbeams,[$nhas|obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
 
           // Skip grapple and ghetto jump to bomb slot
           "@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
           // Allow vanilla beams
-          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
+          "$disabled|r_noriskbeams,[$nhas|obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
 
           // Workstation OoB
           "@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
           // Allow vanilla beams
-          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
+          "$disabled|r_noriskbeams,[$nhas|obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
 
           // Visible, not obtainable (can see from outside, need plasma to escape)
           "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
@@ -1521,7 +1521,7 @@
           "@reqs/late magmoor,morph,wave,@can/pass thermal",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,@reqs/late magmoor,morph}",
+          "{$nhas|obfuscate,@reqs/late magmoor,morph}",
 
           "{hints,artifactcheck}"
         ],
@@ -1559,7 +1559,7 @@
               "@set/t_sunisg,@can/isg,wave",
 
               // Visible, not obtainable
-              "{$disabled|r_obfuscate,@reqs/front phen}",
+              "{$nhas|obfuscate,@reqs/front phen}",
 
               "{hints,artifactcheck}"
             ],
@@ -1573,7 +1573,7 @@
               "@reqs/front phen,@can/super,space,spider",
 
               // Visible, not obtainable
-              "{$disabled|r_obfuscate,@reqs/front phen}",
+              "{$nhas|obfuscate,@reqs/front phen}",
 
               "{hints,artifactcheck}"
             ],
@@ -1682,10 +1682,10 @@
           "@reqs/front phen,@can/bomb,space,wave",
 
           // Allow vanilla beams but require visible items
-          "$disabled|r_noriskbeams,[$disabled|r_obfuscate],@reqs/fron phen,@can/bomb,space",
+          "$disabled|r_noriskbeams,[$nhas|obfuscate],@reqs/fron phen,@can/bomb,space",
 
           // Visible, not obtainable (can see from outside, need wave to escape)
-          "{$disabled|r_obfuscate,@reqs/front phen,@can/bomb,space}",
+          "{$nhas|obfuscate,@reqs/front phen,@can/bomb,space}",
 
           "{hints,artifactcheck}"
         ],
@@ -1819,7 +1819,7 @@
           "@reqs/phen labs,@can/super",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,@reqs/phen labs,xray}",
+          "{$nhas|obfuscate,@reqs/phen labs,xray}",
 
           "{hints,artifactcheck}"
         ],
@@ -1949,7 +1949,7 @@
           "@reqs/far phen,plasma",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,@reqs/far phen}",
+          "{$nhas|obfuscate,@reqs/far phen}",
 
           "{hints,artifactcheck}"
         ],
@@ -1978,7 +1978,7 @@
           "@set/t_dash,@reqs/far phen",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,@reqs/far phen}",
+          "{$nhas|obfuscate,@reqs/far phen}",
 
           "{hints,artifactcheck}"
         ],
@@ -2122,7 +2122,7 @@
           "@set/t_terrain,@set/t_ghetto,@set/t_ljump,@reqs/upper mines,@can/bomb,@can/pass thermal",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
+          "{$nhas|obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
 
           "{hints,artifactcheck}"
         ],
@@ -2363,7 +2363,7 @@
           "@reqs/lower mines,@can/super",
 
           // Visible, not obtainable
-          "{$disabled|r_obfuscate,@reqs/lower mines,xray}",
+          "{$nhas|obfuscate,@reqs/lower mines,xray}",
 
           "{hints,artifactcheck}"
         ],

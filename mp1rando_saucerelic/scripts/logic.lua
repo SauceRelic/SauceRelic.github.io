@@ -15,7 +15,7 @@ function set(item)
 end
 
 -- Inverse has(), used only for access rules defined in json
-function missing(item)
+function nhas(item)
   return not has(item)
 end
 
@@ -166,44 +166,47 @@ function anchorAccess()
   local anchorsTable = {"temple", "to_north", "to_east", "to_west", "to_southchozo", "to_southmines", "cr_west", "cr_north", "cr_east", "cr_south",
    "mc_north", "mc_west", "mc_east", "mc_southmines", "mc_southphen", "pd_north", "pd_south", "pm_east", "pm_west"}
 
+  local iterations = 0
   local resolved = false
 
+  -- Reset all anchors to avoid anchors "locking" each other on
+  for i,code in ipairs(anchorsTable) do
+    local anchor = Tracker:FindObjectForCode(code)
+    anchor.Active = false
+  end
+
   while not resolved do
+    iterations = iterations+1
     resolved = true
     local skipTable = {}
 
     for i,code in ipairs(anchorsTable) do
       local skip = false
-      local iState = has(code)
       local anchor = Tracker:FindObjectForCode(code)
 
       -- If user toggled the anchor, set in logic, else use standard logic
       if has("u_"..code) then
         anchor.Active = true
-        skip = true
       else
         anchor.Active = anchorLogic(code)
       end
 
-      -- If accessibility changed, check all logic again and skip changed entry on future rounds
-      if iState ~= has(code) then
+      -- If accessible, check all logic again and skip entry on future rounds
+      if anchor.Active then
         resolved = false
-        table.insert(skipTable, 1, i)
-      end
-
-      -- Skip on future rounds if forced in logic by user toggle
-      if skip then
         table.insert(skipTable, 1, i)
       end
     end
 
-    -- Remove forced/changed anchors from logic checking loop
+    -- Remove accessible anchors from logic checking loop
     if not resolved then
       for i,v in ipairs(skipTable) do
         table.remove(anchorsTable, v)
       end
     end
   end
+
+  print("Anchor logic iterations:", iterations)
 end
 
 -- Tests anchor logic for non-user-toggle cases

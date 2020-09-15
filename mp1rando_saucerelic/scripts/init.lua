@@ -1,4 +1,3 @@
-Tracker:AddItems("items/settings.json")
 Tracker:AddItems("items/equips.json")
 Tracker:AddItems("items/artifacts.json")
 
@@ -6,12 +5,14 @@ if not string.find(Tracker.ActiveVariantUID, "v_itemsonly") then
   diff_cStage = 0
   startArea_en = false
 
+  Tracker:AddItems("items/settings.json")
   Tracker:AddItems("items/anchors.json")
   Tracker:AddMaps("maps/maps.json")
 
   ScriptHost:LoadScript("scripts/logic.lua")
-  ScriptHost:LoadScript("scripts/settings.lua")
+  ScriptHost:LoadScript("scripts/interface.lua")
 
+  Tracker:AddLocations("locations/anchors.json")
   Tracker:AddLocations("locations/locations.json")
 
   Tracker:AddLayouts("layouts/settings.json")

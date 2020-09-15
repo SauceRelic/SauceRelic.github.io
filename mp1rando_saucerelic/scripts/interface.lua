@@ -69,7 +69,7 @@ function difficultySwitch()
     end
 
     for i,code in ipairs(tricksTable) do
-      local obj = Tracker:FindObjectForCode(code)
+      local obj = Tracker:FindObjectForCode("t_"..code)
       obj.CurrentStage = trickStageTable[i]
     end
 

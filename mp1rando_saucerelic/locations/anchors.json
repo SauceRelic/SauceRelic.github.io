@@ -30,14 +30,11 @@
     "color": "#FFFFFF",
     "access_rules": [
       "elevatorShuffle",
-      "startingArea,$startingAreaVis"
+      "startingArea"
     ],
     "children": [
       {
         "name": "Landing Site",
-        "access_rules": [
-          "startingArea,$startingAreaVis"
-        ],
         "sections": [
           {
             "name": "Starting Area",
@@ -47,6 +44,10 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
             "x": 570,
             "y": 520
           }
@@ -54,9 +55,6 @@
       },
       {
         "name": "Artifact Temple",
-        "access_rules": [
-          "startingArea,$startingAreaVis"
-        ],
         "sections": [
           {
             "name": "Starting Area",
@@ -66,8 +64,8 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -82,8 +80,8 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -98,8 +96,8 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -114,8 +112,8 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -130,8 +128,8 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -146,8 +144,8 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -162,8 +160,8 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -178,8 +176,8 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -194,8 +192,8 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -210,8 +208,8 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -226,8 +224,8 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -242,8 +240,8 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -258,8 +256,8 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -274,8 +272,8 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -290,8 +288,8 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -306,8 +304,8 @@
         "map_locations": [
           {
             "map": "phendranadrifts",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -322,8 +320,8 @@
         "map_locations": [
           {
             "map": "phendranadrifts",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -338,8 +336,8 @@
         "map_locations": [
           {
             "map": "phazonmines",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       },
@@ -354,8 +352,8 @@
         "map_locations": [
           {
             "map": "phazonmines",
-            "x": ,
-            "y": 
+            "x": 0,
+            "y": 0
           }
         ]
       }

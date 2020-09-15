@@ -4,14 +4,7 @@
     "type": "consumable",
     "img": "images/artifacts.png",
     "max_quantity": 12,
-    "codes": "artifact,artifacts,art,arts,chozoartifact,chozoartifacts"
-  },
-  {
-    "name": "Chozo Artifacts (Broadcast View)",
-    "type": "consumable",
-    "img": "images/artifacts.png",
-    "max_quantity": 12,
-    "codes": "broadarts"
+    "codes": "artifacts,artifact,art,arts,chozoartifact,chozoartifacts"
   },
   {
     "name": "Artifact of Truth",

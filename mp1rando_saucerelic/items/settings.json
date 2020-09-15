@@ -4,9 +4,10 @@
     "name": "Hide Item Icons",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/r_obfuscate.png",
-    "disabled_img_mods": "brightness|0.3",
-    "codes": "r_obfuscate"
+    "img": "images/settings/checkbox_on.png",
+    "disabled_img": "images/settings/checkbox_off.png",
+    "disabled_img_mods": "",
+    "codes": "obfuscate"
   },
 
   // Rules
@@ -14,7 +15,9 @@
     "name": "Show Chozo Artifact location hints in Artifact Temple",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/hints.png",
+    "img": "images/settings/checkbox_on.png",
+    "disabled_img": "images/settings/checkbox_off.png",
+    "disabled_img_mods": "",
     "codes": "hints"
   },
   {
@@ -69,16 +72,18 @@
     "name": "Elevator Shuffle",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/elevatorShuffle.png",
-    "disabled_img_mods": "brightness|0.3",
+    "img": "images/settings/checkbox_on.png",
+    "disabled_img": "images/settings/checkbox_off.png",
+    "disabled_img_mods": "",
     "codes": "elevatorShuffle"
   },
   {
     "name": "Randomized/Different Starting Area",
     "type": "toggle",
     "loop": true,
-    "img": "images/settings/startingArea.png",
-    "disabled_img_mods": "brightness|0.3",
+    "img": "images/settings/checkbox_on.png",
+    "disabled_img": "images/settings/checkbox_off.png",
+    "disabled_img_mods": "",
     "codes": "startingArea"
   },
 

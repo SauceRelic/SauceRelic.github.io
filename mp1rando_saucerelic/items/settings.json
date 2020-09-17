@@ -12,15 +12,6 @@
 
   // Rules
   {
-    "name": "Show Chozo Artifact location hints in Artifact Temple",
-    "type": "toggle",
-    "loop": true,
-    "img": "images/settings/checkbox_on.png",
-    "disabled_img": "images/settings/checkbox_off.png",
-    "disabled_img_mods": "",
-    "codes": "hints"
-  },
-  {
     "name": "Show All Locations for Artifact Temple Hints",
     "type": "toggle",
     "loop": true,
@@ -34,12 +25,12 @@
     "allow_disabled": false,
     "stages": [
       {
-        "img": "images/settings/hs_anysuit.png",
+        "img": "images/settings/hp_anysuit.png",
         "inherit_codes": false,
         "codes": "hp_anysuit"
       },
       {
-        "img": "images/settings/hs_variaonly.png",
+        "img": "images/settings/hp_variaonly.png",
         "inherit_codes": false,
         "codes": "hp_variaonly"
       }

@@ -8,7 +8,7 @@
         "orientation": "horizontal",
         "h_alignment": "center",
         "width": 1240,
-        "scale": 0.5,
+        "scale": 0.75,
         "content": [
           {
             "type": "array",

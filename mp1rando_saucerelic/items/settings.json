@@ -44,18 +44,13 @@
     "stages": [
       {
         "img": "images/settings/ponr_disabled.png",
-        "inherit_codes": false,
-        "codes": "ponr_disabled"
+        "codes": "ponr"
       },
       {
-        "img": "images/settings/ponr_visible.png",
-        "inherit_codes": false,
-        "codes": "ponr_visible"
+        "img": "images/settings/ponr_visible.png"
       },
       {
-        "img": "images/settings/ponr_allowall.png",
-        "inherit_codes": false,
-        "codes": "ponr_allowall"
+        "img": "images/settings/ponr_allowall.png"
       }
     ]
   },
@@ -120,10 +115,10 @@
         "codes": "t_alcoveNoItems"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -138,10 +133,10 @@
         "codes": "t_antechamberWithPowerBombs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -156,10 +151,10 @@
         "codes": "t_arborChamberWithoutPlasma"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -174,10 +169,10 @@
         "codes": "t_arboretumPuzzleSkip"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -192,10 +187,10 @@
         "codes": "t_chapelOfTheEldersWithPowerBombs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -210,10 +205,10 @@
         "codes": "t_chozoIceTempleItemWithIS"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -228,10 +223,10 @@
         "codes": "t_chozoIceTempleWithoutSpaceJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -246,10 +241,10 @@
         "codes": "t_climbFrigateCrashSite"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -264,10 +259,10 @@
         "codes": "t_climbFrozenPikeWithoutBombs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -282,10 +277,10 @@
         "codes": "t_climbObservatoryWithoutBoost"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -300,10 +295,10 @@
         "codes": "t_climbOreProcessingWithoutGrappleSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -318,10 +313,10 @@
         "codes": "t_climbPhazonProcessingCenterWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -336,10 +331,10 @@
         "codes": "t_climbReflectingPoolWithoutBoostBall"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -354,10 +349,10 @@
         "codes": "t_climbRuinedCourtyardWithoutBoostSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -372,10 +367,10 @@
         "codes": "t_climbTowerOfLightWithoutMissiles"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -390,10 +385,10 @@
         "codes": "t_crashedFrigateGammaElevatorWithoutGravity"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -408,10 +403,10 @@
         "codes": "t_crossMagmaPoolSuitless"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -426,10 +421,10 @@
         "codes": "t_crossMagmaPoolWithoutGrapple"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -444,10 +439,10 @@
         "codes": "t_crossTwinFiresTunnelSuitless"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -462,10 +457,10 @@
         "codes": "t_crossTwinFiresTunnelWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -480,10 +475,10 @@
         "codes": "t_crosswayHpbj"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -498,10 +493,10 @@
         "codes": "t_crosswayItemFewerReqs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -516,10 +511,10 @@
         "codes": "t_destroyBombCoversWithPowerBombs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -534,10 +529,10 @@
         "codes": "t_earlyPhendranaBehindIceItemsWithIS"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -552,10 +547,10 @@
         "codes": "t_eliteResearchLaserItemWithoutBoost"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -570,10 +565,10 @@
         "codes": "t_lateMagmoorNoHeatProtection"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -588,10 +583,10 @@
         "codes": "t_exitPhendranaCanyonNoItems"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -606,10 +601,10 @@
         "codes": "t_exitQuarantineCaveRuinedCourtyardSlopeJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -624,10 +619,10 @@
         "codes": "t_fieryShoresAccessWithoutMorphGrapple"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -642,10 +637,10 @@
         "codes": "t_fieryShoresItemSj"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -660,10 +655,10 @@
         "codes": "t_frigateCrashSiteItemOnlyScanVisor"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -678,10 +673,10 @@
         "codes": "t_frigateCrashSiteItemWithoutGravitySuit"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -696,10 +691,10 @@
         "codes": "t_furnaceAccessWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -714,10 +709,10 @@
         "codes": "t_furnaceSpiderTrackItemHBJ"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -732,10 +727,10 @@
         "codes": "t_furnaceSpiderTrackItemSpaceJumpBombs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -750,10 +745,10 @@
         "codes": "t_gatheringHallWithoutSpaceJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -768,10 +763,10 @@
         "codes": "t_gravityChamberLedgeItemWithoutGrapplePlasma"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -786,10 +781,10 @@
         "codes": "t_greatTreeHallBarsSkip"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -804,10 +799,10 @@
         "codes": "t_hallOfTheEldersBombSlotsWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -822,10 +817,10 @@
         "codes": "t_hallOfTheEldersItemsWithIS"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -840,10 +835,10 @@
         "codes": "t_hydroAccessTunnelWithoutGravity"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -858,10 +853,10 @@
         "codes": "t_iceBeamBeforeFlaahgraOobWallcrawl"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -876,10 +871,10 @@
         "codes": "t_iceRuinsEastSpiderItemWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -894,10 +889,10 @@
         "codes": "t_eliteResearchInfiniteBoostClip"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -912,10 +907,10 @@
         "codes": "t_lavaLakeItemSuitless"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -930,10 +925,10 @@
         "codes": "t_lavaLakeItemOnlyMissiles"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -948,10 +943,10 @@
         "codes": "t_lifeGroveSpinnerWithoutBoostBall"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -966,10 +961,10 @@
         "codes": "t_lifeGroveTunnelHpbj"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -984,10 +979,10 @@
         "codes": "t_lowerPhazonMineWithoutSpiderGrapple"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1002,10 +997,10 @@
         "codes": "t_magmaPoolItemWithIS"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1020,10 +1015,10 @@
         "codes": "t_mainPlazaHpbj"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1038,10 +1033,10 @@
         "codes": "t_mainPlazaGrappleLedgeOnlyGrapple"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1056,10 +1051,10 @@
         "codes": "t_mainPlazaItemsOnlySpaceJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1074,10 +1069,10 @@
         "codes": "t_mainPlazaTreeNoSpaceJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1092,10 +1087,10 @@
         "codes": "t_mainQuarryItemWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1110,10 +1105,10 @@
         "codes": "t_mainQuarryToOreProcessingWithoutGrapple"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1128,10 +1123,10 @@
         "codes": "t_observatoryPuzzleSkip"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1146,10 +1141,10 @@
         "codes": "t_outOfBoundsWithoutMorphBall"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1164,10 +1159,10 @@
         "codes": "t_phazonMiningTunnelItemWithoutPhazonSuit"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1182,10 +1177,10 @@
         "codes": "t_phendranaTransportSouthToTransportAccessWithoutSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1200,10 +1195,10 @@
         "codes": "t_plasmaProcessingItemWithoutGrappleSpider"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1218,10 +1213,10 @@
         "codes": "t_plasmaProcessingFromMagmoorWorkstationOob"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1236,10 +1231,10 @@
         "codes": "t_quarantineMonitorDash"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1254,10 +1249,10 @@
         "codes": "t_trainingChamberAndAccessOobWallcrawl"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1272,10 +1267,10 @@
         "codes": "t_reflectingPoolAccessWithoutWaveBeam"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1290,10 +1285,10 @@
         "codes": "t_removePhendranaDepthsGrappleReqs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1308,10 +1303,10 @@
         "codes": "t_removeThermalReqs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1326,10 +1321,10 @@
         "codes": "t_removeXrayReqs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1344,10 +1339,10 @@
         "codes": "t_rootCaveArborChamberWithoutGrapple"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1362,10 +1357,10 @@
         "codes": "t_ruinedFountainItemFlaahgraSkip"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1380,10 +1375,10 @@
         "codes": "t_ruinedNurseryWithoutBombs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1398,10 +1393,10 @@
         "codes": "t_ruinedShrineScanDashEscape"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1416,10 +1411,10 @@
         "codes": "t_shoreTunnelEscapeWithoutSpaceJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1434,10 +1429,10 @@
         "codes": "t_spiderlessShafts"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1452,10 +1447,10 @@
         "codes": "t_suitlessMagmoorRun"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1470,10 +1465,10 @@
         "codes": "t_suitlessMagmoorRunMinimal"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1488,10 +1483,10 @@
         "codes": "t_sunTowerIbj"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1506,10 +1501,10 @@
         "codes": "t_towerChamberNoGravity"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1524,10 +1519,10 @@
         "codes": "t_boostThroughBombTunnels"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1542,10 +1537,10 @@
         "codes": "t_triclopsPitItemWithCharge"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1560,10 +1555,10 @@
         "codes": "t_triclopsPitItemWithoutSpaceJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1578,10 +1573,10 @@
         "codes": "t_upperRuinedShrineTowerOfLightFewerAccessReqs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1596,10 +1591,10 @@
         "codes": "t_vaultAccessFromMainPlaza"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1614,10 +1609,10 @@
         "codes": "t_ventShaftHpbj"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1632,10 +1627,10 @@
         "codes": "t_warriorShrineMinimumReqs"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1650,10 +1645,10 @@
         "codes": "t_warriorShrineWithoutBoost"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1668,10 +1663,10 @@
         "codes": "t_wateryHallUnderwaterFlaahgraSkip"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1686,10 +1681,10 @@
         "codes": "t_wateryHallUnderwaterSlopeJump"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1704,10 +1699,10 @@
         "codes": "t_wateryHallScanPuzzleWithIS"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   },
@@ -1722,10 +1717,10 @@
         "codes": "t_waveSunOobWallcrawlWithIS"
       },
       {
-        "img": "images/settings/checkbox_on.png"
+        "img": "images/settings/checkbox_outoflogic.png"
       },
       {
-        "img": "images/settings/checkbox_outoflogic.png"
+        "img": "images/settings/checkbox_on.png"
       }
     ]
   }

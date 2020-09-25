@@ -614,7 +614,7 @@
               {
                 "type": "item",
                 "margin": "0,10,0,2",
-                "item": "ponr_disabled"
+                "item": "ponr"
               },
               {
                 "type": "item",

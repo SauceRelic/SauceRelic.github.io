@@ -6,19 +6,22 @@
       {
         "name": "Landing Site",
         "access_rules": [
-          // Developer intended
-          "morph",
-
-          // Visible, not obtainable
-          "{$nhas|obfuscate}",
-
-          // Hint from Artifact Temple
-          // Included for all non-immediate checks
-          "{hints,artifactcheck}"
+          "to_north",
+          "{}"
         ],
         "sections": [
           {
             "name": "Missile",
+            "access_rules": [
+              "morph",
+
+              // Visible, not obtainable
+              "{$nhas|obfuscate}",
+
+              // Hint from Artifact Temple
+              // Included for most checks
+              "{temple,artifactcheck}"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -35,14 +38,7 @@
         "name": "Alcove",
         "access_rules": [
           // Developer intended
-          "@can/bomb,boost",
-          "space",
-
-          // ESJ scandash
-          "@set/t_scandash",
-
-          // DBJ off ship
-          "@set/t_terrain,@set/t_dbj,@can/bomb",
+          "to_north,$ponrLUT|alcove",
 
           "{hints,artifactcheck}"
         ],
@@ -1069,13 +1065,13 @@
               "@can/bomb,missile",
 
               // Developer intended with vanilla bombs
-              "$disabled|shuf_bombs,missile,morph",
+              "missile,morph",
 
               // Skip bombs with boost
               "@set/t_boostjumps,missile,morph,boost",
 
               // Softlockable (must reload if neither burn dome item is bombs)
-              "{$disabled|r_noriskbombs|sb_r_noriskbombs,missile,morph}",
+              "{missile,morph}",
 
               "{hints,artifactcheck}"
             ],
@@ -1229,7 +1225,7 @@
           "@reqs/reflecting pool,missile,ice",
 
           // Allow vanilla beams, but require visible items
-          "$disabled|r_noriskbeams,[$nhas|obfuscate],@reqs/reflecting pool,missile",
+          "[$nhas|obfuscate],@reqs/reflecting pool,missile",
 
           // Visible, not obtainable (visible from outside)
           "{$nhas|obfuscate,@reqs/reflecting pool,missile}",
@@ -1474,22 +1470,22 @@
           // Developer intended and escape
           "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
           // Allow vanilla beams but require visible items
-          "$disabled|r_noriskbeams,[$nhas|obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
+          "[$nhas|obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
 
           // Skip grapple beam to spinners
           "@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
           // Allow vanilla beams
-          "$disabled|r_noriskbeams,[$nhas|obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
+          "[$nhas|obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
 
           // Skip grapple and ghetto jump to bomb slot
           "@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
           // Allow vanilla beams
-          "$disabled|r_noriskbeams,[$nhas|obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
+          "[$nhas|obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
 
           // Workstation OoB
           "@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
           // Allow vanilla beams
-          "$disabled|r_noriskbeams,[$nhas|obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
+          "[$nhas|obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
 
           // Visible, not obtainable (can see from outside, need plasma to escape)
           "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
@@ -1682,7 +1678,7 @@
           "@reqs/front phen,@can/bomb,space,wave",
 
           // Allow vanilla beams but require visible items
-          "$disabled|r_noriskbeams,[$nhas|obfuscate],@reqs/fron phen,@can/bomb,space",
+          "[$nhas|obfuscate],@reqs/fron phen,@can/bomb,space",
 
           // Visible, not obtainable (can see from outside, need wave to escape)
           "{$nhas|obfuscate,@reqs/front phen,@can/bomb,space}",
@@ -1871,8 +1867,8 @@
           "@set/t_terrain,@reqs/phen labs,bombs",
 
           // Softlockable (need bombs to escape)
-          "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@reqs/phen labs,plasma}",
-          "{$disabled|r_noriskbombs|sb_r_noriskbombs,shuf_bombs,@set/t_terrain,@reqs/phen labs}",
+          "{shuf_bombs,@reqs/phen labs,plasma}",
+          "{shuf_bombs,@set/t_terrain,@reqs/phen labs}",
 
           "{hints,artifactcheck}"
         ],
@@ -2069,7 +2065,7 @@
               "@reqs/far phen,gravity",
 
               // Escape and access with underwater ghetto jump
-              "$disabled|r_noriskgravity|sb_r_noriskgravity,@set/t_ghetto,@reqs/far phen",
+              "@set/t_ghetto,@reqs/far phen",
 
               // Softlockable (need gravity if you don't know how to ghetto jump)
               "{@reqs/far phen,grapple}",
@@ -2087,7 +2083,7 @@
               "@reqs/far phen,gravity,grapple,plasma",
 
               // Ghetto R jump to the item
-              "$disabled|r_noriskgravity|sb_r_noriskgravity,@set/t_ghetto,@set/t_rjump,@reqs/far phen",
+              "@set/t_ghetto,@set/t_rjump,@reqs/far phen",
 
               // Softlockable (in case of falling in)
               "{@reqs/far phen,grapple,plasma}",

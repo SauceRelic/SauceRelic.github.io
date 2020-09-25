@@ -150,6 +150,7 @@
     "name": "Scan Visor",
     "type": "toggle",
     "loop": true,
+    "initial_active_state": true,
     "img": "images/scan.png",
     "codes": "scan,scanvisor"
   },

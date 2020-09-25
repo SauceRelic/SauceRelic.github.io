@@ -3,7 +3,7 @@ Tracker:AddItems("items/artifacts.json")
 
 if not string.find(Tracker.ActiveVariantUID, "v_itemsonly") then
   diff_cStage = 0
-  startArea_en = false
+  startArea_en = nil
 
   Tracker:AddItems("items/settings.json")
   Tracker:AddItems("items/anchors.json")

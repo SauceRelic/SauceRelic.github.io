@@ -64,12 +64,6 @@
                     "type": "layout",
                     "key": "artifacts",
                     "margin": "10,0"
-                  },
-                  {
-                    "type": "item",
-                    "item": "artifactcheck",
-                    "height": 48,
-                    "width": 48
                   }
                 ]
               }

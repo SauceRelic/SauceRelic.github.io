@@ -12,13 +12,6 @@
 
   // Rules
   {
-    "name": "Show All Locations for Artifact Temple Hints",
-    "type": "toggle",
-    "loop": true,
-    "img": "images/artifactcheck.png",
-    "codes": "artifactcheck"
-  },
-  {
     "name": "Heat Protection",
     "type": "progressive",
     "loop": true,

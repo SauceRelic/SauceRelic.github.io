@@ -64,7 +64,7 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 0,
+            "x": 50,
             "y": 0
           }
         ]

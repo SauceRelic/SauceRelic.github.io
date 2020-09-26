@@ -1,13 +1,22 @@
 [
   // ROM Settings
   {
-    "name": "Hide Item Icons",
+    "name": "Hide Item Models",
     "type": "toggle",
     "loop": true,
     "img": "images/settings/checkbox_on.png",
     "disabled_img": "images/settings/checkbox_off.png",
     "disabled_img_mods": "",
     "codes": "obfuscate"
+  },
+  {
+    "name": "Enable Main Plaza Ledge Door",
+    "type": "toggle",
+    "loop": true,
+    "img": "images/settings/checkbox_on.png",
+    "disabled_img": "images/settings/checkbox_off.png",
+    "disabled_img_mods": "",
+    "codes": "ledgeDoorEnable"
   },
 
   // Rules

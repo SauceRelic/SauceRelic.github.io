@@ -25,6 +25,12 @@
                 "type": "image",
                 "h_alignment": "right",
                 "margin": "0,10,0,2",
+                "image": "images/settings/ledgeDoorEnable_text.png"
+              },
+              {
+                "type": "image",
+                "h_alignment": "right",
+                "margin": "0,10,0,2",
                 "image": "images/settings/hp_text.png"
               },              {
                 "type": "image",
@@ -605,6 +611,11 @@
                 "type": "item",
                 "margin": "0,2",
                 "item": "obfuscate"
+              },
+              {
+                "type": "item",
+                "margin": "0,2",
+                "item": "ledgeDoorEnable"
               },
               {
                 "type": "item",

@@ -6,21 +6,16 @@
       {
         "name": "Landing Site",
         "access_rules": [
-          "to_north",
-          "{}"
+          "to_north"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Tunnel (Minor)",
             "access_rules": [
               "morph",
 
               // Visible, not obtainable
-              "{$nhas|obfuscate}",
-
-              // Hint from Artifact Temple
-              // Included for most checks
-              "{temple,artifactcheck}"
+              "{$nhas|obfuscate}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -37,14 +32,11 @@
       {
         "name": "Alcove",
         "access_rules": [
-          // Developer intended
-          "to_north,$ponrLUT|alcove",
-
-          "{hints,artifactcheck}"
+          "to_north,$ponrLUT|alcove"
         ],
         "sections": [
           {
-            "name": "Space Jump",
+            "name": "Space Jump Room (Major)",
             "item_count": 1,
             "capture_item": true
           }
@@ -60,12 +52,11 @@
       {
         "name": "Artifact Temple",
         "access_rules": [
-          // Developer intended
-          "missile"
+          "temple"
         ],
         "sections": [
           {
-            "name": "Artifact of Truth",
+            "name": "Artifact of Truth (Major)",
             "item_count": 1,
             "capture_item": true
           }
@@ -81,17 +72,15 @@
       {
         "name": "Root Cave",
         "access_rules": [
-          // Developer intended
-          "missile,space,grapple,@can/pass xray",
-
-          // Dash instead of grapple
-          "@set/t_dash,missile,space,@can/pass xray",
-
-          "{hints,artifactcheck}"
+          "to_west"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Invisible Platforms (Minor)",
+            "access_rules": [
+              "$xrayReqs,grapple,space",
+              "$xrayReqs,$trick|t_rootCaveArborChamberWithoutGrapple,space"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -107,21 +96,11 @@
       {
         "name": "Arbor Chamber",
         "access_rules": [
-          // Developer intended
-          "missile,space,plasma,grapple,@can/pass xray",
-
-          // Dash to skip grapple
-          "@set/t_dash,missile,space,plasma,@can/pass xray",
-
-          // Wallcrawl from rootcave
-          "@set/oob_rootcave,@can/wallcrawl,missile,space,grapple,@can/pass xray",
-          "@set/oob_rootcave,@can/wallcrawl,@set/t_dash,missile,space,@can/pass xray",
-
-          "{hints,artifactcheck}"
+          "to_west,$xrayReqs,space,$eval|grapple|or|t_rootCaveArborChamberWithoutGrapple,$eval|plasma|or|t_arborChamberWithoutPlasma|morph|bomb"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -137,14 +116,11 @@
       {
         "name": "Transport Tunnel B",
         "access_rules": [
-          // Developer intended
-          "missile",
-
-          "{hints,artifactcheck}"
+          "to_west"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Under the Bridge (Minor)",
             "item_count": 1,
             "capture_item": true
           }
@@ -160,23 +136,21 @@
       {
         "name": "Frigate Crash Site",
         "access_rules": [
-          // Developer intended
-          "missile,morph,space,gravity",
-
-          // Scan dash from shore
-          "@set/t_dash,missile,morph",
-
-          // Underwater ghetto jump
-          "@set/t_ghetto,morph,space,$missing|gravity",
-
-          // Visible, not obtainable
-          "{$nhas|obfuscate,missile,morph}",
-
-          "{hints,artifactcheck}"
+          "to_north,missile,morph",
+          "to_east,morph,space,ice",
+          "morph,ice,gravity,space,$thermalReqs,$eval|bomb|or|t_hydroAccessTunnelWithoutGravity|boost,$eval|to_southmines|or|to_southchozo|t_greatTreeHallBarsSkip|bomb"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Underwater Nook (Minor)",
+            "access_rules": [
+              "space,gravity",
+              "$trick|t_frigateCrashSiteItemWithoutGravitySuit,space",
+              "$trick|t_frigateCrashSiteItemWithoutGravitySuit,grapple",
+              "$trick|t_frigateCrashSiteItemOnlyScanVisor,scan",
+
+              "{$nhas|obfuscate}"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -192,17 +166,12 @@
       {
         "name": "Overgrown Cavern",
         "access_rules": [
-          // Through late Chozo, includes glitchless
-          "@reqs/reflecting pool,@can/bomb,ice",
-
-          // Climbing Frigate Crash Site
-          "@can/climb frigate crash site",
-          
-          "{hints,artifactcheck}"
+          "to_east,morph,space,ice",
+          "@Frigate Crash Site,$trick|t_climbFrigateCrashSite,morph,space,ice"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -219,14 +188,17 @@
         "name": "Cargo Freight Lift to Deck Gamma",
         "color": "#525252",
         "access_rules": [
-          // Frigate with no extra reqs
-          "@reqs/frigate",
-
-          "{hints,artifactcheck}"
+          "@Frigate Crash Site,$thermalReqs,gravity,morph,wave,ice,space",
+          "@Frigate Crash Site,$thermalReqs,$trick|t_crashedFrigateGammaElevatorWithoutGravity,morph,wave,ice,space",
+          "morph,ice,gravity,space,$thermalReqs,$eval|bomb|or|t_hydroAccessTunnelWithoutGravity|boost,$eval|to_southmines|or|to_southchozo|t_greatTreeHallBarsSkip|bomb"
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
+            "access_rules": [
+              "missile",
+              "charge"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -243,14 +215,15 @@
         "name": "Biohazard Containment",
         "color": "#525252",
         "access_rules": [
-          // Frigate with supers
-          "@reqs/frigate,@can/super",
-
-          "{hints,artifactcheck}"
+          "@Cargo Freight Lift to Deck Gamma,gravity,wave",
+          "ice,morph,space,$thermalReqs,$eval|bomb|gravity|or|t_hydroAccessTunnelWithoutGravity|boost,$eval|to_southmines|or|to_southchozo|t_greatTreeHallBarsSkip|bomb"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
+            "access_rules": [
+              "$canSuper"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -267,17 +240,16 @@
         "name": "Hydro Access Tunnel",
         "color": "#525252",
         "access_rules": [
-          // Normal path
-          "@reqs/frigate,@can/bomb",
-
-          // Bars skip
-          "@set/t_barsskip,@reqs/reflecting pool,@can/bomb,gravity,ice,space",
-
-          "{hints,artifactcheck}"
+          "@Biohazard Containment,wave",
+          "ice,$thermalReqs,$eval|gravity|or|t_hydroAccessTunnelWithoutGravity,$eval|to_southmines|or|to_southchozo|t_greatTreeHallBarsSkip|bomb|morph"
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
+            "access_rules": [
+              "gravity,$canBomb",
+              "$trick|t_hydroAccessTunnelWithoutGravity,$canBoost"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -293,19 +265,13 @@
       {
         "name": "Great Tree Chamber",
         "access_rules": [
-          // Through late Chozo
-          "@can/pass xray,ice,space,@reqs/reflecting pool",
-
-          // Through Frigate
-          "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,boost",
-          // With reverse bars skip
-          "@can/pass xray,ice,space,@reqs/frigate,@can/bomb,@set/t_barsskip",
-
-          "{hints,artifactcheck}"
+          "to_southchozo,space,$xrayReqs",
+          "to_southmines,space,$xrayReqs,$canBoost",
+          "to_southmines,space,$xrayReqs,$trick|t_greatTreeHallBarsSkip,$canBomb"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -321,29 +287,16 @@
       {
         "name": "Life Grove Tunnel",
         "access_rules": [
-          // Developer intended
-          // Through late Chozo
-          "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
-          // Through Frigate
-          "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
-
-          // Skipping boost
-          "@set/t_barsskip,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
-          "@set/t_barsskip,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
-
-          // Skipping spider tracks
-          "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
-          "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
-
-          // Max skips
-          "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
-          "@set/t_barsskip,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
-
-          "{hints,artifactcheck}"
+          "to_southchozo,ice,space,$canSpider,$canPb",
+          "to_southmines,ice,space,boost,$canSpider,$canPb",
+          "to_southmines,ice,space,$trick|t_greatTreeHallBarsSkip,$canBomb,$canSpider,$canPb"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
+            "access_rules": [
+              "$canBomb,canBoost"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -358,55 +311,21 @@
       },
       {
         "name": "Life Grove",
+        "access_rules": [
+          "@Life Grove Tunnel,$canBomb,$canBoost",
+          "@Life Grove Tunnel,$canBomb,$trick|t_lifeGroveTunnelHpbj"
+        ],
         "sections": [
           {
-            "name": "X-Ray Visor",
-            "access_rules": [
-              // Developer intended
-              // Through late Chozo
-              "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
-              // Through Frigate
-              "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
-
-              // Skipping boost
-              "@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
-              "@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
-
-              // Skipping spider tracks
-              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
-              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
-
-              // Max skips
-              "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
-              "@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
-
-              "{hints,artifactcheck}"
-            ],
+            "name": "X-Ray Check (Major)",
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Artifact of Chozo",
+            "name": "Artifact of Chozo (Major)",
             "access_rules": [
-              // Developer intended
-              // Through late Chozo
-              "@can/bomb,pb,ice,space,spider,boost,@reqs/reflecting pool",
-              // Through Frigate
-              "@can/bomb,pb,ice,space,spider,boost,@reqs/frigate",
-
-              // Skipping boost
-              "@set/t_noboostspinners,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/reflecting pool",
-              "@set/t_noboostspinners,@set/t_halfpipebj,@can/bomb,pb,ice,space,spider,@reqs/frigate",
-
-              // Skipping spider tracks
-              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/reflecting pool",
-              "@set/t_terrain,@can/bomb,pb,ice,space,boost,@reqs/frigate",
-
-              // Max skips
-              "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/reflecting pool",
-              "@set/t_noboostspinners,@set/t_halfpipebj,@set/t_terrain,@can/bomb,pb,ice,space,@reqs/frigate",
-
-              "{hints,artifactcheck}"
+              "$canPb,$canBoost",
+              "$canPb,$trick|t_lifeGroveSpinnerWithoutBoostBall,$canBomb"
             ],
             "item_count": 1,
             "capture_item": true
@@ -428,80 +347,52 @@
     "children": [
       {
         "name": "Main Plaza",
+        "access_rules": [
+          "cr_west"
+        ],
         "sections": [
           {
-            "name": "Half-Pipe",
+            "name": "Half-Pipe (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/boost",
+              "$canBoost",
+              "$trick|t_mainPlazaHpbj,$canBomb",
+              "$trick|t_mainPlazaItemsOnlySpaceJump,space",
 
-              // Space jump from ledge, ghetto up ramp or jump from above
-              "t_mainPlazaItemsOnlySpaceJump,space",
-
-              // Half-pipe bomb jump
-              "t_mainPlazaHpbj,@can/bomb",
-
-              // Visible, not obtainable
-              "{$nhas|obfuscate}",
-
-              "{hints,artifactcheck}"
+              "{$nhas|obfuscate}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Grapple Ledge",
+            "name": "Grapple Ledge (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/bomb,@has/heat shielding,missile,grapple,boost,wave",
+              "$trick|t_mainPlazaItemsOnlySpaceJump,space",
+              "$trick|t_mainPlazaGrappleLedgeOnlyGrapple,grapple",
 
-              // Jump from tree and grapple
-              "@set/t_terrain,grapple",
+              "grapple,$canBomb,$canBoost,wave,$hasSuit",
+              "grapple,$canBomb,$canBoost,wave,$trick|t_crossMagmaPoolSuitless,etank:2,space,scan",
 
-              // L jump from the ledge below
-              "@set/t_ljump,space",
-
-              // Dash from tree
-              "@set/t_terrain,@set/t_dash,space",
-
-              // Floaty jump
-              "@can/floaty",
-
-              // Visible, not obtainable
-              "{$nhas|obfuscate}",
-
-              "{hints,artifactcheck}"
+              "{$nhas|obfuscate}"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Tree",
+            "name": "Tree (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/super,@can/pass xray",
-
-              // OoB with floaty
-              "@set/oob_trainingchamber,@can/floaty",
-
-              "{hints,artifactcheck}"
+              "$canSuper,space",
+              "$canSuper,$trick|t_mainPlazaTreeNoSpaceJump"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Locked Door",
+            "name": "Locked Door Ledge (Major)",
             "access_rules": [
-              // Developer intended
               "missile,morph",
+              "$trick|t_mainPlazaItemsOnlySpaceJump,space",
 
-              // L-jump
-              "@set/t_ljump,space",
-
-              // Visible, not obtainable
-              "{$nhas|obfuscate}",
-
-              "{hints,artifactcheck}"
+              "{$nhas|obfuscate}"
             ],
             "item_count": 1,
             "capture_item": true
@@ -518,20 +409,17 @@
       {
         "name": "Ruined Fountain",
         "access_rules": [
-          // Developer intended
-          "@can/bomb,missile,spider",
-
-          // Collision abuse
-          "@set/t_terrain,@set/t_ljump,morph,missile,spider",
-
-          // Visible, not obtainable
-          "{$nhas|obfuscate,missile,morph}",
-
-          "{hints,artifactcheck}"
+          "cr_west,morph"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
+            "access_rules": [
+              "$canSpider,$canBomb",
+              "$canSpider,$trick|t_ruinedFountainItemFlaahgraSkip,space",
+
+              "{$nhas|obfuscate}"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -546,54 +434,32 @@
       },
       {
         "name": "Ruined Shrine",
+        "access_rules": [
+          "cr_west,missile"
+        ],
         "sections": [
           {
-            "name": "Beetle Battle (Morph Ball)",
+            "name": "Beetle Battle (Major)",
             "access_rules": [
-              // Developer intended
-              "missile,morph",
-
-              // Developer intended, but later in the game
-              "missile,space",
-
-              // Dash off of something
-              "@set/t_terrain,@set/t_dash,missile",
-
-              // Access/Visible, not obtainable (safely visible, but softlock if collected and item does not meet reqs)
-              "{$nhas|obfuscate,missile}",
-
-              "{hints,artifactcheck}"
+              "$ponrLUT|beetle"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Half-Pipe",
+            "name": "Half-Pipe (Minor)",
             "access_rules": [
-              // Developer intended
-              "missile,morph,boost",
-
-              // Space jump from branch
-              "@set/t_terrain,missile,morph,space",
-
-              // Ghetto jump off half-pipe
-              "@set/t_ghetto,missile,morph,space",
-
-              // Half-pipe bomb jump
-              "@set/t_halfpipebj,missile,@can/bomb",
-
-              "{hints,artifactcheck}"
+              "boost",
+              "$trick|t_upperRuinedShrineTowerOfLightFewerAccessReqs,space,morph"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Lower Tunnel",
+            "name": "Lower Tunnel (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/bomb or pb,missile",
-
-              "{hints,artifactcheck}"
+              "$canBomb",
+              "$trick|t_destroyBombCoversWithPowerBombs,$canPb"
             ],
             "item_count": 1,
             "capture_item": true
@@ -610,17 +476,17 @@
       {
         "name": "Vault",
         "access_rules": [
-          // Developer intended
-          "@can/bomb,missile",
-
-          // Visible, not obtainable
-          "{$nhas|obfuscate,missile,morph}",
-
-          "{hints,artifactcheck}"
+          "cr_north,morph",
+          "cr_west,$trick|t_mainPlazaItemsOnlySpaceJump,$trick|t_vaultAccessFromMainPlaza,ledgeDoorEnable,space"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "In the Vault (Minor)",
+            "access_rules": [
+              "$canBomb",
+
+              "{nhas|obfuscate}"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -636,22 +502,18 @@
       {
         "name": "Training Chamber",
         "access_rules": [
-          // Developer intended
-          "@can/cross magma pool,@can/bomb,wave,boost,spider",
+          "cr_west,morph,wave,$hasSuit,$eval|grapple|or|t_crossMagmaPoolWithoutGrapple|space|scan",
+          "cr_west,morph,wave,$trick|t_crossMagmaPoolSuitless,etank:2,space,scan",
 
-          // Training Chamber OoB
-          // Access (softlock)
-          "{@set/oob_trainingchamber,@can/wallcrawl,bomb}",
-          // Escape through Wave door
-          "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
-          // Escape through morph tunnel
-          "@set/oob_trainingchamber,@can/wallcrawl,bomb,boost",
-
-          "{hints,artifactcheck}"
+          "cr_west,$trick|t_trainingChamberAndAccessOobWallcrawl,$canWallcrawl,$canBomb"
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
+            "access_rules": [
+              "$canBomb,$canBoost,$canSpider",
+              "$canBomb,$trick|t_trainingChamberAndAccessOobWallcrawl,space"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -667,20 +529,11 @@
       {
         "name": "Training Chamber Access",
         "access_rules": [
-          // Developer intended
-          "@can/cross magma pool,@can/bomb,wave",
-
-          // Training Chamber OoB
-          // Access (softlock)
-          "{@set/oob_trainingchamber,@can/wallcrawl,bomb}",
-          // Escape through wave door
-          "@set/oob_trainingchamber,@can/wallcrawl,bomb,@can/cross magma pool,wave",
-
-          "{hints,artifactcheck}"
+          "@Training Chamber"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -696,14 +549,15 @@
       {
         "name": "Magma Pool",
         "access_rules": [
-          // Developer intended
-          "@can/cross magma pool,@can/pb",
+          "@Training Chamber Access,wave,$hasSuit,$canPb",
+          "@Training Chamber Access,wave,$trick|t_crossMagmaPoolSuitless,etank:2,$canPb",
 
-          "{hints,artifactcheck}"
+          "cr_west,morph,$hasSuit,$eval|grapple|pb|or|t_crossMagmaPoolWithoutGrapple|space|scan|pb|or|t_magmaPoolItemWithIS|bomb|boost",
+          "cr_west,morph,$trick|t_crossMagmaPoolSuitless,etank:2,space,scan,$canPb"
         ],
         "sections": [
           {
-            "name": "Power Bomb",
+            "name": "Power Bomb Wall (Minor)",
             "item_count": 1,
             "capture_item": true
           }
@@ -719,17 +573,16 @@
       {
         "name": "Tower of Light",
         "access_rules": [
-          // Developer intended
-          "@can/access tower of light,missile:40",
-
-          // Dash up the tower
-          "@set/t_dash,@set/t_terrain,@can/access tower of light",
-
-          "{hints,artifactcheck}"
+          "@Ruined Shrine,wave,$canBoost,$canSpider",
+          "@Ruined Shrine,wave,$trick|t_upperRuinedShrineTowerOfLightFewerAccessReqs,space"
         ],
         "sections": [
           {
-            "name": "Wavebuster",
+            "name": "Climb the Tower (Major)",
+            "access_rules": [
+              "space,missile:40",
+              "space,$trick|t_climbTowerOfLightWithoutMissiles"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -745,17 +598,12 @@
       {
         "name": "Tower Chamber",
         "access_rules": [
-          // Developer intended
-          "@can/access tower of light,gravity",
-
-          // Underwater ghetto jump
-          "@set/t_ghetto,@can/access tower of light",
-
-          "{hints,artifactcheck}"
+          "@Tower of Light,wave,space,gravity",
+          "@Tower of Light,wave,space,$trick|t_towerChamberNoGravity"
         ],
         "sections": [
           {
-            "name": "Artifact of Lifegiver",
+            "name": "Artifact of Lifegiver (Major)",
             "item_count": 1,
             "capture_item": true
           }
@@ -771,17 +619,17 @@
       {
         "name": "Ruined Nursery",
         "access_rules": [
-          // Developer intended
-          "@can/bomb",
-
-          // Visible, not obtainable
-          "{$nhas|obfuscate}",
-
-          "{hints,artifactcheck}"
+          "cr_west"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
+            "access_rules": [
+              "$canBomb",
+              "$trick|t_ruinedNurseryWithoutBombs,morph,space",
+
+              "{nhas|obfuscate}"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -796,25 +644,23 @@
       },
       {
         "name": "Ruined Gallery",
+        "access_rules": [
+          "cr_west"
+        ],
         "sections": [
           {
-            "name": "Missile Wall",
+            "name": "Missile Wall (Minor)",
             "access_rules": [
-              // Developer intended
-              "missile",
-
-              "{hints,artifactcheck}"
+              "missile"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Tunnel",
+            "name": "Tunnel (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/bomb",
-
-              "{hints,artifactcheck}"
+              "$canBomb",
+              "$trick|t_boostThroughBombTunnels,$canBoost"
             ],
             "item_count": 1,
             "capture_item": true
@@ -831,14 +677,11 @@
       {
         "name": "Transport Access North",
         "access_rules": [
-          // Developer intended
-          "missile",
-
-          "{hints,artifactcheck}"
+          "cr_west,missile"
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -854,17 +697,18 @@
       {
         "name": "Gathering Hall",
         "access_rules": [
-          // Developer intended
-          "@can/bomb or pb,missile,space",
+          "cr_west,morph,missile",
 
-          // Double bomb jump instead of space
-          "@set/t_dbj,@can/bomb,missile",
-
-          "{hints,artifactcheck}"
+          "cr_south,ice,space,$canBomb"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
+            "access_rules": [
+              "space,$canBomb",
+              "space,$trick|t_destroyBombCoversWithPowerBombs,$canPb",
+              "$trick|t_gatheringHallWithoutSpaceJump,$canBomb"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -879,10 +723,12 @@
       },
       {
         "name": "Hive Totem",
-        // No requirements
+        "access_rules": [
+          "cr_west"
+        ],
         "sections": [
           {
-            "name": "Missile Launcher",
+            "name": "Clear the Hive (Major)",
             "item_count": 1,
             "capture_item": true
           }
@@ -897,28 +743,23 @@
       },
       {
         "name": "Sunchamber",
+        "access_rules": [
+          "cr_west,missile,$canBomb,scan",
+          "cr_west,missile,$canBomb,$trick|t_arboretumPuzzleSkip",
+
+          "cr_north,$canBomb,$canSpider,$canSuper,scan"
+        ],
         "sections": [
           {
-            "name": "Flaahgra (Varia Suit)",
-            "access_rules": [
-              // Developer intended
-              "@can/bomb,missile",
-
-              "{hints,artifactcheck}"
-            ],
+            "name": "Flaahgra (Major)",
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Ghosts (Artifact of Wild)",
+            "name": "Ghostbusters (Major)",
             "access_rules": [
-              // Developer intended
-              "@can/bomb,@can/super,spider",
-
-              // Early Wild IBJ
-              "@set/t_earlywild,@can/bomb,missile",
-
-              "{hints,artifactcheck}"
+              "$canSpider,$canSuper",
+              "$trick|t_sunTowerIbj"
             ],
             "item_count": 1,
             "capture_item": true
@@ -935,14 +776,14 @@
       {
         "name": "Watery Hall Access",
         "access_rules": [
-          // Developer intended
-          "missile,morph",
-
-          "{hints,artifactcheck}"
+          "@Gathering Hall"
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Missile Wall (Minor)",
+            "access_rules": [
+              "missile"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -957,34 +798,23 @@
       },
       {
         "name": "Watery Hall",
+        "access_rules": [
+          "@Watery Hall Access,missile"
+        ],
         "sections": [
           {
-            "name": "Scan Puzzle (Charge Beam)",
+            "name": "Scan Puzzle (Major)",
             "access_rules": [
-              // Developer intended
-              "missile,morph",
-
-              "{hints,artifactcheck}"
+              "scan",
+              "$trick|t_wateryHallScanPuzzleWithIS,$canIsg,missile,$hasSuit,etank:1"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Underwater",
+            "name": "Underwater (Minor)",
             "access_rules": [
-              // Developer intended
-              "morph,missile,space,gravity,bomb",
-
-              // Normal w/ damage boost
-              "morph,missile,space,gravity,@set/t_liquidboost",
-
-              // Underwater ghetto jump w/ Flaahgra
-              "@set/t_ghetto,morph,missile,space,bomb",
-
-              // Underwater ghetto jump w/ damage boost
-              "@set/t_ghetto,morph,missile,space,@set/t_liquidboost",
-
-              "{hints,artifactcheck}"
+              "space,$eval|morph|bomb|or|t_wateryHallUnderwaterFlaahgraSkip,$eval|gravity|or|t_wateryHallUnderwaterSlopeJump"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1000,28 +830,20 @@
       },
       {
         "name": "Dynamo",
+        "access_rules": [
+          "@Watery Hall,missile,scan,$canBomb",
+          "@Watery Hall,missile,scan,$trick|t_destroyBombCoversWithPowerBombs,$canPb"
+        ],
         "sections": [
           {
-            "name": "Lower Dynamo",
-            "access_rules": [
-              // Developer intended
-              "@can/bomb or pb,missile",
-
-              "{hints,artifactcheck}"
-            ],
+            "name": "Lower Dynamo (Minor)",
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Spider Track",
+            "name": "Spider Track (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/bomb or pb,missile,spider",
-
-              // Floaty jump
-              "@can/floaty,@can/bomb or pb,missile",
-
-              "{hints,artifactcheck}"
+              "space,$canSpider"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1037,44 +859,21 @@
       },
       {
         "name": "Burn Dome",
+        "access_rules": [
+          "$ponrLUT|burndome"
+        ],
         "sections": [
           {
-            "name": "Tunnel",
+            "name": "Tunnel (Minor)",
             "access_rules": [
-              // Developer intended
-              "@can/bomb,missile",
-
-              // Developer intended with vanilla bombs
-              "$nhas|shuf_bombs,missile,@can/bomb or pb",
-
-              // Skip bombs with boost
-              "@set/t_boostjumps,missile,@can/bomb or pb,boost",
-
-              // Softlockable (must reload if neither burn dome item is bombs)
-              "{$nhas|r_noriskbombs|sb_r_noriskbombs,missile,@can/bomb or pb}",
-
-              "{hints,artifactcheck}"
+              "$canBomb",
+              "$trick|t_destroyBombCoversWithPowerBombs,$canPb"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Incinerator Drone (Morph Bomb)",
-            "access_rules": [
-              // Developer intended
-              "@can/bomb,missile",
-
-              // Developer intended with vanilla bombs
-              "missile,morph",
-
-              // Skip bombs with boost
-              "@set/t_boostjumps,missile,morph,boost",
-
-              // Softlockable (must reload if neither burn dome item is bombs)
-              "{missile,morph}",
-
-              "{hints,artifactcheck}"
-            ],
+            "name": "Incinerator Drone (Major)",
             "item_count": 1,
             "capture_item": true
           }
@@ -1106,7 +905,7 @@
               // Skip halfpipe by abusing terrain
               "@set/t_terrain,@can/bomb,missile,space,spider",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1120,7 +919,7 @@
               // Skipping bombs with boost (softlock if not bombs)
               "{@set/t_boostjumps,missile,morph,boost}",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1146,11 +945,11 @@
           // Infinite speed glitch
           "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1172,11 +971,11 @@
           // L jump and ledge clip into tunnel
           "@set/t_terrain,@set/t_ljump,@reqs/late chozo,space",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1201,7 +1000,7 @@
           // Infinite speed glitch
           "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1230,7 +1029,7 @@
           // Visible, not obtainable (visible from outside)
           "{$nhas|obfuscate,@reqs/reflecting pool,missile}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1262,7 +1061,7 @@
           // Damage boost through lava
           "@set/t_liquidboost,missile,morph,$EarlyMagmoor",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1285,11 +1084,11 @@
           // Developer intended
           "@reqs/early magmoor,missile,space,@can/pass xray",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1308,11 +1107,11 @@
           // Developer intended
           "@reqs/early magmoor,morph",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1331,11 +1130,11 @@
           // Developer intended
           "@reqs/early magmoor,@can/bomb",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1360,7 +1159,7 @@
           // Softlockable (need space or a dbj to escape)
           "{@reqs/early magmoor,@can/pb}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1392,7 +1191,7 @@
               // Damage boost through lava from Tallon elevator and jump on tunnel
               "@set/t_liquidboost,@set/t_terrain,missile,$EarlyMagmoor,space",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1418,7 +1217,7 @@
               "{@set/t_dash,@reqs/early magmoor,@can/pb,space}",
               "{@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1447,7 +1246,7 @@
           // DBJ and dash
           "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/bomb",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1493,7 +1292,7 @@
           "{@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
           "{@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1519,11 +1318,11 @@
           // Visible, not obtainable
           "{$nhas|obfuscate,@reqs/late magmoor,morph}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1557,7 +1356,7 @@
               // Visible, not obtainable
               "{$nhas|obfuscate,@reqs/front phen}",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1571,7 +1370,7 @@
               // Visible, not obtainable
               "{$nhas|obfuscate,@reqs/front phen}",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1597,7 +1396,7 @@
           // Early Sun ISG OoB
           "@set/oob_wavesun,@can/wallcrawl,@set/t_sunisg,@can/isg,@reqs/front phen",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1620,7 +1419,7 @@
           // Developer intended
           "@reqs/front phen,space,plasma",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1646,7 +1445,7 @@
               // Developer intended
               "@reqs/front phen,plasma",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1657,7 +1456,7 @@
               // Developer intended
               "@reqs/front phen,spider",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -1683,7 +1482,7 @@
           // Visible, not obtainable (can see from outside, need wave to escape)
           "{$nhas|obfuscate,@reqs/front phen,@can/bomb,space}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1712,11 +1511,11 @@
           // Terrain abuse to climb
           "@set/t_terrain,@set/t_ljump,@reqs/mid phen,space,wave",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1739,7 +1538,7 @@
           // Softlockable (reload needed only if boxes are destroyed)
           "{@reqs/front phen}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1765,7 +1564,7 @@
           // Softlockable (need spider or grapple to escape)
           "{@reqs/quarantine cave,@can/pass thermal}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1791,11 +1590,11 @@
           // Dash to entrance
           "@set/t_dash,@reqs/quarantine cave,@can/pass thermal,spider",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1817,11 +1616,11 @@
           // Visible, not obtainable
           "{$nhas|obfuscate,@reqs/phen labs,xray}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1840,7 +1639,7 @@
           // Developer intended
           "@reqs/phen labs,@can/climb observatory",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1870,7 +1669,7 @@
           "{shuf_bombs,@reqs/phen labs,plasma}",
           "{shuf_bombs,@set/t_terrain,@reqs/phen labs}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1893,7 +1692,7 @@
           // Developer intended
           "@reqs/phen labs",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1921,7 +1720,7 @@
           // Developer intended
           "@reqs/phen labs",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -1947,11 +1746,11 @@
           // Visible, not obtainable
           "{$nhas|obfuscate,@reqs/far phen}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -1976,11 +1775,11 @@
           // Visible, not obtainable
           "{$nhas|obfuscate,@reqs/far phen}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2007,7 +1806,7 @@
           //   with a ghetto jump
           "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -2038,7 +1837,7 @@
           //   with a ghetto jump
           "@set/t_ljump,@set/t_terrain,@set/t_ghetto,@reqs/far phen,@can/pb,plasma",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -2071,7 +1870,7 @@
               "{@reqs/far phen,grapple}",
               "{@set/t_dash,@reqs/far phen}",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -2088,7 +1887,7 @@
               // Softlockable (in case of falling in)
               "{@reqs/far phen,grapple,plasma}",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -2120,11 +1919,11 @@
           // Visible, not obtainable
           "{$nhas|obfuscate,@reqs/upper mines,@can/bomb,@can/pass thermal}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2143,11 +1942,11 @@
           // Developer intended w/ check for infinite boost possibility
           "@reqs/upper mines,@can/pb,$ERIB",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2166,7 +1965,7 @@
           // Developer intended w/ check for infinite boost possibility
           "@reqs/upper mines,@can/pb,plasma,$ERIB",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -2192,7 +1991,7 @@
               // Developer intended w/ check for infinite boost possibility
               "@reqs/upper mines,@can/pb,$ERIB",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -2203,7 +2002,7 @@
               // Developer intended
               "@reqs/upper mines,@can/bomb,boost,@can/pass xray",
 
-              "{hints,artifactcheck}"
+              
             ],
             "item_count": 1,
             "capture_item": true
@@ -2229,7 +2028,7 @@
           // Reverse mines
           "@reqs/tallon to mines,@can/bomb,@can/pb,spider",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -2255,11 +2054,11 @@
           // Exit Metroid Quarantine A without spider
           "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/bomb,@can/pb,plasma,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2284,7 +2083,7 @@
           // Early Newborn wallcrawl
           "@set/t_phazontunnelnosuit,@set/oob_earlynewborn,@can/wallcrawl,@reqs/lower mines",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -2309,11 +2108,11 @@
           //                    w/ xray
           "@reqs/lower mines,@can/pass xray",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2335,11 +2134,11 @@
           // Skip spider ball
           "@set/t_ghetto,@set/t_terrain,@set/t_dash,@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing,@can/pass xray",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2361,11 +2160,11 @@
           // Visible, not obtainable
           "{$nhas|obfuscate,@reqs/lower mines,xray}",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2384,7 +2183,7 @@
           // Developer intended
           "@reqs/lower mines,xray",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
@@ -2407,11 +2206,11 @@
           // Developer intended
           "@reqs/lower mines,xray",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2430,11 +2229,11 @@
           // Developer intended
           "@reqs/upper mines,@can/pb,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2453,11 +2252,11 @@
           // Developer intended
           "@reqs/upper mines,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "Missile",
+            "name": "Minor Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2476,11 +2275,11 @@
           // Developer intended
           "@reqs/upper mines,@can/pb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {
-            "name": "E-Tank",
+            "name": "Major Item",
             "item_count": 1,
             "capture_item": true
           }
@@ -2499,7 +2298,7 @@
           // Developer intended
           "@reqs/upper mines,@can/bomb,@can/climb vent shaft,@can/climb mines spider shafts,@can/climb ore processing",
 
-          "{hints,artifactcheck}"
+          
         ],
         "sections": [
           {

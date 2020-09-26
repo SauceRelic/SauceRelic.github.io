@@ -1,5 +1,18 @@
 -- Basic Functions
 
+function tristate(state)
+  if     state == 2 then
+    return true
+  elseif state == 1 then
+    return true, AccessibilityLevel.SequenceBreak
+  elseif state == 0 then
+    return false
+  else
+    print("tristate exception: invalid state",state)
+    return false
+  end
+end
+
 -- Shortcut for checking item ownership
 function has(item,mode)
   if not mode then
@@ -90,26 +103,33 @@ end
 -- (has(x) and ... and has(z)) or (...) or ...
 -- Arguments are either item code strings or "or", which denotes or operators in the structure
 function eval(...)
-  local statementPart = true
+  local statementPart = 2
+  local statementFull = 0
 
   for i,v in ipairs({...}) do
 
     if v == "or" then
-      if statementPart then
+      statementFull = math.max(statementFull,statementPart)
+      if statementFull == 2 then
         return true
       else
-        statementPart = true
+        statementPart = 2
       end
 
+    elseif statementPart == 0 then
+      -- Do nothing
+
+    elseif string.find(v,"t_") then
+      statementPart = math.min(statementPart,trick(v,1))
+
     else
-      if statementPart then
-        statementPart = has(v)
-      end
+      statementPart = math.min(statementPart,has(v,1))
 
     end
   end
 
-  return statementPart
+  statementFull = math.max(statementFull,statementPart)
+  return tristate(statementFull)
 end
 
 -- Item combo shortcuts
@@ -321,7 +341,7 @@ function anchorLogic(code)
 
   elseif code == "cr_north" then
     return not set("elevatorShuffle") and has("mc_north") or
-           has("cr_west") and has("morph") and (has("missile") or trick("t_mainPlazaItemsOnlySpaceJump",0) and trick("t_vaultAccessFromMainPlaza",0) and has("space"))
+           has("cr_west") and has("morph") and (has("missile") or trick("t_mainPlazaItemsOnlySpaceJump",0) and trick("t_vaultAccessFromMainPlaza",0) and set("ledgeDoorEnable") and has("space"))
 
   elseif code == "cr_east" then
     return not set("elevatorShuffle") and has("to_east") or
@@ -409,35 +429,60 @@ end
 
 -- Lookup table for path of no return cases to properly badge softlocks
 function ponrLUT(index)
-  local normcase,ponrcase,ponrlevel,locref
+  local basereqs,normcase,ponrcase,ponrlevel,locref
 
   if index == "alcove" then
-    locref = "@Alcove/Space Jump"
+    locref = "@Alcove/Space Jump Room (Major)"
     ponrlevel = 2
-    normcase = math.max(has("space",1), trick("t_alcoveNoItems",1))
+    basereqs = has("to_north",1)
+    normcase = math.max(has("space",1),
+                        trick("t_alcoveNoItems",1))
     ponrcase = math.min(has("morph",1), has("boost",1), has("bomb",1))
+
+  elseif index == "beetle" then
+    locref = "@Ruined Shrine/Beetle Battle (Major)"
+    ponrlevel = 1
+    basereqs = math.min(has("cr_west",1), has("missile",1))
+    normcase = math.max(has("morph",1),
+                        has("space",1),
+                        math.min(trick("t_ruinedShrineScanDashEscape",1), has("scan",1)))
+    ponrcase = 2
+
+  elseif index == "burndome" then
+    locref = "@Burn Dome/Incinerator Drone (Major)"
+    ponrlevel = 2
+    basereqs = math.max(math.min(has("cr_west",1), has("missile",1), has("morph",1)),
+                        math.min(has("cr_south",1), has("ice",1), has("space",1), has("morph",1), has("bomb",1)))
+    normcase = has("bomb",1)
+    ponrcase = 2
+
   else
     print("ponrLUT exception: invalid index",index)
     return false
   end
 
-  if normcase == 2 then
-    badgeHandler(locref)
-    return true
-  elseif normcase == 1 then
-    badgeHandler(locref)
-    return true, AccessibilityLevel.SequenceBreak
-  else
-    local setting = Tracker:FindObjectForCode("ponr")
-    if ponrcase == 2 and setting.CurrentStage >= ponrlevel then
-      badgeHandler(locref,"images/warning.png")
+  if basereqs ~= 0 then
+    if normcase == 2 and basereqs == 2 then
+      badgeHandler(locref)
       return true
-    elseif ponrcase == 1 or ponrcase == 2 and setting.CurrentStage < ponrlevel then
-      badgeHandler(locref,"images/warning.png")
+    elseif normcase ~= 0 then
+      badgeHandler(locref)
       return true, AccessibilityLevel.SequenceBreak
     else
-      badgeHandler(locref)
-      return false
+      local setting = Tracker:FindObjectForCode("ponr")
+      if ponrcase == 2 and setting.CurrentStage >= ponrlevel and basereqs == 2 then
+        badgeHandler(locref,"images/warning.png")
+        return true
+      elseif ponrcase ~= 0  then
+        badgeHandler(locref,"images/warning.png")
+        return true, AccessibilityLevel.SequenceBreak
+      else
+        badgeHandler(locref)
+        return false
+      end
     end
+  else
+    badgeHandler(locref)
+    return false
   end
 end

@@ -1035,7 +1035,7 @@
         ],
         "sections": [
           {
-            "name": "Artifact of Nature",
+            "name": "Destroy Load-Bearing Pillar (Major)",
             "access_rules": [
               "missile,space",
               "missile,$ntrick|t_lavaLakeItemSuitless,grapple"
@@ -1055,14 +1055,20 @@
       {
         "name": "Triclops Pit",
         "access_rules": [
-          // Developer intended
-          "@reqs/early magmoor,missile,space,@can/pass xray",
+          "mc_north,$canBomb,$hasSuit",
 
-          
+          "mc_west,$hasSuit,$canBomb",
+          "mc_west,$hasSuit,$trick|t_boostThroughBombTunnels,$canBoost",
+
+          "mc_east,$hasSuit,morph,grapple",
+          "mc_east,$hasSuit,$trick|t_fieryShoresAccessWithoutMorphGrapple,$eval|morph|or|grapple"
         ],
         "sections": [
           {
-            "name": "Minor Item",
+            "name": "Invisible Platforms (Minor)",
+            "access_rules": [
+              "$xrayReqs,$eval|missile|or|t_triclopsPitItemWithCharge|charge,$eval|space|or|t_triclopsPitItemWithoutSpaceJump"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1078,14 +1084,14 @@
       {
         "name": "Storage Cavern",
         "access_rules": [
-          // Developer intended
-          "@reqs/early magmoor,morph",
-
-          
+          "@Triclops Pit"
         ],
         "sections": [
           {
             "name": "Minor Item",
+            "access_rules": [
+              "morph"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1100,15 +1106,13 @@
       },
       {
         "name": "Transport Tunnel A",
-        "access_rules": [
-          // Developer intended
-          "@reqs/early magmoor,@can/bomb",
-
-          
-        ],
         "sections": [
           {
             "name": "Major Item",
+            "access_rules": [
+              "@Triclops Pit,$canBomb",
+              "mc_west,$heatSuit,$canBomb"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1123,21 +1127,12 @@
       },
       {
         "name": "Shore Tunnel",
-        "access_rules": [
-          // Developer intended
-          "@reqs/early magmoor,@can/pb,space",
-
-          // Escape using a DBJ
-          "@set/t_dbj,@reqs/early magmoor,@can/pb,bomb",
-
-          // Softlockable (need space or a dbj to escape)
-          "{@reqs/early magmoor,@can/pb}",
-
-          
-        ],
         "sections": [
           {
-            "name": "Ice Spreader",
+            "name": "Break the Glass (Major)",
+            "access_rules": [
+              "$ponrLUT|shoretunnel"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1154,44 +1149,20 @@
         "name": "Fiery Shores",
         "sections": [
           {
-            "name": "Morph Track",
+            "name": "Morph Track (Minor)",
             "access_rules": [
-              // Developer intended
-              "missile,$EarlyMagmoor,@can/bomb",
+              "@Triclops Pit,$canBomb",
+              "@Triclops Pit,$trick|t_fieryShoresItemSj,space,grapple",
 
-              // Jump on the morph ball tunnel
-              "@set/t_terrain,missile,$EarlyMagmoor,morph,space",
-
-              // Damage boost through lava from Tallon elevator and jump on tunnel
-              "@set/t_liquidboost,@set/t_terrain,missile,$EarlyMagmoor,space",
-
-              
+              "mc_east,$hasSuit,$eval|morph|grapple|or|t_fieryShoresAccessWithoutMorphGrapple,$eval|bomb|or|t_fieryShoresItemSj|space"
             ],
             "item_count": 1,
             "capture_item": true
           },
           {
-            "name": "Warrior Shrine Tunnel (Powerbomb)",
+            "name": "Warrior Shrine Tunnel (Minor)",
             "access_rules": [
-              // Developer intended
-              "@reqs/early magmoor,@can/pb,bomb,space,boost",
-
-              // DBJ up to spinner
-              "@set/t_dbj,@reqs/early magmoor,@can/pb,bomb,boost",
-
-              // Dash off puffer/pirate instead of spinner
-              "@set/t_dash,@reqs/early magmoor,@can/pb,bomb,space",
-              
-              // DBJ and dash
-              "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb,bomb",
-
-              // Softlockable (need bombs to escape)
-              "{@reqs/early magmoor,@can/pb,space,boost}",
-              "{@set/t_dbj,@reqs/early magmoor,@can/pb,boost}",
-              "{@set/t_dash,@reqs/early magmoor,@can/pb,space}",
-              "{@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/pb",
-
-              
+              "$ponrLUT|warshrine"
             ],
             "item_count": 1,
             "capture_item": true
@@ -1208,23 +1179,17 @@
       {
         "name": "Warrior Shrine",
         "access_rules": [
-          // Developer intended
-          "@reqs/early magmoor,@can/bomb,space,boost",
-
-          // DBJ up to spinner
-          "@set/t_dbj,@reqs/early magmoor,@can/bomb,boost",
-
-          // Dash off puffer/pirate instead of spinner
-          "@set/t_dash,@reqs/early magmoor,space",
-
-          // DBJ and dash
-          "@set/t_dbj,@set/t_dash,@reqs/early magmoor,@can/bomb",
-
-          
+          "@Triclops Pit,$canBoost,space",
+          "@Triclops Pit,$trick|t_warriorShrineWithoutBoost,space",
+          "@Triclops Pit,$trick|t_warriorShrineMinimumReqs"
         ],
         "sections": [
           {
-            "name": "Artifact of Strength",
+            "name": "Artifact of Strength (Major)",
+            "access_rules": [
+              "space",
+              "$trick|t_warriorShrineMinimumReqs"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1239,38 +1204,12 @@
       },
       {
         "name": "Plasma Processing",
-        "access_rules": [
-          // Developer intended and escape
-          "@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider,plasma",
-          // Allow vanilla beams but require visible items
-          "[$nhas|obfuscate],@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider",
-
-          // Skip grapple beam to spinners
-          "@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider,plasma",
-          // Allow vanilla beams
-          "[$nhas|obfuscate],@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider",
-
-          // Skip grapple and ghetto jump to bomb slot
-          "@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,plasma",
-          // Allow vanilla beams
-          "[$nhas|obfuscate],@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost",
-
-          // Workstation OoB
-          "@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,plasma",
-          // Allow vanilla beams
-          "[$nhas|obfuscate],@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor",
-
-          // Visible, not obtainable (can see from outside, need plasma to escape)
-          "{@reqs/late magmoor,ice,@can/bomb,boost,grapple,spider}",
-          "{@set/t_rjump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost,spider}",
-          "{@set/t_ljump,@set/t_ghetto,@reqs/late magmoor,ice,@can/bomb,boost}",
-          "{@set/oob_workstation,@can/wallcrawl,@reqs/late magmoor,ice}",
-
-          
-        ],
         "sections": [
           {
             "name": "Plasma Beam",
+            "access_rules": [
+              "$ponrLUT|plasmaproc"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1285,18 +1224,12 @@
       },
       {
         "name": "Magmoor Workstation",
-        "access_rules": [
-          // Developer intended
-          "@reqs/late magmoor,morph,wave,@can/pass thermal",
-
-          // Visible, not obtainable
-          "{$nhas|obfuscate,@reqs/late magmoor,morph}",
-
-          
-        ],
         "sections": [
           {
             "name": "Major Item",
+            "access_rules": [
+              "$ponrLUT|magmoorwork"
+            ],
             "item_count": 1,
             "capture_item": true
           }

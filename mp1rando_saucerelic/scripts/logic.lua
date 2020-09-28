@@ -226,11 +226,17 @@ function xrayReqs(mode)
   end
 end
 
-function hasSuit()
+function hasSuit(mode)
   if set("hp_variaonly") then
-    return has("varia")
+    return has("varia",mode)
   else
-    return has("varia") or has("gravity") or has("phazon")
+    if not mode then
+      return has("varia") or has("gravity") or has("phazon")
+    elseif mode == 1 then
+      return math.max(has("varia",1),has("gravity",1),has("phazon",1))
+    else
+      print("hasSuit exception: invalid mode",mode)
+    end
   end
 end
 
@@ -481,6 +487,34 @@ function ponrLUT(index)
                 )
               )
     normcase = math.max(has("ice",1),math.min(trick("t_antechamberWithPowerBombs",1),has("morph",1),(has("pb",1))))
+    ponrcase = 2
+
+  elseif index == "shoretunnel" then
+    locref = "@Shore Tunnel/Break the Glass (Major)"
+    ponrlevel = 1
+    basereqs = math.min(
+                hasSuit(1),has("morph",1),has("pb",1),
+                math.max(
+                  math.min(has("mc_north",1),has("bomb",1)),
+                  math.min(has("mc_west",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
+                  math.min(has("mc_east",1),math.max(has("grapple",1),math.min(trick("t_fieryShoresAccessWithoutMorphGrapple",1),has("bomb",1))))
+                )
+              )
+    normcase = has("space",1)
+    ponrcase = 2
+
+  elseif index == "warshrine" then
+    locref = "@Fiery Shores/Warrior Shrine Tunnel (Minor)"
+    ponrlevel = 2
+    basereqs = math.min(
+                hasSuit(1),has("morph",1),has("pb",1),math.max(trick("t_warriorShrineMinimumReqs",1),math.min(has("space",1),math.max(has("boost",1),trick("t_warriorShrineWithoutBoost",1)))),
+                math.max(
+                  math.min(has("mc_north",1),has("bomb",1)),
+                  math.min(has("mc_west",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
+                  math.min(has("mc_east",1),math.max(has("grapple",1),math.min(trick("t_fieryShoresAccessWithoutMorphGrapple",1),has("bomb",1))))
+                )
+              )
+    normcase = has("bomb",1)
     ponrcase = 2
 
   else

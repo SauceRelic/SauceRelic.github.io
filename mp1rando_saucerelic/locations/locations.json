@@ -892,20 +892,9 @@
           {
             "name": "Spider Tracks",
             "access_rules": [
-              // Developer intended
-              "@can/bomb,@can/pb,missile,boost,spider",
-
-              // Floaty jump
-              "@can/bomb,missile,@can/floaty",
-
-              // DBJ to item
-              "@set/t_terrain,@set/t_dbj,@can/bomb,missile,space",
-              "@set/t_terrain,@set/t_dbj,@can/bomb,missile,spider",
-
-              // Skip halfpipe by abusing terrain
-              "@set/t_terrain,@can/bomb,missile,space,spider",
-
-              
+              "@Gathering Hall,$canBomb,$eval|pb|boost|spider|or|t_furnaceSpiderTrackItemHBJ|spider|or|t_furnaceAccessWithoutSpider|t_furnaceSpiderTrackItemSpaceJumpBombs|space",
+              "cr_east,$canBomb,missile,space,$eval|ice|or|boost,$eval|pb|boost|spider|or|t_furnaceSpiderTrackItemHBJ|spider|or|t_furnaceSpiderTrackItemSpaceJumpBombs",
+              "cr_south,$canBomb,ice,space,$eval|pb|boost|spider|or|t_furnaceSpiderTrackItemHBJ|spider|or|t_furnaceSpiderTrackItemSpaceJumpBombs"
             ],
             "item_count": 1,
             "capture_item": true
@@ -913,13 +902,10 @@
           {
             "name": "Tunnel",
             "access_rules": [
-              // Developer intended
-              "@can/bomb,missile",
-
-              // Skipping bombs with boost (softlock if not bombs)
-              "{@set/t_boostjumps,missile,morph,boost}",
-
-              
+              "@Gathering Hall,$canBomb",
+              "cr_east,missile,$canBomb,space,ice",
+              "cr_east,missile,$canBomb,space,$canBoost",
+              "cr_south,ice,space,$canBomb"
             ],
             "item_count": 1,
             "capture_item": true
@@ -936,20 +922,21 @@
       {
         "name": "Hall of the Elders",
         "access_rules": [
-          // Developer intended
-          "@reqs/late chozo,@can/bomb,space,spider,ice",
+          "@Gathering Hall,$canBomb,$eval|spider|or|t_furnaceAccessWithoutSpider,$eval|ice|space|or|wave|ice|or|wave|missile|boost|or|wave|missile|t_crosswayHpbj",
 
-          // Climb to first bomb slot
-          "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice",
+          "cr_east,missile,$canBomb,space",
+          "cr_east,missile,$trick|t_boostThroughBombTunnels,$canBoost,space",
 
-          // Infinite speed glitch
-          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
-
-          
+          "cr_south,ice,space"
         ],
         "sections": [
           {
-            "name": "Major Item",
+            "name": "Ice Slot (Major)",
+            "access_rules": [
+              "$canBomb,ice,space,spider",
+              "$canBomb,ice,space,$trick|t_hallOfTheEldersBombSlotsWithoutSpider",
+              "$trick|t_hallOfTheEldersItemsWithIS,$canIsg,space"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -965,17 +952,18 @@
       {
         "name": "Crossway",
         "access_rules": [
-          // Developer intended
-          "@reqs/late chozo,@can/bomb,@can/super,boost,spider",
+          "@Hall of the Elders,morph,ice",
+          "@Hall of the Elders,$canBoost,missile",
 
-          // L jump and ledge clip into tunnel
-          "@set/t_terrain,@set/t_ljump,@reqs/late chozo,space",
-
-          
+          "@Gathering Hall,$canBomb,$eval|spider|or|t_furnaceAccessWithoutSpider,wave"
         ],
         "sections": [
           {
             "name": "Minor Item",
+            "access_rules": [
+              "bomb,boost,spider,$canSuper,scan",
+              "$trick|t_crosswayItemFewerReqs,space"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -991,20 +979,16 @@
       {
         "name": "Elder Chamber",
         "access_rules": [
-          // Developer intended, ice required to avoid making HotE item unobtainable
-          "@reqs/late chozo,@can/bomb,space,spider,ice,plasma",
-
-          // Climb to first bomb slot
-          "@set/t_terrain,@reqs/late chozo,@can/bomb,space,ice,plasma",
-
-          // Infinite speed glitch
-          "@set/t_terrain,@set/t_hoteisg,@reqs/late chozo,@can/bomb,space,boost,ice",
-
-          
+          "@Hall of the Elders"
         ],
         "sections": [
           {
-            "name": "Artifact of World",
+            "name": "Plasma Slot (Major)",
+            "access_rules": [
+              "$canBomb,ice,plasma,space,spider",
+              "$canBomb,ice,plasma,space,$trick|t_hallOfTheEldersBombSlotsWithoutSpider",
+              "$trick|t_hallOfTheEldersItemsWithIS,$canIsg,space"
+            ],
             "item_count": 1,
             "capture_item": true
           }
@@ -1019,21 +1003,12 @@
       },
       {
         "name": "Antechamber",
-        "access_rules": [
-          // Developer intended
-          "@reqs/reflecting pool,missile,ice",
-
-          // Allow vanilla beams, but require visible items
-          "[$nhas|obfuscate],@reqs/reflecting pool,missile",
-
-          // Visible, not obtainable (visible from outside)
-          "{$nhas|obfuscate,@reqs/reflecting pool,missile}",
-
-          
-        ],
         "sections": [
           {
-            "name": "Ice Beam",
+            "name": "Major Item",
+            "access_rules": [
+              "$ponrLUT|antechamber"
+            ],
             "item_count": 1,
             "capture_item": true
           }

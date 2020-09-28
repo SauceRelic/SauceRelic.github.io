@@ -346,14 +346,14 @@ function anchorLogic(code)
   elseif code == "cr_east" then
     return not set("elevatorShuffle") and has("to_east") or
            has("missile") and canBomb() and (
-             has("cr_west") and has("space") and (canSpider() or trick("t_furnaceAccessWithoutSpider",0) and trick("t_hallOfTheEldersBombSlotsWithoutSpider",0)) and (has("wave") and (canBoost() or trick("t_climbReflectingPoolWithoutBoostBall",0) and (has("ice") or trick("t_crosswayHpbj",0))) or trick("t_reflectingPoolAccessWithoutWaveBeam",0) and has("ice") and (canBoost() or trick("t_climbReflectingPoolWithoutBoostBall",0))) or
+             has("cr_west") and (has("space") and ((canSpider() or trick("t_furnaceAccessWithoutSpider",0) and trick("t_hallOfTheEldersBombSlotsWithoutSpider",0)) and (has("boost") and (has("wave") or has("ice") and trick("t_reflectingPoolAccessWithoutWaveBeam",0)) or trick("t_climbReflectingPoolWithoutBoostBall",0) and (has("wave") and (has("ice") or trick("t_crosswayHpbj",0)) or has("ice") and trick("t_reflectingPoolAccessWithoutWaveBeam",0))) or trick("t_iceBeamBeforeFlaahgraOobWallcrawl",0) and trick("t_climbReflectingPoolWithoutBoostBall",0)) or trick("t_iceBeamBeforeFlaahgraOobWallcrawl",0) and has("boost")) or
              has("cr_south") and has("ice") and (canBoost() or trick("t_climbReflectingPoolWithoutBoostBall",0) and has("space"))
            )
 
   elseif code == "cr_south" then
     return not set("elevatorShuffle") and has("to_southchozo") or
            has("missile") and has("ice") and (
-             has("cr_west") and canBomb() and has("space") and (canBoost() or trick("t_climbReflectingPoolWithoutBoostBall",0)) and (has("wave") or trick("t_reflectingPoolAccessWithoutWaveBeam",0)) and (canSpider() or trick("t_furnaceAccessWithoutSpider",0) and trick("t_hallOfTheEldersBombSlotsWithoutSpider",0)) or
+             has("cr_west") and (canBomb() and has("space") and (canBoost() or trick("t_climbReflectingPoolWithoutBoostBall",0)) and (has("wave") or trick("t_reflectingPoolAccessWithoutWaveBeam",0)) and (canSpider() or trick("t_furnaceAccessWithoutSpider",0) and trick("t_hallOfTheEldersBombSlotsWithoutSpider",0)) or trick("t_iceBeamBeforeFlaahgraOobWallcrawl",0) and (has("space") and trick("t_climbReflectingPoolWithoutBoostBall",0) and (canBomb() or has("morph") and trick("t_outOfBoundsWithoutMorphBall",0)) or canBomb() and canBoost())) or
              has("cr_east") and (canBomb() and canBoost() or trick("t_climbReflectingPoolWithoutBoostBall",0) and has("space") and (canBomb() or trick("t_boostThroughBombTunnels",0) and canBoost()))
            )
 
@@ -456,6 +456,20 @@ function ponrLUT(index)
     normcase = has("bomb",1)
     ponrcase = 2
 
+  elseif index == "antechamber" then
+    locref = "@Antechamber/Major Item"
+    ponrlevel = 1
+    basereqs = math.min(
+                has("missile",1), math.max(math.min(has("morph",1),has("boost",1),has("bomb",1)), math.min(trick("t_climbReflectingPoolWithoutBoostBall",1),has("space",1))),
+                math.max(
+                  math.min(has("cr_south",1), has("ice",1)),
+                  math.min(has("cr_east",1), has("morph",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
+                  math.min(has("cr_west",1), has("morph",1),trick("t_iceBeamBeforeFlaahgraOobWallcrawl",1),trick("t_outOfBoundsWithoutMorphBall",1),has("space",1))
+                )
+              )
+    normcase = math.max(has("ice",1),math.min(trick("t_antechamberWithPowerBombs",1),has("morph",1),(has("pb",1))))
+    ponrcase = 2
+
   else
     print("ponrLUT exception: invalid index",index)
     return false
@@ -471,10 +485,18 @@ function ponrLUT(index)
     else
       local setting = Tracker:FindObjectForCode("ponr")
       if ponrcase == 2 and setting.CurrentStage >= ponrlevel and basereqs == 2 then
-        badgeHandler(locref,"images/warning.png")
+        if ponrlevel == 1 and not set("obfuscate") then
+          badgeHandler(locref,"images/warning_vis.png")
+        else
+          badgeHandler(locref,"images/warning.png")
+        end
         return true
       elseif ponrcase ~= 0  then
-        badgeHandler(locref,"images/warning.png")
+        if ponrlevel == 1 and not set("obfuscate") then
+          badgeHandler(locref,"images/warning_vis.png")
+        else
+          badgeHandler(locref,"images/warning.png")
+        end
         return true, AccessibilityLevel.SequenceBreak
       else
         badgeHandler(locref)

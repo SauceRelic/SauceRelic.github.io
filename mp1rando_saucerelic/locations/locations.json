@@ -1030,17 +1030,16 @@
       {
         "name": "Lava Lake",
         "access_rules": [
-          // Developer intended
-          "missile,morph,space,$EarlyMagmoor",
-
-          // Damage boost through lava
-          "@set/t_liquidboost,missile,morph,$EarlyMagmoor",
-
-          
+          "mc_north,$hasSuit",
+          "mc_north,$trick|t_lavaLakeItemSuitless"
         ],
         "sections": [
           {
             "name": "Artifact of Nature",
+            "access_rules": [
+              "missile,space",
+              "missile,$ntrick|t_lavaLakeItemSuitless,grapple"
+            ],
             "item_count": 1,
             "capture_item": true
           }

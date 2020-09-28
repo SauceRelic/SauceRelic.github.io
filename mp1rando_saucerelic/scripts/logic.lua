@@ -88,6 +88,19 @@ function trick(code, mode)
   end
 end
 
+-- Returns by trick stage:
+-- 0: true
+-- 1: true
+-- 2: true,sequencebreak
+function ntrick(code)
+  local ret = trick(code,1)
+  if ret == 2 then
+    return true, AccessibilityLevel.SequenceBreak
+  else
+    return true
+  end
+end
+
 -- Evaluates a boolean statement consisting of only or operators between terms
 function orN(...)
   for i,v in ipairs({...}) do

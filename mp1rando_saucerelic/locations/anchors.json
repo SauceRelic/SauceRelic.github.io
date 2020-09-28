@@ -64,7 +64,11 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 50,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 0,
             "y": 0
           }
         ]
@@ -80,7 +84,11 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 50,
             "y": 0
           }
         ]
@@ -96,7 +104,11 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 100,
             "y": 0
           }
         ]
@@ -112,7 +124,11 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 150,
             "y": 0
           }
         ]
@@ -128,7 +144,11 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 200,
             "y": 0
           }
         ]
@@ -144,7 +164,11 @@
         "map_locations": [
           {
             "map": "tallonoverworld",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 250,
             "y": 0
           }
         ]
@@ -160,6 +184,10 @@
         "map_locations": [
           {
             "map": "chozoruins",
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
             "x": 0,
             "y": 0
           }
@@ -176,7 +204,11 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 50,
             "y": 0
           }
         ]
@@ -192,7 +224,11 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 100,
             "y": 0
           }
         ]
@@ -208,7 +244,11 @@
         "map_locations": [
           {
             "map": "chozoruins",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 150,
             "y": 0
           }
         ]
@@ -224,6 +264,10 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
             "x": 0,
             "y": 0
           }
@@ -240,7 +284,11 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 50,
             "y": 0
           }
         ]
@@ -256,7 +304,11 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 100,
             "y": 0
           }
         ]
@@ -272,7 +324,11 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 150,
             "y": 0
           }
         ]
@@ -288,7 +344,11 @@
         "map_locations": [
           {
             "map": "magmoorcaverns",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 200,
             "y": 0
           }
         ]
@@ -304,6 +364,10 @@
         "map_locations": [
           {
             "map": "phendranadrifts",
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
             "x": 0,
             "y": 0
           }
@@ -320,7 +384,11 @@
         "map_locations": [
           {
             "map": "phendranadrifts",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 50,
             "y": 0
           }
         ]
@@ -336,6 +404,10 @@
         "map_locations": [
           {
             "map": "phazonmines",
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
             "x": 0,
             "y": 0
           }
@@ -352,7 +424,11 @@
         "map_locations": [
           {
             "map": "phazonmines",
-            "x": 0,
+            "restrict_visibility_rules": [
+              "elevatorShuffle",
+              "$startingAreaVis"
+            ],
+            "x": 50,
             "y": 0
           }
         ]

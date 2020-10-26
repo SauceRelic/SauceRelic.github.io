@@ -1206,7 +1206,7 @@
         "name": "Plasma Processing",
         "sections": [
           {
-            "name": "Plasma Beam",
+            "name": "Plasma Beam (Major)",
             "access_rules": [
               "$ponrLUT|plasmaproc"
             ],

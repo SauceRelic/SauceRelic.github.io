@@ -146,6 +146,15 @@ function eval(...)
 end
 
 -- Item combo shortcuts
+function etanks(count)
+  local tanks = Tracker:ProviderCountForCode("etank")
+  if tanks >= count then
+    return 2
+  else
+    return 0
+  end
+end
+
 function canBomb()
   return has("morph") and has("bomb")
 end
@@ -248,7 +257,7 @@ function canWallcrawl()
   if canBomb() then
     return true
   elseif has("space") then
-    return trick("t_outOfBoundsWithoutMorphBall")
+    return tristate(trick("t_outOfBoundsWithoutMorphBall",1))
   else
     return false
   end
@@ -448,110 +457,173 @@ end
 
 -- Lookup table for path of no return cases to properly badge softlocks
 function ponrLUT(index)
-  local basereqs,normcase,ponrcase,ponrlevel,locref
+  local basereqs,normalreqs,allponrreqs,visonlyreqs,locref = 0,0,0,0,""
 
   if index == "alcove" then
     locref = "@Alcove/Space Jump Room (Major)"
-    ponrlevel = 2
     basereqs = has("to_north",1)
-    normcase = math.max(has("space",1),
-                        trick("t_alcoveNoItems",1))
-    ponrcase = math.min(has("morph",1), has("boost",1), has("bomb",1))
+    normalreqs = math.min(basereqs, math.max(
+      has("space",1),
+      trick("t_alcoveNoItems",1)
+    ))
+    allponrreqs = math.min(basereqs, has("morph",1), has("boost",1), has("bomb",1))
 
   elseif index == "beetle" then
     locref = "@Ruined Shrine/Beetle Battle (Major)"
-    ponrlevel = 1
     basereqs = math.min(has("cr_west",1), has("missile",1))
-    normcase = math.max(has("morph",1),
-                        has("space",1),
-                        math.min(trick("t_ruinedShrineScanDashEscape",1), has("scan",1)))
-    ponrcase = 2
+    normalreqs = math.min(basereqs, math.max(
+      has("morph",1),
+      has("space",1),
+      math.min(trick("t_ruinedShrineScanDashEscape",1), has("scan",1))
+    ))
+    visonlyreqs = 2
 
   elseif index == "burndome" then
     locref = "@Burn Dome/Incinerator Drone (Major)"
-    ponrlevel = 2
-    basereqs = math.max(math.min(has("cr_west",1), has("missile",1), has("morph",1)),
-                        math.min(has("cr_south",1), has("ice",1), has("space",1), has("morph",1), has("bomb",1)))
-    normcase = has("bomb",1)
-    ponrcase = 2
+    basereqs = math.max(
+      math.min(has("cr_west",1), has("missile",1), has("morph",1)), math.min(
+        has("cr_south",1), has("ice",1), has("space",1), has("morph",1), has("bomb",1)
+      )
+    )
+    normalreqs = math.min(basereqs, has("bomb",1))
+    allponrreqs = basereqs
 
   elseif index == "antechamber" then
     locref = "@Antechamber/Major Item"
-    ponrlevel = 1
     basereqs = math.min(
-                has("missile",1), math.max(math.min(has("morph",1),has("boost",1),has("bomb",1)), math.min(trick("t_climbReflectingPoolWithoutBoostBall",1),has("space",1))),
-                math.max(
-                  math.min(has("cr_south",1), has("ice",1)),
-                  math.min(has("cr_east",1), has("morph",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
-                  math.min(has("cr_west",1), has("morph",1),trick("t_iceBeamBeforeFlaahgraOobWallcrawl",1),trick("t_outOfBoundsWithoutMorphBall",1),has("space",1))
-                )
-              )
-    normcase = math.max(has("ice",1),math.min(trick("t_antechamberWithPowerBombs",1),has("morph",1),(has("pb",1))))
-    ponrcase = 2
+      has("missile",1), math.max(math.min(has("morph",1),has("boost",1),has("bomb",1)), math.min(trick("t_climbReflectingPoolWithoutBoostBall",1),has("space",1))),
+      math.max(
+        math.min(has("cr_south",1), has("ice",1)),
+        math.min(has("cr_east",1), has("morph",1), math.max(has("bomb",1), math.min(trick("t_boostThroughBombTunnels",1), has("boost",1)))),
+        math.min(has("cr_west",1), has("morph",1),trick("t_iceBeamBeforeFlaahgraOobWallcrawl",1),trick("t_outOfBoundsWithoutMorphBall",1),has("space",1))
+      )
+    )
+    normalreqs = math.min(basereqs, math.max(
+      has("ice",1),
+      math.min(trick("t_antechamberWithPowerBombs",1),has("morph",1),(has("pb",1)))
+    ))
+    visonlyreqs = basereqs
 
   elseif index == "shoretunnel" then
     locref = "@Shore Tunnel/Break the Glass (Major)"
-    ponrlevel = 1
     basereqs = math.min(
-                hasSuit(1),has("morph",1),has("pb",1),
-                math.max(
-                  math.min(has("mc_north",1),has("bomb",1)),
-                  math.min(has("mc_west",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
-                  math.min(has("mc_east",1),math.max(has("grapple",1),math.min(trick("t_fieryShoresAccessWithoutMorphGrapple",1),has("bomb",1))))
-                )
-              )
-    normcase = has("space",1)
-    ponrcase = 2
+      hasSuit(1), has("morph",1), has("pb",1), math.max(
+        math.min(has("mc_north",1),has("bomb",1)),
+        math.min(has("mc_west",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
+        math.min(has("mc_east",1),math.max(has("grapple",1),math.min(trick("t_fieryShoresAccessWithoutMorphGrapple",1),has("bomb",1))))
+      )
+    )
+    normalreqs = math.min(basereqs, has("space",1))
+    visonlyreqs = basereqs
 
   elseif index == "warshrine" then
     locref = "@Fiery Shores/Warrior Shrine Tunnel (Minor)"
-    ponrlevel = 2
     basereqs = math.min(
-                hasSuit(1),has("morph",1),has("pb",1),math.max(trick("t_warriorShrineMinimumReqs",1),math.min(has("space",1),math.max(has("boost",1),trick("t_warriorShrineWithoutBoost",1)))),
-                math.max(
-                  math.min(has("mc_north",1),has("bomb",1)),
-                  math.min(has("mc_west",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
-                  math.min(has("mc_east",1),math.max(has("grapple",1),math.min(trick("t_fieryShoresAccessWithoutMorphGrapple",1),has("bomb",1))))
-                )
-              )
-    normcase = has("bomb",1)
-    ponrcase = 2
+      hasSuit(1),has("morph",1),has("pb",1),math.max(trick("t_warriorShrineMinimumReqs",1),math.min(has("space",1),math.max(has("boost",1),trick("t_warriorShrineWithoutBoost",1)))),
+      math.max(
+        math.min(has("mc_north",1),has("bomb",1)),
+        math.min(has("mc_west",1),math.max(has("bomb",1),math.min(trick("t_boostThroughBombTunnels",1),has("boost",1)))),
+        math.min(has("mc_east",1),math.max(has("grapple",1),math.min(trick("t_fieryShoresAccessWithoutMorphGrapple",1),has("bomb",1))))
+      )
+    )
+    normalreqs = math.min(basereqs, has("bomb",1))
+    allponrreqs = basereqs
+
+  elseif index == "plasmaproc" then
+    locref = "@Plasma Processing/Plasma Beam (Major)"
+    basereqs = math.min(
+      has("space",1), has("wave",1), has("morph",1), has("bomb",1), has("boost",1), has("ice",1), math.max(math.min(has("grapple",1), has("spider",1)), trick("t_plasmaProcessingItemWithoutGrappleSpider",1)), math.max(
+        math.min(has("mc_east",1), math.max(
+          math.min(hasSuit(1), math.max(has("spider",1), trick("t_crossTwinFiresTunnelWithoutSpider",1))),
+          math.min(trick("t_crossTwinFiresTunnelSuitless",1), etanks(2))
+        )),
+        math.min(has("mc_southmines",1), has("pbs",1), math.max(hasSuit(1), trick("t_lateMagmoorNoHeatProtection",1))),
+        math.min(has("mc_southphen",1), math.max(hasSuit(1), trick("t_lateMagmoorNoHeatProtection",1)))
+      )
+    )
+    local oobreqs = math.min(
+      trick("t_plasmaProcessingFromMagmoorWorkstationOob",1), has("ice",1), math.max(math.min(has("morph",1), has("bomb",1)), math.min(trick("t_outOfBoundsWithoutMorphBall",1), has("space",1))), math.max(
+        math.min(has("mc_east",1), has("wave",1), has("space",1), math.max(
+          math.min(hasSuit(1), math.max(has("spider",1), trick("t_crossTwinFiresTunnelWithoutSpider",1))),
+          math.min(trick("t_crossTwinFiresTunnelSuitless",1), etanks(2))
+        )),
+        math.min(has("mc_southmines",1), has("pbs",1), math.max(hasSuit(1), trick("t_lateMagmoorNoHeatProtection",1))),
+        math.min(has("mc_southphen",1), has("wave",1), math.max(hasSuit(1), trick("t_lateMagmoorNoHeatProtection",1)))
+      )
+    )
+    normalreqs = math.min(has("plasma",1), math.max(
+      basereqs,
+      math.min(oobreqs, has("space"))
+    ))
+    visonlyreqs = math.max(
+      basereqs,
+      math.min(oobreqs, has("space"))
+    )
+    allponrreqs = oobreqs
+
+  elseif index == "magmoorwork" then
+    locref = "@Magmoor Workstation/Major Item"
+    basereqs = math.min(
+      thermalReqs(1), has("wave",1), has("scan",1), has("morph",1), math.max(has("bomb",1), has("space")), math.max(
+        math.min(has("mc_east",1), has("space",1), math.max(
+          math.min(hasSuit(1), math.max(has("spider",1), trick("t_crossTwinFiresTunnelWithoutSpider",1))),
+          math.min(trick("t_crossTwinFiresTunnelSuitless",1), etanks(2))
+        )),
+        math.min(has("mc_southmines",1), has("ice",1), has("pbs",1), math.max(hasSuit(1), trick("t_lateMagmoorNoHeatProtection",1))),
+        math.min(has("mc_southphen",1), math.max(hasSuit(1), trick("t_lateMagmoorNoHeatProtection",1)))
+      )
+    )
+    normalreqs = math.min(basereqs, has("space",1))
+    allponrreqs = basereqs
 
   else
     print("ponrLUT exception: invalid index",index)
     return false
   end
 
-  if basereqs ~= 0 then
-    if normcase == 2 and basereqs == 2 then
-      badgeHandler(locref)
-      return true
-    elseif normcase ~= 0 then
-      badgeHandler(locref)
-      return true, AccessibilityLevel.SequenceBreak
-    else
-      local setting = Tracker:FindObjectForCode("ponr")
-      if ponrcase == 2 and setting.CurrentStage >= ponrlevel and basereqs == 2 then
-        if ponrlevel == 1 and not set("obfuscate") then
-          badgeHandler(locref,"images/warning_vis.png")
-        else
-          badgeHandler(locref,"images/warning.png")
-        end
-        return true
-      elseif ponrcase ~= 0  then
-        if ponrlevel == 1 and not set("obfuscate") then
-          badgeHandler(locref,"images/warning_vis.png")
-        else
-          badgeHandler(locref,"images/warning.png")
-        end
-        return true, AccessibilityLevel.SequenceBreak
-      else
-        badgeHandler(locref)
-        return false
-      end
-    end
+  -- Clear current badge
+  badgeHandler(locref)
+
+  -- Normal case satisfied, can return
+  if normalreqs == 2 then
+    return true
+
+  -- Check PONR cases
   else
-    badgeHandler(locref)
-    return false
+    local setting = Tracker:FindObjectForCode("ponr")
+
+    -- Set to Visible Only
+    if setting.CurrentStage == 1 then
+      if normalreqs >= visonlyreqs then
+        return tristate(normalreqs)
+      else
+        if visonlyreqs >= 1 then
+          badgeHandler(locref,"images/warning_vis.png")
+        end
+        return tristate(visonlyreqs)
+      end
+
+    -- Set to Any
+    elseif setting.CurrentStage == 2 then
+      if normalreqs >= visonlyreqs and normalreqs >= allponrreqs then
+        return tristate(normalreqs)
+      else
+        if visonlyreqs >= allponrreqs then
+          if visonlyreqs >= 1 then
+            badgeHandler(locref,"images/warning_vis.png")
+          end
+          return tristate(visonlyreqs)
+        else
+          if allponrreqs >= 1 then
+            badgeHandler(locref,"images/warning.png")
+          end
+          return tristate(allponrreqs)
+        end
+      end
+
+    -- No cases satisfied, inaccessible
+    else
+      return false
+    end
   end
 end
